@@ -1,0 +1,936 @@
+\part{Opgaver}
+\chapter{C++ Basic}
+\section{\texttt{Delay()} i Arduino}
+
+\subsection*{Formål}
+Formålet med dette afsnit er at introducere og forklare, hvordan \texttt{delay()}-funktionen fungerer i Arduino-programmering, herunder dens fordele og ulemper, samt hvordan man kan anvende funktionen effektivt i projekter.
+
+\subsection*{Introduktion}
+\texttt{delay()} er en indbygget funktion i Arduino-programmeringssproget, der bruges til at skabe en pause i kodeudførelsen i en bestemt periode. Funktionen tager en enkelt parameter: den tid, programmet skal vente, angivet i millisekunder.
+
+\subsection*{Hvad er \texttt{delay()}?}
+\texttt{delay()}-funktionen bruges til at stoppe programudførelsen for en angivet tid, hvilket kan være nyttigt i mange situationer, såsom at blinke en LED eller skabe tidsbaserede sekvenser. Her er et eksempel på, hvordan \texttt{delay()} kan bruges til at tænde og slukke den indbyggede LED på et Arduino-board:
+
+\begin{lstlisting}[language=C++, caption={Using the \texttt{delay()} function with the built-in LED.}]
+	void setup() {
+		pinMode(LED_BUILTIN, OUTPUT); 
+		// Set the built-in LED as OUTPUT
+	}
+	
+	void loop() {
+		digitalWrite(LED_BUILTIN, HIGH); 
+		// Turn on the built-in LED
+		delay(1000);                     
+		// Wait for 1000 milliseconds (1 second)
+		digitalWrite(LED_BUILTIN, LOW);  
+		// Turn off the built-in LED
+		delay(1000);                     
+		// Wait for 1000 milliseconds (1 second)
+	}
+\end{lstlisting}
+
+\subsection*{Opgaver med \texttt{delay()}}
+
+\subsubsection*{Opgave 1: Blinkende LED}
+\textbf{Formål:}\\
+Lær at styre den indbyggede LED på en ESP32 eller Arduino-board ved hjælp af \texttt{delay()}-funktionen.
+
+\textbf{Opgave:}
+\begin{enumerate}
+	\item Tænd den indbyggede LED i 2 sekunder.
+	\item Sluk den indbyggede LED i 3 sekunder.
+	\item Gentag trin 1 og 2 kontinuerligt.
+\end{enumerate}
+
+\subsubsection*{Opgave 2: Sekvens af LED'er}
+\textbf{Formål:}\\
+Lær at styre flere LED'er sekventielt ved hjælp af \texttt{delay()}-funktionen.
+
+\textbf{Materialer:}
+\begin{itemize}
+	\item 3 LED'er
+	\item 3 220-ohm modstande
+	\item Breadboard og jumperkabler
+\end{itemize}
+
+\textbf{Opgave:}
+\begin{enumerate}
+	\item Tilslut de tre LED'er til henholdsvis pin 2, 3 og 4 på dit board.
+	\item Tænd LED 1 (pin 2) i 1 sekund, og sluk den derefter.
+	\item Umiddelbart efter LED 1 slukker, tænd LED 2 (pin 3) i 1 sekund, og sluk den derefter.
+	\item Umiddelbart efter LED 2 slukker, tænd LED 3 (pin 4) i 1 sekund, og sluk den derefter.
+	\item Gentag trin 2-4 kontinuerligt.
+\end{enumerate}
+
+\subsubsection*{Opgave 3: Trafiklys-simulator}
+\textbf{Formål:}\\
+Simulere et trafiklys ved hjælp af \texttt{delay()}-funktionen.
+
+\textbf{Materialer:}
+\begin{itemize}
+	\item Rød, gul og grøn LED
+	\item 3 220-ohm modstande
+	\item Breadboard og jumperkabler
+\end{itemize}
+
+\textbf{Opgave:}
+\begin{enumerate}
+	\item Tilslut de tre LED'er til henholdsvis pin 2 (rød), 3 (gul) og 4 (grøn) på dit board.
+	\item Tænd den røde LED i 5 sekunder, og sluk den derefter.
+	\item Tænd den gule LED i 1,5 sekund, og sluk den derefter.
+	\item Tænd den grønne LED i 4 sekunder, og sluk den derefter.
+	\item Gentag trin 2-4 kontinuerligt.
+\end{enumerate}
+
+\subsection*{Konklusion}
+\texttt{delay()}-funktionen er en simpel, men kraftfuld måde at introducere tidsbaserede handlinger i dine Arduino-projekter. Selvom det er en nem måde at implementere pauser i kodeudførelsen, kan det også føre til udfordringer, såsom at blokere andre processer. I de kommende kapitler vil vi udforske alternative metoder til tidsstyring, som giver mere fleksibilitet og effektivitet.
+
+\subsection*{Løsningsforslag}
+
+\subsubsection*{Løsningsforslag for Opgave 1}
+\begin{lstlisting}[language=C++]
+	void setup() {
+		pinMode(LED_BUILTIN, OUTPUT);
+	}
+	
+	void loop() {
+		digitalWrite(LED_BUILTIN, HIGH);  // Turn on the built-in LED
+		delay(2000);                      // Wait for 2000 ms or 2 seconds
+		digitalWrite(LED_BUILTIN, LOW);   // Turn off the built-in LED
+		delay(3000);                      // Wait for 3000 ms or 3 seconds
+	}
+\end{lstlisting}
+
+\subsubsection*{Løsningsforslag for Opgave 2}
+\begin{lstlisting}[language=C++]
+	void setup() {
+		pinMode(2, OUTPUT);
+		pinMode(3, OUTPUT);
+		pinMode(4, OUTPUT);
+	}
+	
+	void loop() {
+		digitalWrite(2, HIGH);  
+		delay(1000);                      
+		digitalWrite(2, LOW);   
+		
+		digitalWrite(3, HIGH);  
+		delay(1000);                      
+		digitalWrite(3, LOW);   
+		
+		digitalWrite(4, HIGH);  
+		delay(1000);                      
+		digitalWrite(4, LOW);   
+	}
+\end{lstlisting}
+
+\subsubsection*{Løsningsforslag for Opgave 3}
+\begin{lstlisting}[language=C++]
+	void setup() {
+		pinMode(2, OUTPUT);  // Red LED
+		pinMode(3, OUTPUT);  // Yellow LED
+		pinMode(4, OUTPUT);  // Green LED
+	}
+	
+	void loop() {
+		digitalWrite(2, HIGH);  // Turn on red LED
+		delay(5000);            // Wait for 5000 ms or 5 seconds
+		digitalWrite(2, LOW);   // Turn off red LED
+		
+		digitalWrite(3, HIGH);  // Turn on yellow LED
+		delay(1500);            // Wait for 1500 ms or 1.5 seconds
+		digitalWrite(3, LOW);   // Turn off yellow LED
+		
+		digitalWrite(4, HIGH);  // Turn on green LED
+		delay(4000);            // Wait for 4000 ms or 4 seconds
+		digitalWrite(4, LOW);   // Turn off green LED
+	}
+\end{lstlisting}
+
+\section{Trykknapper}
+\subsubsection*{Introduktion}
+Pull-up og pull-down modstande er essentielle for at sikre, at en digital indgang får en klart defineret værdi, uanset om den er åben eller kortsluttet. Dette er særligt vigtigt for at undgå tilfældige omskiftninger på grund af støj.
+
+\subsubsection*{Pull-Up Modstand}
+En pull-up modstand er forbundet til en digital indgang og Vcc. Når trykknappen ikke er aktiveret (ingen forbindelse), vil digital indgang læse "HIGH" på grund af pull-up modstanden. Når trykknappen er trykket, vil den digitale indgang læse "LOW", fordi knappen nu er kortsluttet til jorden.
+
+\subsubsection*{Pull-Down Modstand}
+Tilsvarende er en pull-down modstand forbundet til en digital indgang og jord. Når trykknappen ikke er aktiveret, vil den digitale indgang læse "LOW" på grund af pull-down modstanden. Når trykknappen er trykket, vil den digitale indgang læse "HIGH", da knappen nu er kortsluttet til Vcc.
+
+\subsubsection*{Opgaver}
+\begin{itemize}
+	\item \textbf{Blinkende LED ved Tryk:} Skriv et program, hvor den indbyggede LED blinker, når trykknappen er trykket, og er slukket, når knappen ikke er trykket.
+	\item \textbf{Veksling ved Tryk:} Skriv et program, hvor den indbyggede LED skifter mellem tændt og slukket hver gang trykknappen trykkes og frigives.
+	\item \textbf{Tryk Tæller:} Skriv et program, der tæller antallet af gange, trykknappen er blevet trykket. Hver gang knappen trykkes, skal den indbyggede LED blinke svarende til det aktuelle antal tryk.
+\end{itemize}
+
+\subsubsection*{Konklusion}
+For at sikre stabil aflæsning af trykknapper i digitale kredsløb er det vigtigt at anvende enten pull-up eller pull-down modstande. Dette eliminerer usikkerhed og sikrer, at mikrocontrolleren korrekt kan aflæse, om en knap er blevet trykket eller ej.
+
+\clearpage
+
+\subsection*{Løsningsforslag}
+
+\subsubsection*{Blinkende LED ved Tryk}
+Når trykknappen er trykket, skal den indbyggede LED tænde, og når den ikke er trykket, skal LED'en være slukket.
+\begin{lstlisting}[language=C++]
+	int buttonPin = 2;  // assume the button is connected to pin 2
+	int ledPin = LED_BUILTIN;  // built-in LED
+	
+	void setup() {
+		pinMode(buttonPin, INPUT_PULLUP);
+		pinMode(ledPin, OUTPUT);
+	}
+	
+	void loop() {
+		int buttonState = digitalRead(buttonPin);
+		if (buttonState == LOW) {   // If the button is pressed (due to INPUT_PULLUP)
+			digitalWrite(ledPin, HIGH);
+		} else {
+			digitalWrite(ledPin, LOW); // If the button is not pressed
+		}
+	}
+\end{lstlisting}
+
+\subsubsection*{Veksling ved Tryk}
+LED'en skifter mellem tændt og slukket hver gang trykknappen trykkes og frigives.
+\begin{lstlisting}[language=C++]
+	int buttonPin = 2;
+	int ledPin = LED_BUILTIN;
+	bool lastButtonState = HIGH;
+	bool ledState = LOW;
+	
+	void setup() {
+		pinMode(buttonPin, INPUT_PULLUP);
+		pinMode(ledPin, OUTPUT);
+	}
+	
+	void loop() {
+		bool currentButtonState = digitalRead(buttonPin);
+		
+		if (currentButtonState == LOW && lastButtonState == HIGH) {
+			ledState = !ledState;
+			digitalWrite(ledPin, ledState);
+			delay(50); // debounce
+		}
+		lastButtonState = currentButtonState;
+	}
+\end{lstlisting}
+
+\subsubsection*{Tryk Tæller}
+Hver gang knappen trykkes, blinker LED'en svarende til det aktuelle antal tryk.
+\begin{lstlisting}[language=C++]
+	int buttonPin = 2;
+	int ledPin = LED_BUILTIN;
+	bool lastButtonState = HIGH;
+	int pressCount = 0;
+	
+	void setup() {
+		pinMode(buttonPin, INPUT_PULLUP);
+		pinMode(ledPin, OUTPUT);
+	}
+	
+	void loop() {
+		bool currentButtonState = digitalRead(buttonPin);
+		
+		if (currentButtonState == LOW && lastButtonState == HIGH) {
+			pressCount++;
+			for(int i = 0; i < pressCount; i++) {
+				digitalWrite(ledPin, HIGH);
+				delay(250);
+				digitalWrite(ledPin, LOW);
+				delay(250);
+			}
+			delay(50); // debounce
+		}
+		lastButtonState = currentButtonState;
+	}
+\end{lstlisting}
+Med disse løsningsforslag vil din Arduino reagere forskelligt på trykknappens tilstand afhængigt af det specifikke program, du har valgt.
+
+\section{DHT11 Sensor}
+\subsection*{Formål}
+Formålet med dette afsnit er at introducere læseren til DHT11-føleren, en prisvenlig og effektiv enhed til måling af temperatur og luftfugtighed. Ved at kombinere teoretisk viden med praktisk anvendelse vil læseren få hands-on erfaring med at opsætte, programmere og aflæse data fra DHT11 ved hjælp af ESP32 mikrocontrolleren. De medfølgende opgaver er designet til at styrke forståelsen af, hvordan DHT11-føleren fungerer, samt hvordan data kan bearbejdes og anvendes i forskellige scenarier. Derudover inkorporeres matematiske koncepter for at styrke integrationen af programmering og matematik i realverdenen. Gennem dette afsnit vil læseren opnå en solid forståelse for både hardware- og softwareaspekterne ved at arbejde med temperatur- og fugtighedsfølere i indlejrede systemer.
+
+\subsection*{Introduktion til DHT11-føleren}
+DHT11 er en populær temperatur- og luftfugtighedsføler, som er både omkostningseffektiv og nem at bruge. Den fungerer ved at måle omgivende luft og give digitale signaler, der kan læses fra et mikrocontroller board som ESP32.
+
+\subsection*{Opsætning af DHT11 med ESP32}
+\begin{enumerate}
+	\item Tilslut DHT11-følerens VCC og GND til ESP32's 3,3V og GND henholdsvis.
+	\item Tilslut data-pinden fra DHT11-føleren til en valgfri GPIO-pin på ESP32.
+	\item Installér det nødvendige bibliotek til DHT11 ved at benytte PlatformIO's bibliotekshåndtering eller Arduino IDE's bibliotekshåndtering.
+\end{enumerate}
+
+\subsection*{Opgaver}
+\begin{itemize}
+	\item \textbf{Temperature Alarm:} Write a program that turns on the built-in LED if the temperature exceeds 25 degrees Celsius.
+	\item \textbf{Humidity Difference Calculator:} Given that the maximum comfortable humidity level for a person is \(X\%\), write a program that calculates the difference between the current humidity and \(X\%\) and prints this value.
+	\item \textbf{Temperature Converter:} Write a program that converts the measured temperature from Celsius to Fahrenheit and prints both values.
+\end{itemize}
+
+\subsection*{Konklusion}
+Gennem denne vejledning har vi dykket ned i, hvordan DHT11-føleren fungerer og kan integreres med ESP32 for at aflæse omgivelsens temperatur og fugtighed. Denne viden er afgørende for mange IoT-applikationer, især dem, der fokuserer på klimakontrol, landbrug eller generel miljøovervågning.
+\newline\newline\noindent
+Med korrekt integration og programmering er DHT11 en pålidelig kilde til miljødata. Kombineret med matematisk analyse har vi også set, hvordan man kan manipulere og bruge disse data til at drage konklusioner eller lave forudsigelser.
+\newline\newline\noindent
+For dem, der ønsker at gå videre, kan yderligere eksperimenter og udviklingsprojekter med DHT11 og andre sensorer udforske, hvordan disse teknologier kan integreres i større systemer eller anvendes til at løse specifikke tekniske udfordringer.
+\subsection*{Løsningsforslag}
+\begin{itemize}
+	\item \textbf{Temperature Alarm:} 
+	\begin{lstlisting}[language=C++]
+		#include <DHT.h>
+		#define DHTPIN <Your GPIO pin>
+		#define DHTTYPE DHT11
+		DHT dht(DHTPIN, DHTTYPE);
+		
+		void setup() {
+			dht.begin();
+			pinMode(LED_BUILTIN, OUTPUT);
+		}
+		
+		void loop() {
+			float temp = dht.readTemperature();
+			if (temp > 25) {
+				digitalWrite(LED_BUILTIN, HIGH);
+			} else {
+				digitalWrite(LED_BUILTIN, LOW);
+			}
+		}
+	\end{lstlisting}
+	
+	\item \textbf{Humidity Difference Calculator:}
+	\begin{lstlisting}[language=C++]
+		#include <DHT.h>
+		#define DHTPIN <Your GPIO pin>
+		#define DHTTYPE DHT11
+		#define MAX_HUMIDITY X
+		DHT dht(DHTPIN, DHTTYPE);
+		
+		void setup() {
+			dht.begin();
+			Serial.begin(9600);
+		}
+		
+		void loop() {
+			float humidity = dht.readHumidity();
+			float diff = humidity - MAX_HUMIDITY;
+			Serial.println(diff);
+			delay(2000);
+		}
+	\end{lstlisting}
+	
+	\item \textbf{Temperature Converter:} 
+	\begin{lstlisting}[language=C++]
+		#include <DHT.h>
+		#define DHTPIN <Your GPIO pin>
+		#define DHTTYPE DHT11
+		DHT dht(DHTPIN, DHTTYPE);
+		
+		void setup() {
+			dht.begin();
+			Serial.begin(9600);
+		}
+		
+		void loop() {
+			float tempC = dht.readTemperature();
+			float tempF = tempC * 1.8 + 32;
+			Serial.print("Temperature in C: "); Serial.println(tempC);
+			Serial.print("Temperature in F: "); Serial.println(tempF);
+			delay(2000);
+		}
+	\end{lstlisting}
+\end{itemize}
+
+\section{PIR Sensors}
+
+\subsection*{Formål}
+Formålet med dette afsnit er at introducere læseren til PIR-sensorer, en pålidelig teknologi til detektion af bevægelse baseret på infrarød stråling. Vi vil undersøge, hvordan PIR-sensorer arbejder, hvordan de kan integreres med ESP32 mikrocontrolleren, og hvordan de anvendes i praksis for at skabe bevægelsesaktiverede systemer. Dette vil suppleres med en række opgaver, der kombinerer tekniske og matematiske koncepter for at forstærke forståelsen af dette område.
+
+\subsection*{Introduktion til PIR-sensorer}
+En PIR-sensor (Passive Infrared-sensor) er en elektronisk sensor, der måler infrarødt (IR) lys, som udsendes fra genstande i dens synsfelt. De mest almindeligt anvendte typer af PIR-sensorer bruges i bevægelsesdetekteringssystemer som alarmer og belysning.
+
+\subsection*{Opsætning af PIR-sensor med ESP32}
+\begin{enumerate}
+	\item Tilslut PIR-sensorens VCC og GND til ESP32's 3,3V og GND henholdsvis.
+	\item Tilslut data-pinden fra PIR-sensoren til en valgfri GPIO-pin på ESP32.
+	\item Initialiser GPIO-pinden i INPUT-tilstand i din kode.
+\end{enumerate}
+
+\subsection*{Opgaver}
+\begin{itemize}
+	\item \textbf{Motion Alarm:} Write a program that turns on the built-in LED if motion is detected by the PIR sensor.
+	\item \textbf{Motion Time Calculator:} Record the time of the last five detected motions. Calculate the time intervals between them and print the average.
+	\item \textbf{Alarm Counter:} Write a program that counts the number of times motion is detected within a given time period, such as 10 minutes.
+\end{itemize}
+
+\subsection*{Konklusion}
+PIR-sensorer er essentielle i mange IoT- og automatiseringsprojekter, hvor bevægelsesdetektering er nødvendig. Ved korrekt integration med ESP32 kan man skabe intelligente systemer, der reagerer på menneskelig eller dyrisk bevægelse. Gennem denne vejledning og de tilhørende opgaver skulle læseren gerne have opnået en solid forståelse for, hvordan man opsætter, programmerer og drager nytte af PIR-sensorer.
+
+\clearpage
+
+\subsection*{Løsningsforslag}
+
+\subsubsection*{Motion Alarm}
+The built-in LED should turn on when motion is detected and turn off when no motion is detected.
+\begin{lstlisting}[language=C++]
+	#define PIRPIN <Your GPIO pin>
+	void setup() {
+		pinMode(PIRPIN, INPUT);
+		pinMode(LED_BUILTIN, OUTPUT);
+	}
+	void loop() {
+		int pirState = digitalRead(PIRPIN);
+		if (pirState == HIGH) {
+			digitalWrite(LED_BUILTIN, HIGH);
+		} else {
+			digitalWrite(LED_BUILTIN, LOW);
+		}
+	}
+\end{lstlisting}
+
+\subsubsection*{Motion Time Calculator}
+This program records the time of the last five detected motions and calculates the average time interval between them.
+\begin{lstlisting}[language=C++]
+	#define PIRPIN <Your GPIO pin>
+	unsigned long lastDetectedTimes[5] = {0, 0, 0, 0, 0};
+	int currentIndex = 0;
+	
+	void setup() {
+		pinMode(PIRPIN, INPUT);
+		Serial.begin(9600);
+	}
+	
+	void loop() {
+		int pirState = digitalRead(PIRPIN);
+		if (pirState == HIGH) {
+			unsigned long currentTime = millis();
+			lastDetectedTimes[currentIndex] = currentTime;
+			currentIndex = (currentIndex + 1) % 5;
+			
+			unsigned long intervalSum = 0;
+			for (int i = 1; i < 5; i++) {
+				intervalSum += (lastDetectedTimes[i] - lastDetectedTimes[i - 1]);
+			}
+			float averageInterval = intervalSum / 4.0;
+			Serial.println("Average interval: " + String(averageInterval) + " ms");
+			delay(1000);  // Wait to avoid multiple detections
+		}
+	}
+\end{lstlisting}
+
+\subsubsection*{Alarm Counter}
+This program counts the number of times motion is detected within a given time period, such as 10 minutes.
+\begin{lstlisting}[language=C++]
+	#define PIRPIN <Your GPIO pin>
+	unsigned long startTime;
+	int movementCount = 0;
+	const unsigned long TEN_MINUTES = 10 * 60 * 1000;
+	
+	void setup() {
+		pinMode(PIRPIN, INPUT);
+		Serial.begin(9600);
+		startTime = millis();
+	}
+	
+	void loop() {
+		if (millis() - startTime >= TEN_MINUTES) {
+			Serial.println("Number of motions in the last 10 minutes: " + String(movementCount));
+			movementCount = 0;
+			startTime = millis();
+		}
+		
+		int pirState = digitalRead(PIRPIN);
+		if (pirState == HIGH) {
+			movementCount++;
+			delay(1000);  // Wait to avoid multiple detections
+		}
+	}
+\end{lstlisting}
+
+\section{RFID Teknologi}
+
+\subsection*{Formål}
+Formålet med dette afsnit er at introducere læseren for RFID-teknologi og den typiske anvendelse af en RFID-kortlæser, som MFRC522, sammen med en ESP32-mikrocontroller. Afsnittet giver en dybdegående forståelse af, hvordan man kan programmere og interagere med RFID-tags ved hjælp af ESP32, og hvordan disse tags kan bruges i daglige applikationer som adgangskontrol, identifikation og sporing.
+
+\subsection*{Introduktion til RFID Kortlæseren}
+RFID står for Radio Frequency Identification. Med RFID kan man trådløst identificere og spore tags, der er fastgjort til objekter. Kortlæseren, som MFRC522, bruger elektromagnetiske felter til automatisk at identificere og spore tags, som indeholder lagret information.
+
+\subsection*{Opsætning af MFRC522 med ESP32}
+\begin{enumerate}
+	\item Tilslut MFRC522's VCC, RST, GND til ESP32's 3,3V, valgfri RESET pin og GND henholdsvis.
+	\item Tilslut MISO, MOSI, SCK og SDA (SS) til ESP32's relevante SPI-pins.
+	\item Installér det nødvendige bibliotek (f.eks., MFRC522 library) via PlatformIO eller Arduino IDE.
+\end{enumerate}
+
+\subsection*{Opgaver}
+\begin{itemize}
+	\item \textbf{Basic Card Reading:} Write a program that reads an RFID tag and prints its unique ID (UID) to the serial monitor.
+	\item \textbf{Access Control:} Design a system where only specific RFID tags can turn on an LED. All other tags should turn off the LED.
+	\item \textbf{Card Reading with Time:} Write a program that prints the exact time an RFID tag was scanned.
+\end{itemize}
+
+\subsection*{Konklusion}
+Med denne vejledning har vi opnået grundlæggende viden om RFID-teknologi og dens mange applikationer, specifikt ved at integrere MFRC522-kortlæseren med ESP32-mikrocontrolleren. Teknologien bag RFID kan drastisk forbedre automatiserings- og identifikationsprocesserne i mange industrier, og forståelsen af dens grundlæggende funktionsmåde er essentiel for moderne elektronikentusiaster og ingeniører.
+
+\clearpage
+
+\subsection*{Løsningsforslag}
+Her er løsningsforslagene til de stillede opgaver:
+
+\subsubsection*{Basic Card Reading}
+
+\begin{lstlisting}[language=C++, caption=Basic Card Reading Solution]
+	#include <MFRC522.h>
+	
+	MFRC522 mfrc522(SS_PIN, RST_PIN);  // Create MFRC522 instance
+	
+	void setup() {
+		Serial.begin(9600);
+		SPI.begin();
+		mfrc522.PCD_Init();
+	}
+	
+	void loop() {
+		if (!mfrc522.PICC_IsNewCardPresent()) return;
+		if (!mfrc522.PICC_ReadCardSerial()) return;
+		
+		Serial.print("RFID tag UID:");
+		for (byte i = 0; i < mfrc522.uid.size; i++) {
+			Serial.print(mfrc522.uid.uidByte[i] < 0x10 ? " 0" : " ");
+			Serial.print(mfrc522.uid.uidByte[i], HEX);
+		}
+		Serial.println();
+	}
+\end{lstlisting}
+
+\subsubsection*{Access Control}
+
+\begin{lstlisting}[language=C++, caption=Access Control Solution]
+	#include <MFRC522.h>
+	
+	#define LED_PIN 13  // LED pin
+	
+	MFRC522 mfrc522(SS_PIN, RST_PIN);  // Create MFRC522 instance
+	
+	void setup() {
+		Serial.begin(9600);
+		pinMode(LED_PIN, OUTPUT);
+		SPI.begin();
+		mfrc522.PCD_Init();
+	}
+	
+	void loop() {
+		if (!mfrc522.PICC_IsNewCardPresent()) return;
+		if (!mfrc522.PICC_ReadCardSerial()) return;
+		
+		// Example of a valid tag UID
+		byte validUID[] = {0x12, 0x34, 0x56, 0x78};
+		
+		bool isValid = true;
+		for (byte i = 0; i < mfrc522.uid.size; i++) {
+			if (mfrc522.uid.uidByte[i] != validUID[i]) {
+				isValid = false;
+				break;
+			}
+		}
+		
+		if (isValid) {
+			digitalWrite(LED_PIN, HIGH);  // Turn on LED
+		} else {
+			digitalWrite(LED_PIN, LOW);   // Turn off LED
+		}
+	}
+\end{lstlisting}
+
+\clearpage
+\subsubsection*{Card Reading with Time}
+
+\begin{lstlisting}[language=C++, caption=Card Reading with Time Solution]
+	#include <MFRC522.h>
+	
+	MFRC522 mfrc522(SS_PIN, RST_PIN);  // Create MFRC522 instance
+	
+	void setup() {
+		Serial.begin(9600);
+		SPI.begin();
+		mfrc522.PCD_Init();
+	}
+	
+	void loop() {
+		if (!mfrc522.PICC_IsNewCardPresent()) return;
+		if (!mfrc522.PICC_ReadCardSerial()) return;
+		
+		Serial.print("RFID tag UID:");
+		for (byte i = 0; i < mfrc522.uid.size; i++) {
+			Serial.print(mfrc522.uid.uidByte[i] < 0x10 ? " 0" : " ");
+			Serial.print(mfrc522.uid.uidByte[i], HEX);
+		}
+		Serial.print(" scanned at time ");
+		Serial.println(millis() / 1000);  // Outputs time in seconds since program started
+	}
+\end{lstlisting}
+
+\section{Servo Motor Teknologi}
+
+\subsection*{Formål}
+Formålet med dette afsnit er at introducere læseren for servo motor teknologi og den typiske anvendelse af en servo motor i kombination med en mikrocontroller som Arduino. Afsnittet giver en dybdegående forståelse af, hvordan man kan programmere og interagere med en servo motor ved hjælp af Arduino, og hvordan disse kan bruges i forskellige applikationer som robotter, fjernstyrede køretøjer og mere.
+
+\subsection*{Introduktion til Servo Motorer}
+En servo motor er en type motor, der kan bevæge sig eller dreje et objekt til en specifik vinkel eller afstand. Den bruges ofte i robotteknik, fjernstyrede biler, fly og andre applikationer, hvor præcis bevægelse er nødvendig. Servoer styres normalt ved hjælp af et pulsbreddemodulation (PWM) signal, hvor længden af pulsen bestemmer vinklen, som servo motoren skal bevæge sig til.
+
+\subsection*{Opsætning af Servo Motor med Arduino}
+\begin{enumerate}
+	\item Tilslut servo motorens signal pin til en PWM-kompatibel pin på Arduino.
+	\item Tilslut servo motorens strøm og jord til henholdsvis Arduino's 5V og GND pins.
+	\item Inkludér \texttt{Servo} biblioteket i din Arduino kode.
+\end{enumerate}
+
+\subsection*{Eksempelkode}
+Herunder finder du en simpel kode, der demonstrerer, hvordan man kan styre en servo motor med en Arduino:
+
+\begin{lstlisting}[language=C++, caption=Arduino Code for Controlling a Servo Motor]
+	#include <Servo.h>
+	
+	Servo myServo;  
+	int servoPin = 9; 
+	
+	void setup() {
+		myServo.attach(servoPin);  
+		myServo.write(90);  
+	}
+	
+	void loop() {
+		for (int position = 0; position <= 180; position += 1) {
+			myServo.write(position);
+			delay(15);
+		}
+		for (int position = 180; position >= 0; position -= 1) {
+			myServo.write(position);
+			delay(15);  
+		}
+	}
+\end{lstlisting}
+
+\subsection*{Opgaver}
+\begin{itemize}
+	\item \textbf{Basic Servo Control:} Set up a servo motor with an Arduino and program it to move from 0 to 180 degrees and back again in a continuous loop.
+	\item \textbf{Servo Position Control with Potentiometer:} Connect a potentiometer to your Arduino and use it to control the position of your servo. The servo's angle should change in real-time based on the potentiometer's position.
+	\item \textbf{Interactive Servo Control:} Design a simple system where a user can input a desired angle (between 0 and 180 degrees) via a computer, and the Arduino adjusts the servo's angle accordingly.
+\end{itemize}
+
+\subsection*{Konklusion}
+Med denne vejledning har vi opnået grundlæggende viden om servo motor teknologi og dens mange applikationer, specifikt ved at integrere en servo motor med en Arduino mikrocontroller. Teknologien bag servo motorer kan drastisk forbedre præcision og kontrol i mange mekaniske systemer, og forståelsen af dens grundlæggende funktionsmåde er essentiel for moderne teknologi entusiaster.
+
+\subsection*{Løsningsforslag}
+\subsubsection*{Basic Servo Control}
+For at opsætte en servo motor med en Arduino og få den til at bevæge sig mellem 0 og 180 grader, kan følgende kode anvendes:
+
+\begin{lstlisting}[language=C++, caption=Basic Servo Motor Control]
+	#include <Servo.h>
+	
+	Servo myServo;  
+	int servoPin = 9;
+	
+	void setup() {
+		myServo.attach(servoPin);
+		myServo.write(90);  
+	}
+	
+	void loop() {
+		for (int position = 0; position <= 180; position++) {
+			myServo.write(position);
+			delay(15);
+		}
+		for (int position = 180; position >= 0; position--) {
+			myServo.write(position);
+			delay(15);
+		}
+	}
+\end{lstlisting}
+\clearpage
+\subsubsection*{Servo Position Control with Potentiometer}
+Ved at forbinde et potentiometer kan vi anvende følgende kode til at styre servoens vinkel:
+
+\begin{lstlisting}[language=C++, caption=Controlling Servo Motor with Potentiometer]
+	#include <Servo.h>
+	
+	Servo myServo;  
+	int servoPin = 9;
+	int potPin = A0;
+	
+	void setup() {
+		myServo.attach(servoPin);
+	}
+	
+	void loop() {
+		int potValue = analogRead(potPin);
+		int servoPos = map(potValue, 0, 1023, 0, 180);
+		myServo.write(servoPos);
+		delay(15);
+	}
+\end{lstlisting}
+\clearpage
+\subsubsection*{Interactive Servo Control}
+For at tillade brugeren at indtaste en ønsket vinkel fra en computer, kan en simpel kommunikation mellem computeren og Arduinoen oprettes:
+
+\begin{lstlisting}[language=C++, caption=Interactive Servo Motor Control]
+	#include <Servo.h>
+	
+	Servo myServo;
+	int servoPin = 9;
+	
+	void setup() {
+		myServo.attach(servoPin);
+		Serial.begin(9600);
+	}
+	
+	void loop() {
+		if (Serial.available()) {
+			int angle = Serial.parseInt();
+			if (angle >= 0 && angle <= 180) {
+				myServo.write(angle);
+			}
+		}
+	}
+\end{lstlisting}
+Brugeren kan nu indtaste ønskede vinkler mellem 0 og 180 grader via Arduino IDE's Serial Monitor for at styre servo motor positionen.
+
+\section{Introduktion for ESP32 og Functions i Programmering}
+
+\subsection*{Formål}
+Formålet med dette afsnit er at introducere læseren til ESP32 mikrocontrolleren og dens funktioner. Vi vil dykke ned i, hvordan man opretter og bruger funktioner i ESP32 programmering for at optimere og strukturere kode effektivt.
+
+\subsection*{Introduktion}
+ESP32 er en serie af lavpris, lavstrøms mikrocontrollere med integreret Wi-Fi og dual-mode Bluetooth. Med et stort sæt af onboard funktioner og muligheder er ESP32 en fleksibel og omkostningseffektiv løsning til mange IoT-projekter.
+
+\subsection*{Funktioner i Programmering}
+Funktioner er et fundamentalt koncept i programmering, der giver os mulighed for at organisere og strukturere kode. Ved at opdele komplekse programmer i mindre, genanvendelige dele kan vi forbedre kodeforståelsen, genanvende kode, og gøre fejlfinding lettere.
+
+\subsection*{Eksempel på Funktion i ESP32 Programmering}
+
+\begin{lstlisting}[language=C++, caption=Using a function in ESP32 code]
+	void setup() {
+		Serial.begin(115200);
+	}
+	
+	void loop() {
+		printHello();
+		delay(1000);
+	}
+	
+	void printHello() {
+		Serial.println("Hello from ESP32!");
+	}
+\end{lstlisting}
+
+\subsection*{Opgaver}
+\begin{itemize}
+	\item \textbf{Basic Function:} Write a function that calculates the sum of two numbers and returns the result.
+	\item \textbf{Temperature Conversion:} Write a function that converts Celsius to Fahrenheit.
+	\item \textbf{Blink LED:} Use functions to blink an LED connected to the ESP32.
+\end{itemize}
+
+\subsection*{Konklusion}
+Med forståelse af ESP32 og brugen af funktioner i programmering, kan vi skabe effektive, organiserede og genanvendelige programmer. Funktioner er hjørnestenen i struktureret programmering og er afgørende for at skabe skalerbare og vedligeholdelige systemer.
+
+\clearpage
+
+\subsection*{Løsningsforslag}
+
+\subsubsection*{Basic Function}
+\begin{lstlisting}[language=C++, caption=Sum function]
+	int sum(int a, int b) {
+		return a + b;
+	}
+\end{lstlisting}
+
+\subsubsection*{Temperature Conversion}
+\begin{lstlisting}[language=C++, caption=Celsius to Fahrenheit]
+	float celsiusToFahrenheit(float celsius) {
+		return (celsius * 9/5) + 32;
+	}
+\end{lstlisting}
+
+\subsubsection*{Blink LED}
+\begin{lstlisting}[language=C++, caption=Blink LED using functions]
+	const int ledPin = 2; 
+	
+	void setup() {
+		pinMode(ledPin, OUTPUT);
+	}
+	
+	void loop() {
+		blinkLED();
+		delay(1000);
+	}
+	
+	void blinkLED() {
+		digitalWrite(ledPin, HIGH);
+		delay(500);
+		digitalWrite(ledPin, LOW);
+	}
+\end{lstlisting}
+\clearpage
+\chapter{Node-RED}
+\section{Node-RED Opgaver med ESP32 Plus og Seriel Kommunikation}
+
+\subsection{Formål}
+Formålet med dette afsnit er at demonstrere, hvordan Node-RED kan anvendes til at styre og overvåge enheder via seriel kommunikation. Vi vil skabe forskellige Node-RED flows, som kommunikerer med fysiske enheder som ESP32 Plus, for at udføre simple opgaver som styring af LED'er, temperaturalarmer og servo motorer.
+
+\subsection{Opgave 1: Aflæsning af Data fra ESP32 Plus}
+Denne opgave består i at opsætte et Node-RED flow, som modtager data fra en ESP32 Plus via seriel kommunikation og viser disse data på et dashboard.
+\newline\newline\noindent
+\textbf{Node-RED Flow:}
+\begin{enumerate}
+	\item Brug en \texttt{serial in} node til at læse data fra ESP32 Plus.
+	\item Brug en \texttt{function} node til at behandle dataene, hvis nødvendigt.
+	\item Vis dataene på et Node-RED Dashboard ved hjælp af \texttt{text} eller \texttt{gauge} nodes.
+\end{enumerate}
+\textbf{GPIO-forbindelse:} Ingen specifikke GPIO'er er nødvendige for denne opgave, da den omhandler seriel kommunikation.
+
+\subsection{Opgave 2: Afsendelse af Data til ESP32 Plus}
+Denne opgave kræver, at du opsætter et Node-RED flow, som sender data fra Node-RED til ESP32 Plus via seriel kommunikation.
+\newline\newline\noindent
+\textbf{Node-RED Flow:}
+\begin{enumerate}
+	\item Brug en \texttt{text input} node på dashboardet for at tillade brugeren at indtaste data.
+	\item Brug en \texttt{serial out} node til at sende de indtastede data til ESP32 Plus.
+	\item Tilslut en \texttt{button} node til at udløse afsendelsen af dataene.
+\end{enumerate}
+\textbf{GPIO-forbindelse:} Ingen specifikke GPIO'er er nødvendige for denne opgave, da den omhandler seriel kommunikation.
+
+\subsection{Opgave 3: Temperatur- og Fugtighedsovervågning med DHT11}
+\textbf{Opgavebeskrivelse:} \\
+I denne opgave skal du opsætte en DHT11-sensor til at sende temperatur- og fugtighedsdata til Node-RED via seriel kommunikation. Node-RED vil behandle disse data og vise dem på et dashboard.
+\subsection{Materialer}
+\begin{itemize}
+	\item DHT11 temperatur- og fugtighedssensor
+	\item ESP32 Plus mikrocontroller
+	\item Node-RED
+\end{itemize}
+
+\subsection{Instruktioner}
+\begin{enumerate}
+	\item Tilslut DHT11-sensoren til ESP32 Plus. Forbind VCC til 3.3V, GND til GND, og data-pinden til GPIO 22.
+	\item Upload en kode til ESP32 Plus, der læser data fra DHT11 og sender dem via seriel kommunikation.
+	\item Opret et Node-RED flow, der modtager serielle data fra ESP32 Plus.
+	\item Brug \texttt{function} nodes i Node-RED til at adskille temperatur- og fugtighedsdata.
+	\item Vis dataene på et Node-RED Dashboard ved hjælp af \texttt{gauge} eller \texttt{chart} nodes.
+\end{enumerate}
+
+\noindent\textbf{GPIO-forbindelse:}
+\begin{itemize}
+	\item \textbf{VCC:} 3.3V
+	\item \textbf{GND:} GND
+	\item \textbf{Data:} GPIO 22
+\end{itemize}
+
+\subsection{Opgave 4: Tænd/Sluk af en Fan}
+\textbf{Opgavebeskrivelse:} \\
+I denne opgave skal du opsætte et Node-RED flow, som styrer en Fan baseret på data modtaget fra ESP32 Plus.
+
+\subsection{Materialer}
+\begin{itemize}
+	\item Fan
+	\item ESP32 Plus mikrocontroller
+	\item Node-RED
+\end{itemize}
+
+\subsection{Instruktioner}
+\begin{enumerate}
+	\item Tilslut Fan til ESP32 Plus. Forbind den til GPIO 14 via en transistor for at styre strømmen.
+	\item Upload en kode til ESP32 Plus, som modtager kommandoer fra Node-RED via seriel kommunikation og styrer Fan.
+	\item Opret et Node-RED flow, der sender kommandoer til ESP32 Plus for at tænde/slukke for Fan.
+	\item Brug en \texttt{switch} node til at beslutte, hvornår Fan skal aktiveres.
+\end{enumerate}
+
+\noindent\textbf{GPIO-forbindelse:}
+\begin{itemize}
+	\item \textbf{VCC:} 5V eller 12V afhængig af Fan specifikationer
+	\item \textbf{GND:} GND
+	\item \textbf{Control:} GPIO 14 (via transistor)
+\end{itemize}
+
+\subsection{Opgave 5: Temperatur Alarm med DHT11}
+Denne opgave kræver, at du overvåger temperaturen og tænder en LED, hvis temperaturen overstiger en forudbestemt værdi.
+\newline\newline\noindent
+\textbf{Node-RED Flow:}
+\begin{enumerate}
+	\item Brug en \texttt{serial in} node til at modtage temperaturdata fra DHT11 sensoren tilsluttet GPIO 22.
+	\item Tilslut denne node til en \texttt{switch} node, der sammenligner temperaturen med en tærskelværdi.
+	\item Hvis temperaturen er over tærskelværdien, send en kommando til en \texttt{serial out} node for at tænde LED'en, som er tilsluttet GPIO 16.
+\end{enumerate}
+\noindent
+\textbf{GPIO-forbindelse:}
+\begin{itemize}
+	\item \textbf{VCC:} 3.3V (for DHT11)
+	\item \textbf{GND:} GND (for DHT11 og LED)
+	\item \textbf{Data:} GPIO 22 (for DHT11)
+	\item \textbf{LED:} GPIO 16 (via modstand)
+\end{itemize}
+
+\subsection{Opgave 6: Servo Motor Position Control}
+Denne opgave kræver, at du styrer en servo motors position via data sendt fra Node-RED.
+\newline\newline\noindent
+\textbf{Node-RED Flow:}
+\begin{enumerate}
+	\item Brug en \texttt{dashboard} \texttt{slider} eller \texttt{text input} node til at vælge eller indtaste servoens vinkel.
+	\item Tilslut denne node til en \texttt{serial out} node for at sende den valgte vinkel til servo motoren, som er tilsluttet GPIO 13.
+\end{enumerate}
+\noindent
+\textbf{GPIO-forbindelse:}
+\begin{itemize}
+	\item \textbf{VCC:} 5V
+	\item \textbf{GND:} GND
+	\item \textbf{Control:} GPIO 13
+\end{itemize}
+
+\subsection{Opgave 7: RFID-læser til LED kontrol}
+I denne opgave skal du bruge en RFID-læser til at kontrollere en LED via seriel kommunikation. Bemærk, at RFID-læseren skal tilsluttes 3.3V for at undgå beskadigelse.
+\newline\newline\noindent
+\textbf{Node-RED Flow:}
+\begin{enumerate}
+	\item Brug en \texttt{serial in} node til at modtage UID-data fra RFID-læseren tilsluttet ESP32 Plus.
+	\item Brug en \texttt{switch} node til at sammenligne UID'et med en liste over godkendte UID'er.
+	\item Hvis UID'et er godkendt, send en kommando til en \texttt{serial out} node for at tænde LED'en, som er tilsluttet GPIO 16.
+\end{enumerate}
+\noindent
+\textbf{GPIO-forbindelse:}
+\begin{itemize}
+	\item \textbf{VCC:} 3.3V (vigtigt: brug ikke 5V for RFID-læseren)
+	\item \textbf{GND:} GND
+	\item \textbf{MISO:} GPIO 19
+	\item \textbf{MOSI:} GPIO 23
+	\item \textbf{SCK:} GPIO 18
+	\item \textbf{SS (SDA):} GPIO 5
+	\item \textbf{LED:} GPIO 16
+\end{itemize}
+
+\subsection{Opgave 8: Temperaturstyret Fan}
+I denne opgave skal du kombinere en DHT11-sensor og en Fan. Fan'en skal automatisk tænde, hvis temperaturen overstiger en bestemt tærskel, og slukke, når temperaturen falder under tærsklen.
+\newline\newline\noindent
+\textbf{GPIO-forbindelse:}
+\begin{itemize}
+	\item \textbf{DHT11:} GPIO 22
+	\item \textbf{Fan:} GPIO 14
+\end{itemize}
+
+\subsection{Opgave 9: Temperaturstyret RGB LED}
+I denne opgave skal du kombinere en DHT11-sensor og en RGB LED. RGB LED'en skal ændre farve baseret på temperaturen (f.eks. blå for lave temperaturer, grøn for moderate, og rød for høje temperaturer).
+\noindent
+\textbf{GPIO-forbindelse:}
+\begin{itemize}
+	\item \textbf{DHT11:} GPIO 22
+	\item \textbf{RGB LED:} GPIO 25 (Rød), GPIO 26 (Grøn), GPIO 27 (Blå)
+\end{itemize}
+
+\subsection{Opgave 10: RFID-baseret Fan- og LED-kontrol}
+I denne opgave skal du kombinere en RFID-læser, en Fan og en LED. Kun når et specifikt RFID-tag scannes, skal Fan og LED'en tændes. Andre tags skal ikke have nogen effekt.
+\newline\newline\noindent
+\textbf{GPIO-forbindelse:}
+\begin{itemize}
+	\item \textbf{RFID-læser:} Se tidligere opgave for korrekt tilslutning
+	\item \textbf{Fan:} GPIO 14
+	\item \textbf{LED:} GPIO 16
+\end{itemize}

@@ -1,0 +1,166 @@
+\contentsline {part}{I\hspace {1em}Arduino}{7}{part.1}%
+\contentsline {chapter}{\numberline {1}Hardware}{9}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Beskrivelse}{9}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Specification}{9}{section.1.2}%
+\contentsline {section}{\numberline {1.3}EPS32 Plus Pins}{10}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Arduino IDE}{11}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Introduktion}{11}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Installationstrin}{11}{subsection.1.4.2}%
+\contentsline {subsection}{\numberline {1.4.3}Oprettelse af et nyt projekt}{12}{subsection.1.4.3}%
+\contentsline {part}{II\hspace {1em}C++ Basics}{13}{part.2}%
+\contentsline {chapter}{\numberline {2}C++}{15}{chapter.2}%
+\contentsline {section}{\numberline {2.1}C++ }{15}{section.2.1}%
+\contentsline {section}{\numberline {2.2}C++ Syntax}{16}{section.2.2}%
+\contentsline {section}{\numberline {2.3}C++ Output}{16}{section.2.3}%
+\contentsline {section}{\numberline {2.4}C++ Comments}{20}{section.2.4}%
+\contentsline {section}{\numberline {2.5}C++ Variables}{21}{section.2.5}%
+\contentsline {section}{\numberline {2.6}C++ User Input}{23}{section.2.6}%
+\contentsline {section}{\numberline {2.7}C++ Data Types}{24}{section.2.7}%
+\contentsline {section}{\numberline {2.8}C++ Operators}{26}{section.2.8}%
+\contentsline {section}{\numberline {2.9}C++ Strings}{27}{section.2.9}%
+\contentsline {section}{\numberline {2.10}C++ Conditions}{28}{section.2.10}%
+\contentsline {section}{\numberline {2.11}C++ Loops}{31}{section.2.11}%
+\contentsline {subsubsection}{C++ While Loop}{31}{section*.2}%
+\contentsline {subsubsection}{C++ For Loop}{31}{section*.3}%
+\contentsline {section}{\numberline {2.12}C++ Functions}{33}{section.2.12}%
+\contentsline {subsection}{\numberline {2.12.1}C++ Functions}{33}{subsection.2.12.1}%
+\contentsline {subsection}{\numberline {2.12.2}C++ Function Parameters}{34}{subsection.2.12.2}%
+\contentsline {chapter}{\numberline {3}Arduino pins og special funktioner}{37}{chapter.3}%
+\contentsline {section}{\numberline {3.1}pinMode i Arduino}{37}{section.3.1}%
+\contentsline {section}{\numberline {3.2}digitalRead og digitalWrite i Arduino}{38}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}digitalRead()}{38}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}digitalWrite()}{38}{subsection.3.2.2}%
+\contentsline {section}{\numberline {3.3}analogRead og analogWrite i Arduino}{39}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}analogRead()}{39}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}analogWrite()}{40}{subsection.3.3.2}%
+\contentsline {section}{\numberline {3.4}delay og millis i Arduino}{41}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}delay()}{41}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}millis()}{41}{subsection.3.4.2}%
+\contentsline {part}{III\hspace {1em}C++ advanced}{43}{part.3}%
+\contentsline {chapter}{\numberline {4}C++ Advanced}{45}{chapter.4}%
+\contentsline {section}{\numberline {4.1}C++ Classes}{45}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}C++ Classes/Objects}{45}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}C++ Class Methods}{46}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}C++ Constructors}{48}{subsection.4.1.3}%
+\contentsline {subsection}{\numberline {4.1.4}C++ Access Specifiers}{49}{subsection.4.1.4}%
+\contentsline {subsection}{\numberline {4.1.5}C++ Encapsulation}{51}{subsection.4.1.5}%
+\contentsline {subsection}{\numberline {4.1.6}C++ Inheritance}{52}{subsection.4.1.6}%
+\contentsline {subsection}{\numberline {4.1.7}C++ Polymorphism}{54}{subsection.4.1.7}%
+\contentsline {chapter}{\numberline {5}Opgave}{57}{chapter.5}%
+\contentsline {part}{IV\hspace {1em}Netværk basic}{61}{part.4}%
+\contentsline {chapter}{\numberline {6}Grundlæggende netværkskommunikation i IoT}{63}{chapter.6}%
+\contentsline {subsection}{\numberline {6.0.1}Hvad er et netværk?}{64}{subsection.6.0.1}%
+\contentsline {subsection}{\numberline {6.0.2}LAN og WAN}{66}{subsection.6.0.2}%
+\contentsline {subsubsection}{Lokalt Netværk (LAN - Local Area Network)}{66}{section*.4}%
+\contentsline {subsubsection}{Bredt Netværk (WAN - Wide Area Network)}{67}{section*.5}%
+\contentsline {subsection}{\numberline {6.0.3}Protokoller}{68}{subsection.6.0.3}%
+\contentsline {subsection}{\numberline {6.0.4}IP-adresser og MAC-adresser}{69}{subsection.6.0.4}%
+\contentsline {subsubsection}{IPv4 klasser}{69}{section*.6}%
+\contentsline {subsubsection}{MAC-adresser (Media Access Control Adresser)}{71}{section*.7}%
+\contentsline {subsubsection}{Porte}{71}{section*.8}%
+\contentsline {subsubsection}{Netværks-ID}{71}{section*.9}%
+\contentsline {subsection}{\numberline {6.0.5}Client-Server Kommunikation}{74}{subsection.6.0.5}%
+\contentsline {subsection}{\numberline {6.0.6}Publikum-Abonnements (Pub/Sub) Modellen}{75}{subsection.6.0.6}%
+\contentsline {subsubsection}{Udgivere (Publishers)}{75}{section*.10}%
+\contentsline {subsubsection}{Abonnenter (Subscribers)}{75}{section*.11}%
+\contentsline {subsubsection}{Mæglere (Brokers)}{76}{section*.12}%
+\contentsline {subsubsection}{Anvendelsesområder}{76}{section*.13}%
+\contentsline {subsubsection}{Protokoller}{76}{section*.14}%
+\contentsline {subsubsection}{Fordele og Ulemper}{76}{section*.15}%
+\contentsline {subsection}{\numberline {6.0.7}Message Queuing Protokoller}{77}{subsection.6.0.7}%
+\contentsline {subsubsection}{Producenter (Producers)}{77}{section*.16}%
+\contentsline {subsubsection}{Forbrugere (Consumers)}{77}{section*.17}%
+\contentsline {subsubsection}{Beskedkø (Message Queues)}{77}{section*.18}%
+\contentsline {subsubsection}{Protokoller}{77}{section*.19}%
+\contentsline {subsubsection}{Anvendelsesområder}{78}{section*.20}%
+\contentsline {subsubsection}{Fordele og Ulemper}{78}{section*.21}%
+\contentsline {subsubsection}{Sikkerhed og Overholdelse}{78}{section*.22}%
+\contentsline {subsection}{\numberline {6.0.8}Real-time Protokoller}{78}{subsection.6.0.8}%
+\contentsline {subsubsection}{Definering af Real-time Kommunikation}{79}{section*.23}%
+\contentsline {subsubsection}{Anvendelsesområder}{79}{section*.24}%
+\contentsline {subsubsection}{Real-time Transport Protocol (RTP)}{79}{section*.25}%
+\contentsline {subsubsection}{Quality of Service (QoS)}{79}{section*.26}%
+\contentsline {subsubsection}{Protokoller og Standarder}{79}{section*.27}%
+\contentsline {subsubsection}{Fordele og Ulemper}{80}{section*.28}%
+\contentsline {subsubsection}{Sikkerhed og Overholdelse}{80}{section*.29}%
+\contentsline {subsubsection}{Integration med Andre Systemer}{80}{section*.30}%
+\contentsline {subsection}{\numberline {6.0.9}Low-Power Wide-Area Network Protokoller}{81}{subsection.6.0.9}%
+\contentsline {subsubsection}{Definering af LPWAN}{81}{section*.31}%
+\contentsline {subsubsection}{Anvendelsesområder}{81}{section*.32}%
+\contentsline {subsubsection}{Fælles LPWAN-Protokoller}{81}{section*.33}%
+\contentsline {subsubsection}{Energioptimering}{81}{section*.34}%
+\contentsline {subsubsection}{Sikkerhed og Overholdelse}{82}{section*.35}%
+\contentsline {subsubsection}{Skalering og Implementering}{82}{section*.36}%
+\contentsline {subsubsection}{Fordele og Ulemper}{82}{section*.37}%
+\contentsline {subsection}{\numberline {6.0.10}Mesh Network Protokoller}{82}{subsection.6.0.10}%
+\contentsline {subsubsection}{Definition af Mesh-netværk}{82}{section*.38}%
+\contentsline {subsubsection}{Anvendelsesområder}{82}{section*.39}%
+\contentsline {subsubsection}{Fælles Mesh-netværksprotokoller}{83}{section*.40}%
+\contentsline {subsubsection}{Selvhelbredende Kapabiliteter}{83}{section*.41}%
+\contentsline {subsubsection}{Skalering og Implementering}{83}{section*.42}%
+\contentsline {subsubsection}{Sikkerhed og Privatliv}{83}{section*.43}%
+\contentsline {subsubsection}{Fordele og Ulemper}{83}{section*.44}%
+\contentsline {subsection}{\numberline {6.0.11}Routing og Switching}{84}{subsection.6.0.11}%
+\contentsline {subsubsection}{Switching}{84}{section*.45}%
+\contentsline {subsubsection}{Funktionalitet:}{84}{section*.46}%
+\contentsline {subsubsection}{Formål:}{84}{section*.47}%
+\contentsline {subsubsection}{Routing}{84}{section*.48}%
+\contentsline {subsubsection}{Funktionalitet:}{84}{section*.49}%
+\contentsline {subsubsection}{Formål:}{85}{section*.50}%
+\contentsline {subsection}{\numberline {6.0.12}QoS (Quality of Service)}{85}{subsection.6.0.12}%
+\contentsline {subsubsection}{Funktionalitet:}{85}{section*.51}%
+\contentsline {subsubsection}{Formål:}{86}{section*.52}%
+\contentsline {part}{V\hspace {1em}IoT platform}{87}{part.5}%
+\contentsline {chapter}{\numberline {7}Node-RED}{89}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Node-RED: En Teknisk Gennemgang}{89}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}Introduktion til Node-RED}{89}{subsection.7.1.1}%
+\contentsline {subsection}{\numberline {7.1.2}Arkitektur og Kernekomponenter}{89}{subsection.7.1.2}%
+\contentsline {subsubsection}{Node-RED Runtime}{89}{section*.53}%
+\contentsline {subsubsection}{Node-RED Editor}{90}{section*.54}%
+\contentsline {subsubsection}{Noder}{90}{section*.55}%
+\contentsline {subsection}{\numberline {7.1.3}Flow-baseret Programmeringsparadigme}{91}{subsection.7.1.3}%
+\contentsline {subsubsection}{Meddelelsesflow}{91}{section*.56}%
+\contentsline {subsubsection}{Funktionsnoder}{91}{section*.57}%
+\contentsline {subsection}{\numberline {7.1.4}Implementering og Skalerbarhed}{92}{subsection.7.1.4}%
+\contentsline {subsubsection}{Skalerbarhed}{92}{section*.58}%
+\contentsline {subsubsection}{Clustering}{92}{section*.59}%
+\contentsline {subsection}{\numberline {7.1.5}Integration med IoT Protokoller og Tjenester}{92}{subsection.7.1.5}%
+\contentsline {subsubsection}{MQTT}{92}{section*.60}%
+\contentsline {subsubsection}{HTTP og WebSocket}{92}{section*.61}%
+\contentsline {subsubsection}{Modbus, OPC-UA og Andre Industrielle Protokoller}{92}{section*.62}%
+\contentsline {subsubsection}{Cloud Tjenester}{93}{section*.63}%
+\contentsline {subsection}{\numberline {7.1.6}Sikkerhed og Godkendelse}{93}{subsection.7.1.6}%
+\contentsline {subsubsection}{Brugergodkendelse}{93}{section*.64}%
+\contentsline {subsubsection}{TLS/SSL}{93}{section*.65}%
+\contentsline {subsection}{\numberline {7.1.7}Udvidelsesmuligheder og Custom Noder}{93}{subsection.7.1.7}%
+\contentsline {subsubsection}{Oprettelse af Custom Noder}{93}{section*.66}%
+\contentsline {chapter}{\numberline {8}Opgaver}{95}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Modtagelse af Seriel Data fra ESP32 i Node-RED}{95}{section.8.1}%
+\contentsline {subsection}{\numberline {8.1.1}Opsætning af Seriel Kommunikation}{95}{subsection.8.1.1}%
+\contentsline {subsection}{\numberline {8.1.2}Opgave: Modtagelse og Visualisering af Temperaturdata fra ESP32 i Node-RED}{96}{subsection.8.1.2}%
+\contentsline {part}{VI\hspace {1em}Opgaver}{99}{part.6}%
+\contentsline {chapter}{\numberline {9}C++ Basic}{101}{chapter.9}%
+\contentsline {section}{\numberline {9.1}\texttt {Delay()} i Arduino}{101}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Trykknapper}{105}{section.9.2}%
+\contentsline {section}{\numberline {9.3}DHT11 Sensor}{108}{section.9.3}%
+\contentsline {section}{\numberline {9.4}PIR Sensors}{111}{section.9.4}%
+\contentsline {section}{\numberline {9.5}RFID Teknologi}{114}{section.9.5}%
+\contentsline {section}{\numberline {9.6}Servo Motor Teknologi}{118}{section.9.6}%
+\contentsline {section}{\numberline {9.7}Introduktion for ESP32 og Functions i Programmering}{123}{section.9.7}%
+\contentsline {chapter}{\numberline {10}Node-RED}{127}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Node-RED Opgaver med ESP32 Plus og Seriel Kommunikation}{127}{section.10.1}%
+\contentsline {subsection}{\numberline {10.1.1}Formål}{127}{subsection.10.1.1}%
+\contentsline {subsection}{\numberline {10.1.2}Opgave 1: Aflæsning af Data fra ESP32 Plus}{127}{subsection.10.1.2}%
+\contentsline {subsection}{\numberline {10.1.3}Opgave 2: Afsendelse af Data til ESP32 Plus}{128}{subsection.10.1.3}%
+\contentsline {subsection}{\numberline {10.1.4}Opgave 3: Temperatur- og Fugtighedsovervågning med DHT11}{128}{subsection.10.1.4}%
+\contentsline {subsection}{\numberline {10.1.5}Materialer}{128}{subsection.10.1.5}%
+\contentsline {subsection}{\numberline {10.1.6}Instruktioner}{128}{subsection.10.1.6}%
+\contentsline {subsection}{\numberline {10.1.7}Opgave 4: Tænd/Sluk af en Fan}{129}{subsection.10.1.7}%
+\contentsline {subsection}{\numberline {10.1.8}Materialer}{129}{subsection.10.1.8}%
+\contentsline {subsection}{\numberline {10.1.9}Instruktioner}{129}{subsection.10.1.9}%
+\contentsline {subsection}{\numberline {10.1.10}Opgave 5: Temperatur Alarm med DHT11}{130}{subsection.10.1.10}%
+\contentsline {subsection}{\numberline {10.1.11}Opgave 6: Servo Motor Position Control}{130}{subsection.10.1.11}%
+\contentsline {subsection}{\numberline {10.1.12}Opgave 7: RFID-læser til LED kontrol}{131}{subsection.10.1.12}%
+\contentsline {subsection}{\numberline {10.1.13}Opgave 8: Temperaturstyret Fan}{131}{subsection.10.1.13}%
+\contentsline {subsection}{\numberline {10.1.14}Opgave 9: Temperaturstyret RGB LED}{132}{subsection.10.1.14}%
+\contentsline {subsection}{\numberline {10.1.15}Opgave 10: RFID-baseret Fan- og LED-kontrol}{132}{subsection.10.1.15}%

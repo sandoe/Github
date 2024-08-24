@@ -1,0 +1,443 @@
+\section{Hub}
+\subsection*{Grundlæggende Hub Opsætning}
+\textbf{Mål:} Lær at oprette en grundlæggende netværksopsætning ved hjælp af en hub for at forbinde flere computere i et lokalt netværk.
+
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item Forbind tre computere (PC1, PC2, PC3) til en hub ved hjælp af Ethernet-kabler.
+	\item Konfigurer IP-adresser på alle tre computere:
+	\begin{itemize}
+		\item PC1: 192.168.1.2/24
+		\item PC2: 192.168.1.3/24
+		\item PC3: 192.168.1.4/24
+	\end{itemize}
+	\item Test forbindelsen mellem de tre computere ved at pinge fra PC1 til PC2 og PC3.
+	\item Observer og noter, hvordan data sendes til alle computere tilsluttet hubben.
+\end{enumerate}
+
+\subsection*{Selvstændig Opgave: Grundlæggende Hub Kommunikation}
+\textbf{Opgavebeskrivelse:} Opret et netværk med fire computere forbundet via en hub. Konfigurer IP-adresser og test kommunikation mellem dem. Dokumentér, hvordan hubben håndterer datatrafikken.
+
+\subsection*{Data Kollisionshåndtering med en Hub}
+\textbf{Mål:} Få indsigt i, hvordan data-kollisioner opstår i et netværk, der bruger en hub, og hvordan de kan påvirke netværksydelsen.
+
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item Forbind fire computere (PC1, PC2, PC3, PC4) til en hub.
+	\item Konfigurer IP-adresser på alle fire computere:
+	\begin{itemize}
+		\item PC1: 192.168.2.2/24
+		\item PC2: 192.168.2.3/24
+		\item PC3: 192.168.2.4/24
+		\item PC4: 192.168.2.5/24
+	\end{itemize}
+	\item Start simultan ping mellem alle computere (f.eks. ping fra PC1 til PC2, PC3 til PC4 osv.).
+	\item Observer kollisionsindikatorer i netværksmonitoreringsværktøjer og dokumentér, hvordan kollisionshåndtering fungerer i et hub-baseret netværk.
+\end{enumerate}
+
+\subsection*{Selvstændig Opgave: Kollisionsanalyse i et Hub Netværk}
+\textbf{Opgavebeskrivelse:} Simulér et netværk med fem computere forbundet til en hub. Udfør simultane dataoverførsler og dokumentér antallet af kollisioner og deres effekt på netværksydelsen.
+
+\subsection*{Broadcast Trafik i et Hub Netværk}
+\textbf{Mål:} Forstå, hvordan en hub håndterer broadcast trafik i et netværk og hvordan dette kan påvirke netværkets effektivitet.
+
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item Opret et netværk med tre computere (PC1, PC2, PC3) forbundet til en hub.
+	\item Konfigurer IP-adresser på alle tre computere:
+	\begin{itemize}
+		\item PC1: 192.168.3.2/24
+		\item PC2: 192.168.3.3/24
+		\item PC3: 192.168.3.4/24
+	\end{itemize}
+	\item Send en broadcast-ping fra PC1 (f.eks. ping 192.168.3.255).
+	\item Observer, hvordan denne broadcast-trafik påvirker de andre computere på netværket og dokumentér resultaterne.
+\end{enumerate}
+
+\subsection*{Selvstændig Opgave: Analyser Broadcast Trafik i et Hub Netværk}
+\textbf{Opgavebeskrivelse:} Konfigurer et netværk med seks computere forbundet via en hub. Udfør tests med broadcast trafik og dokumentér, hvordan denne trafik spredes i netværket og påvirker de tilsluttede enheder.
+
+\subsection*{Step-by-Step Opgave 1: Grundlæggende Switchopsætning}
+\textbf{Mål:} Forstå hvordan en switch forbinder flere computere i et netværk og håndterer datatrafik ved hjælp af MAC-adresser.
+
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item Forbind tre computere (PC1, PC2, PC3) til en switch.
+	\item Konfigurer statiske IP-adresser på hver computer:
+	\begin{itemize}
+		\item PC1: 192.168.1.10/24
+		\item PC2: 192.168.1.20/24
+		\item PC3: 192.168.1.30/24
+	\end{itemize}
+	\item Test forbindelsen ved at pinge fra PC1 til PC2 og PC3.
+	\item Observer hvordan switchen lærer MAC-adresser ved at se på switchens MAC-adressetabel.
+\end{enumerate}
+
+\section{Switch}
+\subsection*{Selvstændig Opgave 1: Opsætning af Netværk med Enkelt Switch}
+\textbf{Opgavebeskrivelse:} Udfør opsætning af et netværk med en switch og fire computere. Tildel IP-adresser fra subnettet 192.168.2.0/24, og test forbindelsen mellem alle computere.
+
+\subsection*{Step-by-Step Opgave 2: VLAN Konfiguration}
+\textbf{Mål:} Lær at segmentere netværkstrafik ved at oprette Virtual LANs (VLANs) på en switch.
+
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item Opret to VLANs på switchen: VLAN 10 og VLAN 20.
+	\item Tildel portene som følger:
+	\begin{itemize}
+		\item Port 1-2: VLAN 10
+		\item Port 3-4: VLAN 20
+	\end{itemize}
+	\item Forbind PC1 og PC2 til VLAN 10 og PC3 og PC4 til VLAN 20.
+	\item Test forbindelsen mellem PC1 og PC2, samt mellem PC3 og PC4. Bemærk, at PC1 ikke kan kommunikere med PC3.
+\end{enumerate}
+
+\subsection*{Selvstændig Opgave 2: VLAN Segmentation}
+\textbf{Opgavebeskrivelse:} Opret tre VLANs på en switch. Tildel en PC til hvert VLAN og test kommunikationsbarrierer mellem VLANs. Konfigurer IP-adresser fra subnettene 192.168.3.0/24, 192.168.4.0/24, og 192.168.5.0/24.
+
+\subsection*{Step-by-Step Opgave 3: Spanning Tree Protocol (STP)}
+\textbf{Mål:} Lær at aktivere STP for at forhindre loops i et netværk med flere switches.
+\newline\newline\noindent
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item Forbind to switches (SW1 og SW2) til hinanden med to kabler (for at simulere en loop).
+	\item Aktiver STP på begge switches.
+	\item Overvåg, hvordan STP vælger en root switch og blokerer en af de redundante forbindelser for at forhindre en loop.
+	\item Test netværket ved at pinge fra en PC på SW1 til en PC på SW2.
+\end{enumerate}
+
+\subsection*{Selvstændig Opgave 3: Loop Prevention with STP}
+\textbf{Opgavebeskrivelse:} Forbind tre switches i et trekantet loop. Aktiver STP og test, at netværkskommunikationen stadig fungerer uden loops. Dokumentér, hvilken switch der bliver valgt som root bridge.
+
+\subsection*{Step-by-Step Opgave 4: Subnetting og Switch Konfiguration}
+\textbf{Mål:} Få erfaring med subnetting og forstå hvordan IP-adresser og subnetmasker bruges til at opdele et netværk.
+\newline\newline\noindent
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item Brug subnettet 192.168.10.0/24 og opdel det i fire lige store subnet.
+	\item Tildel følgende IP-adresser til fire forskellige computere tilsluttet til en switch:
+	\begin{itemize}
+		\item PC1: 192.168.10.1/26
+		\item PC2: 192.168.10.65/26
+		\item PC3: 192.168.10.129/26
+		\item PC4: 192.168.10.193/26
+	\end{itemize}
+	\item Test forbindelsen mellem alle computere og forstå, hvorfor visse forbindelser ikke virker.
+\end{enumerate}
+
+\subsection*{Selvstændig Opgave 4: Avanceret Subnetting}
+\textbf{Opgavebeskrivelse:} Brug subnettet 192.168.20.0/24 og opdel det i otte subnet. Tildel IP-adresser til otte computere og dokumentér, hvilke computere der kan kommunikere med hinanden.
+
+\subsection*{Step-by-Step Opgave 5: Subnetting og VLAN Konfiguration}
+\textbf{Mål:} Kombinere subnetting og VLANs for at organisere netværkstrafik på en mere struktureret måde.
+\newline\newline\noindent
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item Opret tre VLANs på switchen (VLAN 30, VLAN 40, VLAN 50).
+	\item Subnet subnettet 192.168.30.0/24 i tre subnet med 128 adresser hver.
+	\item Tildel hver VLAN et subnet:
+	\begin{itemize}
+		\item VLAN 30: 192.168.30.0/25
+		\item VLAN 40: 192.168.30.128/25
+		\item VLAN 50: 192.168.31.0/25
+	\end{itemize}
+	\item Forbind computere til hver VLAN og test, at de kan kommunikere inden for deres eget VLAN.
+\end{enumerate}
+
+\subsection*{Selvstændig Opgave 5: Subnetting og VLAN Integration}
+\textbf{Opgavebeskrivelse:} Opret fire VLANs og tilsvarende subnet ved hjælp af 192.168.40.0/24. Tildel fire computere til forskellige VLANs og dokumentér kommunikationsmønstrene.
+
+\section{Router}
+\subsection*{Step-by-Step Opgave 1: Grundlæggende Routeropsætning}
+\textbf{Mål:} Lær at konfigurere en router for at forbinde to forskellige netværk og muliggøre kommunikation mellem dem.
+\newline\newline\noindent
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item Forbind to computere (PC1 og PC2) til forskellige interfaces på en router:
+	\begin{itemize}
+		\item PC1 til FastEthernet0/0
+		\item PC2 til FastEthernet0/1
+	\end{itemize}
+	\item Konfigurer IP-adresser på PC1 og PC2:
+	\begin{itemize}
+		\item PC1: 192.168.1.2/24
+		\item PC2: 192.168.2.2/24
+	\end{itemize}
+	\item Konfigurer IP-adresser på routerens interfaces:
+	\begin{itemize}
+		\item FastEthernet0/0: 192.168.1.1/24
+		\item FastEthernet0/1: 192.168.2.1/24
+	\end{itemize}
+	\item Aktiver routerens interfaces og test forbindelsen mellem PC1 og PC2 ved at pinge fra PC1 til PC2.
+\end{enumerate}
+
+\subsection*{Selvstændig Opgave 1: Grundlæggende Routing}
+\textbf{Opgavebeskrivelse:} Konfigurer en router til at forbinde tre forskellige netværk med IP-adresserne 192.168.10.0/24, 192.168.20.0/24, og 192.168.30.0/24. Tildel IP-adresser til routerens interfaces og de tilsluttede computere, og test kommunikation mellem alle netværk.
+
+\subsection*{Step-by-Step Opgave 2: Statisk Routing}
+\textbf{Mål:} Lær at konfigurere statisk routing på en router for at styre trafikken mellem flere netværk.
+\newline\newline\noindent
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item Forbind tre computere (PC1, PC2, PC3) til tre forskellige routere (R1, R2, R3).
+	\item Tildel følgende IP-adresser:
+	\begin{itemize}
+		\item PC1: 192.168.1.2/24 (tilsluttet R1)
+		\item PC2: 192.168.2.2/24 (tilsluttet R2)
+		\item PC3: 192.168.3.2/24 (tilsluttet R3)
+	\end{itemize}
+	\item Konfigurer IP-adresser på routeres interfaces, så de kan forbinde til hinanden via serielle forbindelser.
+	\item Konfigurer statiske ruter på hver router for at sikre, at trafikken kan bevæge sig mellem alle tre netværk.
+	\item Test forbindelsen ved at pinge fra PC1 til PC3 og observer, hvordan statisk routing fungerer.
+\end{enumerate}
+
+\subsection*{Selvstændig Opgave 2: Avanceret Statisk Routing}
+\textbf{Opgavebeskrivelse:} Konfigurer et netværk med fire routere og fire forskellige netværk. Brug statisk routing til at sikre, at alle netværk kan kommunikere med hinanden. Dokumentér de konfigurerede ruter og test forbindelserne.
+
+\subsection*{Step-by-Step Opgave 3: Dynamisk Routing med RIP}
+\textbf{Mål:} Få erfaring med dynamisk routing ved at konfigurere Routing Information Protocol (RIP) på en router.
+\newline\newline\noindent
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item Forbind tre routere (R1, R2, R3) i en trekantet topologi.
+	\item Tildel IP-adresser til alle interfaces på routerne.
+	\item Konfigurer RIP version 2 på alle routere, og tilføj de relevante netværk til RIP-processen.
+	\item Verificér, at routerne lærer ruterne dynamisk fra hinanden ved hjælp af `show ip route` kommandoen.
+	\item Test netværksforbindelsen mellem computere tilsluttet til hver router.
+\end{enumerate}
+
+\subsection*{Selvstændig Opgave 3: Dynamisk Routing med EIGRP}
+\textbf{Opgavebeskrivelse:} Konfigurer dynamisk routing på et netværk med fire routere ved brug af Enhanced Interior Gateway Routing Protocol (EIGRP). Sørg for, at alle netværk er korrekt annonceret og test forbindelserne mellem dem.
+
+\subsection*{Step-by-Step Opgave 4: Subnetting og Routing}
+\textbf{Mål:} Kombiner subnetting med routing for at organisere et større netværk og forstå, hvordan IP-adresser og subnetmasker bruges til at opdele og route trafik.
+\newline\newline\noindent
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item Brug subnettet 10.0.0.0/8 og opdel det i fire mindre subnet.
+	\item Tildel de opdelte subnet til fire forskellige routere.
+	\item Konfigurer statisk routing på alle routere, så de kan kommunikere med hinanden.
+	\item Test netværksforbindelsen mellem alle tilsluttede computere og dokumentér hvilke netværk, der kan kommunikere med hinanden.
+\end{enumerate}
+
+\subsection*{Selvstændig Opgave 4: Subnetting med Dynamisk Routing}
+\textbf{Opgavebeskrivelse:} Brug subnettet 172.16.0.0/16 og opdel det i otte subnet. Tildel subnettene til forskellige routere og konfigurer dynamisk routing ved hjælp af OSPF. Test og dokumentér forbindelserne.
+
+\subsection*{Step-by-Step Opgave 5: Access Control Lists (ACL) på en Router}
+\textbf{Mål:} Lær at anvende Access Control Lists (ACL) på en router for at filtrere trafik baseret på IP-adresser.
+\newline\newline\noindent
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item Konfigurer en router til at forbinde to netværk (192.168.1.0/24 og 192.168.2.0/24).
+	\item Opret en ACL, der blokerer al trafik fra 192.168.1.0/24 til 192.168.2.0/24.
+	\item Anvend ACL'en på den relevante interface på routeren.
+	\item Test netværksforbindelsen ved at pinge fra 192.168.1.0/24 til 192.168.2.0/24 og observer, at trafikken blokeres.
+\end{enumerate}
+
+\subsection*{Selvstændig Opgave 5: Avancerede ACL'er}
+\textbf{Opgavebeskrivelse:} Opret flere ACL'er på en router for at filtrere trafik mellem tre forskellige netværk. Sørg for at teste og dokumentere, hvordan ACL'erne påvirker trafikken mellem netværkene.
+
+\section{VPN}
+\subsection*{Opgave 1: Opsætning af Enkelt VPN Tunnel}
+\textbf{Mål:} Lær at oprette en simpel VPN-tunnel mellem to routere for at sikre kommunikation mellem to forskellige LAN-netværk.
+\newline\newline\noindent
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item \textbf{Netværksopsætning:}
+	\begin{itemize}
+		\item Konfigurer to routere og tilslut dem til deres respektive LAN-netværk med switch og PC'er.
+		\item Tildel IP-adresser til alle enheder. Sørg for, at hver router har en WAN-forbindelse til den anden router.
+	\end{itemize}
+	
+	\item \textbf{VPN-konfiguration:}
+	\begin{itemize}
+		\item Brug kommandolinjen til at konfigurere IPsec VPN mellem de to routere. Definer en Pre-Shared Key (PSK) for autentificering.
+		\item Konfigurer adgangslister til at identificere den trafik, der skal sikres gennem VPN-tunnelen.
+		\item Test forbindelsen ved at sende pings fra en PC i det ene LAN til en PC i det andet LAN. Pakkerne skal passere gennem VPN-tunnelen.
+	\end{itemize}
+\end{enumerate}
+
+\subsection*{Opgave 2: Tilføjelse af Flere VPN Tunneler}
+\textbf{Mål:} Udvid dit VPN-netværk ved at tilføje flere VPN-tunneler mellem flere routere.
+\newline\newline\noindent
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item \textbf{Netværksopsætning:}
+	\begin{itemize}
+		\item Opret et netværk med tre routere, hvor hver router er forbundet til sit eget LAN.
+		\item Tildel IP-adresser til alle enheder og sørg for, at routerne kan nå hinanden over WAN-forbindelser.
+	\end{itemize}
+	
+	\item \textbf{VPN-konfiguration:}
+	\begin{itemize}
+		\item Konfigurer IPsec VPN-tunneler mellem alle tre routere. Dette skaber en fuld-mesh VPN-topologi, hvor alle LAN-netværk er forbundet via sikre tunneler.
+		\item Brug kommandolinjen til at konfigurere hver tunnel, og sørg for korrekt routing mellem netværkene.
+		\item Test forbindelsen ved at sende pings mellem PC'er på forskellige LAN-netværk for at sikre, at VPN-tunnelerne fungerer korrekt.
+	\end{itemize}
+\end{enumerate}
+
+\subsection*{Opgave 3: VPN Failover}
+\textbf{Mål:} Lær at konfigurere VPN med failover-mekanisme for at sikre forbindelse selv under netværksfejl.
+\newline\newline\noindent
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item \textbf{Netværksopsætning:}
+	\begin{itemize}
+		\item Konfigurer to routere med en primær og en sekundær WAN-forbindelse mellem dem.
+		\item Tildel IP-adresser til alle enheder og opsæt routing for at tillade failover mellem forbindelserne.
+	\end{itemize}
+	
+	\item \textbf{VPN-konfiguration:}
+	\begin{itemize}
+		\item Konfigurer IPsec VPN-tunneler over begge WAN-forbindelser, hvor den sekundære tunnel fungerer som en backup.
+		\item Test VPN-failover ved at deaktivere den primære WAN-forbindelse og bekræft, at trafikken automatisk rutes gennem den sekundære tunnel.
+	\end{itemize}
+\end{enumerate}
+
+\subsection*{Opgave 4: VPN med NAT Traversal}
+\textbf{Mål:} Konfigurer en VPN-forbindelse, der er i stand til at håndtere NAT (Network Address Translation) på en af routerne.
+\newline\newline\noindent
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item \textbf{Netværksopsætning:}
+	\begin{itemize}
+		\item Opret en netværksopsætning med to routere, hvor den ene router fungerer som en NAT-router og deler internetforbindelsen med en anden enhed.
+		\item Tildel IP-adresser og opsæt NAT-konfiguration på den relevante router.
+	\end{itemize}
+	
+	\item \textbf{VPN-konfiguration:}
+	\begin{itemize}
+		\item Konfigurer en IPsec VPN-tunnel mellem de to routere, der kan håndtere NAT Traversal (NAT-T).
+		\item Test VPN-forbindelsen ved at sende pings fra en PC bag NAT-routeren til en PC på den anden side af VPN-tunnelen, og bekræft, at trafikken krypteres korrekt.
+	\end{itemize}
+\end{enumerate}
+
+\subsection*{Selvstændige Opgaver:}
+\begin{enumerate}
+	\item Opret og konfigurér en enkelt VPN-tunnel mellem to routere og test forbindelsen.
+	\item Udvid dit netværk ved at tilføje flere VPN-tunneler mellem tre routere i en fuld-mesh konfiguration.
+	\item Implementer en VPN-forbindelse med failover-mekanisme og test forbindelsens robusthed under netværksfejl.
+	\item Konfigurér en VPN-forbindelse med NAT Traversal og test forbindelsen bag en NAT-router.
+\end{enumerate}
+
+\section{VLAN}
+\subsection*{Step-by-Step Opgave 1: VLAN-konfiguration på en Switch}
+\textbf{Mål:} Lær at oprette og konfigurere VLAN'er på en switch og tildele porte til specifikke VLAN'er.
+\newline\newline\noindent
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item Log ind på CLI for switchen.
+	\item Opret tre VLAN'er med følgende navne og VLAN ID'er:
+	\begin{itemize}
+		\item VLAN 10: Marketing
+		\item VLAN 20: Finance
+		\item VLAN 30: HR
+	\end{itemize}
+	\item Tildel følgende porte til de respektive VLAN'er:
+	\begin{itemize}
+		\item Port 1-2: VLAN 10 (Marketing)
+		\item Port 3-4: VLAN 20 (Finance)
+		\item Port 5-6: VLAN 30 (HR)
+	\end{itemize}
+	\item Test VLAN-konfigurationen ved at forbinde en PC til hver port og verificere, at PC'er inden for samme VLAN kan kommunikere med hinanden.
+\end{enumerate}
+
+\subsection*{Selvstændig Opgave 1: Udvidet VLAN-konfiguration}
+\textbf{Opgavebeskrivelse:} Opret fire VLAN'er på en switch, og tildel dem til forskellige porte. Konfigurer VLAN ID'erne som 10, 20, 30, og 40 med navne efter eget valg. Test kommunikation inden for hvert VLAN, og verificer, at der ikke er kommunikation på tværs af VLAN'er.
+
+\subsection*{Step-by-Step Opgave 2: Opsætning af Trunk Link på en Switch}
+\textbf{Mål:} Lær at opsætte en trunk-port på en switch, der forbinder til en router og håndterer trafik fra flere VLAN'er.
+\newline\newline\noindent
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item Log ind på CLI for switchen.
+	\item Opsæt en trunk-port på port 24, der tillader trafik fra VLAN 10, 20, og 30.
+	\item Brug følgende kommandoer til at konfigurere trunk-porten:
+	\begin{itemize}
+		\item \texttt{switchport mode trunk}
+		\item \texttt{switchport trunk allowed vlan 10,20,30}
+	\end{itemize}
+	\item Verificer konfigurationen ved at kontrollere, at trunk-porten korrekt håndterer trafikken fra de specificerede VLAN'er.
+\end{enumerate}
+
+\subsection*{Selvstændig Opgave 2: Udvidet Trunk-konfiguration}
+\textbf{Opgavebeskrivelse:} Opret en trunk-port på en switch, der håndterer trafik fra fem forskellige VLAN'er. Konfigurer VLAN ID'erne som 10, 20, 30, 40, og 50, og test trunk-forbindelsen ved at sikre, at alle VLAN'er kan passere korrekt gennem trunk-porten.
+
+\subsection*{Step-by-Step Opgave 3: Router-on-a-Stick Konfiguration}
+\textbf{Mål:} Lær at konfigurere subinterfaces på en router for at håndtere flere VLAN'er via dot1Q-tagging.
+\newline\newline\noindent
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item Log ind på CLI for routeren.
+	\item Opret subinterfaces på FastEthernet 0/0 for VLAN 10, 20, og 30.
+	\item Tildel følgende IP-adresser til de respektive subinterfaces:
+	\begin{itemize}
+		\item VLAN 10: 192.168.10.1/24
+		\item VLAN 20: 192.168.20.1/24
+		\item VLAN 30: 192.168.30.1/24
+	\end{itemize}
+	\item Verificer, at routeren korrekt håndterer trafikken ved at pinge mellem PC'er i de forskellige VLAN'er.
+\end{enumerate}
+
+\subsection*{Selvstændig Opgave 3: Udvidet Router-on-a-Stick Konfiguration}
+\textbf{Opgavebeskrivelse:} Konfigurer en router til at håndtere fire forskellige VLAN'er (VLAN 10, 20, 30, og 40) via Router-on-a-Stick. Tildel hver subinterface en IP-adresse, og verificer, at der er korrekt kommunikation mellem VLAN'erne ved at pinge fra en PC i hvert VLAN til en anden PC i et andet VLAN.
+
+\section{NAT}
+\subsection*{Step-by-Step Opgave 1: Konfiguration af NAT på en Router}
+\textbf{Mål:} Lær at konfigurere NAT på en router for at muliggøre, at enheder på et lokalt netværk kan få adgang til internettet med en enkelt offentlig IP-adresse.
+\newline\newline\noindent
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item Forbind en router til et internt LAN med IP-adresser i intervallet 192.168.1.0/24 og en ekstern forbindelse til internettet med IP-adressen 203.0.113.1/24.
+	\item Konfigurer NAT overbelægning (PAT) på routeren:
+	\begin{itemize}
+		\item Angiv det interne netværk som "insiden" ved hjælp af kommandoen \texttt{ip nat inside}.
+		\item Angiv det eksterne interface som "outsiden" ved hjælp af kommandoen \texttt{ip nat outside}.
+		\item Konfigurer NAT ved at bruge kommandoen \texttt{ip nat inside source list 1 interface FastEthernet0/1 overload}.
+	\end{itemize}
+	\item Test NAT-konfigurationen ved at pinge fra en enhed på det interne netværk til en ekstern IP-adresse.
+\end{enumerate}
+
+\subsection*{Selvstændig Opgave 1: Udvidet NAT-konfiguration}
+\textbf{Opgavebeskrivelse:} Konfigurer statisk NAT på en router for at gøre en intern server tilgængelig udefra. Sørg for at en HTTP-server på det interne netværk (192.168.1.10) kan tilgås fra en ekstern IP-adresse ved hjælp af en statisk NAT-konfiguration.
+
+
+\section{DNS}
+\subsection*{Step-by-Step Opgave 2: Opsætning af DNS Server i Cisco Packet Tracer}
+\textbf{Mål:} Lær at opsætte og konfigurere en DNS-server, der kan oversætte domænenavne til IP-adresser.
+\newline\newline\noindent
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item Opret en DNS-server i Packet Tracer og tilslut den til et netværk.
+	\item Konfigurer DNS-serveren med følgende domænenavn til IP-adresse-mapping:
+	\begin{itemize}
+		\item \texttt{www.example.com} -> 192.168.1.10
+		\item \texttt{mail.example.com} -> 192.168.1.20
+	\end{itemize}
+	\item Konfigurer klient-PC'er på det samme netværk til at bruge DNS-serveren ved at indstille deres DNS-serveradresse til 192.168.1.1.
+	\item Test DNS-konfigurationen ved at pinge \texttt{www.example.com} fra en klient-PC og observere, at IP-adressen korrekt bliver oversat.
+\end{enumerate}
+
+\subsection*{Selvstændig Opgave 2: Udvidet DNS-konfiguration}
+\textbf{Opgavebeskrivelse:} Konfigurer yderligere domænenavne på DNS-serveren og tilføj et andet netværk, hvor klienter også kan bruge DNS-serveren til at løse domænenavne.
+
+\section{DHCP}
+\subsection*{Step-by-Step Opgave 1: Opsætning af DHCP Server i Cisco Packet Tracer}
+\textbf{Mål:} Lær at opsætte og konfigurere en DHCP-server til automatisk at tildele IP-adresser til klienter på et netværk.
+\newline\newline\noindent
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item Opret en DHCP-server i Packet Tracer og tilslut den til et netværk.
+	\item Konfigurer DHCP-serveren med følgende IP-pool:
+	\begin{itemize}
+		\item IP-pool: 192.168.1.100 til 192.168.1.150
+		\item Subnet mask: 255.255.255.0
+		\item Gateway: 192.168.1.1
+		\item DNS-server: 192.168.1.1
+	\end{itemize}
+	\item Konfigurer klient-PC'er til automatisk at modtage IP-adresser fra DHCP-serveren.
+	\item Test DHCP-konfigurationen ved at verificere, at klient-PC'erne modtager en IP-adresse inden for det specificerede interval.
+\end{enumerate}
+
+\subsection*{Selvstændig Opgave 1: Avanceret DHCP-konfiguration}
+\textbf{Opgavebeskrivelse:} Konfigurer flere IP-pools på en DHCP-server, hver tilknyttet forskellige subnet, og verificer, at klienter fra forskellige subnet får de korrekte IP-adresser.

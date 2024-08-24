@@ -1,0 +1,114 @@
+\section{Kunstig Intelligens (AI) i IoT}
+\subsection{Introduktion til Kunstig Intelligens (AI)}
+Kunstig Intelligens (AI) refererer til evnen hos computere og systemer til at udføre opgaver, der traditionelt kræver menneskelig intelligens. Dette inkluderer evnen til at lære af data, identificere mønstre og tage beslutninger. Når AI kombineres med Internet of Things (IoT), skabes kraftfulde systemer, der kan analysere data fra forskellige sensorer og handle på baggrund af den viden, de opnår. AI muliggør automatiseret beslutningstagning, som kan optimere ressourceforbrug, forbedre sikkerhed og effektivisere systemer.
+
+\subsection{Anvendelsesområder for AI i IoT}
+Kombinationen af AI og IoT åbner op for en række nye anvendelsesområder, som kan forbedre funktionaliteten og anvendeligheden af IoT-enheder:
+\begin{itemize}
+	\item \textbf{Smart Homes:} AI kan anvendes til at lære beboernes præferencer og justere temperatur, belysning og sikkerhedssystemer automatisk.
+	\item \textbf{Predictive Maintenance:} AI kan forudsige hvornår maskiner eller enheder er ved at fejle, baseret på data indsamlet fra IoT-sensorer, og dermed reducere nedetid.
+	\item \textbf{Energistyring:} AI kan optimere energiforbruget i bygninger ved at analysere energiforbrugsdata og tilpasse systemernes driftstider.
+	\item \textbf{Sundhedsmonitorering:} IoT-enheder, kombineret med AI, kan overvåge sundhedsdata i realtid og give tidlige advarsler om potentielle helbredsproblemer.
+\end{itemize}
+
+\subsection{Supervised og Unsupervised Learning}
+AI i IoT anvender ofte maskinlæring, som kan opdeles i to hovedkategorier: supervised og unsupervised learning.
+
+\paragraph{Supervised Learning}
+Supervised learning er en maskinlæringstilgang, hvor modellen trænes ved hjælp af et datasæt, der indeholder både inputdata og de tilsvarende ønskede outputdata. Modellen lærer at mappe input til output ved at identificere mønstre i dataene. Eksempler inkluderer klassifikation (f.eks. at identificere om en e-mail er spam eller ikke) og regression (f.eks. at forudsige fremtidige temperaturer baseret på tidligere målinger).
+
+\paragraph{Unsupervised Learning}
+I modsætning til supervised learning, hvor dataene er mærket med det ønskede output, bruges unsupervised learning til at finde skjulte mønstre eller grupperinger i data uden at have specifikke mål for output. Eksempler på unsupervised learning inkluderer klyngeanalyse, hvor data opdeles i grupper baseret på deres egenskaber, og dimensionreduktionsalgoritmer, der forenkler data ved at reducere antallet af variabler.
+
+\subsection{Avancerede Maskinlæringsteknikker}
+Udover de grundlæggende teknikker som supervised og unsupervised learning, er der også andre maskinlæringsteknikker, der kan anvendes i IoT:
+\begin{itemize}
+	\item \textbf{Neurale Netværk:} Kan bruges til at håndtere komplekse data og finde mønstre, som ikke er synlige med enkle modeller.
+	\item \textbf{Decision Trees:} En teknik, der anvendes til både klassifikation og regression, hvor dataene opdeles i en træstruktur baseret på beslutningsregler.
+	\item \textbf{Reinforcement Learning:} En læringsmetode hvor en agent lærer at tage beslutninger ved at interagere med miljøet og modtage belønninger eller straf for sine handlinger.
+\end{itemize}
+
+\subsection{Lineær Regression}
+En af de mest grundlæggende teknikker i supervised learning er lineær regression. Lineær regression bruges til at modellere forholdet mellem en afhængig variabel og en eller flere uafhængige variabler. Målet er at finde en lineær sammenhæng, der kan forudsige den afhængige variabel baseret på de uafhængige variabler.
+
+\paragraph{Matematisk Formulering}
+For en simpel lineær regression med en uafhængig variabel, kan modellen beskrives som:
+
+\[
+y = \beta_0 + \beta_1 x + \epsilon
+\]
+
+Her er:
+\begin{itemize}
+	\item \(y\) den afhængige variabel (f.eks. temperatur),
+	\item \(x\) den uafhængige variabel (f.eks. tid),
+	\item \(\beta_0\) skæringspunktet på y-aksen,
+	\item \(\beta_1\) hældningen af linjen,
+	\item \(\epsilon\) fejlleddet.
+\end{itemize}
+\noindent Ved at bruge data til at estimere \(\beta_0\) og \(\beta_1\) kan man forudsige fremtidige værdier af \(y\) baseret på nye værdier af \(x\).
+
+\subsection{Udfordringer ved AI i IoT}
+Der er en række udfordringer ved at implementere AI i IoT, som inkluderer:
+\begin{itemize}
+	\item \textbf{Dataintegritet:} Kvaliteten af de data, der bruges til at træne AI-modeller, er afgørende. Dårlige eller inkonsistente data kan føre til unøjagtige forudsigelser.
+	\item \textbf{Beregningseffektivitet:} AI-algoritmer kræver betydelige beregningsressourcer, hvilket kan være en udfordring i ressourcebegrænsede IoT-enheder.
+	\item \textbf{Sikkerhed:} Med flere IoT-enheder forbundet til AI-systemer, er der større risiko for sikkerhedsbrud, hvilket kan kompromittere både data og beslutningsprocesser.
+	\item \textbf{Skalerbarhed:} Når antallet af IoT-enheder vokser, skal AI-systemer kunne skalere for at håndtere den øgede datamængde og kompleksitet.
+\end{itemize}
+
+\subsection{Dataindsamling og Modellering med Firebase og Python}
+En mulig anvendelse af AI i IoT er at kombinere dataindsamling med maskinlæring. Dette kan implementeres ved at følge disse trin:
+
+\paragraph{Trin:}
+\begin{enumerate}
+	\item Brug ESP32 til at indsamle sensordata (f.eks. temperatur og fugtighed) og logge disse data til Firebase.
+	\item Analyser de indsamlede data med Python og byg en lineær regressionsmodel, der kan forudsige fremtidige temperaturer.
+	\item Integrer den trænede model i Node-RED, hvor den bruges til at optimere husets klimakontrol baseret på forudsigelser.
+\end{enumerate}
+Denne fremgangsmåde illustrerer, hvordan AI kan anvendes i IoT for at forbedre systemernes effektivitet og intelligens. Ved at integrere dataindsamling, modellering og automatiseret kontrol, skabes et system, der kan forudsige og tilpasse sig fremtidige forhold.	
+
+\part{Sikkerhed}
+\chapter{Sikkerhed i IoT}
+\section*{Introduktion til IoT-sikkerhed}
+Internet of Things (IoT) refererer til det stadigt voksende netværk af internetforbundne enheder, som er i stand til at indsamle, dele og analysere data. Mens IoT åbner op for en bred vifte af innovative applikationer, fra smart home-løsninger til sundhedsovervågning og industrielle systemer, medfører det også betydelige sikkerhedsudfordringer. Disse enheder kan være mål for angreb, der udnytter svagheder i systemerne, hvilket kan resultere i uautoriseret adgang, datatyveri eller endda fysisk skade.
+
+\section*{Grundlæggende sikkerhedsprincipper}
+For at beskytte IoT-enheder og de data, de behandler, er det vigtigt at implementere nogle grundlæggende sikkerhedsforanstaltninger. Nogle af de vigtigste principper inkluderer:
+
+\subsection*{Autentificering}
+Autentificering er processen med at bekræfte identiteten af en enhed eller bruger, før adgang til systemet gives. Dette kan omfatte brugen af adgangskoder, digitale certifikater eller biometriske data. I IoT-sammenhæng er det essentielt at sikre, at kun autoriserede enheder og brugere kan få adgang til netværket og dets ressourcer.
+
+\subsection*{Kryptering}
+Kryptering beskytter data ved at gøre dem ulæselige for uautoriserede parter. Dette kan omfatte både data, der overføres mellem enheder (in-transit), og data, der er lagret på enheder (at-rest). Ved at bruge stærke krypteringsmetoder sikres det, at selv hvis data opsnappes af en angriber, vil de være ubrugelige uden den korrekte dekrypteringsnøgle.
+
+\subsection*{Adgangskontrol}
+Adgangskontrol indebærer at bestemme, hvem der har tilladelse til at få adgang til specifikke data eller systemfunktioner. Dette kan implementeres gennem adgangslister, roller og rettigheder, hvor kun autoriserede enheder eller brugere har adgang til kritiske systemfunktioner eller følsomme data.
+
+\subsection*{Opdatering og vedligeholdelse}
+Mange IoT-enheder har lang levetid og er ofte i drift i årtier. Det er afgørende, at disse enheder opdateres regelmæssigt med de nyeste sikkerhedsrettelser og firmwareopdateringer for at lukke kendte sårbarheder. Automatisk opdatering eller push-opdateringer kan hjælpe med at sikre, at enhederne forbliver sikre over tid.
+
+\section*{Eksempler på sikkerhedstrusler i IoT}
+Selvom der er mange fordele ved IoT, er der også betydelige sikkerhedstrusler, som bør overvejes:
+
+\subsection*{Man-in-the-Middle (MitM) angreb}
+I et MitM-angreb aflytter en angriber kommunikationen mellem to enheder for at opsnappe eller ændre informationen. Uden kryptering kan disse angreb give angriberen adgang til følsomme data eller tillade dem at injicere falske kommandoer i systemet.
+
+\subsection*{Botnet-angreb}
+Et botnet er et netværk af inficerede enheder, der kan bruges til at udføre koordinerede angreb, såsom Distributed Denial of Service (DDoS) angreb. IoT-enheder med svage sikkerhedsforanstaltninger kan blive kompromitteret og brugt som en del af et botnet til at overvælde mål med trafik.
+
+\subsection*{Uautoriseret adgang og kontrol}
+Mange IoT-enheder har utilstrækkelige adgangskontroller, hvilket gør dem sårbare over for uautoriseret adgang. En angriber, der får kontrol over en IoT-enhed, kan potentielt misbruge den til at udføre skadelige handlinger eller få adgang til andre enheder på netværket.
+
+\section*{Best Practices for IoT-sikkerhed}
+For at reducere risikoen for sikkerhedsbrud i IoT-miljøer bør følgende bedste praksis følges:
+\begin{itemize}
+	\item \textbf{Implementer stærk autentificering:} Brug stærke, unikke adgangskoder og to-faktor autentificering, hvor det er muligt.
+	\item \textbf{Krypter data:} Sørg for, at alle data, der overføres mellem enheder og til servere, er krypteret ved hjælp af stærke krypteringsalgoritmer.
+	\item \textbf{Opdater regelmæssigt:} Hold firmware og software opdateret med de nyeste sikkerhedsrettelser.
+	\item \textbf{Adgangskontrol:} Begræns adgang til enheder og data til kun de personer eller enheder, der har brug for det.
+	\item \textbf{Netværkssegmentering:} Adskil IoT-enheder fra det øvrige netværk ved hjælp af VLANs eller separate subnetværk for at reducere risikoen ved kompromittering af en enhed.
+\end{itemize}
+
+\section*{Opsummering}
+Sikkerhed i IoT er en kompleks udfordring, men ved at følge grundlæggende sikkerhedsprincipper og bedste praksis kan man reducere risikoen for kompromittering betydeligt. Det er vigtigt at være proaktiv med hensyn til at beskytte både data og enheder for at sikre et sikkert og pålideligt IoT-miljø.

@@ -1,0 +1,3194 @@
+\part{Avancerede Netværksapplikationer}
+\chapter{Cisco Packet Tracer Netværksopgaver}
+\section*{Introduktion til Cisco Packet Tracer}
+\textbf{Cisco Packet Tracer} er et kraftfuldt netværkssimuleringsværktøj udviklet af Cisco Systems. Det er designet til at hjælpe studerende og netværksprofessionelle med at lære om og praktisere netværkskonfigurationer, fejlfinding og netværksdesign uden behov for fysisk netværkshardware. Packet Tracer giver brugerne mulighed for at oprette komplekse netværksscenarier og simulere deres funktioner i et virtuelt miljø.
+
+\section*{Hvad er Cisco Packet Tracer?}
+Cisco Packet Tracer er en dynamisk, visuel simuleringsapplikation, der gør det muligt for brugerne at opbygge, konfigurere og analysere netværkstopologier. Værktøjet understøtter en bred vifte af netværksenheder, herunder routere, switches, computere og forskellige IoT-enheder, der alle kan simuleres i realtid.
+
+\section*{Funktioner og Anvendelser}
+Cisco Packet Tracer er kendt for sine mange funktioner, herunder:
+\begin{itemize}
+	\item \textbf{Netværkssimulering:} Brugere kan simulere komplekse netværksscenarier med flere enheder og forbindelser. Dette giver mulighed for at forstå, hvordan netværksprotokoller fungerer og interagerer.
+	\item \textbf{Interaktiv læring:} Packet Tracer bruges ofte i undervisningsmiljøer til at hjælpe studerende med at forstå netværkskonfigurationer gennem praktiske øvelser. Studerende kan eksperimentere med netværksopsætninger uden risikoen for at beskadige fysisk udstyr.
+	\item \textbf{Real-time feedback:} Når brugere opsætter netværkskonfigurationer, giver Packet Tracer real-time feedback, hvilket hjælper med at identificere og rette fejl undervejs.
+	\item \textbf{IoT Integration:} Packet Tracer understøtter også Internet of Things (IoT), hvilket giver brugerne mulighed for at simulere og lære om, hvordan IoT-enheder interagerer i netværk.
+	\item \textbf{Multi-user funktion:} Værktøjet understøtter multi-user netværksopsætninger, hvor flere brugere kan arbejde på samme projekt samtidig, hvilket fremmer samarbejde og gruppeopgaver.
+\end{itemize}
+
+\section*{Hvordan bruges Cisco Packet Tracer?}
+Cisco Packet Tracer anvendes i vid udstrækning i både uddannelses- og professionelle miljøer. Nogle af de mest almindelige anvendelser inkluderer:
+\begin{itemize}
+	\item \textbf{Uddannelse og Certificering:} Cisco Packet Tracer er en central del af Cisco Networking Academy-programmet, som forbereder studerende til Cisco-certificeringer som CCNA (Cisco Certified Network Associate). Studerende bruger værktøjet til at simulere netværksscenarier og forberede sig til eksamener.
+	\item \textbf{Netværksdesign og Fejlfinding:} Netværksprofessionelle bruger Packet Tracer til at designe og afprøve netværkskonfigurationer før implementering i den virkelige verden. Det giver også mulighed for at fejlsøge netværksproblemer i et kontrolleret miljø.
+	\item \textbf{Eksperimenter med nye teknologier:} Packet Tracer giver mulighed for at eksperimentere med nye netværksteknologier og -protokoller uden at kræve fysisk udstyr, hvilket gør det ideelt for at holde sig ajour med den nyeste udvikling inden for netværksteknologi.
+\end{itemize}
+
+\section*{Fordele ved Cisco Packet Tracer}
+Nogle af de vigtigste fordele ved at bruge Cisco Packet Tracer inkluderer:
+
+\begin{itemize}
+	\item \textbf{Koste- og tidsbesparelse:} Det eliminerer behovet for fysisk udstyr, hvilket reducerer omkostningerne og den tid, der kræves for at opsætte og vedligeholde netværk.
+	\item \textbf{Tilgængelighed:} Packet Tracer er gratis for alle, der deltager i Cisco Networking Academy-kurser, og det er også tilgængeligt for selvstuderende.
+	\item \textbf{Fleksibilitet:} Værktøjet understøtter flere platforme, herunder Windows, Linux, og macOS, og kan bruges både offline og online.
+\end{itemize}
+Cisco Packet Tracer er et uundværligt værktøj for alle, der ønsker at lære om netværksteknologi, og det giver en omfattende platform til at udvikle og teste netværksfærdigheder i et sikkert og kontrolleret miljø.
+
+\section{Hub}
+\subsection{Simpel Hub Opsætning}
+\textbf{Mål:} Forstå hvordan en hub fungerer ved at oprette et simpelt netværk og teste forbindelsen mellem flere computere.
+\newline\newline\noindent
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item \textbf{Forbind tre computere til en hub:}
+	\begin{itemize}
+		\item Brug Ethernet-kabler til at forbinde PC1, PC2, og PC3 til en hub i Cisco Packet Tracer.
+	\end{itemize}
+	\item \textbf{Konfigurer IP-adresser:}
+	\begin{itemize}
+		\item PC1: 192.168.1.2/24
+		\item PC2: 192.168.1.3/24
+		\item PC3: 192.168.1.4/24
+	\end{itemize}
+	\item \textbf{Test forbindelsen:}
+	\begin{itemize}
+		\item Brug kommandoen \texttt{ping} fra PC1 til PC2 og PC3 for at verificere, at alle enheder kan kommunikere.
+	\end{itemize}
+\end{enumerate}
+
+\subsection{Hub Kommunikation med Fire Computere}
+\textbf{Mål:} Udforsk hvordan en hub håndterer datatrafik, når flere computere er tilsluttet og kommunikerer samtidigt.
+\newline\newline\noindent
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item \textbf{Forbind fire computere til en hub:}
+	\begin{itemize}
+		\item Brug Ethernet-kabler til at forbinde PC1, PC2, PC3, og PC4 til en hub i Cisco Packet Tracer.
+	\end{itemize}
+	\item \textbf{Konfigurer IP-adresser:}
+	\begin{itemize}
+		\item PC1: 192.168.2.2/24
+		\item PC2: 192.168.2.3/24
+		\item PC3: 192.168.2.4/24
+		\item PC4: 192.168.2.5/24
+	\end{itemize}
+	\item \textbf{Test forbindelsen:}
+	\begin{itemize}
+		\item Pinge fra PC1 til alle de andre computere (PC2, PC3, PC4).
+		\item Notér, hvordan dataene sendes til alle computere tilsluttet hubben, og hvordan de reagerer på de indkomne pakker.
+	\end{itemize}
+\end{enumerate}
+
+\subsection{Hub og Broadcast Trafik}
+\textbf{Mål:} Lær hvordan en hub håndterer broadcast-trafik i et netværk.
+\newline\newline\noindent
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item \textbf{Forbind tre computere til en hub:}
+	\begin{itemize}
+		\item Brug Ethernet-kabler til at forbinde PC1, PC2, og PC3 til en hub i Cisco Packet Tracer.
+	\end{itemize}
+	\item \textbf{Konfigurer IP-adresser:}
+	\begin{itemize}
+		\item PC1: 192.168.3.2/24
+		\item PC2: 192.168.3.3/24
+		\item PC3: 192.168.3.4/24
+	\end{itemize}
+	\item \textbf{Send en broadcast-ping:}
+	\begin{itemize}
+		\item Fra PC1, send en broadcast-ping til 192.168.3.255.
+		\item Observer hvordan hubben håndterer denne broadcast, og hvordan alle computere modtager ping-forespørgslen.
+	\end{itemize}
+\end{enumerate}
+
+
+\section{Switch}
+\subsection{Grundlæggende Netværksforbindelser}
+\subsubsection{Grundlæggende Switch Forbindelse}
+\textbf{Mål:} Lær at forbinde to computere til en switch og teste deres forbindelse.
+\newline\newline\noindent
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item \textbf{Forbind to computere til en switch:}
+	\begin{itemize}
+		\item Forbind PC1 og PC2 til en switch ved hjælp af Ethernet-kabler.
+	\end{itemize}
+	\item \textbf{Konfigurer IP-adresser:}
+	\begin{itemize}
+		\item PC1: 192.168.1.2/24
+		\item PC2: 192.168.1.3/24
+	\end{itemize}
+	\item \textbf{Test forbindelsen:}
+	\begin{itemize}
+		\item Pinge fra PC1 til PC2 for at verificere forbindelsen.
+	\end{itemize}
+\end{enumerate}
+
+\subsubsection{Tilføjelse af en en ekstra Computer}
+\textbf{Mål:} Lær at udvide netværket ved at tilføje en tredje computer til switchen.
+\newline\newline\noindent
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item \textbf{Forbind en tredje computer til switchen:}
+	\begin{itemize}
+		\item Forbind PC3 til switchen med et Ethernet-kabel.
+	\end{itemize}
+	\item \textbf{Konfigurer IP-adressen:}
+	\begin{itemize}
+		\item PC3: 192.168.1.4/24
+	\end{itemize}
+	\item \textbf{Test forbindelsen:}
+	\begin{itemize}
+		\item Pinge fra PC3 til PC1 og PC2 for at sikre, at alle enheder kan kommunikere.
+	\end{itemize}
+\end{enumerate}
+
+\subsection{Switch Funktionalitet og Læring}
+\subsubsection*{Observer MAC-adresse Tabel}
+\textbf{Mål:} Lær at observere, hvordan en switch lærer MAC-adresser.
+\newline\newline\noindent
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item \textbf{Forbind to computere til switchen:}
+	\begin{itemize}
+		\item Forbind PC1 og PC2 til en switch og konfigurer deres IP-adresser.
+	\end{itemize}
+	\item \textbf{Udfør ping:}
+	\begin{itemize}
+		\item Pinge fra PC1 til PC2.
+	\end{itemize}
+	\item \textbf{Observer MAC-adresse tabellen:}
+	\begin{itemize}
+		\item Brug kommandoen \texttt{show mac address-table} på switchen for at observere MAC-adresserne.
+	\end{itemize}
+\end{enumerate}
+
+\subsubsection*{Fjernelse og Genforbindelse}
+\textbf{Mål:} Forstå hvordan switchen opdaterer sin MAC-adresse tabel.
+\newline\newline\noindent
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item \textbf{Fjern netværkskablet fra en computer:}
+	\begin{itemize}
+		\item Fjern kablet fra en af de tilsluttede computere og tilslut det igen til en anden port på switchen.
+	\end{itemize}
+	\item \textbf{Udfør en ny ping:}
+	\begin{itemize}
+		\item Pinge igen mellem PC1 og PC2.
+	\end{itemize}
+	\item \textbf{Observer MAC-adresse tabellen:}
+	\begin{itemize}
+		\item Brug kommandoen \texttt{show mac address-table} for at se, hvordan tabellen er opdateret.
+	\end{itemize}
+\end{enumerate}
+
+\subsection{Grundlæggende Switch Konfiguration}
+\subsubsection*{Skift Switchens Hostname}
+\textbf{Mål:} Lær at ændre switchens hostname.
+\newline\newline\noindent
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item \textbf{Log ind på switchens CLI:}
+	\begin{itemize}
+		\item Log ind på switchen via CLI.
+	\end{itemize}
+	\item \textbf{Ændr hostname:}
+	\begin{itemize}
+		\item Brug kommandoen \texttt{hostname} til at ændre navnet til "Switch1".
+	\end{itemize}
+	\item \textbf{Gem konfigurationen:}
+	\begin{itemize}
+		\item Brug \texttt{write memory} for at gemme ændringerne.
+	\end{itemize}
+\end{enumerate}
+
+\subsubsection*{Sæt en Adgangskode på Konsoladgang}
+\textbf{Mål:} Sikre konsoladgang ved at tilføje en adgangskode.
+\newline\newline\noindent
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item \textbf{Log ind på switchens CLI:}
+	\begin{itemize}
+		\item Log ind på switchen via CLI.
+	\end{itemize}
+	\item \textbf{Sæt en adgangskode:}
+	\begin{itemize}
+		\item Brug kommandoerne \texttt{line console 0} og \texttt{password cisco} for at indstille adgangskoden.
+	\end{itemize}
+	\item \textbf{Aktivér adgangskode:}
+	\begin{itemize}
+		\item Brug kommandoen \texttt{login} for at aktivere adgangskodebeskyttelsen.
+	\end{itemize}
+\end{enumerate}
+
+\subsection{Udvidet Switch Konfiguration}
+\subsubsection{Navngivning af Switch}
+\textbf{Mål:} Forstå grundlæggende navngivning og konfiguration.
+\newline\newline\noindent
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item \textbf{Log ind på switchens CLI:}
+	\begin{itemize}
+		\item Log ind på switchen via CLI.
+	\end{itemize}
+	\item \textbf{Navngiv switchen:}
+	\begin{itemize}
+		\item Brug kommandoen \texttt{hostname} for at navngive switchen.
+	\end{itemize}
+	\item \textbf{Verificér navnet:}
+	\begin{itemize}
+		\item Brug kommandoen \texttt{show running-config} for at tjekke det nye navn.
+	\end{itemize}
+\end{enumerate}
+
+\subsubsection*{Indstilling af System Beskrivelse}
+\textbf{Mål:} Tilføj en beskrivelse af systemet for dokumentationsformål.
+\newline\newline\noindent
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item \textbf{Log ind på switchens CLI:}
+	\begin{itemize}
+		\item Log ind på switchen via CLI.
+	\end{itemize}
+	\item \textbf{Tilføj en besked:}
+	\begin{itemize}
+		\item Brug kommandoen \texttt{banner motd} for at tilføje en meddelelse, der vises ved login.
+	\end{itemize}
+	\item \textbf{Test beskeden:}
+	\begin{itemize}
+		\item Log ud og log ind igen for at se den nye besked.
+	\end{itemize}
+\end{enumerate}
+
+\subsection{Spanning Tree Protocol (STP)}
+\subsubsection*{Aktiver STP på en Switch}
+\textbf{Mål:} Introduktion til Spanning Tree Protocol.
+\newline\newline\noindent
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item \textbf{Log ind på switchens CLI:}
+	\begin{itemize}
+		\item Log ind på switchen via CLI.
+	\end{itemize}
+	\item \textbf{Aktiver STP:}
+	\begin{itemize}
+		\item Brug kommandoen \texttt{spanning-tree} for at aktivere STP.
+	\end{itemize}
+	\item \textbf{Verificér STP status:}
+	\begin{itemize}
+		\item Brug \texttt{show spanning-tree} for at se STP-status.
+	\end{itemize}
+\end{enumerate}
+
+\subsubsection*{Forbind To Switches og Observer STP}
+\textbf{Mål:} Forstå, hvordan STP arbejder i et simpelt netværk.
+\newline\newline\noindent
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item \textbf{Forbind to switches med to kabler:}
+	\begin{itemize}
+		\item Forbind to switches med to kabler for at simulere en loop.
+	\end{itemize}
+	\item \textbf{Observer STP:}
+	\begin{itemize}
+		\item Brug kommandoen \texttt{show spanning-tree} på begge switches for at se, hvordan STP blokerer en af forbindelserne.
+	\end{itemize}
+\end{enumerate}
+
+\subsection{Redundans og Failover}
+\subsubsection*{Redundant Forbindelse til Enkelt Switch}
+\textbf{Mål:} Forstå enkel redundans med to links.
+\newline\newline\noindent
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item \textbf{Forbind en computer til en switch med to kabler:}
+	\begin{itemize}
+		\item Forbind en computer til switchen med to Ethernet-kabler.
+	\end{itemize}
+	\item \textbf{Fjern og tilslut et kabel:}
+	\begin{itemize}
+		\item Fjern det ene kabel og observer forbindelsens opførsel.
+		\item Tilslut kablet igen og observer, hvordan forbindelsen genoprettes.
+	\end{itemize}
+\end{enumerate}
+
+\subsubsection*{Redundant Forbindelse med To Switche}
+\textbf{Mål:} Forstå failover mellem to switche.
+\newline\newline\noindent
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item \textbf{Forbind to switche med to kabler:}
+	\begin{itemize}
+		\item Forbind to switche med to Ethernet-kabler.
+	\end{itemize}
+	\item \textbf{Fjern et kabel:}
+	\begin{itemize}
+		\item Fjern et kabel og observer, hvordan netværket håndterer fejlen.
+	\end{itemize}
+\end{enumerate}
+
+\subsection{EtherChannel Konfiguration}
+\subsubsection*{Opret en EtherChannel Forbindelse}
+\textbf{Mål:} Lær at oprette en EtherChannel mellem to switches.
+\newline\newline\noindent
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item \textbf{Forbind to switches med to kabler:}
+	\begin{itemize}
+		\item Forbind to switches med to Ethernet-kabler.
+	\end{itemize}
+	\item \textbf{Konfigurer EtherChannel:}
+	\begin{itemize}
+		\item Brug kommandoen \texttt{channel-group 1 mode on} på begge switches.
+	\end{itemize}
+	\item \textbf{Test forbindelsen:}
+	\begin{itemize}
+		\item Test forbindelsen mellem to computere på hver switch for at sikre, at EtherChannel fungerer.
+	\end{itemize}
+\end{enumerate}
+
+\subsubsection*{Verificér EtherChannel Konfiguration}
+\textbf{Mål:} Verificér en fungerende EtherChannel.
+\newline\newline\noindent
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item \textbf{Verificér EtherChannel status:}
+	\begin{itemize}
+		\item Brug kommandoen \texttt{show etherchannel summary} for at se status på EtherChannel.
+	\end{itemize}
+	\item \textbf{Test redundans:}
+	\begin{itemize}
+		\item Afbryd et af kablerne og kontrollér, at forbindelsen stadig fungerer.
+	\end{itemize}
+\end{enumerate}
+
+
+\section{Router}
+\subsection{Opret en Grundlæggende Router-til-Router Forbindelse}
+\textbf{Mål:} Lær at forbinde to routere og konfigurer deres grænseflader.
+\newline\newline\noindent
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item \textbf{Forbind to routere med et serielt kabel:}
+	\begin{itemize}
+		\item Brug et serielt kabel til at forbinde Router1 og Router2.
+	\end{itemize}
+	\item \textbf{Konfigurer IP-adresser på serielle interfaces:}
+	\begin{itemize}
+		\item Router1: 192.168.1.1/30
+		\item Router2: 192.168.1.2/30
+	\end{itemize}
+	\item \textbf{Test forbindelsen:}
+	\begin{itemize}
+		\item Pinge fra Router1 til Router2 for at sikre, at der er forbindelse.
+	\end{itemize}
+\end{enumerate}
+
+\subsection{Grundlæggende Router Konfiguration}
+\subsubsection*{Skift Routerens Hostname}
+\textbf{Mål:} Lær at ændre routerens hostname.
+\newline\newline\noindent
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item \textbf{Log ind på routerens CLI:}
+	\begin{itemize}
+		\item Log ind på Router1 via CLI.
+	\end{itemize}
+	\item \textbf{Ændr hostname:}
+	\begin{itemize}
+		\item Brug kommandoen \texttt{hostname} til at ændre navnet til "Router1".
+	\end{itemize}
+	\item \textbf{Gem konfigurationen:}
+	\begin{itemize}
+		\item Brug \texttt{write memory} for at gemme ændringerne.
+	\end{itemize}
+\end{enumerate}
+
+\subsubsection*{Sæt en Adgangskode på Konsoladgang}
+\textbf{Mål:} Sikre konsoladgang ved at tilføje en adgangskode.
+\newline\newline\noindent
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item \textbf{Log ind på routerens CLI:}
+	\begin{itemize}
+		\item Log ind på Router1 via CLI.
+	\end{itemize}
+	\item \textbf{Sæt en adgangskode:}
+	\begin{itemize}
+		\item Brug kommandoerne \texttt{line console 0} og \texttt{password cisco} for at indstille adgangskoden.
+	\end{itemize}
+	\item \textbf{Aktivér adgangskode:}
+	\begin{itemize}
+		\item Brug kommandoen \texttt{login} for at aktivere adgangskodebeskyttelsen.
+	\end{itemize}
+\end{enumerate}
+
+\subsection{Enkel Router Routing}
+\subsubsection*{Konfigurér en Statisk Route}
+\textbf{Mål:} Lær at opsætte en simpel statisk route på en router.
+\newline\newline\noindent
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item \textbf{Log ind på routerens CLI:}
+	\begin{itemize}
+		\item Log ind på Router1 via CLI.
+	\end{itemize}
+	\item \textbf{Konfigurér en statisk route:}
+	\begin{itemize}
+		\item Brug kommandoen \texttt{ip route 192.168.2.0 255.255.255.0 192.168.1.2} for at opsætte en statisk route til et tilstødende netværk.
+	\end{itemize}
+	\item \textbf{Test ruten:}
+	\begin{itemize}
+		\item Pinge fra Router1 til et device på 192.168.2.0-netværket for at verificere ruten.
+	\end{itemize}
+\end{enumerate}
+
+\subsection{Grundlæggende Interface Konfiguration}
+\subsubsection*{Konfigurér et Ethernet Interface}
+\textbf{Mål:} Lær at konfigurere en grundlæggende IP-adresse på et Ethernet interface.
+\newline\newline\noindent
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item \textbf{Log ind på routerens CLI:}
+	\begin{itemize}
+		\item Log ind på Router1 via CLI.
+	\end{itemize}
+	\item \textbf{Konfigurér IP-adresse på Ethernet-interface:}
+	\begin{itemize}
+		\item Brug kommandoen \texttt{interface gigabitEthernet 0/0} og sæt IP-adressen til 192.168.10.1/24.
+	\end{itemize}
+	\item \textbf{Aktivér interface:}
+	\begin{itemize}
+		\item Brug kommandoen \texttt{no shutdown} for at aktivere interfacet.
+	\end{itemize}
+	\item \textbf{Test forbindelsen:}
+	\begin{itemize}
+		\item Pinge til en tilsluttet enhed for at sikre, at interfacet fungerer korrekt.
+	\end{itemize}
+\end{enumerate}
+
+\subsection{Enkel Router Sikkerhed}
+\subsubsection*{Sæt en Enable Password}
+\textbf{Mål:} Sikre routerens privilegerede EXEC-tilstand ved at tilføje en enable-adgangskode.
+\newline\newline\noindent
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item \textbf{Log ind på routerens CLI:}
+	\begin{itemize}
+		\item Log ind på Router1 via CLI.
+	\end{itemize}
+	\item \textbf{Sæt en enable-adgangskode:}
+	\begin{itemize}
+		\item Brug kommandoen \texttt{enable secret cisco} for at indstille en adgangskode til privilegeret adgang.
+	\end{itemize}
+	\item \textbf{Verificér adgangskoden:}
+	\begin{itemize}
+		\item Log ud og log ind igen for at teste den nye adgangskode.
+	\end{itemize}
+\end{enumerate}
+
+\subsection{Grundlæggende Netværks-ID og Subnetting}
+\subsubsection*{Identificér Netværks-ID fra en IP-adresse}
+\textbf{Mål:} Lær at finde netværks-ID'et for en given IP-adresse og subnetmaske.
+\newline\newline\noindent
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item \textbf{Givet IP-adressen 192.168.10.14 med subnetmasken 255.255.255.0:}
+	\begin{itemize}
+		\item Beregn netværks-ID'et for denne IP-adresse ved hjælp af subnetmasken.
+	\end{itemize}
+	\item \textbf{Skriv netværks-ID'et ned:}
+	\begin{itemize}
+		\item Notér den del af IP-adressen, der repræsenterer netværket.
+	\end{itemize}
+\end{enumerate}
+
+\subsubsection*{Bestem Antallet af Hosts i et Subnet}
+\textbf{Mål:} Forstå hvordan man beregner antallet af mulige hosts i et subnet.
+\newline\newline\noindent
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item \textbf{Givet subnetmasken 255.255.255.224:}
+	\begin{itemize}
+		\item Beregn antallet af brugbare IP-adresser (hosts) i dette subnet.
+	\end{itemize}
+	\item \textbf{Skriv antallet af hosts ned:}
+	\begin{itemize}
+		\item Notér, hvor mange IP-adresser der kan tildeles til enheder i dette subnet.
+	\end{itemize}
+\end{enumerate}
+
+\subsubsection*{Opdel Et Simpelt Netværk i To Subnets}
+\textbf{Mål:} Lær at opdele et lille netværk i to mindre subnets.
+\newline\newline\noindent
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item \textbf{Givet netværket 192.168.10.0/24:}
+	\begin{itemize}
+		\item Del dette netværk op i to lige store subnets.
+	\end{itemize}
+	\item \textbf{Skriv subnet-ID'er og nye subnetmasker ned:}
+	\begin{itemize}
+		\item Notér de to subnet-ID'er og deres tilhørende subnetmasker.
+	\end{itemize}
+\end{enumerate}
+
+\subsubsection*{Tildel IP-adresser inden for et Simpelt Subnet}
+\textbf{Mål:} Praktisk anvendelse af IP-adressering inden for et givet subnet.
+\newline\newline\noindent
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item \textbf{Givet subnet-ID'et 192.168.10.0/28:}
+	\begin{itemize}
+		\item Tildel IP-adresser til fire enheder inden for dette subnet.
+	\end{itemize}
+	\item \textbf{Identificér broadcast-adressen:}
+	\begin{itemize}
+		\item Bestem broadcast-adressen for dette subnet.
+	\end{itemize}
+\end{enumerate}
+
+\section{VLAN}
+\subsection{Opret en Grundlæggende VLAN}
+\textbf{Mål:} Lær at oprette en grundlæggende VLAN på en switch og tildele porte til VLAN'et.
+\newline\newline\noindent
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item \textbf{Opret VLAN 10 for "Production" på en switch:}
+	\begin{itemize}
+		\item Log ind på switchens CLI.
+		\item Brug kommandoen \texttt{vlan 10} for at oprette VLAN 10.
+	\end{itemize}
+	\item \textbf{Navngiv VLAN 10:}
+	\begin{itemize}
+		\item Brug kommandoen \texttt{name Production} for at navngive VLAN'et.
+	\end{itemize}
+	\item \textbf{Tildel porte til VLAN 10:}
+	\begin{itemize}
+		\item Brug kommandoen \texttt{interface range gigabitEthernet 0/1 - 2} for at vælge portene.
+		\item Brug kommandoen \texttt{switchport access vlan 10} for at tildele portene til VLAN 10.
+	\end{itemize}
+	\item \textbf{Verificér VLAN-konfigurationen:}
+	\begin{itemize}
+		\item Brug kommandoen \texttt{show vlan brief} for at verificere, at portene er korrekt tildelt til VLAN 10.
+	\end{itemize}
+\end{enumerate}
+
+\subsection{Grundlæggende VLAN Routing}
+\subsubsection*{Konfigurér Inter-VLAN Routing}
+\textbf{Mål:} Lær at konfigurere routing mellem VLAN'er ved hjælp af en router-on-a-stick-konfiguration.
+\newline\newline\noindent
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item \textbf{Konfigurér underinterface på routeren for "Production":}
+	\begin{itemize}
+		\item Log ind på routerens CLI.
+		\item Brug kommandoen \texttt{interface gigabitEthernet 0/0.10} for at oprette et underinterface for VLAN 10 ("Production").
+		\item Tildel IP-adressen 192.168.10.1/24 til underinterfacet.
+		\item Brug kommandoen \texttt{encapsulation dot1Q 10} for at angive VLAN ID.
+	\end{itemize}
+	\item \textbf{Konfigurér underinterface på routeren for "Finance":}
+	\begin{itemize}
+		\item Opret et underinterface \texttt{gigabitEthernet 0/0.20} for VLAN 20 ("Finance").
+		\item Tildel IP-adressen 192.168.20.1/24.
+		\item Brug \texttt{encapsulation dot1Q 20}.
+	\end{itemize}
+	\item \textbf{Test Inter-VLAN Routing:}
+	\begin{itemize}
+		\item Pinge fra en enhed i VLAN 10 ("Production") til en enhed i VLAN 20 ("Finance") for at sikre, at der er routing mellem VLAN'erne.
+	\end{itemize}
+\end{enumerate}
+
+\subsection{Sikkerhed i VLAN}
+\subsubsection*{Opret og Konfigurér et Management VLAN}
+\textbf{Mål:} Lær at oprette et dedikeret management VLAN for at sikre adgang til switchens administrative interface.
+\newline\newline\noindent
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item \textbf{Opret VLAN 99 som "Management":}
+	\begin{itemize}
+		\item Log ind på switchens CLI.
+		\item Brug kommandoen \texttt{vlan 99} for at oprette management VLAN'et.
+	\end{itemize}
+	\item \textbf{Tildel en IP-adresse til VLAN 99 interface:}
+	\begin{itemize}
+		\item Brug kommandoen \texttt{interface vlan 99}.
+		\item Tildel IP-adressen 192.168.99.1/24 til VLAN 99 interface.
+	\end{itemize}
+	\item \textbf{Sæt en standard gateway:}
+	\begin{itemize}
+		\item Brug kommandoen \texttt{ip default-gateway 192.168.99.254}.
+	\end{itemize}
+	\item \textbf{Verificér adgang til management VLAN:}
+	\begin{itemize}
+		\item Pinge til switchens management IP fra en computer i netværket for at sikre, at VLAN 99 fungerer korrekt.
+	\end{itemize}
+\end{enumerate}
+
+\subsection*{Konfigurér Port Security på et VLAN}
+\textbf{Mål:} Lær at anvende port security på et VLAN for at forbedre netværkssikkerheden.
+\newline\newline\noindent
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item \textbf{Aktivér port security på en switch port i "Guest" VLAN:}
+	\begin{itemize}
+		\item Log ind på switchens CLI.
+		\item Vælg en port med \texttt{interface gigabitEthernet 0/1}.
+		\item Brug kommandoen \texttt{switchport mode access} for at sætte porten i access mode.
+		\item Aktivér port security med \texttt{switchport port-security}.
+	\end{itemize}
+	\item \textbf{Konfigurér en maksimal grænse for MAC-adresser:}
+	\begin{itemize}
+		\item Brug kommandoen \texttt{switchport port-security maximum 2} for at tillade maksimalt to MAC-adresser.
+	\end{itemize}
+	\item \textbf{Indstil en port security action:}
+	\begin{itemize}
+		\item Brug kommandoen \texttt{switchport port-security violation shutdown} for at lukke porten, hvis sikkerheden krænkes.
+	\end{itemize}
+	\item \textbf{Verificér port security:}
+	\begin{itemize}
+		\item Brug kommandoen \texttt{show port-security interface gigabitEthernet 0/1} for at verificere indstillingerne.
+	\end{itemize}
+\end{enumerate}
+
+\section{NAT (Network Address Translation)}	
+\subsection{Konfigurér Statisk NAT}
+\textbf{Mål:} Lær at konfigurere statisk NAT for at mappe en enkelt intern IP-adresse til en enkelt ekstern IP-adresse.
+\newline\newline\noindent
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item \textbf{Log ind på routerens CLI:}
+	\begin{itemize}
+		\item Log ind på Router1 via CLI.
+	\end{itemize}
+	\item \textbf{Konfigurér en indvendig lokal IP-adresse:}
+	\begin{itemize}
+		\item Brug kommandoen \texttt{ip nat inside source static 192.168.10.10 203.0.113.10} for at mappe den interne IP-adresse (192.168.10.10) til en ekstern IP-adresse (203.0.113.10).
+	\end{itemize}
+	\item \textbf{Angiv interfacet som indvendig eller udvendig:}
+	\begin{itemize}
+		\item Brug kommandoen \texttt{interface gigabitEthernet 0/1} for at vælge det interne interface og angiv det som "inside" ved at bruge \texttt{ip nat inside}.
+		\item Brug kommandoen \texttt{interface gigabitEthernet 0/0} for at vælge det eksterne interface og angiv det som "outside" ved at bruge \texttt{ip nat outside}.
+	\end{itemize}
+	\item \textbf{Test den statiske NAT-konfiguration:}
+	\begin{itemize}
+		\item Pinge den eksterne IP-adresse (203.0.113.10) fra en ekstern enhed og verificér, at forbindelsen oversættes korrekt til den interne IP-adresse.
+	\end{itemize}
+\end{enumerate}
+
+\subsection{Konfigurér Dynamisk NAT}
+\textbf{Mål:} Lær at konfigurere dynamisk NAT for at oversætte flere interne IP-adresser til en pool af eksterne IP-adresser.
+\newline\newline\noindent
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item \textbf{Opret en pool af eksterne IP-adresser:}
+	\begin{itemize}
+		\item Brug kommandoen \texttt{ip nat pool NAT-POOL 203.0.113.10 203.0.113.15 netmask 255.255.255.248} for at definere en pool af eksterne IP-adresser.
+	\end{itemize}
+	\item \textbf{Konfigurér en access-list for indvendige IP-adresser:}
+	\begin{itemize}
+		\item Brug kommandoen \texttt{access-list 1 permit 192.168.10.0 0.0.0.255} for at tillade interne IP-adresser fra 192.168.10.0/24-netværket.
+	\end{itemize}
+	\item \textbf{Anvend dynamisk NAT:}
+	\begin{itemize}
+		\item Brug kommandoen \texttt{ip nat inside source list 1 pool NAT-POOL} for at anvende dynamisk NAT ved at oversætte de tilladte interne IP-adresser til poolen af eksterne IP-adresser.
+	\end{itemize}
+	\item \textbf{Angiv interfacet som indvendig eller udvendig:}
+	\begin{itemize}
+		\item Brug kommandoen \texttt{interface gigabitEthernet 0/1} for at vælge det interne interface og angiv det som "inside" ved at bruge \texttt{ip nat inside}.
+		\item Brug kommandoen \texttt{interface gigabitEthernet 0/0} for at vælge det eksterne interface og angiv det som "outside" ved at bruge \texttt{ip nat outside}.
+	\end{itemize}
+	\item \textbf{Test den dynamiske NAT-konfiguration:}
+	\begin{itemize}
+		\item Pinge fra en intern enhed til en ekstern adresse og verificér, at NAT oversættelsen sker fra den interne til den eksterne IP-pool.
+	\end{itemize}
+\end{enumerate}
+
+\section{DNS (Domain Name System)}
+\subsection{Konfigurér en DNS-klient}
+\textbf{Mål:} Lær at konfigurere en computer til at bruge en specifik DNS-server for at oversætte domænenavne til IP-adresser.
+\newline\newline\noindent
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item \textbf{Åbn netværksindstillinger på klientcomputeren:}
+	\begin{itemize}
+		\item Gå til netværksindstillinger på en Windows- eller Linux-maskine.
+	\end{itemize}
+	\item \textbf{Konfigurér DNS-serveradresse:}
+	\begin{itemize}
+		\item Indtast DNS-serverens IP-adresse (f.eks. 8.8.8.8) i feltet for DNS-server.
+	\end{itemize}
+	\item \textbf{Test DNS-konfigurationen:}
+	\begin{itemize}
+		\item Brug kommandoen \texttt{nslookup www.example.com} for at verificere, at DNS-klienten kan oversætte domænenavne til IP-adresser ved hjælp af den konfigurerede DNS-server.
+	\end{itemize}
+\end{enumerate}
+
+\subsection{Konfigurér en Grundlæggende DNS Server}
+\textbf{Mål:} Lær at opsætte en simpel DNS-server, der kan svare på forespørgsler for et specifikt domæne.
+\newline\newline\noindent
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item \textbf{Installer DNS-server software:}
+	\begin{itemize}
+		\item Installer en DNS-server software som BIND på en Linux-maskine eller brug indbygget DNS-server på en Windows Server-maskine.
+	\end{itemize}
+	\item \textbf{Konfigurér en zonefil for domænet "example.com":}
+	\begin{itemize}
+		\item Opret en zonefil og tilføj en A-record for \texttt{www.example.com}, der peger på IP-adressen 192.168.1.10.
+	\end{itemize}
+	\item \textbf{Start DNS-serveren:}
+	\begin{itemize}
+		\item Start DNS-serveren og sørg for, at den kører korrekt.
+	\end{itemize}
+	\item \textbf{Test DNS-serveren:}
+	\begin{itemize}
+		\item Brug kommandoen \texttt{nslookup www.example.com} på en klientcomputer for at verificere, at DNS-serveren korrekt oversætter domænenavnet til den rigtige IP-adresse.
+	\end{itemize}
+\end{enumerate}
+
+\subsection{Konfigurér DNS Forwarding}
+\textbf{Mål:} Lær at konfigurere en DNS-server til at videresende forespørgsler til en anden DNS-server, hvis den ikke kan svare på forespørgslen selv.
+\newline\newline\noindent
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item \textbf{Åbn DNS-serverens konfigurationsfil:}
+	\begin{itemize}
+		\item Åbn DNS-serverens konfigurationsfil (f.eks. \texttt{/etc/named.conf} for BIND).
+	\end{itemize}
+	\item \textbf{Tilføj en forwarding-indstilling:}
+	\begin{itemize}
+		\item Tilføj en sektion for forwarding og angiv IP-adressen på den eksterne DNS-server (f.eks. 8.8.8.8).
+	\end{itemize}
+	\item \textbf{Genstart DNS-serveren:}
+	\begin{itemize}
+		\item Genstart DNS-serveren for at anvende de nye indstillinger.
+	\end{itemize}
+	\item \textbf{Test DNS-forwarding:}
+	\begin{itemize}
+		\item Forsøg at slå et domænenavn op, som DNS-serveren ikke har i sin zonefil, og verificér, at forespørgslen videresendes korrekt til den eksterne DNS-server.
+	\end{itemize}
+\end{enumerate}
+
+\subsection{Tilføj en CNAME Record}
+\textbf{Mål:} Lær at tilføje en CNAME (alias) record til en DNS-server for at pege et domænenavn til et andet domænenavn.
+\newline\newline\noindent
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item \textbf{Åbn DNS-serverens zonefil for "example.com":}
+	\begin{itemize}
+		\item Find og åbn zonefilen for \texttt{example.com}.
+	\end{itemize}
+	\item \textbf{Tilføj en CNAME record:}
+	\begin{itemize}
+		\item Tilføj en CNAME record, så \texttt{mail.example.com} peger på \texttt{www.example.com}.
+	\end{itemize}
+	\item \textbf{Genstart DNS-serveren:}
+	\begin{itemize}
+		\item Genstart DNS-serveren for at anvende ændringerne.
+	\end{itemize}
+	\item \textbf{Test CNAME record:}
+	\begin{itemize}
+		\item Brug kommandoen \texttt{nslookup mail.example.com} for at sikre, at \texttt{mail.example.com} korrekt peger på IP-adressen til \texttt{www.example.com}.
+	\end{itemize}
+\end{enumerate}
+
+\section{DHCP (Dynamic Host Configuration Protocol)}
+\subsection{Konfigurér en Grundlæggende DHCP Server}
+\textbf{Mål:} Lær at opsætte en grundlæggende DHCP-server for automatisk at tildele IP-adresser til klienter på netværket.
+\newline\newline\noindent
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item \textbf{Log ind på routerens CLI:}
+	\begin{itemize}
+		\item Log ind på Router1 via CLI.
+	\end{itemize}
+	\item \textbf{Konfigurér et DHCP-pool:}
+	\begin{itemize}
+		\item Brug kommandoen \texttt{ip dhcp pool LAN} for at oprette en ny DHCP-pool med navnet "LAN".
+		\item Indstil netværksadressen ved hjælp af \texttt{network 192.168.10.0 255.255.255.0}.
+		\item Indstil standard gateway med \texttt{default-router 192.168.10.1}.
+		\item Angiv DNS-serveren med \texttt{dns-server 8.8.8.8}.
+	\end{itemize}
+	\item \textbf{Udsæt visse IP-adresser fra DHCP-poolen:}
+	\begin{itemize}
+		\item Brug kommandoen \texttt{ip dhcp excluded-address 192.168.10.1 192.168.10.10} for at undgå, at disse adresser tildeles af DHCP-serveren.
+	\end{itemize}
+	\item \textbf{Verificér DHCP-konfigurationen:}
+	\begin{itemize}
+		\item Brug kommandoen \texttt{show ip dhcp binding} for at se de IP-adresser, der er blevet tildelt af DHCP-serveren.
+		\item Test DHCP ved at tilslutte en klient til netværket og verificér, at klienten modtager en IP-adresse automatisk.
+	\end{itemize}
+\end{enumerate}
+
+\subsection{Konfigurér DHCP-udlejningstid}
+\textbf{Mål:} Lær at konfigurere udlejningstiden (lease time) for IP-adresser, der tildeles af DHCP-serveren.
+\newline\newline\noindent
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item \textbf{Åbn DHCP-pool konfigurationen:}
+	\begin{itemize}
+		\item Brug kommandoen \texttt{ip dhcp pool LAN} for at åbne DHCP-pool konfigurationen.
+	\end{itemize}
+	\item \textbf{Indstil udlejningstiden:}
+	\begin{itemize}
+		\item Brug kommandoen \texttt{lease 2 12 00} for at indstille udlejningstiden til 2 dage og 12 timer.
+	\end{itemize}
+	\item \textbf{Verificér udlejningstiden:}
+	\begin{itemize}
+		\item Brug kommandoen \texttt{show ip dhcp pool} for at se den konfigurerede udlejningstid.
+		\item Test ved at tilslutte en klient og verificere, at den modtager en IP-adresse med den angivne udlejningstid.
+	\end{itemize}
+\end{enumerate}
+
+\subsection{Konfigurér DHCP Reservation}
+\textbf{Mål:} Lær at konfigurere en DHCP-reservation for at sikre, at en bestemt enhed altid modtager den samme IP-adresse.
+\newline\newline\noindent
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item \textbf{Find MAC-adressen på enheden:}
+	\begin{itemize}
+		\item På klienten, brug kommandoen \texttt{ipconfig /all} (Windows) eller \texttt{ifconfig} (Linux) for at finde MAC-adressen.
+	\end{itemize}
+	\item \textbf{Konfigurér DHCP-reservation:}
+	\begin{itemize}
+		\item På routeren, brug kommandoen \texttt{ip dhcp pool LAN}.
+		\item Indstil en reservation med kommandoen \texttt{host 192.168.10.50} og tilknyt MAC-adressen med \texttt{hardware-address <MAC-adresse>}.
+	\end{itemize}
+	\item \textbf{Verificér DHCP-reservationen:}
+	\begin{itemize}
+		\item Test ved at genstarte netværksforbindelsen på klienten og verificér, at den modtager den reserverede IP-adresse.
+	\end{itemize}
+\end{enumerate}
+
+\subsection{Konfigurér en DHCP Relay Agent}
+\textbf{Mål:} Lær at konfigurere en DHCP Relay Agent for at videresende DHCP-forespørgsler fra klienter på forskellige netværk.
+\newline\newline\noindent
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item \textbf{Log ind på routeren, der forbinder to netværk:}
+	\begin{itemize}
+		\item Log ind på Router2 via CLI.
+	\end{itemize}
+	\item \textbf{Aktivér DHCP Relay Agent på det lokale interface:}
+	\begin{itemize}
+		\item Brug kommandoen \texttt{interface gigabitEthernet 0/1}.
+		\item Indstil DHCP Relay Agent ved at bruge kommandoen \texttt{ip helper-address 192.168.20.1}, hvor \texttt{192.168.20.1} er IP-adressen på DHCP-serveren.
+	\end{itemize}
+	\item \textbf{Test DHCP-relay:}
+	\begin{itemize}
+		\item Tilslut en klient til netværket på det lokale interface og verificér, at den modtager en IP-adresse fra DHCP-serveren på det fjerntliggende netværk.
+	\end{itemize}
+\end{enumerate}
+
+
+\chapter{Siemens}
+\section{TIA Portal Netværksopgaver}
+\label{sec:tia_portal_opgaver}
+Dette afsnit fokuserer på de centrale opgaver og procedurer, der er nødvendige for at konfigurere og vedligeholde netværksforbindelser inden for TIA Portal. Gennem en række trin-for-trin instruktioner vil læseren blive guidet igennem processerne for oprettelse af PROFINET-netværk, integration af enheder og fejlfinding af netværksproblemer.
+\newline\newline\noindent
+Før du går i gang med opgaverne i dette afsnit, skal du læse og forstå de forskellige metoder for IP-adressering og konfiguration af PROFINET enhedsnavne i TIA Portal. Disse guides dækker statisk IP-adresse, DHCP og direkte konfiguration på enheden.
+
+\section{IP-adresse guide}
+\subsection*{Indstilling af statisk IP-adresse}
+\label{subsec:static_ip}
+\textbf{Mål:} Opsætning af en statisk IP-adresse på en Siemens PLC i TIA Portal.
+\newline\newline\noindent
+\textbf{Trin-for-trin Guide:}
+\begin{enumerate}
+	\item Åbn TIA Portal og vælg det relevante projekt.
+	\item Naviger til den PLC-enhed, du ønsker at konfigurere.
+	\item Klik på fanen \textit{Properties}.
+	\item Vælg \textit{Ethernet addresses} under \textit{General}.
+	\item Under \textit{Internet protocol version 4 (IPv4)}, vælg \textit{Set IP address in the project}.
+	\item Indtast den ønskede IP-adresse og subnetmaske.
+	\begin{itemize}
+		\item \textbf{Use router:} Kryds dette felt af, hvis PLC'en skal kunne kommunikere med enheder uden for det lokale netværk. Indtast routerens IP-adresse.
+		\item \textbf{PROFINET device name is set directly at the device:} Kryds dette felt af, hvis du vil sætte enhedsnavnet direkte på PLC'en i stedet for at konfigurere det i projektet.
+		\item \textbf{Generate PROFINET device name automatically:} Kryds dette felt af, hvis du ønsker, at TIA Portal automatisk genererer et PROFINET enhedsnavn.
+	\end{itemize}
+	\item Klik på \textit{OK} eller \textit{Apply} for at gemme ændringerne.
+\end{enumerate}
+\textbf{Bemærk:} Sørg for, at \textit{IP-adressen} og \textit{PROFINET device name} er unik inden for netværket og ikke konflikter med andre enheder.
+
+\subsection*{Indstilling af IP-adresse via DHCP}
+\label{subsec:dhcp_ip}
+\textbf{Mål:} Konfigurering af en Siemens PLC til at modtage en IP-adresse fra en DHCP-server.
+\newline\newline\noindent\textbf{Trin-for-trin Guide:}
+\begin{enumerate}
+	\item Åbn TIA Portal og vælg det relevante projekt.
+	\item Naviger til den PLC-enhed, du ønsker at konfigurere.
+	\item Klik på fanen \textit{Properties}.
+	\item Vælg \textit{Ethernet addresses} under \textit{General}.
+	\item Under \textit{Internet protocol version 4 (IPv4)}, vælg \textit{IP address from DHCP server}.
+	\begin{itemize}
+		\item \textbf{Mode:} Vælg \textit{Use MAC address as client ID}, hvis PLC'en skal bruge sin MAC-adresse som klient-ID ved anmodning om en IP-adresse fra DHCP-serveren.
+		
+		\item \textbf{Client ID:} Hvis du ønsker at specificere et brugerdefineret klient-ID, kan du indtaste det her. Kryds \textit{Client ID can be changed during runtime} af, hvis dette ID skal kunne ændres under kørsel.
+		
+		\item \textbf{PROFINET device name is set directly at the device:} Kryds dette felt af, hvis du vil sætte enhedsnavnet direkte på PLC'en i stedet for at konfigurere det i projektet.
+		
+		\item \textbf{Generate PROFINET device name automatically:} Kryds dette felt af, hvis du ønsker, at TIA Portal automatisk genererer et PROFINET enhedsnavn.
+	\end{itemize}
+	\item Klik på \textit{OK} eller \textit{Apply} for at gemme ændringerne.
+\end{enumerate}
+\textbf{Bemærk:} DHCP-serveren skal være korrekt konfigureret til at tildele IP-adresser inden for det ønskede netværk.
+\newline\newline\noindent \textbf{Note for Mode:} Når du vælger \textit{Use MAC address as client ID}, betyder det, at PLC'en automatisk bruger sin unikke MAC-adresse som klient-ID, når den anmoder om en IP-adresse fra en DHCP-server. Du skal ikke manuelt indtaste MAC-adressen; PLC'en bruger sin egen hardware-adresse, som allerede er indkodet i dens netværkskort.
+\newline\newline\noindent \textbf{Note for Client ID:} Hvis du ønsker at specificere et brugerdefineret klient-ID i stedet for at bruge MAC-adressen, kan du indtaste det her. Dette kan være nyttigt i situationer, hvor du har brug for en mere meningsfuld identifikation for PLC'en i netværket. Hvis du sætter kryds ved \textit{Client ID can be changed during runtime}, tillader du, at dette ID kan ændres dynamisk, mens systemet er i drift, hvilket giver fleksibilitet i netværksadministrationen.
+\subsection*{Indstilling af IP-adresse direkte på enheden}
+\label{subsec:device_ip}
+
+\textbf{Mål:} Konfiguration af en Siemens PLC til at have en IP-adresse sat direkte på enheden.
+\newline\newline\noindent
+\textbf{Trin-for-trin Guide:}
+\begin{enumerate}
+	\item Åbn TIA Portal og vælg det relevante projekt.
+	\item Naviger til den PLC-enhed, du ønsker at konfigurere.
+	\item Klik på fanen \textit{Properties}.
+	\item Vælg \textit{Ethernet addresses} under \textit{General}.
+	\item Under \textit{Internet protocol version 4 (IPv4)}, vælg \textit{IP address is set directly at the device}.
+	\begin{itemize}
+		\item \textbf{PROFINET device name is set directly at the device:} Kryds dette felt af, hvis du vil sætte enhedsnavnet direkte på PLC'en i stedet for at konfigurere det i projektet.
+		\item \textbf{Generate PROFINET device name automatically:} Kryds dette felt af, hvis du ønsker, at TIA Portal automatisk genererer et PROFINET enhedsnavn.
+	\end{itemize}
+	\item Klik på \textit{OK} eller \textit{Apply} for at gemme ændringerne.
+\end{enumerate}
+\textbf{Bemærk:} Når denne indstilling er valgt, skal IP-adressen konfigureres direkte på PLC-enheden via dens brugergrænseflade.
+
+\section{Oprettelse af PROFINET Netværk}
+\textbf{Mål:} Denne sektion guider dig gennem oprettelsen af et PROFINET netværk i Siemens TIA Portal, trin for trin. 
+\newline
+\newline
+\noindent Følg nedenstående trin for at sikre korrekt opsætning:
+\begin{enumerate}
+	\item \textbf{Dokumentation og Planlægning:}
+	\begin{itemize}
+		\item Opret en detaljeret plan for netværksopsætningen, herunder en liste over alle enheder, der skal tilføjes, deres tildelte IP-adresser, enhedsnavne og andre relevante konfigurationsdetaljer.
+		\item Gem planen i et let tilgængeligt format, f.eks. en PDF-fil eller et regneark.
+		\item Sørg for, at planen er opdateret og inkluderer eventuelle ændringer eller tilføjelser til netværket.
+	\end{itemize}
+	\item \textbf{Åbn TIA Portal og vælg det relevante projekt:}
+	\begin{itemize}
+		\item Start TIA Portal-softwaren.
+		\item Opret et nyt projekt.
+	\end{itemize}
+	\item \textbf{Indsæt en fysisk S7-1200:}
+	\begin{itemize}
+		\item Tilføj en fysisk S7-1200 PLC til projektet som den første enhed.
+	\end{itemize}
+	\item \textbf{Naviger til "Netværksoversigt":}
+	\begin{itemize}
+		\item Gå til \textit{Netværksoversigt} i projektets hovedmenu.
+	\end{itemize}
+	\item \textbf{Angiv unikt IP-adresseområde og "Device name":}
+	\begin{itemize}
+		\item Højreklik på S7-1200 PLC'en og vælg \textit{Properties}.
+		\item Definer et passende IP-adresseområde for netværket for at sikre, at alle enheder får unikke IP-adresser.
+		\item Giv S7-1200 PLC'en en unik IP-adresse.
+		\item Indtast et beskrivende \textit{Device name}.
+		\item Dokumenter Device name, IP-adresse og MAC-adresse.
+	\end{itemize}
+	\item \textbf{Brug 'Drag and Drop' for at tilføje en ny simuleret S7-1500 PLC til netværket, og tildel unik IP-adresse:}
+	\begin{itemize}
+		\item Træk den simulerede S7-1500 PLC fra enhedslisten ind i netværksoversigten ved hjælp af 'Drag and Drop'.
+		\item Sørg for, at S7-1500 PLC'en får tildelt en unik IP-adresse inden for det specificerede IP-adresseområde.
+	\end{itemize}
+	\item \textbf{Konfigurer netværksindstillinger for hver enhed:}
+	\begin{itemize}
+		\item Klik på hver enhed i netværksoversigten for at åbne dens konfigurationsindstillinger.
+		\item Tildel et unikt enhedsnavn og den relevante IP-adresse til hver enhed, så de passer inden for det definerede IP-adresseområde.
+	\end{itemize}
+	\item \textbf{Online \& Diagnostic:}
+	\begin{itemize}
+		\item Gå online med netværket ved hjælp af TIA Portal.
+		\item Brug \textit{Online \& Diagnostic} til at finde MAC-adresserne for alle tilsluttede enheder.
+		\item Undersøg om alle enheder fungerer korrekt, og om der er nogen netværksfejl.
+		\item Opdater dokumentationen med de fundne MAC-adresser og eventuelle bemærkninger om netværksfejl eller status.
+	\end{itemize}
+	\item \textbf{Gem og kompiler projektet for at anvende ændringerne:}
+	\begin{itemize}
+		\item Efter at have konfigureret alle enheder, skal du gemme projektet.
+		\item Klik på \textit{Kompiler} for at sikre, at alle ændringer er korrekte og integreret i projektet.
+	\end{itemize}
+	\item \textbf{Dokumentation:}
+	\begin{itemize}
+		\item Opdater den oprindelige dokumentation med eventuelle ændringer eller tilføjelser foretaget under opsætningsprocessen.
+		\item Sørg for, at alle detaljer er nøjagtige og let tilgængelige for fremtidig reference.
+	\end{itemize}
+\end{enumerate}
+\noindent\textbf{Note:} Hvis det ikke er muligt at bruge en fysisk S7-1200 og en simuleret S7-1500, kan to simulerede PLC'er anvendes i stedet.
+
+\subsection*{Ekstra Tips til PROFINET Netværksopsætning}
+\begin{itemize}
+	\item \textbf{Meningsfulde Enhedsnavne:} Brug meningsfulde navne til enhederne, der afspejler deres funktion eller placering, for lettere identifikation og fejlfinding.
+	\item \textbf{Ensartet IP-adressering:} Sørg for, at alle IP-adresser er inden for samme subnet for at sikre korrekt kommunikation mellem enhederne.
+	\item \textbf{Dokumentation:} Dokumentér alle netværksindstillinger, enhedsnavne og IP-adresser for fremtidig reference og fejlfinding.
+	\item \textbf{Netværkstest:} Efter kompilering og implementering, test netværket for at sikre, at alle enheder kommunikerer korrekt og effektivt.
+\end{itemize}
+Ved at følge disse detaljerede trin og tips kan du oprette og konfigurere et robust PROFINET netværk i TIA Portal, der opfylder dine industrielle automatiseringskrav.
+
+\section{Fejlfinding af Netværk i TIA Portal}
+\textbf{Mål:} Formålet med opgaven er at du forstår og kan ændre IP-adresser på enheder i et PROFINET netværk som har fået konfigureret en forkert IP-adresse.
+\begin{enumerate}
+	\item Arbejd videre fra forrige opgave.
+	\item Konfigurer en IP-adresse som ligger uden for dit subnet og derefter lav "Hardware download" til enheden.
+	\item Brug \textit{Diagnostic} funktionerne i TIA Portal til at identificere eventuelle fejl eller advarsler.
+	\item Prøv at konfigurer en IP-adresse som er i det rigtige subnet og se om du kan komme i kontakt med enheden.
+	\item Anvend \textit{Accessible Devices}-værktøjet til at scanne netværket og bekræfte, at alle enheder er korrekt forbundet og konfigureret.
+	\item Naviger til \textit{Online \& Diagnostic} for at give enheden en ny IP-adresse. 
+	\item Dokumentér netværkskonfiguration og eventuelle ændringer grundigt for fremtidig reference og fejlfinding.
+\end{enumerate}
+Lav enten en video eller dokumenter din måde at finde frem til fejlen og udbedre fejlen.
+
+\section{S7-Communication}
+Før du begynder at løse netværksopgaverne i TIA Portal, er det vigtigt at du har forståelse for de forskellige metoder til dataoverførsel og netværkskommunikation. Følgende afsnit vil give dig indsigt i de vigtigste kommunikationsblokke og deres anvendelsesområder. Dette vil danne grundlaget for de praktiske opgaver, du skal udføre.
+
+\section{Kommunikationsblokke og deres Anvendelse}
+\textbf{BSEND}
+\begin{itemize}
+	\item \textbf{Datatyper:}
+	\begin{itemize}
+		\item \textbf{Store Datasæt:} Egnet til at sende større datasæt som komplette datasæt, konfigurationsfiler eller batchprocesdata.
+		\item \textbf{Komplekse Strukturer:} Kan håndtere komplekse datastrukturer, herunder arrays, records eller multi-dimensionelle data.
+		\item \textbf{Kritisk Kontroldata:} Bruges til at transmittere kritisk kontrolinformation, såsom setpunkter, kontrolparametre eller systemtilstande.
+	\end{itemize}
+	\item \textbf{Brugstilfælde:}
+	\begin{itemize}
+		\item \textbf{Batchbehandling:} Overførsel af hele batches af data i fremstillingsprocesser.
+		\item \textbf{Konfigurationsoverførsler:} Initiering eller opdatering af systemkonfigurationer.
+		\item \textbf{Kvalitetskontroldata:} Transmitterer detaljerede kvalitetskontroldata til analyse.
+		\item \textbf{Synkronisering af Tilstand:} Holder systemer synkroniseret ved at sende omfattende tilstandsoplysninger.
+	\end{itemize}
+\end{itemize}
+
+\noindent\textbf{TSEND\_C}
+\begin{itemize}
+	\item \textbf{Datatyper:}
+	\begin{itemize}
+		\item \textbf{Almindelige Datasæt:} Brugt til almindelig dataoverførsel såsom statusopdateringer og kontrolsignaler.
+		\item \textbf{Strukturerede Data:} Kan håndtere simple strukturer og mindre datasæt.
+	\end{itemize}
+	\item \textbf{Brugstilfælde:}
+	\begin{itemize}
+		\item \textbf{Realtidskommunikation:} Bruges til realtidsdataudveksling mellem PLC og andre systemer, fx HMI'er.
+		\item \textbf{Integrering med IT-systemer:} Muliggør kommunikation med IT-systemer eller andre enheder via standard TCP/IP.
+	\end{itemize}
+\end{itemize}
+
+\noindent\textbf{TSEND}
+\begin{itemize}
+	\item \textbf{Datatyper:}
+	\begin{itemize}
+		\item \textbf{Sekventielle Data:} Velegnet til overførsel af data i sekventielle eller kontinuerlige strømme.
+		\item \textbf{Mindre Datasæt:} Ideel til mindre, hyppigt opdaterede datasæt.
+	\end{itemize}
+	\item \textbf{Brugstilfælde:}
+	\begin{itemize}
+		\item \textbf{Data Logging:} Sender data kontinuerligt til en datalogger.
+		\item \textbf{Overvågning:} Overfører statusopdateringer til overvågningssystemer.
+	\end{itemize}
+\end{itemize}
+
+\noindent\textbf{PUT}
+\begin{itemize}
+	\item \textbf{Datatyper:}
+	\begin{itemize}
+		\item \textbf{Enkelte Variabler:} Overfører specifikke dataelementer, såsom enkelte variabler eller små datasæt.
+		\item \textbf{Kritiske Opdateringer:} Egnet til at sende kritiske opdateringer eller kontrolsignaler.
+	\end{itemize}
+	\item \textbf{Brugstilfælde:}
+	\begin{itemize}
+		\item \textbf{Direkte PLC-til-PLC Kommunikation:} Anvendes til simpel og direkte dataoverførsel mellem to PLC'er.
+		\item \textbf{Kontrolkommandoer:} Sender kontrolkommandoer til en anden PLC.
+	\end{itemize}
+\end{itemize}
+
+\noindent\textbf{GET}
+\begin{itemize}
+	\item \textbf{Datatyper:}
+	\begin{itemize}
+		\item \textbf{Enkelte Variabler:} Henter specifikke dataelementer fra en anden PLC.
+		\item \textbf{Mindre Datasæt:} Henter små datasæt til brug i kontrolprogrammer.
+	\end{itemize}
+	\item \textbf{Brugstilfælde:}
+	\begin{itemize}
+		\item \textbf{Data Retrieval:} Bruges til at hente aktuelle værdier fra en anden PLC til overvågning eller videre behandling.
+		\item \textbf{Tilstandsopdateringer:} Modtager opdateringer om systemtilstand fra andre enheder.
+	\end{itemize}
+\end{itemize}
+
+\noindent\textbf{USEND}
+\begin{itemize}
+	\item \textbf{Datatyper:}
+	\begin{itemize}
+		\item \textbf{Pakker:} Sender data i form af individuelle pakker.
+		\item \textbf{Best Effort Data:} Velegnet til data, hvor pålidelighed ikke er kritisk.
+	\end{itemize}
+	\item \textbf{Brugstilfælde:}
+	\begin{itemize}
+		\item \textbf{Broadcast Kommunikation:} Sender data til flere modtagere i et netværk.
+		\item \textbf{Ikke-kritiske Opdateringer:} Bruges til opdateringer, hvor tab af data kan tolereres, såsom periodiske statusmeddelelser.
+	\end{itemize}
+\end{itemize}
+
+\subsection*{PUT-metode}
+\label{subsec:put_method_plc_communication}
+\textbf{Mål:} Denne øvelse har til formål at demonstrere konfiguration og anvendelse af PUT-metoden for dataoverførsel mellem en fysisk SIMATIC S7-1200 PLC og en simuleret SIMATIC S7-1500 PLC. Målet er at udvikle en dybere forståelse for effektiv datakommunikation i automatiserede systemer og at opnå praktisk erfaring med direkte PLC-til-PLC kommunikation. Du skal også designe en simpel produktionslinje i Emulate3D, hvor data udveksles mellem to PLC'er for at koordinere maskinernes drift.
+\newline\newline
+\noindent\textbf{Opgave:}
+\begin{enumerate}
+	\item \textbf{Planlægning og Dokumentation:}
+	\begin{itemize}
+		\item Udarbejd en detaljeret plan for placering af PLC-tavleskabe og maskiner. Tavleskabene skal være placeret med en afstand på mindre end 100m, men mere end 50m.
+		\item \textbf{Note:} To rullebånd kan bruges til at symbolisere maskiner.
+		\item Dokumentér planen med et layoutdiagram, der viser placeringen af tavleskabe og maskiner.
+	\end{itemize}
+	\item \textbf{Scenarieopbygning i Emulate3D:}
+	\begin{itemize}
+		\item Design en simpel produktionslinje i Emulate3D med to maskiner, der skal koordinere deres aktiviteter.
+		\item Den første maskine (PLC A) skal starte en operation og sende en besked til den anden maskine (PLC B), når operationen er fuldført.
+		\item Den anden maskine (PLC B) skal modtage beskeden og begynde sin operation baseret på den modtagne data.
+	\end{itemize}
+	\item \textbf{Konfiguration i TIA Portal:}
+	\begin{itemize}
+		\item Konfigurer en fysisk S7-1200 PLC og en simuleret S7-1500 PLC i TIA Portal, hvor S7-1200 fungerer som sender (bruger PUT-metoden) og S7-1500 som modtager.
+		\item Tildel unikke IP-adresser til begge PLC'er og opsæt passende netværksparametre for at muliggøre kommunikation via Ethernet.
+	\end{itemize}
+	\item \textbf{Simulering med PLCSIM Advanced:}
+	\begin{itemize}
+		\item Brug PLCSIM Advanced til at simulere S7-1500 PLC'en og etablere en virtuel forbindelse mellem den og den fysiske S7-1200 PLC.
+		\item \textbf{Note:} Vælg \textit{TCP/IP Single Adapter} og derefter vælg det fysiske netkort \textbf{(ikke wireless)}.
+	\end{itemize}
+	\item \textbf{Konfiguration af PUT-funktionsblok:}
+	\begin{itemize}
+		\item I sender-PLC'en (S7-1200), konfigurer en PUT-funktionsblok med relevante data og destinationsadressen for modtager-PLC'en (S7-1500).
+		\item Initialiser PUT-funktionsblokken ved at aktivere `REQ`-variablen, når både `DONE` og `ERROR` er inaktive.
+		\item I modtager-PLC'en (S7-1500), opsæt en modtagefunktion for at håndtere og lagre de modtagne data så de evt. ville kunne vises på en HMI
+	\end{itemize}
+	\item \textbf{Test af dataoverførsel:}
+	\begin{itemize}
+		\item Test dataoverførslen ved at sende forskellige datatyper fra sender til modtager og verificer korrekt modtagelse og integritet (nøjagtighed).
+	\end{itemize}
+	\item \textbf{Fejlhåndtering:}
+	\begin{itemize}
+		\item Implementer fejlhåndteringsmekanismer for at sikre pålidelighed og korrekt respons på eventuelle kommunikationsfejl.
+		\item Fejl gemmes i et array for yderligere analyse.
+	\end{itemize}
+	\item \textbf{Dokumentation:}
+	\begin{itemize}
+		\item Fysiske layouttegninger: Viser den fysiske placering af netværksudstyr, kabler og andre komponenter i automatiseringsmiljøet.
+		\item Logiske diagrammer: Illustrerer dataflowet og kommunikationen mellem forskellige enheder og systemer i netværket.
+		\item Netværksdiagrammer: Viser den fysiske og logiske struktur af netværket, herunder enheder, forbindelser og protokoller.
+		\item Device name \& IP-adresseplan: En tabel eller liste over alle enheder på netværket med deres tildelte device name IP-adresser, subnetmasker og gateways.
+		\item Revisionshistorik: En oversigt over ændringer og opdateringer til netværkskonfigurationen over tid.
+		\item Oversigtsdiagram: Et oversigtsdiagram over produktionslinjen i Emulate3D og plantegning.
+	\end{itemize}
+\end{enumerate}
+
+\textbf{Krav:}
+\begin{itemize}
+	\item Forståelse af PLC-til-PLC kommunikation og grundlæggende principper i netværksopsætning.
+	\item Erfaring med programmering og konfiguration i TIA Portal og brug af PLCSIM Advanced.
+	\item Evne til at konstruere og fejlsøge avancerede PLC-programmer, der involverer direkte datakommunikation.
+\end{itemize}
+%\textbf{Aflevering:} En omfattende teknisk rapport, der detaljeret beskriver implementeringsprocessen, udfordringerne undervejs, anvendte løsninger og en evaluering af datakommunikationens ydeevne.
+%\newline\newline\noindent
+\textbf{Note:} Hvis det ikke er muligt at bruge en fysisk S7-1200 PLC og en simuleret S7-1500 PLC, kan to simulerede PLC'er anvendes i stedet.
+
+\subsection*{GET-metode}
+\label{subsec:get_method_plc_communication}
+
+\textbf{Mål:} Formålet med denne øvelse er at demonstrere konfiguration og anvendelse af GET-metoden for datahentning mellem to SIMATIC S7-1500 PLC'er. Målet er at forbedre forståelsen af direkte PLC-til-PLC kommunikation og at opnå hands-on erfaring med effektiv dataudveksling i automatiseringssystemer. Du skal også designe en simpel produktionslinje i Emulate3D, hvor data udveksles mellem to PLC'er for at koordinere maskinernes drift.
+\newline\newline
+\noindent\textbf{Opgave:}
+\begin{enumerate}
+	\item \textbf{Planlægning og Dokumentation:}
+	\begin{itemize}
+		\item Udarbejd en detaljeret plan for placering af PLC-tavleskabe og maskiner. Tavleskabene skal være placeret med en afstand på mere end 101m fra hinanden.
+		\item \textbf{Note:} To rullebånd kan bruges til at symbolisere maskiner.
+		\item Dokumentér planen med et layoutdiagram, der viser placeringen af tavleskabe og maskiner.
+	\end{itemize}
+	\item \textbf{Scenarieopbygning i Emulate3D:}
+	\begin{itemize}
+		\item Design en simpel produktionslinje i Emulate3D med to maskiner, der skal koordinere deres aktiviteter.
+		\item Den første maskine (PLC A) skal starte en operation og sende en besked til den anden maskine (PLC B), når operationen er fuldført.
+		\item Den anden maskine (PLC B) skal modtage beskeden og begynde sin operation baseret på den modtagne data.
+	\end{itemize}
+	\item \textbf{Konfiguration i TIA Portal:}
+	\begin{itemize}
+		\item Konfigurer to S7-1500 PLC'er i TIA Portal, hvor den ene fungerer som datakilde og den anden som datahentende enhed (bruger GET-metoden).
+		\item Tildel unikke IP-adresser til begge PLC'er og opsæt netværksparametre for Ethernet-kommunikation.
+	\end{itemize}
+	\item \textbf{Simulering med PLCSIM Advanced:}
+	\begin{itemize}
+		\item Brug PLCSIM Advanced til at simulere begge PLC'er og etablere en virtuel Ethernet-forbindelse mellem dem.
+		\item \textbf{Note:} Vælg \textit{TCP/IP Single Adapter} og derefter vælg det fysiske netkort \textbf{(ikke wireless)}.
+	\end{itemize}
+	\item \textbf{Konfiguration af GET-funktionsblok:}
+	\begin{itemize}
+		\item I kildens PLC, opsæt et datalager, der indeholder de data, som skal hentes af den anden PLC.
+		\item I den datahentende PLC, konfigurer en GET-funktionsblok med kildens IP-adresse og specifikationer for de data, der skal hentes.
+		\item Initialiser GET-funktionsblokken ved at aktivere `REQ`-variablen, når både `DONE` og `ERROR` er inaktive.
+		\item I modtager-PLC'en, opsæt en modtagefunktion for at håndtere og lagre de modtagne data, så de evt. kan vises på en HMI.
+	\end{itemize}
+	\item \textbf{Test af datahentning:}
+	\begin{itemize}
+		\item Test datahentningsprocessen ved at anmode om og modtage data fra kilden og verificere dataenes integritet (nøjagtighed) og korrekthed.
+	\end{itemize}
+	\item \textbf{Fejlhåndtering:}
+	\begin{itemize}
+		\item Implementer fejlhåndteringslogik for at adressere eventuelle kommunikationsfejl og sikre pålidelighed i dataoverførslen.
+		\item Fejl gemmes i et array for yderligere analyse.
+	\end{itemize}
+	\item \textbf{Dokumentation:}
+	\begin{itemize}
+		\item Fysiske layouttegninger: Viser den fysiske placering af netværksudstyr, kabler og andre komponenter i automatiseringsmiljøet.
+		\item Logiske diagrammer: Illustrerer dataflowet og kommunikationen mellem forskellige enheder og systemer i netværket.
+		\item Netværksdiagrammer: Viser den fysiske og logiske struktur af netværket, herunder enheder, forbindelser og protokoller.
+		\item Device name \& IP-adresseplan: En tabel eller liste over alle enheder på netværket med deres tildelte device name, IP-adresser, subnetmasker og gateways.
+		\item Revisionshistorik: En oversigt over ændringer og opdateringer til netværkskonfigurationen over tid.
+		\item Oversigtsdiagram: Et oversigtsdiagram over produktionslinjen i Emulate3D og plantegning.
+	\end{itemize}
+\end{enumerate}
+
+\textbf{Krav:}
+\begin{itemize}
+	\item Grundlæggende forståelse for PLC-kommunikation og principper for netværkskonfiguration.
+	\item Kompetencer indenfor TIA Portal-programmering og anvendelse af PLCSIM Advanced.
+	\item Evner til at udvikle og debugge komplekse PLC-programmer, som involverer direkte dataudveksling mellem PLC'er.
+\end{itemize}
+\textbf{Note:} Hvis det ikke er muligt at bruge en fysisk S7-1200 PLC og en simuleret S7-1500 PLC, kan to simulerede PLC'er anvendes i stedet.
+
+\section{S7-Communication Others}
+\subsection*{USEND \& URCV}
+\label{subsec:usend_urcv_plc_communication}
+
+\textbf{Mål:} Formålet med denne øvelse er at demonstrere konfiguration og anvendelse af USEND og URCV metoderne for dataoverførsel mellem en fysisk SIMATIC S7-1200 PLC og en simuleret SIMATIC S7-1500 PLC. Målet er at udvikle en dybere forståelse for effektiv datakommunikation i automatiserede systemer og at opnå praktisk erfaring med direkte PLC-til-PLC kommunikation. Du skal også designe en simpel produktionslinje i Emulate3D, hvor data udveksles mellem tre rullebånd for at koordinere deres drift.
+\newline\newline
+\noindent\textbf{Opgave:}
+\begin{enumerate}
+	\item \textbf{Planlægning og Dokumentation:}
+	\begin{itemize}
+		\item Udarbejd en detaljeret plan for placering af PLC-tavleskabe og rullebånd. Tavleskabene skal være placeret med en afstand, der kræver kommunikation via et netværk.
+		\item \textbf{Note:} Tre rullebånd kan bruges til at symbolisere maskiner.
+		\item Dokumentér planen med et layoutdiagram, der viser placeringen af tavleskabe og rullebånd.
+	\end{itemize}
+	\item \textbf{Scenarieopbygning i Emulate3D:}
+	\begin{itemize}
+		\item Design en simpel produktionslinje i Emulate3D med tre rullebånd, der skal koordinere deres aktiviteter.
+		\item Det første rullebånd (PLC A) skal starte en operation og sende en besked til det andet rullebånd (PLC B) og det tredje rullebånd (PLC C), når operationen er fuldført.
+		\item De to andre rullebånd (PLC B og PLC C) skal modtage beskeden og begynde deres operationer baseret på den modtagne data.
+	\end{itemize}
+	\item \textbf{Konfiguration i TIA Portal:}
+	\begin{itemize}
+		\item Konfigurer en fysisk S7-1200 PLC og 2 simuleret S7-1500 PLC i TIA Portal, hvor S7-1200 fungerer som sender (bruger USEND-metoden) og S7-1500 PLC'erne som modtager (bruger URCV-metoden).
+		\item Tildel unikke IP-adresser til begge PLC'er og opsæt passende netværksparametre for at muliggøre kommunikation via Ethernet.
+	\end{itemize}
+	\item \textbf{Simulering med PLCSIM Advanced:}
+	\begin{itemize}
+		\item Brug PLCSIM Advanced til at simulere S7-1500 PLC'erne og etablere en virtuel forbindelse mellem den og den fysiske S7-1200 PLC.
+		\item \textbf{Note:} Vælg \textit{TCP/IP Single Adapter} og derefter vælg det fysiske netkort \textbf{(ikke wireless)}.
+	\end{itemize}
+	\item \textbf{Konfiguration af USEND- og URCV-funktionsblokke:}
+	\begin{itemize}
+		\item I sender-PLC'en (S7-1200), konfigurer en USEND-funktionsblok med relevante data og destinationsadressen for modtager-PLC'en (S7-1500).
+		\item Initialiser USEND-funktionsblokken ved at aktivere `REQ`-variablen, når både `DONE` og `ERROR` er inaktive.
+		\item I modtager-PLC'en (S7-1500), opsæt en URCV-funktionsblok for at håndtere og lagre de modtagne data, så de evt. ville kunne vises på en HMI.
+	\end{itemize}
+	\item \textbf{Test af dataoverførsel:}
+	\begin{itemize}
+		\item Test dataoverførslen ved at sende forskellige datatyper fra sender til modtager og verificer korrekt modtagelse og integritet (nøjagtighed).
+	\end{itemize}
+	\item \textbf{Fejlhåndtering:}
+	\begin{itemize}
+		\item Implementer fejlhåndteringsmekanismer for at sikre pålidelighed og korrekt respons på eventuelle kommunikationsfejl.
+		\item Fejl gemmes i et array for yderligere analyse.
+	\end{itemize}
+	\item \textbf{Dokumentation:}
+	\begin{itemize}
+		\item Fysiske layouttegninger: Viser den fysiske placering af netværksudstyr, kabler og andre komponenter i automatiseringsmiljøet.
+		\item Logiske diagrammer: Illustrerer dataflowet og kommunikationen mellem forskellige enheder og systemer i netværket.
+		\item Netværksdiagrammer: Viser den fysiske og logiske struktur af netværket, herunder enheder, forbindelser og protokoller.
+		\item Device name \& IP-adresseplan: En tabel eller liste over alle enheder på netværket med deres tildelte device name, IP-adresser, subnetmasker og gateways.
+		\item Revisionshistorik: En oversigt over ændringer og opdateringer til netværkskonfigurationen over tid.
+		\item Oversigtsdiagram: Et oversigtsdiagram over produktionslinjen i Emulate3D og plantegning.
+		\item Tegning af Netværkstopologi
+	\end{itemize}
+\end{enumerate}
+
+\textbf{Krav:}
+\begin{itemize}
+	\item Grundlæggende forståelse for PLC-kommunikation og principper for netværkskonfiguration.
+	\item Kompetencer indenfor TIA Portal-programmering og anvendelse af PLCSIM Advanced.
+	\item Evner til at udvikle og debugge komplekse PLC-programmer, som involverer direkte dataudveksling mellem PLC'er.
+\end{itemize}
+\textbf{Note:} Hvis det ikke er muligt at bruge en fysisk S7-1200 PLC og en simuleret S7-1500 PLC, kan to simulerede PLC'er anvendes i stedet.
+
+\subsection*{BSEND \& BRCV}
+\label{subsec:bsend_brcv_plc_communication}
+
+\textbf{Mål:} Formålet med denne øvelse er at demonstrere konfiguration og anvendelse af BSEND og BRCV metoderne for dataoverførsel mellem en fysisk SIMATIC S7-1200 PLC og en simuleret SIMATIC S7-1500 PLC. Målet er at udvikle en dybere forståelse for effektiv datakommunikation i automatiserede systemer og at opnå praktisk erfaring med direkte PLC-til-PLC kommunikation. Du skal også designe en simpel produktionslinje i Emulate3D, hvor data udveksles mellem tre rullebånd for at koordinere deres drift.
+\newline\newline
+\noindent\textbf{Opgave:}
+\begin{enumerate}
+	\item \textbf{Planlægning og Dokumentation:}
+	\begin{itemize}
+		\item Udarbejd en detaljeret plan for placering af PLC-tavleskabe og rullebånd. Tavleskabene skal være placeret med en afstand, der kræver kommunikation via et netværk.
+		\item \textbf{Note:} Tre rullebånd kan bruges til at symbolisere maskiner.
+		\item Dokumentér planen med et layoutdiagram, der viser placeringen af tavleskabe og rullebånd.
+	\end{itemize}
+	\item \textbf{Scenarieopbygning i Emulate3D:}
+	\begin{itemize}
+		\item Design en simpel produktionslinje i Emulate3D med tre rullebånd, der skal koordinere deres aktiviteter.
+		\item Det første rullebånd (PLC A) skal starte en operation og sende en besked til det andet rullebånd (PLC B) og det tredje rullebånd (PLC C), når operationen er fuldført.
+		\item De to andre rullebånd (PLC B og PLC C) skal modtage beskeden og begynde deres operationer baseret på den modtagne data.
+	\end{itemize}
+	\item \textbf{Konfiguration i TIA Portal:}
+	\begin{itemize}
+		\item Konfigurer en fysisk S7-1200 PLC og en simuleret S7-1500 PLC i TIA Portal, hvor S7-1200 fungerer som sender (bruger BSEND-metoden) og S7-1500 som modtager (bruger BRCV-metoden).
+		\item Tildel unikke IP-adresser til begge PLC'er og opsæt passende netværksparametre for at muliggøre kommunikation via Ethernet.
+	\end{itemize}
+	\item \textbf{Simulering med PLCSIM Advanced:}
+	\begin{itemize}
+		\item Brug PLCSIM Advanced til at simulere S7-1500 PLC'en og etablere en virtuel forbindelse mellem den og den fysiske S7-1200 PLC.
+		\item \textbf{Note:} Vælg \textit{TCP/IP Single Adapter} og derefter vælg det fysiske netkort \textbf{(ikke wireless)}.
+	\end{itemize}
+	\item \textbf{Konfiguration af BSEND- og BRCV-funktionsblokke:}
+	\begin{itemize}
+		\item I sender-PLC'en (S7-1200), konfigurer en BSEND-funktionsblok med relevante data og destinationsadressen for modtager-PLC'en (S7-1500).
+		\item Initialiser BSEND-funktionsblokken ved at aktivere `REQ`-variablen, når både `DONE` og `ERROR` er inaktive.
+		\item I modtager-PLC'en (S7-1500), opsæt en BRCV-funktionsblok for at håndtere og lagre de modtagne data, så de evt. ville kunne vises på en HMI.
+	\end{itemize}
+	\item \textbf{Test af dataoverførsel:}
+	\begin{itemize}
+		\item Test dataoverførslen ved at sende forskellige datatyper fra sender til modtager og verificer korrekt modtagelse og integritet (nøjagtighed).
+	\end{itemize}
+	\item \textbf{Fejlhåndtering:}
+	\begin{itemize}
+		\item Implementer fejlhåndteringsmekanismer for at sikre pålidelighed og korrekt respons på eventuelle kommunikationsfejl.
+		\item Fejl gemmes i et array for yderligere analyse.
+	\end{itemize}
+	\item \textbf{Dokumentation:}
+	\begin{itemize}
+		\item Fysiske layouttegninger: Viser den fysiske placering af netværksudstyr, kabler og andre komponenter i automatiseringsmiljøet.
+		\item Logiske diagrammer: Illustrerer dataflowet og kommunikationen mellem forskellige enheder og systemer i netværket.
+		\item Netværksdiagrammer: Viser den fysiske og logiske struktur af netværket, herunder enheder, forbindelser og protokoller.
+		\item Device name \& IP-adresseplan: En tabel eller liste over alle enheder på netværket med deres tildelte device name, IP-adresser, subnetmasker og gateways.
+		\item Revisionshistorik: En oversigt over ændringer og opdateringer til netværkskonfigurationen over tid.
+		\item Oversigtsdiagram: Et oversigtsdiagram over produktionslinjen i Emulate3D og plantegning.
+	\end{itemize}
+\end{enumerate}
+
+\textbf{Krav:}
+\begin{itemize}
+	\item Grundlæggende forståelse for PLC-kommunikation og principper for netværkskonfiguration.
+	\item Kompetencer indenfor TIA Portal-programmering og anvendelse af PLCSIM Advanced.
+	\item Evner til at udvikle og debugge komplekse PLC-programmer, som involverer direkte dataudveksling mellem PLC'er.
+\end{itemize}
+\textbf{Note:} Hvis det ikke er muligt at bruge en fysisk S7-1200 PLC og en simuleret S7-1500 PLC, kan to simulerede PLC'er anvendes i stedet.
+
+\section{Open User Communication}
+\subsection*{TCON \& TDISCON}
+\label{subsec:tcon_}
+
+\textbf{Mål:} Formålet med denne opgave er at konfigurere og teste kommunikationen mellem to SIMATIC S7-1500 PLC'er ved brug af TCON (Transport Control Protocol) over en simuleret industrielt Ethernet-netværk. Du vil udvikle forståelse for etablering af forbindelser, dataudveksling og grundlæggende netværksdiagnostik i et virtuelt miljø ved brug af PLCSIM Advanced.
+\newline\newline
+\noindent\textbf{Opgave:}
+\begin{enumerate}
+	\item \textbf{Planlægning og Dokumentation:}
+	\begin{itemize}
+		\item Udarbejd en detaljeret plan for placering af PLC-tavleskabe og maskiner. Tavleskabene skal være placeret med en afstand, der kræver kommunikation via et netværk.
+		\item \textbf{Note:} To rullebånd kan bruges til at symbolisere maskiner.
+		\item Dokumentér planen med et layoutdiagram, der viser placeringen af tavleskabe og maskiner.
+	\end{itemize}
+	\item \textbf{Scenarieopbygning i Emulate3D:}
+	\begin{itemize}
+		\item Design en simpel produktionslinje i Emulate3D med to maskiner, der skal koordinere deres aktiviteter.
+		\item Den første maskine (PLC A) skal starte en operation og sende en besked til den anden maskine (PLC B), når operationen er fuldført.
+		\item Den anden maskine (PLC B) skal modtage beskeden og begynde sin operation baseret på den modtagne data.
+	\end{itemize}
+	\item \textbf{Konfiguration i TIA Portal:}
+	\begin{itemize}
+		\item Åbn TIA Portal og opret et nyt projekt med en fysisk S7-1200 og en simuleret S7-1500 PLC. Tildel dem unikke IP-adresser inden for samme subnet.
+		\item Konfigurer de nødvendige netværksindstillinger i begge PLC'er, så de kan etablere en TCP-forbindelse. Sørg for at aktivere TCON-blokken i brugerprogrammet.
+	\end{itemize}
+	\item \textbf{Simulering med PLCSIM Advanced:}
+	\begin{itemize}
+		\item Initialiser PLCSIM Advanced og opret to separate instanser for hver af dine PLC'er.
+		\item Etabler en forbindelse mellem de to simulerede PLC'er ved at bruge TSEND og TRECV datablokkene for at sende og modtage data.
+	\end{itemize}
+	\item \textbf{Test af dataudveksling:}
+	\begin{itemize}
+		\item Implementer en simpel dataudveksling, hvor PLC 1 sender en streng eller et heltal til PLC 2, og PLC 2 sender en bekræftelse tilbage.
+		\item Overvåg og verificer kommunikationen mellem de to PLC'er ved hjælp af TIA Portal's diagnostiske værktøjer. Dokumenter alle trin og resultater.
+	\end{itemize}
+	\item \textbf{Fejlhåndtering:}
+	\begin{itemize}
+		\item Identificer og fejlfind enhver kommunikationsfejl ved hjælp af PLCSIM Advanced diagnostiske funktioner.
+		\item Implementer fejlhåndteringsmekanismer for at sikre pålidelighed og korrekt respons på eventuelle kommunikationsfejl.
+	\end{itemize}
+	\item \textbf{Analyse:}
+	\begin{itemize}
+		\item Diskuter mulige anvendelsesområder for PLC-til-PLC-kommunikation i industrielle automatiseringsmiljøer og hvordan simulation kan bistå i design og fejlfinding af disse systemer.
+	\end{itemize}
+	\item \textbf{Dokumentation:}
+	\begin{itemize}
+		\item Fysiske layouttegninger: Viser den fysiske placering af netværksudstyr, kabler og andre komponenter i automatiseringsmiljøet.
+		\item Logiske diagrammer: Illustrerer dataflowet og kommunikationen mellem forskellige enheder og systemer i netværket.
+		\item Netværksdiagrammer: Viser den fysiske og logiske struktur af netværket, herunder enheder, forbindelser og protokoller.
+		\item Device name \& IP-adresseplan: En tabel eller liste over alle enheder på netværket med deres tildelte device name, IP-adresser, subnetmasker og gateways.
+		\item Revisionshistorik: En oversigt over ændringer og opdateringer til netværkskonfigurationen over tid.
+		\item Oversigtsdiagram: Et oversigtsdiagram over produktionslinjen i Emulate3D og plantegning.
+	\end{itemize}
+\end{enumerate}
+
+\textbf{Krav:}
+\begin{itemize}
+	\item Fuldstændig forståelse af TIA Portal interface og navigering.
+	\item Grundlæggende viden om industrielle Ethernet-netværk og TCP/IP-protokollen.
+	\item Evne til at implementere og fejlfinde TCON kommunikationsblokke i et SIMATIC S7-1500 miljø.
+\end{itemize}
+
+\noindent\textbf{Aflevering (optional):} En rapport, der inkluderer konfigurationsdetaljer, skærmbilleder, der viser den vellykkede dataudveksling, og en fejlanalyse med løsninger på eventuelle problemer, der opstod under opgaven.
+\newline\newline
+\noindent\textbf{Note:} Hvis det ikke er muligt at bruge en fysisk S7-1200 PLC og en simuleret S7-1500 PLC, kan to simulerede PLC'er anvendes i stedet.
+
+
+\subsection*{TSEND\_C \& TRCV\_C}
+\label{subsec:dataudveksling_med_tsend_c_trcv_c}
+
+\textbf{Mål:} I denne øvelse vil de studerende oprette en sikker og konsistent dataudveksling mellem to SIMATIC S7-1500 PLC'er ved brug af de konsistente datakommunikationsblokke `TSEND\_C` og `TRCV\_C`. Formålet er at forstå og anvende metoder for konsistent datatransmission i et simuleret industrielt Ethernet-netværk og at få praktisk erfaring med avancerede datakommunikationsmekanismer.
+
+\textbf{Opgave:}
+\begin{enumerate}
+	\item \textbf{Planlægning og Dokumentation:}
+	\begin{itemize}
+		\item Udarbejd en detaljeret plan for placering af PLC-tavleskabe og maskiner. Tavleskabene skal være placeret med en afstand, der kræver kommunikation via et netværk.
+		\item \textbf{Note:} To rullebånd kan bruges til at symbolisere maskiner.
+		\item Dokumentér planen med et layoutdiagram, der viser placeringen af tavleskabe og maskiner.
+	\end{itemize}
+	\item \textbf{Scenarieopbygning i Emulate3D:}
+	\begin{itemize}
+		\item Design en simpel produktionslinje i Emulate3D med tre maskiner, der skal koordinere deres aktiviteter.
+		\item Den første maskine (PLC A) skal starte en operation og sende en besked til den anden maskine (PLC B), når operationen er fuldført.
+		\item Den anden maskine (PLC B) skal modtage beskeden og begynde sin operation baseret på den modtagne data og sende en besked til den tredje maskine (PLC C), når operationen er fuldført.
+		\item Den tredje maskine (PLC C) skal modtage beskeden og begynde sin operation baseret på den modtagne data.
+	\end{itemize}
+	\item \textbf{Konfiguration i TIA Portal:}
+	\begin{itemize}
+		\item Start med at konfigurere to S7-1500 PLC'er i TIA Portal, inklusive tildeling af passende IP-adresser og enhedsnavne.
+		\item Opret en konsistent datatilkobling ved at anvende `TSEND\_C` og `TRCV\_C` blokkene i henholdsvis sender- og modtager-PLC'ens program.
+		\item Konfigurer PLC'erne til at køre i et simuleret miljø ved hjælp af PLCSIM Advanced, og sikre, at begge PLC'er er korrekt forbundet til den simulerede netværksinfrastruktur.
+	\end{itemize}
+	\item \textbf{Simulering med PLCSIM Advanced:}
+	\begin{itemize}
+		\item Brug PLCSIM Advanced til at simulere begge PLC'er og etablere en virtuel forbindelse mellem dem.
+	\end{itemize}
+	\item \textbf{Konfiguration af TSEND\_C og TRCV\_C-funktionsblokke:}
+	\begin{itemize}
+		\item Definer et datasæt, der skal overføres fra sender-PLC'en til modtager-PLC'en, og konfigurer `TSEND\_C`-blokken til at sende denne data cyklisk.
+		\item Indstil `TRCV\_C`-blokken i modtager-PLC'en til at modtage den sendte data og implementer en kvitteringsmekanisme for at sikre, at transmissionen er sket.
+	\end{itemize}
+	\item \textbf{Test af dataudveksling:}
+	\begin{itemize}
+		\item Demonstrer og valider konsistensen af dataoverførslen ved at observere og registrere dataudvekslingen i TIA Portal's overvågningsværktøjer.
+	\end{itemize}
+	\item \textbf{Fejlhåndtering:}
+	\begin{itemize}
+		\item Analyser systemets adfærd og reaktioner ved eventuelle netværksforstyrrelser eller kommunikationsfejl, og dokumenter procedurerne for fejlfinding.
+		\item Implementer fejlhåndteringsmekanismer for at sikre pålidelighed og korrekt respons på eventuelle kommunikationsfejl.
+		\item Fejl gemmes i et array for yderligere analyse.
+	\end{itemize}
+	\item \textbf{Analyse:}
+	\begin{itemize}
+		\item Diskutér, hvordan konsistent datakommunikation kan være kritisk i visse industrielle applikationer, og hvordan man kan sikre høj systempålidelighed gennem simulation og test.
+	\end{itemize}
+	\item \textbf{Dokumentation:}
+	\begin{itemize}
+		\item Fysiske layouttegninger: Viser den fysiske placering af netværksudstyr, kabler og andre komponenter i automatiseringsmiljøet.
+		\item Logiske diagrammer: Illustrerer dataflowet og kommunikationen mellem forskellige enheder og systemer i netværket.
+		\item Netværksdiagrammer: Viser den fysiske og logiske struktur af netværket, herunder enheder, forbindelser og protokoller.
+		\item Device name \& IP-adresseplan: En tabel eller liste over alle enheder på netværket med deres tildelte device name, IP-adresser, subnetmasker og gateways.
+		\item Revisionshistorik: En oversigt over ændringer og opdateringer til netværkskonfigurationen over tid.
+		\item Oversigtsdiagram: Et oversigtsdiagram over produktionslinjen i Emulate3D og plantegning.
+	\end{itemize}
+\end{enumerate}
+
+\textbf{Krav:}
+\begin{itemize}
+	\item Forståelse for konfiguration af kommunikationsblokke og netværksparametre i TIA Portal.
+	\item Bekendtskab med funktionaliteten af konsistent dataoverførsel ved hjælp af `TSEND\_C` og `TRCV\_C`.
+	\item Evne til at udføre simulering og fejlfinding af netværkskommunikation med PLCSIM Advanced.
+\end{itemize}
+
+\textbf{Aflevering (optional):} En teknisk rapport, der indeholder de anvendte konfigurationer, skærmbilleder af datatransmissionen, og en diskussion af resultaterne samt eventuelle udfordringer og løsninger.
+\newline\newline
+\noindent Denne opgave vil understøtte de studerendes færdigheder i håndtering af konsistent og sikker PLC-til-PLC kommunikation og vil forbedre deres evner til at anvende komplekse kommunikationssystemer i industrielle automatiseringsprojekter.
+
+\subsection*{TMAIL\_C}
+\label{subsec:kommunikation_med_tmail_c}
+
+\textbf{Mål:} I denne øvelse skal de studerende konfigurere og anvende TMAIL\_C-blokken til at sende e-mails fra en SIMATIC S7-1500 PLC. Øvelsen kombinerer brugen af PUT/GET til dataudveksling mellem to linjer og sender en e-mail ved fejl. Formålet er at forstå opsætning af e-mail-kommunikation, anvende denne teknologi i industrielle applikationer og få praktisk erfaring med avancerede kommunikationsmetoder i TIA Portal.
+\newline\newline\noindent
+\textbf{Opgave:}
+\begin{enumerate}
+	\item \textbf{Planlægning og Dokumentation:}
+	\begin{itemize}
+		\item Udarbejd en detaljeret plan for anvendelse af e-mailkommunikation i et industrielt miljø.
+		\item \textbf{Note:} To rullebånd kan bruges til at symbolisere maskiner.
+		\item Dokumentér planen med et layoutdiagram, der viser anvendelsen af e-mailkommunikation i processen.
+	\end{itemize}
+	\item \textbf{Scenarieopbygning i Emulate3D:}
+	\begin{itemize}
+		\item Design en simpel produktionslinje i Emulate3D med tre maskiner, hvor e-mails bruges til at sende beskeder om maskinens status og fejlmeddelelser.
+		\item Den første maskine (PLC A) skal sende en e-mail til operatøren, når en operation er fuldført.
+		\item Den anden maskine (PLC B) skal sende en e-mail, hvis der opstår en fejl.
+		\item Den tredje maskine (PLC C) skal sende en e-mail med en daglig statusrapport.
+	\end{itemize}
+	\item \textbf{Konfiguration i TIA Portal:}
+	\begin{itemize}
+		\item Konfigurer en S7-1500 PLC i TIA Portal med de nødvendige netværksparametre og e-mailindstillinger.
+		\item Indstil SMTP-serveroplysningerne og e-mailkontoen, der skal bruges til at sende meddelelser.
+	\end{itemize}
+	\item \textbf{Simulering med PLCSIM Advanced:}
+	\begin{itemize}
+		\item Brug PLCSIM Advanced til at simulere PLC'en og sikre, at e-mailkommunikationen fungerer korrekt i det simulerede miljø.
+	\end{itemize}
+	\item \textbf{Konfiguration af PUT/GET-funktionsblokke:}
+	\begin{itemize}
+		\item Konfigurer en fysisk S7-1200 PLC og en simuleret S7-1500 PLC i TIA Portal, hvor S7-1200 fungerer som sender (bruger PUT-metoden) og S7-1500 som modtager.
+		\item I sender-PLC'en (S7-1200), konfigurer en PUT-funktionsblok med relevante data og destinationsadressen for modtager-PLC'en (S7-1500).
+		\item Initialiser PUT-funktionsblokken ved at aktivere `REQ`-variablen, når både `DONE` og `ERROR` er inaktive.
+		\item I modtager-PLC'en (S7-1500), opsæt en modtagefunktion for at håndtere og lagre de modtagne data, så de evt. ville kunne vises på en HMI.
+	\end{itemize}
+	\item \textbf{Test af dataoverførsel:}
+	\begin{itemize}
+		\item Test dataoverførslen ved at sende forskellige datatyper fra sender til modtager og verificer korrekt modtagelse og integritet (nøjagtighed).
+	\end{itemize}
+	\item \textbf{Fejlhåndtering:}
+	\begin{itemize}
+		\item Implementer fejlhåndteringsmekanismer for at sikre pålidelighed og korrekt respons på eventuelle kommunikationsfejl.
+		\item Fejl gemmes i et array for yderligere analyse.
+		\item Konfigurer TMAIL\_C-blokken til at sende en e-mail ved fejl.
+	\end{itemize}
+	\item \textbf{Analyse:}
+	\begin{itemize}
+		\item Diskutér, hvordan e-mailkommunikation kan anvendes i industrielle applikationer, og hvordan det kan forbedre systemets pålidelighed og effektivitet.
+	\end{itemize}
+	\item \textbf{Dokumentation:}
+	\begin{itemize}
+		\item Fysiske layouttegninger: Viser den fysiske placering af netværksudstyr, kabler og andre komponenter i automatiseringsmiljøet.
+		\item Logiske diagrammer: Illustrerer dataflowet og kommunikationen mellem forskellige enheder og systemer i netværket.
+		\item Netværksdiagrammer: Viser den fysiske og logiske struktur af netværket, herunder enheder, forbindelser og protokoller.
+		\item Device name \& IP-adresseplan: En tabel eller liste over alle enheder på netværket med deres tildelte device name, IP-adresser, subnetmasker og gateways.
+		\item Revisionshistorik: En oversigt over ændringer og opdateringer til netværkskonfigurationen over tid.
+		\item Oversigtsdiagram: Et oversigtsdiagram over produktionslinjen i Emulate3D og plantegning.
+	\end{itemize}
+\end{enumerate}
+
+\textbf{Krav:}
+\begin{itemize}
+	\item Forståelse for konfiguration af kommunikationsblokke og netværksparametre i TIA Portal.
+	\item Bekendtskab med funktionaliteten af PUT/GET og TMAIL\_C-blokken.
+	\item Evne til at udføre simulering og fejlfinding af netværkskommunikation med PLCSIM Advanced.
+\end{itemize}
+
+\noindent\textbf{Aflevering (optional):} En teknisk rapport, der indeholder de anvendte konfigurationer, skærmbilleder af e-mailtransmissionen, og en diskussion af resultaterne samt eventuelle udfordringer og løsninger.
+\newline\newline
+\noindent Denne opgave vil understøtte de studerendes færdigheder i håndtering af e-mailkommunikation fra PLC'er og vil forbedre deres evner til at anvende avancerede kommunikationssystemer i industrielle automatiseringsprojekter.
+
+\section{Modbus TCP (Client/Server)}
+\label{subsec:modbus_tcp_client_server_knapper_analog}
+
+\textbf{Mål:} Denne øvelse fokuserer på at oprette og konfigurere en Modbus TCP client/server-kommunikation mellem to SIMATIC S7-1500 PLC'er, hvor PLC A er forbundet til Emulate3D og læser knapper og analoge værdier og sender dem til PLC B for videre behandling. Målet er at udvikle en dybere forståelse for Modbus TCP-protokollen og praktisk erfaring med implementering af standardiserede industrielle kommunikationsprotokoller i et simuleret netværk.
+\newline\newline
+\noindent\textbf{Opgave:}
+\begin{enumerate}
+	\item \textbf{Planlægning og Dokumentation:}
+	\begin{itemize}
+		\item Udarbejd en detaljeret plan for placering af PLC-tavleskabe og maskiner. Tavleskabene skal være placeret med en afstand, der kræver kommunikation via et netværk.
+		\item \textbf{Note:} To rullebånd kan bruges til at symbolisere maskiner.
+		\item Dokumentér planen med et layoutdiagram, der viser placeringen af tavleskabe og maskiner.
+	\end{itemize}
+	\item \textbf{Scenarieopbygning i Emulate3D:}
+	\begin{itemize}
+		\item Design en simpel produktionslinje i Emulate3D med to maskiner, hvor data udveksles mellem to PLC'er for at koordinere maskinernes drift.
+		\item PLC A skal læse status for knapper (coils), digitale sensorer (diskret input) og analoge værdier (holding registre) og sende disse data til PLC B via Modbus TCP.
+		\item PLC B skal modtage dataene og udføre yderligere handlinger baseret på de modtagne værdier (f.eks. starte/stoppe maskiner, justere parametre).
+	\end{itemize}
+	\item \textbf{Konfiguration i TIA Portal:}
+	\begin{itemize}
+		\item Konfigurer S7-1500 PLC i TIA Portal, en som Modbus TCP server (PLC A) og den anden S7-1200 PLC som Modbus TCP client (PLC B).
+		\item Tildel unikke IP-adresser og opret passende netværksparametre for begge PLC'er for at muliggøre kommunikation over TCP/IP.
+	\end{itemize}
+	\item \textbf{Simulering med PLCSIM Advanced:}
+	\begin{itemize}
+		\item Brug S7-1200 og PLCSIM Advanced til at netværksforbindelse mellem dem. Hvis dette ikke virker så anvend 2 simulerede PLC'er.
+	\end{itemize}
+	\item \textbf{Konfiguration af Modbus TCP-funktionsblokke:}
+	\begin{itemize}
+		\item På Modbus TCP serveren (PLC A), definer dataområder som coils (til knapper), diskret input (til digitale sensorer) og holding registre (til analoge værdier), der skal tilgængeliggøres for klienten (PLC B).
+		\item På Modbus TCP klienten (PLC B), konfigurer Modbus kommunikationsblokke til at forespørge data fra serveren og håndtere læse/skrive operationer for coils, diskret input og holding registre.
+	\end{itemize}
+	\item \textbf{Test af kommunikationsforbindelse:}
+	\begin{itemize}
+		\item Test kommunikationsforbindelsen ved at forespørge og ændre værdier i serverens dataområder (coils, diskret input og holding registre) fra klienten og overvåge de resulterende ændringer.
+	\end{itemize}
+	\item \textbf{Fejlhåndtering:}
+	\begin{itemize}
+		\item Implementer fejlhåndtering i begge PLC-programmer for at sikre robusthed og systempålidelighed.
+	\end{itemize}
+	\item \textbf{Analyse:}
+	\begin{itemize}
+		\item Evaluer kommunikationslatens og throughput for Modbus TCP forbindelsen og diskuter, hvordan disse kan optimeres.
+	\end{itemize}
+	\item \textbf{Dokumentation:}
+	\begin{itemize}
+		\item Fysiske layouttegninger: Viser den fysiske placering af netværksudstyr, kabler og andre komponenter i automatiseringsmiljøet.
+		\item Logiske diagrammer: Illustrerer dataflowet og kommunikationen mellem forskellige enheder og systemer i netværket.
+		\item Netværksdiagrammer: Viser den fysiske og logiske struktur af netværket, herunder enheder, forbindelser og protokoller.
+		\item Device name \& IP-adresseplan: En tabel eller liste over alle enheder på netværket med deres tildelte device name, IP-adresser, subnetmasker og gateways.
+		\item Revisionshistorik: En oversigt over ændringer og opdateringer til netværkskonfigurationen over tid.
+		\item Oversigtsdiagram: Et oversigtsdiagram over produktionslinjen i Emulate3D og plantegning.
+	\end{itemize}
+\end{enumerate}
+
+\textbf{Krav:}
+\begin{itemize}
+	\item Grundlæggende forståelse af Modbus TCP-protokollen og dets anvendelse i industriel kommunikation.
+	\item Erfaring med netværksopsætning i TIA Portal og anvendelse af PLCSIM Advanced.
+	\item Kompetence i at konstruere og debugge PLC-programmer, der involverer komplekse kommunikationsprotokoller.
+\end{itemize}
+
+\noindent\textbf{Aflevering:} En detaljeret teknisk rapport med beskrivelse af implementeringsprocessen, udfordringer, løsninger og en analyse af systemets ydeevne.
+
+\section{CIP mellem Siemens og Rockwell}
+
+\section{MQTT}
+\label{subsec:mqtt_communication_plc}
+
+\textbf{Mål:} Målet med denne opgave er at konfigurere og demonstrere MQTT-kommunikation mellem en fysisk SIMATIC S7-1200 PLC og en simuleret SIMATIC S7-1500 PLC. Denne opgave vil give de studerende en praktisk forståelse af MQTT-protokollen, som er bredt anvendt i industriel IoT.
+\newline\newline
+\noindent\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item \textbf{Planlægning og Dokumentation:}
+	\begin{itemize}
+		\item Udarbejd en detaljeret plan for placering af PLC-tavleskabe og maskiner. Tavleskabene skal være placeret med en afstand, der kræver kommunikation via et netværk.
+		\item \textbf{Note:} To rullebånd kan bruges til at symbolisere maskiner.
+		\item Dokumentér planen med et layoutdiagram, der viser placeringen af tavleskabe og maskiner.
+	\end{itemize}
+	
+	\item \textbf{Scenarieopbygning i Emulate3D:}
+	\begin{itemize}
+		\item Design en simpel produktionslinje i Emulate3D, hvor data udveksles mellem to PLC'er for at koordinere maskinernes drift.
+		\item Den fysiske S7-1200 PLC skal læse status for knapper og sensorer og sende disse data via MQTT til den simulerede S7-1500 PLC.
+		\item Den simulerede S7-1500 PLC skal modtage dataene og udføre yderligere handlinger baseret på de modtagne værdier (f.eks. starte/stoppe maskiner, justere parametre).
+	\end{itemize}
+	
+	\item \textbf{Opsætning af MQTT:}
+	\begin{itemize}
+		\item Opsæt en MQTT-broker, som PLC'erne kan forbinde til. Brug gerne en åben kildekode broker som Mosquitto for simpel opsætning.
+	\end{itemize}
+	\textbf{Note:} Mosquitto broker skal først installeres på egen computer og manualen skal følges for videre konfiguration.
+	\item \textbf{Konfiguration i TIA Portal:}
+	\begin{itemize}
+		\item Konfigurer en fysisk S7-1200 PLC og en simuleret S7-1500 PLC i TIA Portal, hvor S7-1200 fungerer som MQTT Publisher og S7-1500 som MQTT Subscriber.
+		\item Tildel unikke IP-adresser til begge PLC'er og opsæt passende netværksparametre for at muliggøre kommunikation via Ethernet.
+	\end{itemize}
+	
+	\item \textbf{Simulering med PLCSIM Advanced:}
+	\begin{itemize}
+		\item Brug PLCSIM Advanced til at simulere S7-1500 PLC'en og etablere en virtuel forbindelse mellem den og den fysiske S7-1200 PLC.
+	\end{itemize}
+	
+	\item \textbf{Implementering af MQTT-kommunikation:}
+	\begin{itemize}
+		\item Konfigurer den fysiske S7-1200 PLC som MQTT Publisher, der sender beskeder til en bestemt topic.
+		\item Konfigurer den simulerede S7-1500 PLC som MQTT Subscriber, der abonnerer på denne topic.
+		\item Implementer logikken på begge PLC'er for håndtering af MQTT-kommunikationen. Dette inkluderer at oprette forbindelse til brokeren, abonnere/publish til topics og håndtere indkommende beskeder.
+	\end{itemize}
+	
+	\item \textbf{Test af dataoverførsel:}
+	\begin{itemize}
+		\item Test dataoverførslen ved at sende forskellige typer af beskeder, herunder tekststrenge, numeriske værdier, og binære kommandoer fra Publisher til Subscriber og verificer korrekt modtagelse.
+	\end{itemize}
+	
+	\item \textbf{Dokumentation:}
+	\begin{itemize}
+		\item Fysiske layouttegninger: Viser den fysiske placering af netværksudstyr, kabler og andre komponenter i automatiseringsmiljøet.
+		\item Logiske diagrammer: Illustrerer dataflowet og kommunikationen mellem forskellige enheder og systemer i netværket.
+		\item Netværksdiagrammer: Viser den fysiske og logiske struktur af netværket, herunder enheder, forbindelser og protokoller.
+		\item Device name \& IP-adresseplan: En tabel eller liste over alle enheder på netværket med deres tildelte device name, IP-adresser, subnetmasker og gateways.
+		\item Revisionshistorik: En oversigt over ændringer og opdateringer til netværkskonfigurationen over tid.
+		\item Oversigtsdiagram: Et oversigtsdiagram over produktionslinjen i Emulate3D og plantegning.
+	\end{itemize}
+	
+	\item \textbf{Analyse:}
+	\begin{itemize}
+		\item Diskuter potentielle anvendelsesområder for MQTT i industriel automation, især med hensyn til dets letvægt og evnen til at fungere på tværs af usikre netværk.
+	\end{itemize}
+\end{enumerate}
+
+\textbf{Krav:}
+\begin{itemize}
+	\item Grundlæggende forståelse af MQTT-protokollen og dets anvendelse i industriel kommunikation.
+	\item Erfaring med netværksopsætning i TIA Portal og anvendelse af PLCSIM Advanced.
+	\item Kompetence i at konstruere og debugge PLC-programmer, der involverer komplekse kommunikationsprotokoller.
+\end{itemize}
+
+\noindent\textbf{Aflevering (optional):} En detaljeret teknisk rapport med beskrivelse af opsætningen af netværket, MQTT-brokeren, og begge PLC'er. Der skal ligeledes medfølge skærmbilleder, kodeeksempler, og netværksdiagrammer, samt en dybdegående analyse af de udførte tests og resultater.
+\newline\newline
+\noindent\textbf{Note:} Hvis det ikke er muligt at bruge en fysisk S7-1200 PLC og en simuleret S7-1500 PLC, kan to simulerede PLC'er anvendes i stedet.
+
+
+\section{OPC UA}
+\label{subsec:opcua_communication_plcsim_advanced}
+
+\textbf{Mål:} Målet med denne opgave er at etablere og demonstrere OPC UA-kommunikation mellem to simulerede PLC'er ved hjælp af Siemens PLCSIM Advanced. Opgaven skal give studerende en praktisk forståelse af OPC UA-protokollens implementering og anvendelse i et simuleret industrielt miljø.
+\newline\newline
+\noindent\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item \textbf{Planlægning og Dokumentation:}
+	\begin{itemize}
+		\item Udarbejd en detaljeret plan for placering af PLC-tavleskabe og maskiner i Emulate3D. Tavleskabene skal være placeret med en afstand, der kræver kommunikation via et netværk.
+		\item \textbf{Note:} To rullebånd kan bruges til at symbolisere maskiner.
+		\item Dokumentér planen med et layoutdiagram, der viser placeringen af tavleskabe og maskiner.
+	\end{itemize}
+	
+	\item \textbf{Scenarieopbygning i Emulate3D:}
+	\begin{itemize}
+		\item Design en simpel produktionslinje i Emulate3D, hvor en PLC læser status for knapper og sensorer og sender disse data via OPC UA til den anden PLC.
+		\item Simuler sensorer og aktuatorer i Emulate3D og opret relevante tags til dem.
+	\end{itemize}
+	
+	\item \textbf{Konfiguration i TIA Portal:}
+	\begin{itemize}
+		\item Opstil to separate simulerede S7-1500 PLC'er i TIA Portal ved hjælp af PLCSIM Advanced, og konfigurer dem til henholdsvis at fungere som OPC UA-server og -klient.
+		\item På server-PLC'en, aktiver OPC UA-server funktionalitet og opret et sæt af tags eller variabler, som klient-PLC'en skal tilgå.
+		\item På klient-PLC'en, konfigurer OPC UA-klient funktionalitet til at forbinde til serveren og tilgå de nødvendige tags/variabler.
+		\item Tildel unikke IP-adresser til begge PLC'er og opsæt passende netværksparametre for at muliggøre kommunikation via Ethernet.
+	\end{itemize}
+	
+	\item \textbf{Simulering med PLCSIM Advanced:}
+	\begin{itemize}
+		\item Brug PLCSIM Advanced til at simulere begge PLC'er og etablere en virtuel forbindelse mellem dem.
+	\end{itemize}
+	
+	\item \textbf{Implementering af OPC UA-kommunikation:}
+	\begin{itemize}
+		\item Implementér et enkelt automatiseringsscenarie, hvor klienten kontinuerligt læser fra og/eller skriver til server-PLC'ens tags, for eksempel for at styre en proces eller overvåge sensorværdier.
+		\item Sikr at forbindelsen mellem OPC UA-serveren og -klienten er sikret ved hjælp af passende sikkerhedsforanstaltninger, såsom applikationsautentificering og kryptering.
+	\end{itemize}
+	
+	\item \textbf{Test af dataoverførsel:}
+	\begin{itemize}
+		\item Test dataoverførslen ved at sende forskellige typer af data fra serveren til klienten og verificer korrekt modtagelse og integritet (nøjagtighed).
+	\end{itemize}
+	
+	\item \textbf{Fejlhåndtering:}
+	\begin{itemize}
+		\item Implementer fejlhåndteringsmekanismer for at sikre pålidelighed og korrekt respons på eventuelle kommunikationsfejl.
+		\item Fejl gemmes i et array for yderligere analyse.
+	\end{itemize}
+	
+	\item \textbf{Dokumentation:}
+	\begin{itemize}
+		\item Fysiske layouttegninger: Viser den fysiske placering af netværksudstyr, kabler og andre komponenter i automatiseringsmiljøet.
+		\item Logiske diagrammer: Illustrerer dataflowet og kommunikationen mellem forskellige enheder og systemer i netværket.
+		\item Netværksdiagrammer: Viser den fysiske og logiske struktur af netværket, herunder enheder, forbindelser og protokoller.
+		\item Device name \& IP-adresseplan: En tabel eller liste over alle enheder på netværket med deres tildelte device name, IP-adresser, subnetmasker og gateways.
+		\item Revisionshistorik: En oversigt over ændringer og opdateringer til netværkskonfigurationen over tid.
+		\item Oversigtsdiagram: Et oversigtsdiagram over produktionslinjen i Emulate3D og plantegning.
+	\end{itemize}
+	
+	\item \textbf{Analyse:}
+	\begin{itemize}
+		\item Diskuter potentielle anvendelsesområder for OPC UA i industriel automation, især med hensyn til dets standardisering og interoperabilitet på tværs af forskellige systemer.
+	\end{itemize}
+\end{enumerate}
+
+\textbf{Krav:}
+\begin{itemize}
+	\item Grundlæggende forståelse af OPC UA-protokollen og dens anvendelse i industriel kommunikation.
+	\item Erfaring med netværksopsætning i TIA Portal og anvendelse af PLCSIM Advanced.
+	\item Kompetence i at konstruere og debugge PLC-programmer, der involverer komplekse kommunikationsprotokoller.
+\end{itemize}
+
+\noindent\textbf{Aflevering(optional):} En detaljeret teknisk rapport med beskrivelse af opsætningen af netværket, OPC UA-konfigurationerne, og begge PLC'er. Der skal ligeledes medfølge skærmbilleder, kodeeksempler, og netværksdiagrammer, samt en dybdegående analyse af de udførte tests og resultater.
+
+\section{Others WEB Server}
+\label{subsec:webserver_s7_1500}
+
+\section{Opsætning af Webserver på en Fysisk og Simuleret PLC}
+\label{subsec:webserver_simulated_physical_plc}
+
+\textbf{Mål:} Målet med denne opgave er at opsætte og konfigurere en webserver på en fysisk SIMATIC S7-1200 PLC og en simuleret S7-1500 PLC ved hjælp af Siemens PLCSIM Advanced. Opgaven skal give de studerende en praktisk forståelse af webserverfunktionen på en PLC og dens anvendelse til overvågning og kontrol af industrielle processer.
+
+\noindent\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item \textbf{Planlægning og Dokumentation:}
+	\begin{itemize}
+		\item Udarbejd en detaljeret plan for placering af PLC-tavleskabe og maskiner i Emulate3D. 
+		\item \textbf{Note:} To rullebånd kan bruges til at symbolisere maskiner.
+		\item Dokumentér planen med et layoutdiagram, der viser placeringen af tavleskabe og maskiner.
+	\end{itemize}
+	
+	\item \textbf{Konfiguration i TIA Portal:}
+	\begin{itemize}
+		\item Opret et nyt projekt i TIA Portal og tilføj en fysisk S7-1200 PLC og en simuleret S7-1500 PLC.
+		\item Tildel unikke IP-adresser til begge PLC'er og konfigurer netværksparametre for at muliggøre kommunikation via Ethernet.
+		\item Aktivér webserver-funktionaliteten i begge PLC'er ved at gå til PLC-egenskaberne og vælge webserverindstillingerne.
+		\item Opret brugerdefinerede websideindstillinger, der viser vigtige procesdata og kontroller.
+	\end{itemize}
+	
+	\item \textbf{Simulering med PLCSIM Advanced:}
+	\begin{itemize}
+		\item Brug PLCSIM Advanced til at simulere S7-1500 PLC'en og sikre, at den er korrekt forbundet til den virtuelle netværksinfrastruktur.
+		\item Start simuleringen og verificer, at webserveren på den simulerede PLC er tilgængelig via en webbrowser ved at indtaste PLC'ens IP-adresse.
+	\end{itemize}
+	
+	\item \textbf{Implementering af Webserverindhold:}
+	\begin{itemize}
+		\item Opret og implementer webserverindhold på begge PLC'er, der viser live data, såsom sensorværdier og statusindikatorer.
+		\item Implementér kontrolfunktioner på websiden, der gør det muligt at styre procesparametre direkte fra webbrowseren.
+	\end{itemize}
+	
+	\item \textbf{Test og Verifikation:}
+	\begin{itemize}
+		\item Test webserverens funktionalitet ved at navigere til forskellige sider og verificere, at data vises korrekt og opdateres i realtid.
+		\item Test kontrolfunktionerne ved at ændre procesparametre via webbrowseren og observere de tilsvarende ændringer i PLC-simuleringen.
+	\end{itemize}
+	
+	\item \textbf{Fejlhåndtering:}
+	\begin{itemize}
+		\item Implementer fejlhåndteringsmekanismer for at sikre pålidelighed og robusthed af webserveren.
+		\item Dokumentér eventuelle fejl og de trin, der blev taget for at løse dem.
+	\end{itemize}
+	
+	\item \textbf{Dokumentation:}
+	\begin{itemize}
+		\item Fysiske layouttegninger: Viser den fysiske placering af netværksudstyr, kabler og andre komponenter i automatiseringsmiljøet.
+		\item Logiske diagrammer: Illustrerer dataflowet og kommunikationen mellem forskellige enheder og systemer i netværket.
+		\item Netværksdiagrammer: Viser den fysiske og logiske struktur af netværket, herunder enheder, forbindelser og protokoller.
+		\item Device name \& IP-adresseplan: En tabel eller liste over alle enheder på netværket med deres tildelte device name, IP-adresser, subnetmasker og gateways.
+		\item Revisionshistorik: En oversigt over ændringer og opdateringer til netværkskonfigurationen over tid.
+		\item Oversigtsdiagram: Et oversigtsdiagram over produktionslinjen i Emulate3D og plantegning.
+	\end{itemize}
+	
+	\item \textbf{Analyse:}
+	\begin{itemize}
+		\item Diskuter potentielle anvendelsesområder for webservere i industriel automation, især med hensyn til fjernovervågning og kontrol af processer.
+	\end{itemize}
+\end{enumerate}
+
+\textbf{Krav:}
+\begin{itemize}
+	\item Grundlæggende forståelse af webservere og deres anvendelse i industriel kommunikation.
+	\item Erfaring med netværksopsætning i TIA Portal og anvendelse af PLCSIM Advanced.
+	\item Kompetence i at konstruere og debugge PLC-programmer, der involverer webserverfunktioner.
+\end{itemize}
+
+\noindent\textbf{Aflevering (optional):} En detaljeret teknisk rapport med beskrivelse af opsætningen af netværket, webserverkonfigurationerne, og begge PLC'er. Der skal ligeledes medfølge skærmbilleder, kodeeksempler, og netværksdiagrammer, samt en dybdegående analyse af de udførte tests og resultater.
+
+
+\textbf{Mål:} Formålet med denne opgave er at implementere og konfigurere en webserver på en SIMATIC S7-1500 PLC og tilgå den ved hjælp af en standard webbrowser. Dette vil demonstrere PLC'ens indbyggede kommunikationsfunktioner og studerendes evne til at anvende disse til overvågning og kontrolformål.
+\\\\
+\noindent\textbf{Opgave:}
+\begin{enumerate}
+	\item Vælg en SIMATIC S7-1500 PLC i TIA Portal og aktiver webserverfunktionen i PLC'ens enhedsegenskaber.
+	\item Tildel PLC'en en passende IP-adresse og konfigurer de nødvendige netværksindstillinger for at sikre tilgængelighed på det lokale netværk.
+	\item Design en simpel webside ved hjælp af TIA Portals indbyggede web-editor, hvilket inkluderer grundlæggende kontrol- og overvågningselementer (f.eks. knapper, indikatorlamper og datavisning).
+	\item Anvend PLCSIM Advanced til at simulere PLC'en og test webserverens funktionalitet.
+	\item Brug en standard webbrowser til at tilgå PLC'ens webserver ved hjælp af dets IP-adresse og interager med de designede websideelementer for at udføre kontrol- og overvågningsopgaver.
+	\item Demonstrer evnen til at læse og skrive til/fra PLC datablokke via websiden.
+	\item Sikr webserverens kommunikation ved at konfigurere og anvende passende sikkerhedsindstillinger.
+	\item Evaluer webserverens ydeevne og brugeroplevelse ved at tilgå den fra forskellige enheder og browsere.
+	\item Forbered en detaljeret teknisk rapport, der beskriver opsætningsprocessen, brugerinterfacet, sikkerhedsaspekter og de opnåede testresultater.
+\end{enumerate}
+\textbf{Krav:}
+\begin{itemize}
+	\item Forståelse for webserverkoncepter og HTTP-protokollen.
+	\item Færdigheder i brugen af TIA Portal til konfiguration af PLC'er og oprettelse af brugerinterfaces.
+	\item Evnen til at implementere og teste industrielle kommunikationsnetværk.
+\end{itemize}
+\textbf{Aflevering:} En rapport, der inkluderer den komplette vejledning til opsætningen af webserveren, brugergrænsefladedesignet, sikkerhedskonfigurationer, og en diskussion af den praktiske anvendelse af webservere i industriel automation.
+
+\subsection*{PLC-til-PLC kommunikation via Webserver og TCP/IP}
+\label{subsec:plc_to_plc_comm_tcp}
+
+\textbf{Mål:} Målet med denne opgave er at oprette en kommunikationsforbindelse mellem to SIMATIC S7-1500 PLC'er ved hjælp af en webserver og TCP/IP-protokollen. Studerende skal demonstrere evnen til at udveksle data mellem PLC'er over et netværk ved at anvende standard webteknologier.
+\\\\
+\noindent\textbf{Opgave:}
+\begin{enumerate}
+	\item Konfigurer to SIMATIC S7-1500 PLC'er i TIA Portal, og aktiver webserverfunktionerne på begge PLC'er.
+	\item Tildel hver PLC en unik IP-adresse, og sikr at de kan nå hinanden over det lokale netværk.
+	\item Opret et simpelt HTTP-baseret API på den første PLC's webserver, som tillader læsning og skrivning af specifikke datablokke.
+	\item Design en klient-side applikation på den anden PLC's webserver, der kan sende og modtage data ved hjælp af HTTP-anmodninger til den første PLC's API.
+	\item Simuler begge PLC'er med PLCSIM Advanced, og test kommunikationen mellem de to PLC'er ved at udveksle kontrolsignaler og procesdata via webserverne.
+	\item Analyser og håndter de potentielle sikkerhedsmæssige udfordringer forbundet med at tillade inter-PLC kommunikation over TCP/IP.
+	\item Dokumenter processen for at oprette og sikre kommunikationen, samt de trin der er taget for at verificere og validere dataudvekslingen.
+	\item Udforsk mulighederne for at overvåge og logge kommunikationen mellem PLC'erne ved hjælp af netværksanalyseværktøjer.
+	\item Afslutningsvis, diskutér i en teknisk rapport anvendelsen af webserverbaseret kommunikation i industrielle automatiseringssystemer og dens fordele og ulemper i forhold til traditionelle metoder.
+\end{enumerate}
+
+\textbf{Krav:}
+\begin{itemize}
+	\item Dybdegående kendskab til TCP/IP-protokollen og webserver teknologi.
+	\item Kompetencer i at programmere og konfigurere SIMATIC S7-1500 PLC'er og tilhørende webservere.
+	\item Evne til at skabe sikre og pålidelige netværkskommunikationsløsninger.
+\end{itemize}	
+\textbf{Aflevering:} En detaljeret rapport, der omfatter opsætningsvejledninger, kommunikationsprotokolbeskrivelse, sikkerhedsforanstaltninger, testprocedurer og en evaluering af teknologiens anvendelighed i industriel automation.
+
+\subsection*{PLC-til-PLC Kommunikation via Webserver og UDP}
+\label{subsec:plc_to_plc_comm_udp}
+
+\textbf{Mål:} Formålet med denne opgave er at udforske en alternativ metode til at facilitere kommunikation mellem to SIMATIC S7-1500 PLC'er ved hjælp af UDP-protokollen koordineret gennem en webserver. Opgaven vil introducere de studerende for udfordringer og løsninger ved brug af mindre almindelige kommunikationsmetoder i automationsmiljøer.
+\\\\
+\noindent\textbf{Opgave:}
+\begin{enumerate}
+	\item Opstil to SIMATIC S7-1500 PLC'er i TIA Portal og implementer en webserver på hver PLC.
+	\item Konfigurer hver PLC med en unik IP-adresse inden for det samme subnet for at muliggøre netværkskommunikation.
+	\item Udvikl et script på webserveren, der initialiserer og konfigurerer en UDP-kommunikationskanal. Dette script vil agere som en 'startpakke' for at igangsætte UDP-kommunikationen mellem PLC'erne.
+	\item Skriv et PLC-program, der sender og modtager data via UDP. Brug webserveren til at aktivere og overvåge denne kommunikation.
+	\item Anvend PLCSIM Advanced til at simulere begge PLC'er og etabler en virtuel testmiljø, hvor UDP-pakker sendes og modtages mellem de to enheder.
+	\item Vurder effektiviteten og responsiviteten af UDP-kommunikationen i forhold til TCP i en webserverkontekst og dokumenter observationerne.
+	\item Fremhæv potentielle problemer såsom pakketab, og diskuter hvordan disse kan overvindes eller minimeres i et industrielt netværksmiljø.
+	\item Konkluder opgaven med en teknisk rapport, der indeholder dine erfaringer og refleksioner over brugen af UDP i sammenhæng med en webserver til PLC-kommunikation, herunder fordele, ulemper og potentielle brugsscenarier.
+\end{enumerate}
+
+\noindent\textbf{Krav:}
+\begin{itemize}
+	\item Grundlæggende forståelse for UDP og TCP/IP-protokollerne.
+	\item Evner i konfiguration og anvendelse af webservere på SIMATIC S7-1500 PLC'er.
+	\item Færdigheder i anvendelse af TIA Portal og PLCSIM Advanced for simulering af netværkskommunikation.
+\end{itemize}
+\textbf{Aflevering:} En detaljeret rapport med dine testresultater, kodeeksempler, netværkskonfigurationer og en evaluering af UDP's anvendelighed i PLC-kommunikation.
+
+\subsection*{HTTP-kommunikation mellem to PLC'er via Webserver}
+\label{subsec:http_communication_plc}
+
+\textbf{Mål:} Denne opgave har til formål at etablere en grundlæggende HTTP-kommunikation mellem to SIMATIC S7-1500 PLC'er ved at udnytte deres indbyggede webserver-kapacitet. Studerende vil udvikle forståelse for anvendelsen af HTTP-protokollen inden for industriel automation og hvordan man kan bruge denne protokol til at udveksle data mellem PLC'er.
+\\\\
+\noindent\textbf{Opgavebeskrivelse:}	
+\begin{enumerate}
+	\item Konfigurér webserveren på begge SIMATIC S7-1500 PLC'er, og sikr at de er tilgængelige på netværket.
+	\item Udvikl et simpelt HTML-brugergrænseflade eller RESTful API, som gør det muligt for en PLC at sende HTTP-requests til en anden PLC's webserver.
+	\item Skriv et script eller et PLC-program, som kan sende HTTP-GET og POST-requests for at hente og sende data til/fra den anden PLC.
+	\item Implementér logik på modtager-PLC'en til at behandle indkommende HTTP-requests og udføre handlinger baseret på disse anmodninger, som for eksempel at ændre værdier i datablokke eller aktivere outputs.
+	\item Brug PLCSIM Advanced til at simulere begge PLC'er og deres webserveres funktionalitet.
+	\item Test kommunikationsprocessen grundigt for at sikre data bliver overført korrekt og pålideligt mellem de to PLC'er.
+	\item Diskutér potentielle industrielle anvendelser for HTTP-kommunikation mellem PLC'er og overvej sikkerhedsmæssige aspekter ved denne tilgang.
+	\item Dokumentér hele opsætningen, kode, testprocedurer og konklusioner i en detaljeret teknisk rapport.
+\end{enumerate}	
+\textbf{Krav til dokumentation:} Den tekniske rapport skal inkludere netværksdiagrammer, konfigurationsdetaljer, kodeudsnit, testresultater og en kritisk vurdering af tilgangens anvendelighed i en industriel kontekst.
+
+\subsection*{CoAP-kommunikation mellem to PLC'er}
+\label{subsec:coap_communication_plc}
+
+\textbf{Mål:} Formålet med denne opgave er at etablere CoAP-kommunikation mellem to SIMATIC S7-1500 PLC'er. Dette skal introducere studerende for CoAP-protokollen som et letvægts alternativ til HTTP i ressourcebegrænsede systemer, der er typiske for industrielle Internet of Things (IoT)-applikationer.
+\\\\
+\noindent\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item Opstil to SIMATIC S7-1500 PLC'er, og konfigurer dem til at kunne forbinde over et lokalt netværk.
+	\item Implementér CoAP-server funktionalitet på den ene PLC, således at den kan modtage og reagere på CoAP-requests.
+	\item Implementér CoAP-klient funktionalitet på den anden PLC, så den kan sende CoAP-requests.
+	\item Design et simpelt dataudvekslingsscenarie, hvor den ene PLC regelmæssigt anmoder om data fra den anden PLC, f.eks. sensorlæsninger eller statusopdateringer.
+	\item Sikr, at CoAP-klienten kan sende både GET og POST-requests til serveren, og at serveren kan respondere korrekt på disse requests.
+	\item Gennemfør simuleringen af begge PLC'er ved hjælp af PLCSIM Advanced, inklusiv deres CoAP-kommunikation.
+	\item Udfør grundige test for at verificere, at CoAP-kommunikationen fungerer som forventet og inden for de krævede tidsspecifikationer.
+	\item Analyser og diskuter hvordan CoAP kan integreres i industrielle automationsløsninger, og sammenlign det med andre protokoller som HTTP og MQTT i konteksten af IoT.
+	\item Afslut opgaven med en detaljeret rapport, der dokumenterer hele processen fra opsætning til test, inklusive netværksdiagrammer, konfigurationsdetaljer og en diskussion af resultaterne.
+\end{enumerate}	
+\textbf{Krav til dokumentation:} Rapporten skal inkludere skærmbilleder af konfigurationsindstillinger, kodeudsnit med kommentarer, testscenarier, samt en refleksion over anvendeligheden af CoAP i et industriel miljø og eventuelle sikkerhedsmæssige overvejelser.
+
+\subsection*{MQTT-kommunikation mellem to PLC'er via Webserver og CDN}
+\label{subsec:mqtt_communication_plc_CDN}
+
+\textbf{Mål:} At konfigurere to PLC'er til at kommunikere med hinanden ved hjælp af MQTT over en webserver og benytte `cdnjs` til at levere nødvendige JavaScript-biblioteker.
+\\\\
+\noindent\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item Konfigurér webserveren på begge PLC'er til at levere en webapplikation med HTML og JavaScript-filer.
+	\item Inkludér \texttt{<script>} tags i HTML-dokumentet, der henviser til MQTT.js biblioteket hostet på `cdnjs`.
+	\begin{verbatim}
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/
+		paho-mqtt/1.0.2/mqttws31.min.js" 
+		type="text/javascript">
+		</script>
+	\end{verbatim}
+	\item Brug Paho MQTT biblioteket i din webapplikations JavaScript til at oprette forbindelse til en MQTT Broker.
+	\item Abonner på relevante topics for begge PLC'er og implementér logik til at sende og modtage MQTT-beskeder.
+	\item Simulér PLC'ernes adfærd ved at sende og modtage kontrolbeskeder.
+	\item Overvåg og test kommunikationen mellem PLC'erne ved hjælp af MQTT Brokerens overvågningsværktøjer.
+	\item Fejlfind eventuelle kommunikationsproblemer og optimer forbindelsen for pålidelighed.
+	\item Dokumentér processen, konfigurationen af MQTT, og sikkerhedsovervejelser i en detaljeret rapport.
+\end{enumerate}
+\textbf{Krav til dokumentation:} Den tekniske rapport skal indeholde konfigurationsdetaljer, kodeudsnit, en gennemgang af testproceduren, og en diskussion af sikkerhedsmæssige aspekter ved at bruge MQTT i en industriel kontekst. Den skal også vurdere anvendeligheden og pålideligheden af MQTT-kommunikation gennem en webserver understøttet af en CDN.
+
+\subsection*{CoAP-kommunikation mellem to PLC'er via Webserver og CDN}
+\label{subsec:coap_communication_plc_cdn}
+
+\textbf{Mål:} At facilitere CoAP-kommunikation mellem to SIMATIC S7-1500 PLC'er ved at bruge en webserver og CDN til at levere nødvendige CoAP JavaScript-biblioteker.
+\\\\
+\noindent\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item Konfigurér webserverne på begge SIMATIC S7-1500 PLC'er til at hoste en webside, som indeholder CoAP-klient logik.
+	\item Inkludér et \texttt{<script>} tag i din HTML, som refererer til et CoAP JavaScript-bibliotek gennem en CDN. 
+	
+	\begin{verbatim}
+		<script src="https://cdn.jsdelivr.net/npm/
+		coap-client-browserify@1/coap-client.js" 
+		type="text/javascript"></script>
+	\end{verbatim}
+	\item Benyt JavaScript og det inkluderede CoAP-bibliotek til at sende og modtage CoAP-beskeder mellem de to PLC'er.
+	\item Design og implementér et simpelt dataudvekslingsscenarie, hvor PLC'erne kan anmode om og sende forskellige ressourcer til hinanden.
+	\item Brug simulering til at efterligne PLC'ernes netværk og verificere den korrekte funktion af CoAP-meddelelserne.
+	\item Analyser dataflowet og CoAP-meddelelseslogikken for at sikre, at begge PLC'er korrekt kan håndtere anmodninger og ressourcer.
+	\item Udarbejd en grundig testprocedure og dokumenter interaktionerne mellem PLC'erne og valideringen af kommunikationsprotokollen.
+	\item Skriv en rapport, som inkluderer tekniske aspekter af CoAP-implementeringen, netværksopsætning, og overvejelser omkring brugen af CDN'er til industrielle applikationer.
+\end{enumerate}
+\textbf{Krav til dokumentation:} Den tekniske rapport skal omfatte konfigurationsdetaljer, kodningseksempler, en diskussion af testmetoder, og en evaluering af CoAP's effektivitet og pålidelighed i en industriel kontekst. Rapporten bør også adressere sikkerhedsmæssige udfordringer og fordele ved at benytte CDN'er for at forbedre ydeevnen og tilgængeligheden af CoAP-tjenester.
+
+\subsection*{AMQP-kommunikation mellem to PLC'er via Webserver og CDN}
+\label{subsec:amqp_communication_plc_cdn}
+
+\textbf{Mål:} Målet med denne opgave er at etablere AMQP-kommunikation mellem to SIMATIC S7-1500 PLC'er ved brug af en webserver og CDN for at facilitere realtidsbeskedudveksling.
+\\\\
+\noindent\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item Konfigurer webserveren på hver af de SIMATIC S7-1500 PLC'er til at tjene en webside, der vil fungere som en AMQP klient.
+	\item Indsæt et \texttt{<script>} tag i websidens HTML for at referere til et AMQP JavaScript-bibliotek hosted via en CDN.
+	\begin{verbatim}
+		<script src="https://cdn.jsdelivr.net/npm/
+		amqp-websocket-client/amqp-client.js" 
+		type="text/javascript"></script>
+	\end{verbatim}
+	\item Brug JavaScript til at benytte det inkluderede AMQP-bibliotek til at etablere en forbindelse mellem de to PLC'er og at muliggøre beskedudveksling.
+	\item Udvikl et scenarie for udveksling af beskeder, hvor PLC'erne regelmæssigt udveksler data såsom sensorværdier eller kontrolkommandoer.
+	\item Anvend PLC-simuleringsværktøjer til at teste og validere opsætningen og den succesfulde udveksling af AMQP-beskeder.
+	\item Sikr, at den etablerede kommunikationsforbindelse overholder de relevante tidskrav og sikkerhedsstandarder.
+	\item Dokumentér hvert skridt i opsætningsprocessen, fra konfigurering af webserver og PLC til udviklingen af AMQP-klientlogikken.
+	\item Afslut med at udarbejde en detaljeret teknisk rapport, der dokumenterer opsætningen, kommunikationsprotokollen, og de udførte tests.
+\end{enumerate}
+\textbf{Krav til dokumentation:} Rapporten skal inkludere en gennemgang af de tekniske implementeringer, skærmbilleder af konfigurationer, eksempler på kode, beskrivelse af testscenarier, og en vurdering af AMQP-kommunikation i en industriel automationskontekst. Overvejelser vedrørende brug af CDN'er for at forbedre ydelsen og pålideligheden af kommunikationen bør også inkluderes.
+
+\subsection*{WebSocket-kommunikation mellem to PLC'er via Webserver}
+\label{subsec:websocket_communication_plc}
+
+\textbf{Mål:} Denne opgave fokuserer på at opsætte en WebSocket-kommunikation mellem to SIMATIC S7-1500 PLC'er ved hjælp af en webserver. Målet er at forstå og anvende WebSockets til at opnå tovejskommunikation i realtid mellem PLC'er.
+
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item Konfigurer en webserver på hver PLC til at hoste en webside, der fungerer som en WebSocket-klient.
+	\item På websiden, indsæt et \texttt{<script>} tag der inkluderer JavaScript-kode for at etablere og håndtere en WebSocket-forbindelse.
+	
+	\begin{verbatim}
+		<script type="text/javascript">
+		var ws = new WebSocket('ws://PLC_SERVER_ADRESSE');
+		ws.onopen = function() {
+			// Kode for når forbindelsen åbnes
+		};
+		ws.onmessage = function(evt) {
+			// Kode for at håndtere indkommende beskeder
+		};
+		ws.onclose = function() {
+			// Kode for når forbindelsen lukkes
+		};
+		</script>
+	\end{verbatim}
+	
+	\item Skriv logikken for at sende og modtage data over WebSocket-forbindelsen. Dette skal omfatte både at håndtere forbindelsen og at formatere dataene korrekt.
+	\item Udvikl et enkelt scenarie, hvor PLC'erne kommunikerer, for eksempel udveksling af statusopdateringer eller kommandoer.
+	\item Test kommunikationsforbindelsen ved hjælp af en simuleret opsætning for at sikre, at dataudvekslingen fungerer som forventet.
+	\item Undersøg mulighederne og udfordringerne ved at bruge WebSocket i en industriel automationssammenhæng.
+	\item Dokumentér opsætningsprocessen, udvikling af klientlogikken og testresultaterne i en detaljeret rapport.
+\end{enumerate}
+\textbf{Krav til dokumentation:} Rapporten skal indeholde beskrivelser af de tekniske opsætninger, eksempler på den anvendte kode, testscenarier og resultater, samt en diskussion af fordele og ulemper ved at bruge WebSockets i industrielle automationssystemer. Det bør også inkludere overvejelser omkring sikkerhedsaspekterne ved brug af WebSockets.
+\\\\
+\textbf{OBS!}
+husk at udskifte PLC\_SERVER\_ADRESSE med den faktiske adresse til PLC-webserveren, der håndterer WebSocket-forbindelser. Koden antager, at PLC-webserveren er konfigureret til at understøtte WebSockets og er i stand til at acceptere indkommende WebSocket-forbindelser.
+
+\subsection*{Hente Data fra Firebase Realtime Database ved Hjælp af Axios}
+\label{subsec:firebase_data_fetch_axios}
+
+\textbf{Mål:} Denne opgave har til formål at udvikle studerendes evner til at integrere en Firebase Realtime Database i en webapplikation for at hente data, der kan bruges i automatiseringsscenarier og overvågning.
+\\\\
+\noindent\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item Opret en Firebase-konto og konfigurér en ny Firebase Realtime Database.
+	\item Definer en datastruktur i Firebase-databasen, der kunne simulere relevante data for automatisering, såsom sensorlæsninger eller systemstatus.
+	\item Indhent dine Firebase-databaseindstillinger og adgangsnøgler, der er nødvendige for at autentificere anmodninger.
+	\item Implementér Axios i dit webservermiljø for at kunne sende HTTP-anmodninger til Firebase REST API'et:
+	\begin{verbatim}
+		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+		\script type="text/javascript">
+		const firebaseConfig = {
+			// Din Firebase-konfiguration
+			apiKey: "DIN_API_NØGLE",
+			authDomain: "DIN_PROJECT_ID.firebaseapp.com",
+			databaseURL: "https://DIN_PROJECT_ID.firebaseio.com",
+			// ... andre nødvendige konfigurationsdetaljer
+		};
+		
+		function fetchFirebaseData() {
+			const path = 'din/data/sti';
+			const url = \`${firebaseConfig.databaseURL}/${path}.json\`;
+			
+			axios.get(url)
+			.then(function (response) {
+				// Håndter succesfuld respons
+				console.log(response.data);
+			})
+			.catch(function (error) {
+				// Håndter fejl
+				console.error(error);
+			});
+		}
+		</script>
+	\end{verbatim}
+	\item Tilføj en knap til din webside, der når den klikkes på, kalder funktionen `fetchFirebaseData()` for at hente og vise data fra Firebase.
+	\item Test din webapplikations evne til at hente data fra Firebase og sikre, at den håndterer data korrekt.
+	\item Diskutér, hvordan integrationen af Firebase kan udvide funktionaliteten i automatiseringssystemer, især med hensyn til realtidsdataovervågning og -styring.
+	\item Afslut med at dokumentere hele processen, inklusiv konfigurationsindstillinger og testresultater, i en teknisk rapport.
+\end{enumerate}
+\textbf{Krav til dokumentation:} Den tekniske rapport skal indeholde en fuld beskrivelse af Firebase-konfigurationen, JavaScript-kodeeksempler, et UI-layout til at demonstrere datahentning, og en diskussion af de opnåede resultater samt potentielle sikkerhedsaspekter ved at bruge cloud-baserede databaser i industriel automatisering.
+
+\section{Profinet}
+\subsection{Profinet til UR og Dimensionering af PROFINET-netværk}
+\textbf{Mål:} Denne opgave består af to dele. I første del er målet at konfigurere og demonstrere PROFINET-kommunikation mellem en Siemens S7-1200 PLC og en Universal Robots (UR) robot, eller mellem en simulerede S7-1500 PLC og simuleret UR. Anden del fokuserer på at designe og dimensionere et PROFINET-netværk, der skal understøtte en produktionslinje med seks robotceller og et SCADA-system. Samlet set vil opgaven give de studerende praktisk erfaring med både opsætning af PROFINET-kommunikation og netværksdesign i et komplekst industrielt miljø.
+
+\subsection{Del 1: Opsætning af PROFINET-kommunikation}
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item \textbf{Forberedelse af GSDML-fil:}
+	\begin{itemize}
+		\item Download den relevante GSDML-fil til Universal Robots (UR) fra producentens hjemmeside.
+		\item Sørg for, at filen er kompatibel med den version af Siemens TIA Portal, der anvendes.
+		\item Importer GSDML-filen i TIA Portal for at gøre UR robotten tilgængelig som en PROFINET-enhed.
+	\end{itemize}
+	
+	\item \textbf{Valg af opsætning:}
+	\begin{itemize}
+		\item \textbf{Option 1:} Brug en fysisk S7-1200 PLC til at kommunikere med en fysisk UR robot.
+		\item \textbf{Option 2:} Brug en fysisk S7-1200 PLC til at kommunikere med en simuleret UR robot.
+		\item \textbf{Option 3:} Brug en simulerede S7-1500 PLC og en simuleret UR til at simulere kommunikationen.
+	\end{itemize}
+	
+	\item \textbf{Opsætning af PROFINET i TIA Portal:}
+	\begin{itemize}
+		\item Start et nyt projekt i TIA Portal og opret en ny konfiguration med den valgte PLC.
+		\item Tilføj UR robotten eller den anden PLC som en PROFINET-enhed i netværkskonfigurationen ved hjælp af den importerede GSDML-fil.
+		\item Tildel en unik IP-adresse til UR robotten eller den anden PLC, der er inden for det samme subnet som din valgte PLC.
+		\item Konfigurer de nødvendige PROFINET-parametre, herunder cyklustider, I/O-adressering, og forbindelsesparametre.
+	\end{itemize}
+	
+	\item \textbf{Kommunikationstest og I/O Mapping:}
+	\begin{itemize}
+		\item Udfør en hardware download til din PLC og verificer, at den oprettede PROFINET-forbindelse er korrekt og aktiv.
+		\item Opsæt I/O-mapping i TIA Portal for at definere, hvilke input og output data der skal udveksles mellem PLC'en og UR robotten eller den anden PLC.
+		\item Test kommunikationen ved at sende en simpel kommando fra PLC'en til UR robotten eller den anden PLC (f.eks. at starte en bevægelse eller ændre en hastighed).
+		\item Verificer, at enheden reagerer korrekt på kommandoen, og at feedback-data fra enheden vises korrekt i PLC'en.
+	\end{itemize}
+	
+	\item \textbf{Simuleringsscenarie i UR:}
+	\begin{itemize}
+		\item Hvis du bruger en UR robot, opret et simpelt program i UR's kontrolsoftware, hvor robotten udfører en bestemt handling (f.eks. flytter en genstand fra et punkt til et andet) baseret på modtagne PROFINET-kommandoer.
+		\item Hvis du bruger en anden PLC, opsæt en kommunikationslogik, der simulerer en maskinhandling eller proces.
+	\end{itemize}
+\end{enumerate}
+
+\subsection{Del 2: Dimensionering af PROFINET-netværk for Produktionslinje med Robotceller}
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item \textbf{Scenarie og Krav:}
+	\begin{itemize}
+		\item Produktionslinjen består af seks robotceller, hvor hver celle indeholder en Universal Robots (UR) robot, en Siemens S7-1200 PLC og et SCADA-anlæg til dataopsamling.
+		\item Robotcellerne er fordelt mellem to haller, med fire celler i Hal A og to celler i Hal B. De to haller er fysisk adskilt.
+		\item Produktionslinjen skal kommunikere via PROFINET, og der skal opsamles data i realtid fra hver robotcelle til SCADA-systemet.
+	\end{itemize}
+	
+	\item \textbf{Netværkstopologi:}
+	\begin{itemize}
+		\item Vælg en passende netværkstopologi, der kan sikre effektiv og pålidelig kommunikation mellem alle robotceller og SCADA-systemet. Overvej topologier som stjerne, linje eller ring.
+		\item Overvej hvordan kommunikationen mellem de to haller skal håndteres, og om der er behov for en bro, router eller fiberforbindelse mellem hallerne.
+	\end{itemize}
+	
+	\item \textbf{Kabellængder og Netværkskomponenter:}
+	\begin{itemize}
+		\item Beregn de nødvendige kabellængder for hver forbindelse mellem robotceller, SCADA-anlæg og netværksswitche. Tag hensyn til de maksimale længder for Ethernet-kabler (f.eks. Cat5e, Cat6) og eventuelt behov for fiberkabler mellem hallerne.
+		\item Dimensionér netværket ved at vælge antal og placering af netværksswitche, routere og eventuelle repeatere for at sikre tilstrækkelig dækning og kapacitet i hele produktionslinjen.
+	\end{itemize}
+	
+	\item \textbf{Design af Netværksinfrastruktur:}
+	\begin{itemize}
+		\item Tegn et detaljeret netværksdiagram, der viser alle robotceller, SCADA-anlæg, switche, routere og kabelløb mellem enhederne. Diagrammet skal tydeligt illustrere forbindelsen mellem Hal A og Hal B.
+		\item Angiv i diagrammet de anvendte kabeltyper og deres specifikke længder, samt de nødvendige komponenter som switche og routere.
+	\end{itemize}
+	
+	\item \textbf{Overvejelser om Sikkerhed og Pålidelighed:}
+	\begin{itemize}
+		\item Vurder behovet for redundans i netværket, for eksempel ved at implementere ringtopologi eller anvende flere switche for at undgå enkeltpunktsfejl.
+		\item Diskuter hvilke sikkerhedsforanstaltninger, der bør implementeres for at beskytte mod netværksfejl eller uautoriseret adgang, såsom VLAN-segmentering, firewall, eller adgangskontrol.
+	\end{itemize}
+\end{enumerate}
+
+\noindent\textbf{Aflevering:} En detaljeret teknisk rapport, der beskriver opsætningen, konfigurationen, og testresultaterne fra Del 1, samt netværksdesign og dimensionering fra Del 2. Rapporten skal inkludere netværksdiagrammer, skærmbilleder fra TIA Portal, beregninger af kabellængder og komponentplaceringer, samt en vurdering af netværkets pålidelighed og sikkerhed.
+
+
+\section{Profibus}
+\subsection*{Del 1: Installation og konfiguration af PROFIBUS-netværk med én ET200 modul}
+\textbf{Mål:} I denne del af opgaven skal de studerende lære at forbinde og konfigurere en S7-1200 PLC med et ET200-modul ved hjælp af PROFIBUS. De studerende skal selv fremstille et PROFIBUS-kabel og sikre, at kommunikationen mellem PLC’en og ET200-modulet fungerer korrekt.
+\newline\newline\noindent
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item \textbf{Fremstilling af PROFIBUS-kabel:}
+	\begin{itemize}
+		\item Fremstil et PROFIBUS-kabel, der skal forbinde S7-1200 PLC’en med ET200-modulet. Følg de nødvendige specifikationer for kabellængde og terminering.
+	\end{itemize}
+	\item \textbf{Konfiguration af netværket i TIA Portal:}
+	\begin{itemize}
+		\item Opret et nyt projekt i TIA Portal, og tilføj S7-1200 PLC’en og ET200-modulet.
+		\item Konfigurer PROFIBUS-netværket og tildel unikke adresser til hver enhed.
+	\end{itemize}
+	\item \textbf{Test af kommunikation:}
+	\begin{itemize}
+		\item Gå online med S7-1200 PLC’en i TIA Portal, og verificer, at der er stabil kommunikation mellem PLC’en og ET200-modulet.
+		\item Brug diagnoseværktøjer i TIA Portal til at sikre, at der ikke er fejl i netværkskommunikationen.
+	\end{itemize}
+\end{enumerate}
+
+\subsection*{Del 2: Tilslutning af et ekstra ET200 modul til PROFIBUS-netværket}
+\textbf{Mål:} I denne del skal de studerende udvide det eksisterende PROFIBUS-netværk ved at tilføje endnu et ET200-modul. De skal igen fremstille et PROFIBUS-kabel og sikre, at begge moduler fungerer korrekt i netværket.
+\newline\newline\noindent
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item \textbf{Fremstilling af ekstra PROFIBUS-kabel:}
+	\begin{itemize}
+		\item Fremstil et nyt PROFIBUS-kabel, der skal forbinde det første ET200-modul med det andet ET200-modul.
+	\end{itemize}
+	\item \textbf{Opdatering af netværkskonfiguration:}
+	\begin{itemize}
+		\item Opdater netværkskonfigurationen i TIA Portal ved at tilføje det nye ET200-modul.
+		\item Tildel en unik adresse til det nye ET200-modul, og konfigurer netværksparametrene.
+	\end{itemize}
+	\item \textbf{Test af udvidet netværk:}
+	\begin{itemize}
+		\item Gå online med S7-1200 PLC’en i TIA Portal, og verificer, at begge ET200-moduler kommunikerer korrekt med PLC’en.
+		\item Brug diagnoseværktøjer til at teste netværkets stabilitet og pålidelighed.
+	\end{itemize}
+\end{enumerate}
+
+\subsection*{Del 3: Design og implementering af et stort PROFIBUS-netværk}
+\textbf{Mål:} Denne delopgave udfordrer de studerende til at designe og implementere et komplekst PROFIBUS-netværk, der inkluderer flere ET200-moduler og Danfoss frekvensomformere. De skal tage højde for fysiske begrænsninger som kabellængder og anvende repeatere, hvor det er nødvendigt.
+\newline\newline
+\noindent\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item \textbf{Design af netværket:}
+	\begin{itemize}
+		\item Tegn et netværksdiagram, der viser forbindelserne mellem S7-1200 PLC’en, 7 ET200-moduler og 5 Danfoss frekvensomformere.
+		\item Marker kabellængderne mellem hver enhed, og angiv, hvor der skal bruges repeatere.
+		\item Bestem og dokumentér adressering for hver enhed.
+	\end{itemize}
+	\item \textbf{Fremstilling og installation:}
+	\begin{itemize}
+		\item Fremstil nødvendige PROFIBUS-kabler til at forbinde alle enhederne og installer repeatere, hvor det er nødvendigt.
+		\item Tilslut alle enheder til netværket i overensstemmelse med det designede netværksdiagram.
+	\end{itemize}
+	\item \textbf{Konfiguration i TIA Portal:}
+	\begin{itemize}
+		\item Tilføj og konfigurer alle 7 ET200-moduler og 5 Danfoss frekvensomformere i TIA Portal.
+		\item Sørg for korrekt opsætning af repeatere og verificér netværkets stabilitet.
+	\end{itemize}
+	\item \textbf{Test af netværkets ydeevne:}
+	\begin{itemize}
+		\item Gå online med S7-1200 PLC’en i TIA Portal, og brug diagnoseværktøjer til at teste netværkets ydeevne.
+		\item Verificer, at alle enheder kommunikerer korrekt, og at netværket er stabilt og pålideligt.
+	\end{itemize}
+\end{enumerate}
+
+\noindent\textbf{Krav til dokumentation:} Studerende skal aflevere en teknisk rapport, der inkluderer netværksdiagrammer, adresseringsplaner, testresultater. Opgaven skal dokumenteres med skærmbilleder og tekst. I opgaven skal fremgå et teori/metode afsnit.
+\chapter{Rockwell}
+\section{Studio 5000 Netværksopgaver}
+\label{sec:studio_5000_opgaver}
+
+\section{Opsætning af EtherNet/IP Netværk i Studio 5000}
+\label{subsec:ethernet_ip_setup}
+
+\textbf{Mål:} Målet med denne opgave er at lære, hvordan man opretter og konfigurerer et EtherNet/IP-netværk i Studio 5000. Dette er afgørende for effektiv kommunikation mellem Allen-Bradley PLC'er og andre enheder i et industrielt netværk.
+
+\noindent\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item \textbf{Planlægning og Dokumentation:}
+	\begin{itemize}
+		\item Udarbejd en detaljeret plan for netværksopsætningen, herunder IP-adressering og netværkstopologi.
+		\item Dokumentér planlægningen med et netværksdiagram, der viser alle enheder og deres tilhørende IP-adresser.
+	\end{itemize}
+	
+	\item \textbf{Konfiguration i Studio 5000:}
+	\begin{itemize}
+		\item Start Studio 5000 og opret et nyt projekt baseret på din specifikke PLC-model.
+		\item Tilføj EtherNet/IP-moduler til projektet ved hjælp af Hardware Tree.
+		\item Konfigurer IP-adresser og netværksindstillinger for hvert modul for at sikre korrekt kommunikation på netværket.
+	\end{itemize}
+	
+	\item \textbf{Etablering af Forbindelser:}
+	\begin{itemize}
+		\item Brug 'Who Active' og 'RSWho' værktøjerne i RSLinx Classic til at etablere en rute til en ekstern enhed.
+		\item Opret og konfigurer en Produced and Consumed datakonfiguration for at sende og modtage data mellem PLC'er.
+		\item Tilføj Remote I/O-enheder i I/O Configuration, og konfigurer deres forbindelse til controlleren.
+	\end{itemize}
+	
+	\item \textbf{Test og Verifikation:}
+	\begin{itemize}
+		\item Gennemfør en Ping-test for at validere netværkskommunikationen til alle enhederne.
+		\item Test og verificér dataudveksling mellem PLC'er og I/O-enheder ved hjælp af tagbaseret programmering i Studio 5000.
+	\end{itemize}
+	
+	\item \textbf{Dokumentation:}
+	\begin{itemize}
+		\item Udarbejd netværksdiagrammer, IP-adressetabeller og skærmbilleder af din konfiguration.
+		\item Dokumentér processen og resultaterne i en teknisk rapport.
+	\end{itemize}
+\end{enumerate}
+
+\textbf{Krav:}
+\begin{itemize}
+	\item Grundlæggende forståelse af EtherNet/IP-protokollen og dets anvendelse i industriel kommunikation.
+	\item Erfaring med konfiguration og programmering i Studio 5000.
+	\item Evne til at fejlsøge netværksproblemer ved hjælp af diagnostiske værktøjer i RSLinx Classic.
+\end{itemize}
+
+\textbf{Aflevering:} En detaljeret teknisk rapport, der beskriver opsætningen, konfigurationen, og testresultaterne, inklusive netværksdiagrammer og skærmbilleder.
+
+
+\section{Ændring af IP-adresse med BOOTP}
+\label{subsec:bootp_ip_change}
+
+\textbf{Mål:} Målet med denne opgave er at lære, hvordan man bruger BOOTP (Bootstrap Protocol) til at tildele eller ændre IP-adressen på en SIMATIC S7-1200 PLC. Dette er en vigtig færdighed, når du arbejder med enheder, der bruger dynamiske IP-adresser eller skal konfigureres til et bestemt netværk.
+
+\noindent\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item \textbf{Opsætning:}
+	\begin{itemize}
+		\item Sørg for, at din PLC er korrekt tilsluttet netværket, og at BOOTP/DHCP er aktiveret på enheden.
+		\item Forbind din computer til det samme netværk som PLC'en.
+	\end{itemize}
+	
+	\item \textbf{Installation og Konfiguration af BOOTP Server:}
+	\begin{itemize}
+		\item Download og installer Siemens BOOTP Server eller et andet kompatibelt BOOTP-værktøj på din computer.
+		\item Start BOOTP Server og konfigurer den til at lytte på det netværksinterface, som din PLC er tilsluttet.
+	\end{itemize}
+	
+	\item \textbf{Registrering af PLC:}
+	\begin{itemize}
+		\item Sæt din PLC til at anmode om en IP-adresse ved at nulstille netværkskonfigurationen (eventuelt ved at bruge en speciel knap på enheden).
+		\item BOOTP Serveren bør registrere en forespørgsel fra PLC'en, identificeret ved dens MAC-adresse.
+		\item Tilføj PLC'en til BOOTP Serverens liste og tildel den en statisk IP-adresse.
+	\end{itemize}
+	
+	\item \textbf{Tildeling af IP-adresse:}
+	\begin{itemize}
+		\item Efter at have tildelt IP-adressen, skal du bruge BOOTP Serveren til at sende IP-adressen til PLC'en.
+		\item Verificér, at PLC'en har modtaget og accepteret den nye IP-adresse ved at pinge enheden fra din computer.
+	\end{itemize}
+	
+	\item \textbf{Test og Dokumentation:}
+	\begin{itemize}
+		\item Test forbindelsen ved at oprette forbindelse til PLC'en via TIA Portal og verificér, at den fungerer korrekt med den nye IP-adresse.
+		\item Dokumentér alle trin, herunder skærmbilleder af BOOTP-konfigurationen og testresultaterne.
+	\end{itemize}
+\end{enumerate}
+
+\textbf{Krav:}
+\begin{itemize}
+	\item Grundlæggende forståelse af netværkskonfiguration og IP-adressering.
+	\item Erfaring med brug af Siemens TIA Portal og netværksværktøjer.
+	\item Kendskab til BOOTP og DHCP-protokoller.
+\end{itemize}
+
+\textbf{Aflevering:} En teknisk rapport, der beskriver konfigurationsprocessen, IP-adresseringen, samt testresultaterne, inklusive skærmbilleder og ping-tests.
+
+
+\section{Producer/Consumer Tags}
+\label{subsec:data_exchange_echo_simulators}
+
+\textbf{Mål:} Målet med denne opgave er at konfigurere to ECHO Simulatorer til at udveksle data ved hjælp af Producer/Consumer tags i en simulering af en EtherNet/IP-netværksinfrastruktur. Opgaven skal give de studerende en praktisk forståelse af Producer/Consumer kommunikationsmodellen og dens anvendelse i industrielle miljøer.
+
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item \textbf{Oprettelse af Projekter i Studio 5000:}
+	\begin{itemize}
+		\item Brug Studio 5000 til at oprette to separate projekter, hver repræsenterende en virtuel PLC konfigureret til at arbejde med ECHO Simulator.
+	\end{itemize}
+	\item \textbf{Konfiguration af ECHO Simulatorer:}
+	\begin{itemize}
+		\item Konfigurér hver ECHO Simulator til at fungere som henholdsvis en Producer og en Consumer af data.
+		\item Definér et sæt af tags på Producer-simulatoren, der skal deles med Consumer-simulatoren, og omvendt.
+	\end{itemize}
+	\item \textbf{Opsætning af CIP Connection:}
+	\begin{itemize}
+		\item Opsæt den korrekte CIP-connection (Common Industrial Protocol) i begge simulatorer for at tillade korrekt dataudveksling.
+	\end{itemize}
+	\item \textbf{Dataoverførsel og Verifikation:}
+	\begin{itemize}
+		\item Anvend Producer/Consumer-modellen til at overføre data fra den ene ECHO Simulator til den anden og bekræft overførslen ved at monitorere tag-værdierne på begge enheder.
+	\end{itemize}
+	\item \textbf{Simulering af Driftstilstande:}
+	\begin{itemize}
+		\item Simulér forskellige driftstilstande, herunder normal drift, pakketab og genforbindelse efter netværksafbrydelse.
+	\end{itemize}
+	\item \textbf{Analyse og Dokumentation:}
+	\begin{itemize}
+		\item Analyser overførselshastigheder og latenstider under forskellige belastninger og netværksforhold.
+		\item Dokumentér setuppet, konfigurationsprocessen, og resultaterne af din dataudvekslingstest, herunder skærmbilleder og beskrivelser af de observationer, der er gjort under simulationen.
+	\end{itemize}
+\end{enumerate}
+
+\textbf{Krav til dokumentation:}
+Rapporten skal indeholde følgende elementer:
+\begin{itemize}
+	\item Detaljerede beskrivelser af hver ECHO Simulators konfiguration.
+	\item Netværksdiagrammer, der viser datastrømme og forbindelserne mellem de to simulatorer.
+	\item Diskussion af de anvendte Producer/Consumer tag konfigurationer og deres formål.
+	\item Gennemgang af de testscenarier, der er kørt, og de fundne resultater.
+	\item Analyse af simulatorens præcision og effektivitet i forhold til en reel PLC-setup.
+	\item Refleksioner over betydningen af nøjagtig simulation og mulige forbedringer i metoder til netværksfejlsøgning.
+\end{itemize}
+
+
+\section{Modbus TCP}
+\label{subsec:modbus_communication_echo_simulators}
+
+\subsection*{Modbus - Rockwell til Rockwell}
+\textbf{Mål:} Målet med denne opgave er at konfigurere og teste Modbus-kommunikation mellem to ECHO Simulatorer for at simulere en industriel netværksforbindelse og dataudveksling mellem enheder. Denne øvelse skal give de studerende praktisk erfaring med Modbus-protokollen og dens anvendelse i industrielle systemer.
+
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item \textbf{Oprettelse af Projekter i Studio 5000:}
+	\begin{itemize}
+		\item Brug Studio 5000 til at oprette to separate projekter, hvor hvert projekt repræsenterer en virtuel PLC konfigureret til at arbejde med ECHO Simulator. Den ene simulator skal fungere som Modbus Master, og den anden som Modbus Slave.
+	\end{itemize}
+	\item \textbf{Konfiguration af Kommunikationsparametre:}
+	\begin{itemize}
+		\item Indstil den passende Modbus-adresse, baudrate, parity, stopbits, og andre nødvendige kommunikationsparametre på begge simulatorer.
+	\end{itemize}
+	\item \textbf{Opsætning af Modbus-registre:}
+	\begin{itemize}
+		\item Definér og konfigurér Modbus-registerne i Slave-simulatoren, som skal indeholde de data, der skal tilgås af Master-simulatoren.
+	\end{itemize}
+	\item \textbf{Dataforespørgsel og -skrivning:}
+	\begin{itemize}
+		\item Skriv et script i Master-simulatoren, der anmoder om data fra Slave-simulatorens registre ved hjælp af Modbus-funktionskoder, såsom læsning af holde-registre (03) eller input-registre (04).
+		\item Konfigurér Master-simulatoren til at skrive værdier til Slave-simulatorens registre ved hjælp af relevante Modbus-funktionskoder, såsom skriv til enkelt register (06) eller flere registre (16).
+	\end{itemize}
+	\item \textbf{Simulering og Test:}
+	\begin{itemize}
+		\item Simulér og test kommunikationen for at sikre, at data udveksles præcist og pålideligt mellem Master og Slave.
+		\item Observér og dokumentér hvordan de to simulatorer håndterer forbindelsesafbrydelser og genetableringer.
+	\end{itemize}
+	\item \textbf{Analyse af Ydeevne:}
+	\begin{itemize}
+		\item Analyser ydeevnen af Modbus-kommunikationen under forskellige belastningsforhold og diskuter dens anvendelighed i en industriel sammenhæng.
+	\end{itemize}
+\end{enumerate}
+
+\textbf{Krav til dokumentation:}
+Den tekniske rapport skal omfatte:
+\begin{itemize}
+	\item Udførlige beskrivelser af konfigurationsindstillingerne for Modbus-kommunikationen i begge ECHO Simulatorer.
+	\item Diagrammer, der viser datastrømmene og de logiske forbindelser mellem Master- og Slave-simulatorerne.
+	\item Forklaringer på de valgte Modbus-registre og deres anvendelse i testscenariet.
+	\item Detaljerede beskrivelser af testscenarierne, herunder skærmbilleder og forklaringer på observerede dataudvekslinger.
+\end{itemize}
+
+
+\subsection*{Modbus - Rockwell til Siemens}
+\label{subsec:modbus_communication_plcsim_advanced}
+
+\textbf{Mål:} Målet med denne øvelse er at konfigurere og teste Modbus TCP kommunikation mellem to simulerede PLC'er ved hjælp af PLCSIM Advanced, hvilket vil give en forståelse for netværkskommunikation mellem automationsenheder.
+\\\\
+\noindent\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item Start med at oprette to separate projekter i TIA Portal, og indlæs dem i PLCSIM Advanced, hvor de skal fungere som Modbus TCP Master og Modbus TCP Slave.
+	\item Konfigurér netværksindstillinger for begge simulerede PLC'er, så de kan kommunikere på samme virtuelle netværk. Indstil relevante IP-adresser og subnet masker.
+	\item På Slave-PLC'en, konfigurér de relevante datablokke (DBs) til at fungere som Modbus-registerområder, som vil være tilgængelige for Master-PLC'en.
+	\item På Master-PLC'en, skriv et program, som bruger Modbus TCP-biblioteksfunktioner til at anmode om data fra Slave-PLC'ens registre og skriv data til disse registre.
+	\item Simuler begge PLC'er og etabler en kommunikationsforbindelse mellem dem. Test at Master-PLC kan læse fra og skrive til Slave-PLC'ens Modbus-registre.
+	\item Analysér og optimer kommunikationen for effektivitet og stabilitet. Overvej eksempelvis anvendelsen af asynkron kommunikation og genoprettelsesmekanismer ved forbindelsestab.
+	\item Dokumentér og diskutér anvendelsen af Modbus-kommunikation i et automationsmiljø og hvordan simuleret testning kan overføres til den virkelige verden.
+\end{enumerate}	
+\textbf{Krav til dokumentation:}
+Den tekniske rapport skal indeholde:
+\begin{itemize}
+	\item En gennemgang af de anvendte netværkskonfigurationer og -indstillinger for begge PLC'er.
+	\item En forklaring på strukturen og brugen af datablokke som Modbus-registre i Slave-PLC'en.
+	\item En detaljeret beskrivelse af Master-PLC's Modbus-klientprogram med kodeeksempler og forklaringer af de anvendte funktioner.
+	\item Skærmbilleder fra PLCSIM Advanced, der viser den vellykkede Modbus-kommunikation og de data, der udveksles mellem Master og Slave.
+	\item En kritisk analyse af de opnåede testresultater, herunder forsinkelsestider, kommunikationssikkerhed og potentielle fejlkilder.
+	\item Anbefalinger til optimering af kommunikationsprotokollen for at forbedre ydeevnen og pålideligheden i et reelt automationsanlæg.
+\end{itemize}
+
+\section{OPC UA}
+\label{subsec:opcua_echo_simulation_rockwell}
+\textbf{Mål:} Denne opgave er designet til at instruere studerende i at konfigurere og facilitere OPC UA-kommunikation mellem to Echo simulatorer ved hjælp af Rockwell Automation software. Det vil fremme en forståelse af OPC UA-protokollen og dens anvendelse i simulering af kontrolsystemer.
+\\\\
+\noindent\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item Brug Rockwell Automation's Studio 5000 til at oprette to kontrolprogrammer, der kan køre på Echo simulatorer, og konfigurer dem til at simulere OPC UA-server og -klient funktionalitet.
+	\item Konfigurer en Echo Simulator til at fungere som en OPC UA-server, og eksponer et sæt af tags eller data punkter, som klienten vil abonnere på.
+	\item Konfigurer den anden Echo Simulator som en OPC UA-klient, der opretter forbindelse til serveren og abonnerer på de eksponerede tags/data.
+	\item Etabler sikkerhedsmekanismer såsom certifikater og kryptering for at sikre, at kommunikationen mellem server og klient er sikker.
+	\item Demonstrér, at klienten kan læse og skrive til de tags, som serveren eksponerer, og implementér en kontrollogik, der afhænger af denne dataudveksling.
+	\item Udfør en række tests for at bekræfte, at kommunikationen fungerer som forventet, herunder fejltolerance og genforbindelsesmekanismer.
+	\item Analyser og rapportér kommunikationens performance og stabilitet, og identificér eventuelle begrænsninger eller problemer.
+	\item Skriv en teknisk rapport, der dokumenterer hele processen fra start til slut, herunder de anvendte konfigurationer, simuleringsresultater og eventuelle udfordringer eller læringspunkter.
+\end{enumerate}	
+\textbf{Krav til dokumentation:} Rapporten skal indeholde skærmbilleder af simulatorens og Studio 5000-programmets indstillinger, et flowdiagram der beskriver kommunikationsprocessen, kodeeksempler, og en diskussion om anvendeligheden af OPC UA i simulerede industrielle miljøer.
+
+\chapter{KepServerEX}
+\section{OPC UA}
+\subsection*{Konfiguration af OPC UA Kommunikation for Siemens PLC}
+\label{subsec:opc_ua_comm_siemens}
+
+\textbf{Mål:} Opgavens formål er at konfigurere og afprøve OPC UA-kommunikation mellem en Siemens PLC og KEPServerEX. Studerende vil lære at etablere netværksforbindelser, der muliggør udveksling af data mellem Siemens PLC og KEPServerEX, der understøtter OPC UA-protokollen.
+\\\\
+\noindent\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item Konfigurer Siemens PLC Netværksinterface:
+	\begin{itemize}
+		\item Sørg for, at Siemens PLC (f.eks. S7-1500) er korrekt forbundet til det lokale netværk med en statisk IP-adresse, der kan kommunikere med KEPServerEX serveren.
+	\end{itemize}
+	\item Aktiver OPC UA Server på Siemens PLC:
+	\begin{itemize}
+		\item Gennem TIA Portal, aktiver OPC UA serveren på Siemens PLC'en og konfigurer nødvendige sikkerhedsindstillinger (certifikater, brugerautentificering).
+	\end{itemize}
+	\item Konfigurer KEPServerEX til at Forbinde med Siemens PLC:
+	\begin{itemize}
+		\item Åbn KEPServerEX og tilføj en ny OPC UA Client Channel.
+		\item Indtast Siemens PLC’ens IP-adresse og portnummer.
+		\item Importer eller tilføj de nødvendige OPC UA tags fra Siemens PLC til KEPServerEX.
+	\end{itemize}
+	\item Definer Tags i KEPServerEX:
+	\begin{itemize}
+		\item Definer nødvendige tags i KEPServerEX, der skal læses fra eller skrives til Siemens PLC.
+		\item Brug TIA Portal til at kortlægge disse tags til de respektive PLC-adresser.
+	\end{itemize}
+	\item Opret et PLC Program til Dataudveksling:
+	\begin{itemize}
+		\item I TIA Portal, opret et PLC-program, der læser og skriver værdier til de definerede OPC UA tags.
+		\item Implementér logik til periodisk at opdatere PLC'ens interne variable baseret på OPC UA tagværdier.
+	\end{itemize}
+	\item Test OPC UA Kommunikation:
+	\begin{itemize}
+		\item Udfør en serie tests for at bekræfte, at OPC UA-kommunikationen fungerer korrekt.
+		\item Sikr, at KEPServerEX kan modtage og sende data pålideligt til og fra Siemens PLC.
+	\end{itemize}
+	\item Dokumentér Opsætningen:
+	\begin{itemize}
+		\item Dokumentér hele opsætningen og testprocessen, herunder detaljerede netværkskonfigurationer, programlistings og beskrivelser af de registrerede testresultater.
+	\end{itemize}
+	\item Udarbejd en Teknisk Rapport:
+	\begin{itemize}
+		\item Afslut opgaven med en teknisk rapport, der indeholder en diskussion om anvendeligheden af OPC UA i sammenhæng med industrielt automatisering, udfordringer ved implementeringen og eventuelle løsninger.
+	\end{itemize}
+\end{enumerate}
+\textbf{Krav til dokumentation:} Rapporten skal indeholde skærmbilleder og beskrivelser af de foretagne indstillinger, PLC-programmer og logiske fløde, tests og analyser af resultater, og en evaluering af OPC UA som en kommunikationsprotokol i industrielle anvendelser.
+
+\subsection*{Konfiguration af OPC UA Kommunikation for Rockwell Automation PLC}
+\label{subsec:opc_ua_comm_rockwell}
+
+\textbf{Mål:} Opgavens formål er at konfigurere og afprøve OPC UA-kommunikation mellem en Rockwell Automation PLC (Allen-Bradley) og KEPServerEX. Studerende vil lære at etablere netværksforbindelser, der muliggør udveksling af data mellem Rockwell PLC og KEPServerEX, der understøtter OPC UA-protokollen.
+\\\\
+\noindent\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item Konfigurer Rockwell PLC Netværksinterface:
+	\begin{itemize}
+		\item Sørg for, at Rockwell Automation PLC (f.eks. ControlLogix) er korrekt forbundet til det lokale netværk med en statisk IP-adresse, der kan kommunikere med KEPServerEX serveren.
+	\end{itemize}
+	\item Aktiver OPC UA Server på Rockwell PLC:
+	\begin{itemize}
+		\item Gennem Rockwell Studio 5000, aktiver OPC UA serveren på Rockwell PLC'en og konfigurer nødvendige sikkerhedsindstillinger (certifikater, brugerautentificering).
+	\end{itemize}
+	\item Konfigurer KEPServerEX til at Forbinde med Rockwell PLC:
+	\begin{itemize}
+		\item Åbn KEPServerEX og tilføj en ny OPC UA Client Channel.
+		\item Indtast Rockwell PLC’ens IP-adresse og portnummer.
+		\item Importer eller tilføj de nødvendige OPC UA tags fra Rockwell PLC til KEPServerEX.
+	\end{itemize}
+	\item Definer Tags i KEPServerEX:
+	\begin{itemize}
+		\item Definer nødvendige tags i KEPServerEX, der skal læses fra eller skrives til Rockwell PLC.
+		\item Brug Rockwell Studio 5000 til at kortlægge disse tags til de respektive PLC-adresser.
+	\end{itemize}
+	\item Opret et PLC Program til Dataudveksling:
+	\begin{itemize}
+		\item I Rockwell Studio 5000, opret et PLC-program, der læser og skriver værdier til de definerede OPC UA tags.
+		\item Implementér logik til periodisk at opdatere PLC'ens interne variable baseret på OPC UA tagværdier.
+	\end{itemize}
+	\item Test OPC UA Kommunikation:
+	\begin{itemize}
+		\item Udfør en serie tests for at bekræfte, at OPC UA-kommunikationen fungerer korrekt.
+		\item Sikr, at KEPServerEX kan modtage og sende data pålideligt til og fra Rockwell PLC.
+	\end{itemize}
+	\item Dokumentér Opsætningen:
+	\begin{itemize}
+		\item Dokumentér hele opsætningen og testprocessen, herunder detaljerede netværkskonfigurationer, programlistings og beskrivelser af de registrerede testresultater.
+	\end{itemize}
+	\item Udarbejd en Teknisk Rapport:
+	\begin{itemize}
+		\item Afslut opgaven med en teknisk rapport, der indeholder en diskussion om anvendeligheden af OPC UA i sammenhæng med industrielt automatisering, udfordringer ved implementeringen og eventuelle løsninger.
+	\end{itemize}
+\end{enumerate}
+\textbf{Krav til dokumentation:} Rapporten skal indeholde skærmbilleder og beskrivelser af de foretagne indstillinger, PLC-programmer og logiske fløde, tests og analyser af resultater, og en evaluering af OPC UA som en kommunikationsprotokol i industrielle anvendelser.
+
+\section{Modbus}
+\subsection*{Konfiguration af Modbus TCP Kommunikation for Siemens PLC}
+\label{subsec:modbus_tcp_comm_siemens}
+
+\textbf{Mål:} Opgavens formål er at konfigurere og afprøve Modbus TCP-kommunikation mellem en Siemens PLC og KEPServerEX. Studerende vil lære at etablere netværksforbindelser, der muliggør udveksling af data mellem Siemens PLC og KEPServerEX, der understøtter Modbus TCP-protokollen.
+\\\\
+\noindent\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item Konfigurer Siemens PLC Netværksinterface:
+	\begin{itemize}
+		\item Sørg for, at Siemens PLC (f.eks. S7-1500) er korrekt forbundet til det lokale netværk med en statisk IP-adresse, der kan kommunikere med KEPServerEX serveren.
+	\end{itemize}
+	\item Aktiver Modbus TCP Server på Siemens PLC:
+	\begin{itemize}
+		\item Gennem TIA Portal, aktiver Modbus TCP serveren på Siemens PLC'en og konfigurer nødvendige indstillinger (IP-adresse, portnummer).
+	\end{itemize}
+	\item Konfigurer KEPServerEX til at Forbinde med Siemens PLC:
+	\begin{itemize}
+		\item Åbn KEPServerEX og tilføj en ny Modbus TCP Client Channel.
+		\item Indtast Siemens PLC’ens IP-adresse og portnummer.
+		\item Importer eller tilføj de nødvendige Modbus registre fra Siemens PLC til KEPServerEX.
+	\end{itemize}
+	\item Definer Tags i KEPServerEX:
+	\begin{itemize}
+		\item Definer nødvendige tags i KEPServerEX, der skal læses fra eller skrives til Siemens PLC.
+		\item Brug TIA Portal til at kortlægge disse tags til de respektive PLC-adresser.
+	\end{itemize}
+	\item Opret et PLC Program til Dataudveksling:
+	\begin{itemize}
+		\item I TIA Portal, opret et PLC-program, der læser og skriver værdier til de definerede Modbus registre.
+		\item Implementér logik til periodisk at opdatere PLC'ens interne variable baseret på Modbus registerværdier.
+	\end{itemize}
+	\item Test Modbus TCP Kommunikation:
+	\begin{itemize}
+		\item Udfør en serie tests for at bekræfte, at Modbus TCP-kommunikationen fungerer korrekt.
+		\item Sikr, at KEPServerEX kan modtage og sende data pålideligt til og fra Siemens PLC.
+	\end{itemize}
+	\item Dokumentér Opsætningen:
+	\begin{itemize}
+		\item Dokumentér hele opsætningen og testprocessen, herunder detaljerede netværkskonfigurationer, programlistings og beskrivelser af de registrerede testresultater.
+	\end{itemize}
+	\item Udarbejd en Teknisk Rapport:
+	\begin{itemize}
+		\item Afslut opgaven med en teknisk rapport, der indeholder en diskussion om anvendeligheden af Modbus TCP i sammenhæng med industrielt automatisering, udfordringer ved implementeringen og eventuelle løsninger.
+	\end{itemize}
+\end{enumerate}
+\textbf{Krav til dokumentation:} Rapporten skal indeholde skærmbilleder og beskrivelser af de foretagne indstillinger, PLC-programmer og logiske fløde, tests og analyser af resultater, og en evaluering af Modbus TCP som en kommunikationsprotokol i industrielle anvendelser.
+
+\subsection*{Konfiguration af Modbus TCP Kommunikation for Rockwell Automation PLC}
+\label{subsec:modbus_tcp_comm_rockwell}
+
+\textbf{Mål:} Opgavens formål er at konfigurere og afprøve Modbus TCP-kommunikation mellem en Rockwell Automation PLC (Allen-Bradley) og KEPServerEX. Studerende vil lære at etablere netværksforbindelser, der muliggør udveksling af data mellem Rockwell PLC og KEPServerEX, der understøtter Modbus TCP-protokollen.
+\\\\
+\noindent\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item Konfigurer Rockwell PLC Netværksinterface:
+	\begin{itemize}
+		\item Sørg for, at Rockwell Automation PLC (f.eks. ControlLogix) er korrekt forbundet til det lokale netværk med en statisk IP-adresse, der kan kommunikere med KEPServerEX serveren.
+	\end{itemize}
+	\item Aktiver Modbus TCP Server på Rockwell PLC:
+	\begin{itemize}
+		\item Gennem Rockwell Studio 5000, aktiver Modbus TCP serveren på Rockwell PLC'en og konfigurer nødvendige indstillinger (IP-adresse, portnummer).
+	\end{itemize}
+	\item Konfigurer KEPServerEX til at Forbinde med Rockwell PLC:
+	\begin{itemize}
+		\item Åbn KEPServerEX og tilføj en ny Modbus TCP Client Channel.
+		\item Indtast Rockwell PLC’ens IP-adresse og portnummer.
+		\item Importer eller tilføj de nødvendige Modbus registre fra Rockwell PLC til KEPServerEX.
+	\end{itemize}
+	\item Definer Tags i KEPServerEX:
+	\begin{itemize}
+		\item Definer nødvendige tags i KEPServerEX, der skal læses fra eller skrives til Rockwell PLC.
+		\item Brug Rockwell Studio 5000 til at kortlægge disse tags til de respektive PLC-adresser.
+	\end{itemize}
+	\item Opret et PLC Program til Dataudveksling:
+	\begin{itemize}
+		\item I Rockwell Studio 5000, opret et PLC-program, der læser og skriver værdier til de definerede Modbus registre.
+		\item Implementér logik til periodisk at opdatere PLC'ens interne variable baseret på Modbus registerværdier.
+	\end{itemize}
+	\item Test Modbus TCP Kommunikation:
+	\begin{itemize}
+		\item Udfør en serie tests for at bekræfte, at Modbus TCP-kommunikationen fungerer korrekt.
+		\item Sikr, at KEPServerEX kan modtage og sende data pålideligt til og fra Rockwell PLC.
+	\end{itemize}
+	\item Dokumentér Opsætningen:
+	\begin{itemize}
+		\item Dokumentér hele opsætningen og testprocessen, herunder detaljerede netværkskonfigurationer, programlistings og beskrivelser af de registrerede testresultater.
+	\end{itemize}
+	\item Udarbejd en Teknisk Rapport:
+	\begin{itemize}
+		\item Afslut opgaven med en teknisk rapport, der indeholder en diskussion om anvendeligheden af Modbus TCP i sammenhæng med industrielt automatisering, udfordringer ved implementeringen og eventuelle løsninger.
+	\end{itemize}
+\end{enumerate}
+\textbf{Krav til dokumentation:} Rapporten skal indeholde skærmbilleder og beskrivelser af de foretagne indstillinger, PLC-programmer og logiske fløde, tests og analyser af resultater, og en evaluering af Modbus TCP som en kommunikationsprotokol i industrielle anvendelser.
+
+\section{S7-communication}
+\subsection*{Konfiguration af S7 Kommunikation for Siemens PLC}
+\label{subsec:s7_comm_siemens}
+
+\textbf{Mål:} Opgavens formål er at konfigurere og afprøve S7-kommunikation mellem en Siemens PLC og KEPServerEX. Studerende vil lære at etablere netværksforbindelser, der muliggør udveksling af data mellem Siemens PLC og KEPServerEX, der understøtter S7-protokollen.
+\\\\
+\noindent\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item Konfigurer Siemens PLC Netværksinterface:
+	\begin{itemize}
+		\item Sørg for, at Siemens PLC (f.eks. S7-1200 eller S7-1500) er korrekt forbundet til det lokale netværk med en statisk IP-adresse, der kan kommunikere med KEPServerEX serveren.
+	\end{itemize}
+	\item Konfigurer S7-Forbindelse på Siemens PLC:
+	\begin{itemize}
+		\item Gennem TIA Portal, opret og konfigurer en ny S7-forbindelse på Siemens PLC'en og angiv nødvendige indstillinger (IP-adresse, rack og slot).
+	\end{itemize}
+	\item Konfigurer KEPServerEX til at Forbinde med Siemens PLC:
+	\begin{itemize}
+		\item Åbn KEPServerEX og tilføj en ny Siemens S7-200/300/400/1200/1500 Ethernet driver.
+		\item Indtast Siemens PLC’ens IP-adresse, rack og slotnummer.
+		\item Importer eller tilføj de nødvendige dataområder (DB, M, I, Q) fra Siemens PLC til KEPServerEX.
+	\end{itemize}
+	\item Definer Tags i KEPServerEX:
+	\begin{itemize}
+		\item Definer nødvendige tags i KEPServerEX, der skal læses fra eller skrives til Siemens PLC.
+		\item Brug TIA Portal til at kortlægge disse tags til de respektive PLC-adresser.
+	\end{itemize}
+	\item Opret et PLC Program til Dataudveksling:
+	\begin{itemize}
+		\item I TIA Portal, opret et PLC-program, der læser og skriver værdier til de definerede dataområder.
+		\item Implementér logik til periodisk at opdatere PLC'ens interne variable baseret på S7 registerværdier.
+	\end{itemize}
+	\item Test S7 Kommunikation:
+	\begin{itemize}
+		\item Udfør en serie tests for at bekræfte, at S7-kommunikationen fungerer korrekt.
+		\item Sikr, at KEPServerEX kan modtage og sende data pålideligt til og fra Siemens PLC.
+	\end{itemize}
+	\item Dokumentér Opsætningen:
+	\begin{itemize}
+		\item Dokumentér hele opsætningen og testprocessen, herunder detaljerede netværkskonfigurationer, programlistings og beskrivelser af de registrerede testresultater.
+	\end{itemize}
+	\item Udarbejd en Teknisk Rapport:
+	\begin{itemize}
+		\item Afslut opgaven med en teknisk rapport, der indeholder en diskussion om anvendeligheden af S7-kommunikation i sammenhæng med industrielt automatisering, udfordringer ved implementeringen og eventuelle løsninger.
+	\end{itemize}
+\end{enumerate}
+\textbf{Krav til dokumentation:} Rapporten skal indeholde skærmbilleder og beskrivelser af de foretagne indstillinger, PLC-programmer og logiske fløde, tests og analyser af resultater, og en evaluering af S7 som en kommunikationsprotokol i industrielle anvendelser.
+
+\section{Ethernet/IP}
+\subsection*{Konfiguration af Ethernet/IP Kommunikation for Rockwell Automation PLC}
+\label{subsec:ethernet_ip_comm_rockwell}
+
+\textbf{Mål:} Opgavens formål er at konfigurere og afprøve Ethernet/IP-kommunikation mellem en Rockwell Automation PLC (f.eks. Allen-Bradley) og KEPServerEX. Studerende vil lære at etablere netværksforbindelser, der muliggør udveksling af data mellem Rockwell Automation PLC og KEPServerEX, der understøtter Ethernet/IP-protokollen.
+\\\\
+\noindent\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item Konfigurer Rockwell Automation PLC Netværksinterface:
+	\begin{itemize}
+		\item Sørg for, at Rockwell Automation PLC (f.eks. Allen-Bradley ControlLogix eller CompactLogix) er korrekt forbundet til det lokale netværk med en statisk IP-adresse, der kan kommunikere med KEPServerEX serveren.
+	\end{itemize}
+	\item Konfigurer Ethernet/IP Forbindelse på Rockwell Automation PLC:
+	\begin{itemize}
+		\item Gennem RSLogix 5000/Studio 5000, opret og konfigurer en ny Ethernet/IP-forbindelse på Rockwell Automation PLC'en og angiv nødvendige indstillinger (IP-adresse).
+	\end{itemize}
+	\item Konfigurer KEPServerEX til at Forbinde med Rockwell Automation PLC:
+	\begin{itemize}
+		\item Åbn KEPServerEX og tilføj en ny Ethernet/IP driver.
+		\item Indtast Rockwell Automation PLC’ens IP-adresse.
+		\item Importer eller tilføj de nødvendige dataområder (tags) fra Rockwell Automation PLC til KEPServerEX.
+	\end{itemize}
+	\item Definer Tags i KEPServerEX:
+	\begin{itemize}
+		\item Definer nødvendige tags i KEPServerEX, der skal læses fra eller skrives til Rockwell Automation PLC.
+		\item Brug RSLogix 5000/Studio 5000 til at kortlægge disse tags til de respektive PLC-adresser.
+	\end{itemize}
+	\item Opret et PLC Program til Dataudveksling:
+	\begin{itemize}
+		\item I RSLogix 5000/Studio 5000, opret et PLC-program, der læser og skriver værdier til de definerede dataområder.
+		\item Implementér logik til periodisk at opdatere PLC'ens interne variable baseret på Ethernet/IP registerværdier.
+	\end{itemize}
+	\item Test Ethernet/IP Kommunikation:
+	\begin{itemize}
+		\item Udfør en serie tests for at bekræfte, at Ethernet/IP-kommunikationen fungerer korrekt.
+		\item Sikr, at KEPServerEX kan modtage og sende data pålideligt til og fra Rockwell Automation PLC.
+	\end{itemize}
+	\item Dokumentér Opsætningen:
+	\begin{itemize}
+		\item Dokumentér hele opsætningen og testprocessen, herunder detaljerede netværkskonfigurationer, programlistings og beskrivelser af de registrerede testresultater.
+	\end{itemize}
+	\item Udarbejd en Teknisk Rapport:
+	\begin{itemize}
+		\item Afslut opgaven med en teknisk rapport, der indeholder en diskussion om anvendeligheden af Ethernet/IP-kommunikation i sammenhæng med industrielt automatisering, udfordringer ved implementeringen og eventuelle løsninger.
+	\end{itemize}
+\end{enumerate}
+\textbf{Krav til dokumentation:} Rapporten skal indeholde skærmbilleder og beskrivelser af de foretagne indstillinger, PLC-programmer og logiske fløde, tests og analyser af resultater, og en evaluering af Ethernet/IP som en kommunikationsprotokol i industrielle anvendelser.
+
+\section{MQTT}
+\subsection*{Konfiguration af MQTT Kommunikation for Siemens PLC}
+\label{subsec:mqtt_comm_siemens}
+
+\textbf{Mål:} Opgavens formål er at konfigurere og afprøve MQTT-kommunikation mellem en Siemens PLC (f.eks. S7-1200) og KEPServerEX. Studerende vil lære at etablere netværksforbindelser, der muliggør udveksling af data mellem Siemens PLC og KEPServerEX, der understøtter MQTT-protokollen.
+\\\\
+\noindent\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item Konfigurer Siemens PLC Netværksinterface:
+	\begin{itemize}
+		\item Sørg for, at Siemens PLC er korrekt forbundet til det lokale netværk med en statisk IP-adresse, der kan kommunikere med KEPServerEX serveren.
+	\end{itemize}
+	\item Konfigurer MQTT Forbindelse på Siemens PLC:
+	\begin{itemize}
+		\item Gennem TIA Portal, opret og konfigurer en ny MQTT-klient på Siemens PLC'en og angiv nødvendige indstillinger (MQTT broker IP-adresse, portnummer, etc.).
+	\end{itemize}
+	\item Konfigurer KEPServerEX til at Forbinde med Siemens PLC:
+	\begin{itemize}
+		\item Åbn KEPServerEX og tilføj en ny MQTT driver.
+		\item Indtast Siemens PLC’ens MQTT broker IP-adresse.
+		\item Importer eller tilføj de nødvendige dataområder (tags) fra Siemens PLC til KEPServerEX.
+	\end{itemize}
+	\item Definer Tags i KEPServerEX:
+	\begin{itemize}
+		\item Definer nødvendige tags i KEPServerEX, der skal læses fra eller skrives til Siemens PLC.
+		\item Brug TIA Portal til at kortlægge disse tags til de respektive PLC-adresser.
+	\end{itemize}
+	\item Opret et PLC Program til Dataudveksling:
+	\begin{itemize}
+		\item I TIA Portal, opret et PLC-program, der læser og skriver værdier til de definerede dataområder.
+		\item Implementér logik til periodisk at opdatere PLC'ens interne variable baseret på MQTT registerværdier.
+	\end{itemize}
+	\item Test MQTT Kommunikation:
+	\begin{itemize}
+		\item Udfør en serie tests for at bekræfte, at MQTT-kommunikationen fungerer korrekt.
+		\item Sikr, at KEPServerEX kan modtage og sende data pålideligt til og fra Siemens PLC.
+	\end{itemize}
+	\item Dokumentér Opsætningen:
+	\begin{itemize}
+		\item Dokumentér hele opsætningen og testprocessen, herunder detaljerede netværkskonfigurationer, programlistings og beskrivelser af de registrerede testresultater.
+	\end{itemize}
+	\item Udarbejd en Teknisk Rapport:
+	\begin{itemize}
+		\item Afslut opgaven med en teknisk rapport, der indeholder en diskussion om anvendeligheden af MQTT-kommunikation i sammenhæng med industrielt automatisering, udfordringer ved implementeringen og eventuelle løsninger.
+	\end{itemize}
+\end{enumerate}
+\textbf{Krav til dokumentation:} Rapporten skal indeholde skærmbilleder og beskrivelser af de foretagne indstillinger, PLC-programmer og logiske fløde, tests og analyser af resultater, og en evaluering af MQTT som en kommunikationsprotokol i industrielle anvendelser.
+\subsection*{Konfiguration af MQTT Kommunikation for Rockwell Automation PLC}
+\label{subsec:mqtt_comm_rockwell}
+
+\textbf{Mål:} Opgavens formål er at konfigurere og afprøve MQTT-kommunikation mellem en Rockwell Automation PLC (f.eks. Allen-Bradley) og KEPServerEX. Studerende vil lære at etablere netværksforbindelser, der muliggør udveksling af data mellem Rockwell Automation PLC og KEPServerEX, der understøtter MQTT-protokollen.
+\\\\
+\noindent\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item Konfigurer Rockwell Automation PLC Netværksinterface:
+	\begin{itemize}
+		\item Sørg for, at Rockwell Automation PLC (f.eks. Allen-Bradley ControlLogix eller CompactLogix) er korrekt forbundet til det lokale netværk med en statisk IP-adresse, der kan kommunikere med KEPServerEX serveren.
+	\end{itemize}
+	\item Konfigurer MQTT Forbindelse på Rockwell Automation PLC:
+	\begin{itemize}
+		\item Gennem RSLogix 5000/Studio 5000, opret og konfigurer en ny MQTT-klient på Rockwell Automation PLC'en og angiv nødvendige indstillinger (MQTT broker IP-adresse, portnummer, etc.).
+	\end{itemize}
+	\item Konfigurer KEPServerEX til at Forbinde med Rockwell Automation PLC:
+	\begin{itemize}
+		\item Åbn KEPServerEX og tilføj en ny MQTT driver.
+		\item Indtast Rockwell Automation PLC’ens MQTT broker IP-adresse.
+		\item Importer eller tilføj de nødvendige dataområder (tags) fra Rockwell Automation PLC til KEPServerEX.
+	\end{itemize}
+	\item Definer Tags i KEPServerEX:
+	\begin{itemize}
+		\item Definer nødvendige tags i KEPServerEX, der skal læses fra eller skrives til Rockwell Automation PLC.
+		\item Brug RSLogix 5000/Studio 5000 til at kortlægge disse tags til de respektive PLC-adresser.
+	\end{itemize}
+	\item Opret et PLC Program til Dataudveksling:
+	\begin{itemize}
+		\item I RSLogix 5000/Studio 5000, opret et PLC-program, der læser og skriver værdier til de definerede dataområder.
+		\item Implementér logik til periodisk at opdatere PLC'ens interne variable baseret på MQTT registerværdier.
+	\end{itemize}
+	\item Test MQTT Kommunikation:
+	\begin{itemize}
+		\item Udfør en serie tests for at bekræfte, at MQTT-kommunikationen fungerer korrekt.
+		\item Sikr, at KEPServerEX kan modtage og sende data pålideligt til og fra Rockwell Automation PLC.
+	\end{itemize}
+	\item Dokumentér Opsætningen:
+	\begin{itemize}
+		\item Dokumentér hele opsætningen og testprocessen, herunder detaljerede netværkskonfigurationer, programlistings og beskrivelser af de registrerede testresultater.
+	\end{itemize}
+	\item Udarbejd en Teknisk Rapport:
+	\begin{itemize}
+		\item Afslut opgaven med en teknisk rapport, der indeholder en diskussion om anvendeligheden af MQTT-kommunikation i sammenhæng med industrielt automatisering, udfordringer ved implementeringen og eventuelle løsninger.
+	\end{itemize}
+\end{enumerate}
+\textbf{Krav til dokumentation:} Rapporten skal indeholde skærmbilleder og beskrivelser af de foretagne indstillinger, PLC-programmer og logiske fløde, tests og analyser af resultater, og en evaluering af MQTT som en kommunikationsprotokol i industrielle anvendelser.
+
+\subsection*{Konfiguration af MQTT Kommunikation for ESP32}
+\label{subsec:mqtt_comm_esp32}
+
+\textbf{Mål:} Opgavens formål er at konfigurere og afprøve MQTT-kommunikation mellem en ESP32 mikrokontroller og KEPServerEX. Studerende vil lære at etablere netværksforbindelser, der muliggør udveksling af data mellem ESP32 og KEPServerEX, der understøtter MQTT-protokollen.
+\\\\
+\noindent\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item Konfigurer ESP32 Netværksinterface:
+	\begin{itemize}
+		\item Sørg for, at ESP32 er korrekt forbundet til det lokale netværk med en statisk IP-adresse, der kan kommunikere med KEPServerEX serveren.
+	\end{itemize}
+	\item Konfigurer MQTT Forbindelse på ESP32:
+	\begin{itemize}
+		\item Gennem Arduino IDE eller ESP-IDF, opret og konfigurer en ny MQTT-klient på ESP32 og angiv nødvendige indstillinger (MQTT broker IP-adresse, portnummer, etc.).
+	\end{itemize}
+	\item Konfigurer KEPServerEX til at Forbinde med ESP32:
+	\begin{itemize}
+		\item Åbn KEPServerEX og tilføj en ny MQTT driver.
+		\item Indtast ESP32’ens MQTT broker IP-adresse.
+		\item Importer eller tilføj de nødvendige dataområder (tags) fra ESP32 til KEPServerEX.
+	\end{itemize}
+	\item Definer Tags i KEPServerEX:
+	\begin{itemize}
+		\item Definer nødvendige tags i KEPServerEX, der skal læses fra eller skrives til ESP32.
+		\item Brug Arduino IDE eller ESP-IDF til at kortlægge disse tags til de respektive MQTT-emner.
+	\end{itemize}
+	\item Opret et Program til Dataudveksling på ESP32:
+	\begin{itemize}
+		\item I Arduino IDE eller ESP-IDF, opret et program, der læser og skriver værdier til de definerede dataområder.
+		\item Implementér logik til periodisk at opdatere ESP32'ens interne variable baseret på MQTT registerværdier.
+	\end{itemize}
+	\item Test MQTT Kommunikation:
+	\begin{itemize}
+		\item Udfør en serie tests for at bekræfte, at MQTT-kommunikationen fungerer korrekt.
+		\item Sikr, at KEPServerEX kan modtage og sende data pålideligt til og fra ESP32.
+	\end{itemize}
+	\item Dokumentér Opsætningen:
+	\begin{itemize}
+		\item Dokumentér hele opsætningen og testprocessen, herunder detaljerede netværkskonfigurationer, programlistings og beskrivelser af de registrerede testresultater.
+	\end{itemize}
+	\item Udarbejd en Teknisk Rapport:
+	\begin{itemize}
+		\item Afslut opgaven med en teknisk rapport, der indeholder en diskussion om anvendeligheden af MQTT-kommunikation i sammenhæng med IoT-applikationer, udfordringer ved implementeringen og eventuelle løsninger.
+	\end{itemize}
+\end{enumerate}
+\textbf{Krav til dokumentation:} Rapporten skal indeholde skærmbilleder og beskrivelser af de foretagne indstillinger, programmer og logiske fløde, tests og analyser af resultater, og en evaluering af MQTT som en kommunikationsprotokol i IoT anvendelser.
+
+\chapter{Universal Robots}
+\label{sec:ur_opgaver}
+% Detaljerede Universal Robots netværkskonfigurationsopgaver for Modbus-kommunikation
+
+\section{Modbus Universal Robots til Siemens}
+\label{subsec:modbus_tcp_ur_plcsim_advanced}
+\textbf{Mål:} Formålet med denne opgave er at konfigurere og implementere en Modbus TCP-kommunikation mellem en Universal Robot og en simuleret SIMATIC S7-1500 PLC ved hjælp af Siemens PLCSIM Advanced. Denne opgave vil give de studerende erfaring med at integrere forskellige automatiseringssystemer og teknologier.	
+\\\\
+\noindent\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item Konfigurer netværksindstillingerne for den simulerede S7-1500 PLC i TIA Portal, og sørg for, at den kan nås på det virtuelle netværk.
+	\item Etabler en Modbus TCP-server på den simulerede PLC ved at benytte de integrerede funktioner til Modbus-kommunikation i TIA Portal. Definér relevante dataregistre, som skal være tilgængelige for UR-robotten.
+	\item På UR-robottens kontrolpanel, opsæt en Modbus TCP-klient, og konfigurér den til at forbinde til den simulerede S7-1500 PLC's IP-adresse og port.
+	\item Skab et URScript eller brug den grafiske brugergrænseflade på robottens kontrolpanel til at programmere robotten til at sende Modbus-forespørgsler for at læse fra og skrive til dataregistrene på den simulerede PLC.
+	\item Simuler begge systemer, og initier dataudveksling for at sikre, at UR-robotten og den simulerede S7-1500 PLC kan kommunikere korrekt over Modbus TCP.
+	\item Test kommunikationen grundigt, og bekræft, at UR-robotten kan hente og ændre værdierne i den simulerede PLC's datablokke effektivt.
+	\item Analyser datastrømmen og sikkerheden i kommunikationen, og diskutér, hvordan denne integration kan optimeres i en reel industriel applikation.
+	\item Dokumentér processen og resultaterne i en teknisk rapport, der indeholder netværkskonfigurationer, programmeringsdetaljer, og testscenarier.
+\end{enumerate}	
+\textbf{Krav til dokumentation:} Rapporten skal indeholde skærmbilleder, kodeudsnit, konfigurationsindstillinger, testresultater, og en kritisk analyse af Modbus-kommunikationens præstation og pålidelighed i integrationen mellem Universal Robots og Siemens PLC-systemer.
+
+\section{Modbus Universal Robots til Rockwell}
+\label{sec:ur_ab_integration_opgaver}
+
+\textbf{Mål:} Formålet med denne opgave er at konfigurere og demonstrere Modbus TCP-kommunikation mellem en Universal Robots (UR) robotarm og en Allen-Bradley PLC. Studerende vil få praktisk erfaring med at integrere en UR-robot med en Rockwell PLC ved hjælp af Modbus TCP-protokollen. Denne opgave kan udføres enten med en fysisk robot eller en simuleret robot.
+
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item \textbf{Opsætning af Modbus TCP på Universal Robots:}
+	\begin{itemize}
+		\item Konfigurer Modbus TCP på UR-robotten og opsæt nødvendige parametre som IP-adresse, portnummer, og Modbus-registere.
+		\item Definér Modbus-coils og registre, der vil blive brugt til at kommunikere med Allen-Bradley PLC'en.
+	\end{itemize}
+	
+	\item \textbf{Konfiguration af Allen-Bradley PLC:}
+	\begin{itemize}
+		\item I Studio 5000, opsæt et nyt projekt og konfigurer PLC'en til at fungere som en Modbus TCP Master, som kan læse fra og skrive til UR-robotten.
+		\item Opret en Modbus-tabel i Studio 5000, der matcher de coils og registre, der er konfigureret på UR-robotten.
+	\end{itemize}
+	
+	\item \textbf{Simulering og Test:}
+	\begin{itemize}
+		\item Opret et simpelt program i Studio 5000, hvor PLC'en kontrollerer UR-robotten via Modbus TCP, for eksempel ved at sende en kommando om at starte robotten, når en specifik coil aktiveres.
+		\item Implementér en funktion, hvor PLC'en kan overvåge robotarmens position og status via Modbus-registre og reagere på ændringer.
+		\item Test kommunikationen ved at simulere forskellige scenarier, såsom start og stop af robotten eller læsning af sensorværdier fra robotten.
+	\end{itemize}
+	
+	\item \textbf{UR Robot Handling:}
+	\begin{itemize}
+		\item Programmér UR-robotten til at flytte en kasse fra en position til en anden, når den modtager et signal fra Allen-Bradley PLC'en via Modbus TCP.
+		\item Robotten skal reagere på Modbus-signaler for at bevæge sig til kassen, samle den op, transportere den til en palle, og placere den præcist.
+		\item Når robotten har fuldført opgaven, skal den sende en færdigmelding tilbage til PLC'en.
+	\end{itemize}
+	
+	\item \textbf{Dokumentation:}
+	\begin{itemize}
+		\item Dokumentér hele konfigurationsprocessen for både UR-robotten og Allen-Bradley PLC'en, inklusive Modbus TCP indstillingerne.
+		\item Inkludér diagrammer, der illustrerer dataflowet mellem PLC'en og UR-robotten, samt screenshots af relevante skærmbilleder fra Studio 5000.
+		\item Beskriv testscenarierne og de observerede resultater, herunder en analyse af systemets ydeevne og eventuelle kommunikationsfejl.
+	\end{itemize}
+\end{enumerate}
+
+\textbf{Krav til dokumentation:}
+Den tekniske rapport skal indeholde:
+\begin{itemize}
+	\item En detaljeret beskrivelse af konfigurationen af Modbus TCP både på UR-robotten og i Studio 5000.
+	\item Et netværksdiagram, der viser kommunikationsforbindelsen mellem UR-robotten og Allen-Bradley PLC'en.
+	\item En gennemgang af de observerede resultater fra simuleringen, inklusive eventuelle udfordringer og løsninger.
+\end{itemize}
+
+
+\section{Modbus Universal Robots til KepServerEX}
+\label{subsec:modbus_tcp_ur_echo}
+
+\textbf{Mål:} Formålet med denne opgave er at konfigurere en UR-robot til at bevæge sig fra en standby-position, hente en kasse, der er registreret af en sensor, og placere den på en palle. Når robotten har afsluttet sin opgave, skal den sende et færdigsignal tilbage til KEPServerEX via Modbus. Denne øvelse giver studerende praktisk erfaring med anvendelsen af Modbus til styring af robotbevægelser i en industriel kontekst. Opgaven kan udføres enten med en fysisk UR-robot eller ved hjælp af en simuleret robot.
+
+\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item \textbf{Opsætning af KEPServerEX:}
+	\begin{itemize}
+		\item Installér og konfigurer KEPServerEX med en Modbus TCP/IP driver.
+		\item Opret coils i KEPServerEX til at sende signaler om, hvornår robotten skal bevæge sig fra standby-position til kassen, når kassen rammer sensoren.
+		\item Opret holding registers til at modtage statusopdateringer fra robotten, såsom bekræftelse af, at kassen er placeret på pallen.
+	\end{itemize}
+	
+	\item \textbf{UR-robot Konfiguration:}
+	\begin{itemize}
+		\item Opret et URScript-program, der forbinder til KEPServerEX via Modbus.
+		\item Programmér robotten til at bevæge sig til en standby-position, klar til at modtage signal fra KEPServerEX.
+		\item Programmér robotten til at bevæge sig mod kassen, når sensoren aktiveres, og afhent kassen.
+		\item Robotten skal derefter transportere kassen til pallen og placere den på en foruddefineret position.
+		\item Tilføj logik, der sender et færdigsignal til KEPServerEX, når kassen er korrekt placeret på pallen.
+	\end{itemize}
+	
+	\item \textbf{Test og Simulering:}
+	\begin{itemize}
+		\item Simulér en situation, hvor KEPServerEX sender et signal til robotten om at hente en kasse, når sensoren er aktiveret.
+		\item Observér robotens bevægelser fra standby-position til kassen, og bekræft, at kassen korrekt transporteres og placeres på pallen.
+		\item Verificér, at robotten sender et færdigsignal tilbage til KEPServerEX, når opgaven er udført.
+	\end{itemize}
+	
+	\item \textbf{Fejlhåndtering:}
+	\begin{itemize}
+		\item Implementér fejlhåndtering i URScript, der kan håndtere tilfælde, hvor kassen ikke er korrekt placeret, eller forbindelsen til KEPServerEX mistes.
+		\item Test fejlhåndteringsprocedurerne og evaluer robotens respons på fejltilstande.
+	\end{itemize}
+\end{enumerate}
+
+\textbf{Krav til dokumentation:}
+Rapporten skal indeholde:
+\begin{itemize}
+	\item En beskrivelse af KEPServerEX og UR-robotopsætningen.
+	\item Diagrammer, der viser robotens bevægelsesbane fra standby-position til kasse og derefter til pallen.
+	\item Skærmbilleder af konfigurationer, dataflow og testresultater.
+	\item En analyse af effektiviteten af robotens opgaver og fejlhåndteringsstrategier.
+\end{itemize}	
+
+\chapter{ABB Robot}
+\label{sec:abb_opgaver}
+% Detaljerede ABB Robot netværkskonfigurationsopgaver
+
+\section{Opgave: Konfiguration af Netværkskommunikation for ABB Roboter}
+\label{subsec:network_communication_abb_robots}
+\section{Konklusion}
+\label{sec:konklusion}
+% Konklusion og afsluttende bemærkninger
+\textbf{Mål:} Målet med denne opgave er at konfigurere netværkskommunikation for ABB robotter, som kan bruges til at interagere med andre enheder i et industrielt netværk, såsom PLC'er, HMI'er og fjernstyrede servere. Studerende skal lære at etablere og diagnosticere netværksforbindelser, konfigurere IP-indstillinger, og oprette dataudveksling over industrielle protokoller.
+\\\\
+\noindent\textbf{Opgavebeskrivelse:}
+\begin{enumerate}
+	\item \textbf{Netværkskonfiguration:} Konfigurer netværksindstillingerne på ABB robotcontrolleren, herunder IP-adresse, subnetmaske og gateway for at forbinde robotten til et lokalt netværk.
+	\item \textbf{Protokolimplementering:} Vælg en industriprotokol såsom Modbus TCP, Ethernet/IP eller PROFINET. Opsæt de nødvendige parametre for den valgte protokol på robotcontrolleren.
+	\item \textbf{PLC-Integration:} Etablere en forbindelse mellem ABB robotcontrolleren og en PLC. Dette kan inkludere opsætning af en passende PLC-modul for kommunikation og konfiguration af korrekt dataudveksling.
+	\item \textbf{Dataudveksling:} Implementer et simpelt kontrolsystem, hvor ABB robotten modtager kommandoer fra og sender statusopdateringer til PLC'en. Dette kan omfatte, men er ikke begrænset til, start/stop af robotprogrammer, nødstopsignaler og produktionstællinger.
+	\item \textbf{Fejlfinding og Diagnostik:} Udfør netværksdiagnostik ved hjælp af ABB's værktøjer og/eller tredjepartsværktøjer for at sikre en pålidelig dataudveksling. Identificer og ret eventuelle konfigurationsproblemer.
+	\item \textbf{Sikkerhedsvurdering:} Analyser netværkssikkerheden for din robotforbindelse og anbefal forbedringer eller best practices for at sikre industrielle netværk.
+	\item \textbf{Rapportering og Dokumentation:} Dokumentér hele processen fra start til slut, inklusive netværkskonfigurationer, programmeringskode, fejlfindingstrin og sikkerhedsanalyse. Indsend en rapport med detaljerede forklaringer og underbygget med relevante skærmbilleder og diagrammer.
+\end{enumerate}
+\textbf{Krav til dokumentation:} Rapporten skal indeholde omfattende teknisk dokumentation af alle skridt taget i konfigurationsprocessen, problemløsning, sikkerhedsvurdering og eventuelle anbefalinger til yderligere arbejde eller undersøgelser.
+
+%	\section{VPN}
+%	\section{Opsætning af ProtonVPN}
+%	
+%	ProtonVPN er en VPN-tjeneste, der tilbyder en række sikkerheds- og privatlivsfunktioner, hvilket gør den velegnet til industriel cyber security. I denne øvelse vil vi se, hvordan man opsætter ProtonVPN på en Windows-computer.
+%	
+%	\section{1. Tilmeld dig ProtonVPN}
+%	\begin{enumerate}
+	%		\item Gå til \href{ProtonVPN's hjemmeside}{https://protonvpn.com/}.
+	%		\item Klik på "Tilmeld dig".
+	%		\item Indtast dine oplysninger og klik på "Opret konto".
+	%	\end{enumerate}
+%	
+%	\section{2. Download og installer ProtonVPN-klienten}
+%	
+%	\begin{enumerate}
+	%		\item Gå til \href{ProtonVPN's hjemmeside}{https://protonvpn.com/}.
+	%		\item Klik på "Download".
+	%		\item Vælg dit operativsystem og klik på "Download".
+	%	\end{enumerate}
+%	
+%	\section{3. Start ProtonVPN-klienten}
+%	
+%	\begin{enumerate}
+	%		\item Dobbeltklik på den downloadede fil.
+	%		\item Følg instruktionerne på skærmen.
+	%	\end{enumerate}
+%	
+%	\section{4. Log ind på ProtonVPN}
+%	
+%	\begin{enumerate}
+	%		\item Indtast dine ProtonVPN-kontooplysninger.
+	%		\item Klik på "Log ind".
+	%	\end{enumerate}
+%	
+%	\section{5. Vælg en server}
+%	\begin{enumerate}
+	%		\item Klik på "Servere".
+	%		\item Vælg en server, der er placeret i det land, du vil oprette forbindelse til.
+	%	\end{enumerate}
+%	
+%	\section{6. Forbind til en server}
+%	\begin{enumerate}
+	%		\item Dobbeltklik på den server, du vil oprette forbindelse til.
+	%	\end{enumerate}
+%	
+%	\section{7. Aktiver Kill-switchen}
+%	\begin{enumerate}
+	%		\item Klik på "Indstillinger".
+	%		\item Klik på "Kill-switch".
+	%		\item Sæt kryds ved "Aktiver Kill-switch".
+	%	\end{enumerate}
+%	
+%	\section{8. Test din VPN-forbindelse}
+%	\begin{enumerate}
+	%		\item Besøg en hjemmeside, der bruger din IP-adresse til at lokalisere dig.
+	%	\end{enumerate}
+%	
+%	\section{Øvelse: Opret en VPN ind til et lukket industrielt netværk}
+%	I denne øvelse vil vi oprette en VPN ind til et lukket industrielt netværk. For at gøre dette skal vi konfigurere ProtonVPN til at bruge en specifik IP-adresse og port.
+%	
+%	\begin{enumerate}
+	%		\item Åbn ProtonVPN-klienten.
+	%		\item Klik på "Indstillinger".
+	%		\item Vælg fanen "Avanceret".
+	%		\item Indtast IP-adressen og porten for den server, du vil oprette forbindelse til.
+	%		\item Klik på "Anvend".
+	%		\item Forbind til serveren.
+	%	\end{enumerate}
+%	Når du er forbundet til serveren, vil du være i stand til at få adgang til det lukkede industrielle netværk.
+%	
+%	\section{Sikkerhedsforanstaltninger}
+%	Når du bruger en VPN, er det vigtigt at tage følgende sikkerhedsforanstaltninger:
+%	\begin{itemize}
+	%		\item Brug en stærk adgangskode til din VPN-konto.
+	%		\item Aktiver Kill-switchen for at beskytte dine data.
+	%		\item Opdater din VPN-software regelmæssigt. 
+	%	\end{itemize}
+%	Disse foranstaltninger vil hjælpe med at beskytte dig mod ondsindet indbrud og spionage.

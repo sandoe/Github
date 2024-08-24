@@ -1,0 +1,302 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\definecolor{darkerlightblue}{rgb}{0.1, 0.3, 0.5}
+
+\lstdefinestyle{mystyle}{
+	backgroundcolor=\color{backcolour},   
+	commentstyle=\color{codegreen},
+	keywordstyle=\color{darkerlightblue},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codepurple},
+	basicstyle=\ttfamily\footnotesize,
+	breakatwhitespace=false,         
+	breaklines=true,                 
+	captionpos=b,                    
+	keepspaces=true,                 
+	numbers=left,                    
+	numbersep=5pt,                  
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=2
+}
+
+\lstset{style=mystyle}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\rfoot{\thepage\ af \pageref{LastPage}}
+
+\title{Forløbsplan}
+\author{Anders S. Østergaard}
+\date{\today}
+
+\begin{document}
+	\pagenumbering{arabic}
+	\maketitle
+	\thispagestyle{empty}
+	\vspace{14cm}
+	\noindent\textbf{OBS!} Vær opmærksom på at der kan forekomme ændringer i forløbsplanen
+	\clearpage
+	\section*{Undervisningsforløb i Industrielt Netværk \\\vspace{-1cm}\begin{center}
+			(12 dage)
+	\end{center}}
+	
+	\begin{enumerate}[leftmargin=*, label=\textbf{Dag \arabic* (3 timer)}]
+		
+		% Dag 1
+		\item IT-Netværk Del 1
+		\begin{itemize}
+			\item \textbf{Teori (1,5 time):}
+			\begin{itemize}
+				\item Grundlæggende Netværksbegreber 
+				\item Netværkshardware 
+				\item Forbindelsesorienteret vs. Forbindelsesløse Netværk
+				\item Media Access Control (MAC) mechanisms
+				\item Transmissionsteknikker
+				\item OSI-modellen
+				\item TCP/IP-modellen
+			\end{itemize}
+			\item \textbf{Praktisk arbejde (1,5 time):}
+			\begin{itemize}
+				\item \textbf{Cisco Packet Tracer}
+				\begin{itemize}
+					\item Hub
+					\item Switch
+				\end{itemize}
+			\end{itemize}
+			\item \textbf{Litteratur}
+			\begin{itemize}
+				\item Læs kap.: 1 og afs. 2.1 til 2.16
+			\end{itemize}
+			\item \textbf{Hjemmeopgave:}
+			\begin{itemize}
+				\item Opgave [1]: Tegn og beskriv et netværksdiagram for et lille kontornetværk med 8 computere, i et LAN.
+				
+				\item Opgave [2]: Lav opgaver Hub og Switch under afsnittet \textbf{Cisco Packet Tracer} færdigt
+				
+				\item Opgave [3]: Skriv kort refleksioner omkring Hub, Switch, hvad er en IP-adresse og subnetting.
+			\end{itemize}
+		\end{itemize}
+		
+		% Dag 2
+		\item IT-Netværk Del 2
+		\begin{itemize}
+			\item \textbf{Teori (1,5 time):}
+			\begin{itemize}
+				\item IPv4 
+				\item Subnetting
+				\item Classless Inter-Domain Routing (CIDR)
+				\item DHCP, DNS, NAT, og VLAN 
+				\item Kabling
+			\end{itemize}
+			\item \textbf{Praktisk arbejde (1,5 time):}
+			\begin{itemize}
+				\item Router
+				\item VPN
+				\item VLAN
+				\item NAT
+				\item DHCP
+				\item DNS
+			\end{itemize}
+			\item \textbf{Litteratur}
+			\begin{itemize}
+				\item Læs Kap. 3
+			\end{itemize}
+			
+			\item \textbf{Hjemmeopgave:}
+			\begin{itemize}
+				\item Opgave [1]: Lav opgaverne under afsnittet \\\textbf{Cisco Packet Tracer}
+				\begin{itemize}
+					\item Router
+					\item VLAN
+					\item VPN
+					\item NAT
+					\item DHCP
+					\item DNS
+				\end{itemize}
+			\end{itemize}
+		\end{itemize}
+		\clearpage
+		
+		% Dag 3
+		\item Industrielle Netværksprotokoller og Teknologier - Dag I
+		\begin{itemize}
+			\item \textbf{Teori (1,5 time):}
+			\begin{itemize}
+				\item Industrielle Netværkstopologier
+				\item Grundlæggende Serielle \& parallelle kommunikation 
+				\item Fieldbus protokoller
+			\end{itemize}
+			\item \textbf{Praktisk arbejde (1,5 time):}
+			\begin{itemize}
+				\item Profibus (aflevering).
+				\item Modbus (Simens/Rockwell) og UR simulator (aflevering).
+			\end{itemize}
+			\item \textbf{Litteratur}
+			\begin{itemize}
+				\item Læs kap. 7, 8 og afs. 9.1 og 9.3
+			\end{itemize}
+			\item \textbf{Hjemmeopgave:}
+			\begin{itemize}
+				\item Færdiggørelse af øvelse
+			\end{itemize}
+		\end{itemize}
+		
+		% Dag 4
+		\item Industrielle Netværksprotokoller og Teknologier - Dag II
+		\begin{itemize}
+			\item \textbf{Teori (1 time):}
+			\begin{itemize}
+				\item Profinet
+			\end{itemize}
+			\item \textbf{Praktisk arbejde (2 time):}
+			\begin{itemize}
+				\item Siemens 
+			\end{itemize}
+			\item \textbf{Litteratur}
+			\begin{itemize}
+				\item Læs Afs. 9.3
+			\end{itemize}
+			\item \textbf{Hjemmeopgave:}
+			\begin{itemize}
+				\item Opgave [1]: Lav opgaverne færdig under Kap. 12
+			\end{itemize}
+		\end{itemize}
+		
+		% Dag 5
+		\item Industrielle Netværksprotokoller og Teknologier - Dag III
+		\begin{itemize}
+			\item \textbf{Teori (1,5 time):}
+			\begin{itemize}
+				\item AS-i
+				\item IO-Link
+				\item Ethernet/IP.
+			\end{itemize}
+			\item \textbf{Praktisk arbejde (1,5 time):}
+			\begin{itemize}
+				\item Rockwell + Rockwell aflevering
+			\end{itemize}
+			\item \textbf{Litteratur}
+			\begin{itemize}
+				\item Læs Afs. 9.2, 9.4, 9.5
+			\end{itemize}
+			\item \textbf{Hjemmeopgave:}
+			\begin{itemize}
+				\item Opgave [1]: Lav opgaverne færdige som omhandler Siemens og Rockwell + Rockwell aflevering
+			\end{itemize}
+		\end{itemize}
+
+		% Dag 6
+		\item Industrielle Netværksprotokoller og Teknologier - Dag IIII
+		\begin{itemize}
+			\item \textbf{Teori (1,5 time):}
+			\begin{itemize}
+				\item KepServerEX
+				\item OPC
+			\end{itemize}
+			\item \textbf{Praktisk arbejde (1,5 time):}
+			\begin{itemize}
+				\item KepServerEX opgaver + aflevering
+			\end{itemize}
+			\item \textbf{Litteratur}
+			\begin{itemize}
+				\item Læs Afs. 9.6 og 9.7
+			\end{itemize}
+			\item \textbf{Hjemmeopgave:}
+			\begin{itemize}
+				\item Opgave [1]: Løs opgaverne vedr. KepServerEX og OPC + aflevering
+			\end{itemize}
+		\end{itemize}
+		
+		% Dag 7
+		\item Robot kommunikation
+		\begin{itemize}
+			\item \textbf{Praktisk arbejde (3 time):}
+			\begin{itemize}
+				\item UR, AUBO, Rockwell, ESP32 (optional)
+			\end{itemize}
+			\item \textbf{Hjemmeopgave:}
+			\begin{itemize}
+				\item Opgave [1]: UR 
+				\item Opgave [2]: AUBO
+			\end{itemize}
+		\end{itemize}
+		
+		% Dag 8
+		\item Netværkssikkerhed og Problemløsning 
+		\begin{itemize}
+			\item \textbf{Teori (1,5 time):}
+			\begin{itemize}
+				\item Netværkssikkerhedsprincipper 
+				\item Firewalls og VPN-konfiguration 
+			\end{itemize}
+			\item \textbf{Praktisk arbejde (1,5 time):}
+			\begin{itemize}
+				\item Implementering af en firewall
+			\end{itemize}
+			\item \textbf{Hjemmeopgave:}
+			\begin{itemize}
+				\item Gå sammen 3 i en gruppe og lave en præsentation om en netværksteknologi og præsenter den i klassen til næste lektion. Præsentationen skal være mellem 8-9 min lang.
+			\end{itemize}
+		\end{itemize}
+
+		% Dag 9
+		\item Præsentation af netværksteknologier af studerende
+		\begin{itemize}
+			\item \textbf{Teori:}
+			\begin{itemize}
+				\item Gennemgang Præsentation fra studerende
+			\end{itemize}
+		\end{itemize}
+		
+		% Dag 10
+		\item Gennemgang af opgaver
+		\begin{itemize}
+			\item \textbf{Teori og praktisk opsummering (3 timer):}
+			\begin{itemize}
+				\item Gennemgang af centrale emner, opgaver og opsamling på uafklarede spørgsmål.
+			\end{itemize}
+		\end{itemize}
+
+		% Dag 11
+		\item Forberedelse til Tværfagligt Projekt (Dag 11)
+		\begin{itemize}
+			\item \textbf{Teori og praktisk opsummering (3 timer):}
+			\begin{itemize}
+				\item Sidste gennemgang af centrale emner og deres anvendelse i det tværfaglige projekt.
+				\item \textbf{Ekstra Opgaver!} (For dem der har gennemført alle de øvrige opgaver):
+				\begin{itemize}
+					\item ESP32/NodeMCU 8266: Implementering og test af netværkskommunikation med UR robotter, Siemens, Rockwell.
+					\item Node-Red: Implementering af kommunikation og udtræk af data fra PLC'er
+					\item Python: Implementering af kommunikation og udtræk af data fra PLC'er
+				\end{itemize}
+			\end{itemize}
+		\end{itemize}
+		
+			% Dag 12
+		\item Forberedelse til Tværfagligt Projekt (Dag 12)
+		\begin{itemize}
+			\item \textbf{Teori og praktisk opsummering (3 timer):}
+			\begin{itemize}
+				\item Sidste gennemgang af centrale emner og deres anvendelse i det tværfaglige projekt.				
+			\end{itemize}
+		\end{itemize}
+	\end{enumerate}
+\end{document}
+

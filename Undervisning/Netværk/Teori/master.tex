@@ -1,0 +1,109 @@
+\documentclass[a4paper,11pt]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[danish]{babel}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+
+% Definer farver
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+% Kode listning stil
+\lstdefinestyle{mystyle}{
+	backgroundcolor=\color{backcolour},   
+	commentstyle=\color{codegreen},
+	keywordstyle=\color{magenta},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codepurple},
+	basicstyle=\ttfamily\footnotesize,
+	breakatwhitespace=false,         
+	breaklines=true,                 
+	captionpos=b,                    
+	keepspaces=true,                 
+	numbers=left,                    
+	numbersep=5pt,                  
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=2
+}
+
+\lstset{style=mystyle}
+
+% Forbedret titelside format
+\title{\Huge\textbf{Industriel Netværksteknologi:}\\[0.5cm]\Huge\textbf{Fra Teori til Praksis}}
+\author{\vspace{2cm}\LARGE Anders S. Østergaard}
+\date{\vfill\today}
+
+% Fjern header og tilpas footer
+\pagestyle{plain} % Standard sidetal i footeren, men ingen header
+
+% Undertrykke sidetal på forsiden, indholdsfortegnelse, partsider og blanke sider
+\usepackage{fancyhdr}
+\fancypagestyle{plain}{
+	\fancyhf{} % Fjern header og footer
+	\renewcommand{\headrulewidth}{0pt} % Fjern header-linjen
+	\renewcommand{\footrulewidth}{0pt} % Fjern footer-linjen
+	\fancyfoot[C]{\thepage} % Tilføj sidetal i footeren (kun sidetal)
+}
+
+% Fjern sidetal på forsiden, indholdsfortegnelse og blanke sider
+\let\cleardoublepage\clearpage
+\makeatletter
+\renewcommand{\maketitle}{%
+	\begin{titlepage}
+		\centering
+		\vspace*{5cm}
+		{\Huge\bfseries \@title \par}
+		\vspace{2cm}
+		{\Large \@author \par}
+		\vfill
+		{\large \@date \par}
+	\end{titlepage}
+	\thispagestyle{empty} % Ingen sidetal på forsiden
+}
+\renewcommand{\tableofcontents}{\@starttoc{toc}\thispagestyle{empty}} % Ingen sidetal på indholdsfortegnelsen
+\makeatother
+
+% Undertrykke sidetal på \part sider
+\titleformat{\part}[display]
+{\normalfont\huge\bfseries\centering} % Format for part
+{\partname\ \thepart}                  % Label
+{20pt}                                 % Spacing
+{\Huge}                                % Before-code
+\titlespacing*{\part}{0pt}{0pt}{40pt}
+
+\begin{document}
+	
+	\maketitle
+	\clearpage
+	\tableofcontents
+	\thispagestyle{empty}
+	\newpage
+	
+	% Introduktion
+	\input{introduktion.tex}
+	% Fundamentale IT-Netværksteknologier
+	\input{basicnetværk.tex}
+	% Industrielt netværk
+	\input{industrieltnetværk.tex}
+	% Seriel/Parallel Kommunikation
+	\input{serielogparallel.tex}
+	% Ethernet-baseret Kommunikation
+	\input{ethernet.tex}
+	% Avancerede Netværksapplikationer
+	\input{opgaver.tex}
+%	\part{Netværkssikkerhed}
+%	\include{sikkerhed.tex}
+
+
+	
+\end{document}

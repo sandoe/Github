@@ -1,0 +1,306 @@
+
+\chapter{Firebase}
+\section{Hvad er Firebase?}
+Firebase er en platform udviklet af Google, der tilbyder en række cloud-baserede tjenester og værktøjer designet til at hjælpe udviklere med at bygge og skalere mobil- og webapplikationer. Firebase blev oprindeligt lanceret som en Realtime Database i 2011 og blev senere erhvervet af Google i 2014. Siden da er Firebase blevet udvidet til en komplet app-udviklingsplatform, der inkluderer en bred vifte af funktioner såsom autentificering, hosting, cloud storage, analytics, og meget mere.
+
+\subsection*{Firebase Realtime Database (RTDB)}
+Firebase Realtime Database er en cloud-hosted NoSQL-database, der gemmer data som JSON-objekter. Dens primære funktion er at synkronisere data i realtid med alle tilsluttede klienter. Dette betyder, at så snart data ændres i databasen, opdateres den automatisk hos alle tilsluttede enheder. Dette gør Firebase RTDB ideel til applikationer, hvor realtidsdata er afgørende, såsom chatapplikationer, multiplayer-spil, IoT-systemer og mere.
+\newline\newline\noindent
+Firebase RTDB understøtter offline datalagring, hvilket betyder, at applikationer kan forblive funktionelle, selv når de ikke har en aktiv internetforbindelse. Data, der indtastes offline, bliver automatisk synkroniseret, når forbindelsen genoprettes. 
+
+\subsection*{Cloud Firestore}
+Cloud Firestore er en nyere database i Firebase-familien, som også er en cloud-hosted NoSQL-database, men med nogle væsentlige forskelle og forbedringer i forhold til Realtime Database. Cloud Firestore gemmer data som dokumenter, der organiseres i samlinger. Hver dokument indeholder felter, der kan lagre forskellige datatyper, herunder underdokumenter.
+\newline\newline\noindent
+En af de væsentlige fordele ved Firestore er dens avancerede forespørgselsfunktioner. Firestore understøtter komplekse forespørgsler, der kan filtrere og sortere data på tværs af flere felter. Dette gør det nemmere at håndtere komplekse datamodeller og relationer mellem data.
+\newline\newline\noindent
+Firestore er også designet til at skalere automatisk, hvilket gør det til et godt valg for applikationer, der forventer at vokse hurtigt eller have store mængder data. Ligesom Realtime Database tilbyder Firestore også realtidssynkronisering og offline support, hvilket gør det muligt for applikationer at fungere selv under ustabile netværksforhold.
+
+\subsection*{Firebase Authentication}
+Firebase Authentication tilbyder enkle og sikre metoder til at administrere brugergodkendelse i applikationer. Det understøtter en række forskellige godkendelsesudbydere, herunder e-mail og adgangskode, Google, Facebook, Twitter og mange flere. Dette gør det nemt for udviklere at tilføje autentificering til deres applikationer uden at skulle bygge deres eget autentificeringssystem fra bunden.
+
+\subsection*{Firebase Cloud Messaging (FCM)}
+Firebase Cloud Messaging (FCM) er en tjeneste, der giver dig mulighed for at sende beskeder og notifikationer til applikationer på tværs af platforme, herunder Android, iOS og web. FCM er især nyttigt til at sende push-notifikationer til brugere, selv når applikationen ikke kører aktivt.
+
+\subsection*{Firebase Hosting}
+Firebase Hosting tilbyder en hurtig, sikker og skalerbar hostingplatform til webapplikationer. Det er velegnet til hosting af HTML-, CSS-, JavaScript- og andre statiske filer samt dynamiske webapplikationer, der er genereret af f.eks. serverless funktioner.
+
+\subsection*{Firebase Functions}
+Firebase Functions er en serverless computing-løsning, der giver udviklere mulighed for at køre backend-kode som svar på hændelser, der udløses af Firebase-tjenester eller HTTPS-anmodninger. Dette gør det muligt at udvide applikationens funktionalitet uden at skulle administrere servere.
+
+\subsection*{Sammenhæng mellem Firebase og IoT}
+I konteksten af IoT (Internet of Things) spiller Firebase en vigtig rolle som backend-tjeneste, der muliggør realtidskommunikation mellem enheder (som ESP32) og skyen. Ved hjælp af Firebase RTDB eller Firestore kan IoT-enheder sende sensor- eller aktuatordata til skyen og modtage kommandoer eller konfigurationsopdateringer. Firebase Authentication kan bruges til at sikre, at kun autoriserede enheder har adgang til data, og Firebase Functions kan automatisere reaktioner på specifikke dataændringer, hvilket skaber et kraftfuldt og fleksibelt IoT-økosystem.
+
+\section{Kommunikation mellem ESP32 og Firebase Realtime Database (RTDB)}
+
+\subsection*{Formål}
+Formålet med dette dokument er at introducere læseren til kommunikation mellem ESP32 mikrocontrolleren og Firebase's Realtime Database (RTDB). Dokumentet giver instruktioner om, hvordan man opsætter og konfigurerer ESP32 og Firebase for at sende og modtage data.
+
+\subsection*{Opsætning af Firebase RTDB}
+\begin{enumerate}
+	\item Opret en ny Firebase-projekt på \url{https://console.firebase.google.com/}.
+	\item Vælg "Realtime Database" i venstre menu og opret en ny database.
+	\item Konfigurer databasens regler for læse/skrive-adgang som nødvendigt.
+	\item Gå til "Indstillinger" > "Tjenestekonti" og generer en ny privat nøgle. Denne nøgle vil blive brugt til at autentificere ESP32 for at få adgang til databasen.
+\end{enumerate}
+
+\subsection*{Opsætning af Firebase RTDB}
+\begin{enumerate}
+	\item \textbf{Opret et projekt:} Gå til \url{https://console.firebase.google.com/} og klik på "Tilføj projekt". Indtast et projektnavn og følg trinene for at oprette et nyt Firebase-projekt.
+	
+	\item \textbf{Aktivér Realtime Database:} Fra Firebase-konsolens dashboard, vælg "Realtime Database" fra venstre sidepanel. Klik på "Opret database" for at begynde at oprette din Realtime Database. Vælg en starttilstand (f.eks. "Testtilstand") og klik på "Aktivér".
+	
+	\item \textbf{Konfigurer regler:} Firebase RTDB kommer med sikkerhedsregler. For dette eksempel (og kun i en testindstilling) kan du sætte reglerne til at tillade alle læsninger og skrivninger. Vær opmærksom på, at sådanne regler ikke bør anvendes i produktion.
+	\begin{lstlisting}[language=C++]
+		{
+			"rules": {
+				".read": "true",
+				".write": "true"
+			}
+		}
+	\end{lstlisting}
+	Efter testfasen bør du stramme reglerne for at sikre din database.
+	
+	\item \textbf{Tjenestekonti og hemmelig nøgle:} Gå til Firebase-konsollen, vælg dit projekt, klik på tandhjulsikonet øverst til venstre og vælg "Projektindstillinger". Under "Tjenestekonti"-fanen skal du klikke på knappen "Generer ny nøgle". Dette vil downloade en privat nøgle i JSON-format, som vil blive brugt til at autentificere ESP32 for at få adgang til databasen. Opbevar denne nøgle sikkert.
+	
+	\item \textbf{Database URL:} På dashboardet for din Realtime Database bør du se en URL øverst. Den vil se sådan ud: "https://your-project-id.firebaseio.com/". Dette er den URL, din ESP32 vil bruge til at interagere med databasen.
+\end{enumerate}
+
+\subsection*{Opsætning af ESP32}
+For at integrere ESP32 med Firebase RTDB, kan du bruge biblioteket `Firebase ESP32 Client`.
+
+\begin{enumerate}
+	\item Installér biblioteket via Arduino IDE's bibliotekshåndterer.
+	\item Download den tidligere genererede privatnøgle (JSON-fil) fra Firebase.
+	\item Konfigurer din WiFi-forbindelse og Firebase-credentials i din ESP32-kode.
+\end{enumerate}
+
+\subsection*{Eksempler}
+
+\subsubsection*{Send temperatur fra ESP32 til Firebase RTDB}
+
+ESP32 kode:
+\begin{lstlisting}[language=C++, caption=ESP32 kode til kommunikation med Firebase RTDB]
+	#include <FirebaseESP32.h>
+	#include <WiFi.h>
+	
+	// Erstat med dine WiFi-oplysninger
+	const char* WIFI_SSID = "Dit_WiFi_Navn";
+	const char* WIFI_PASSWORD = "Dit_WiFi_Password";
+	
+	// Erstat med din Firebase projektinformation
+	#define FIREBASE_HOST "your-project-id.firebaseio.com"
+	#define FIREBASE_AUTH "dinFirebaseSecret"
+	
+	// Opretter en instans af FirebaseData-objektet
+	FirebaseData firebaseData;
+	
+	void setup() {
+		// Start WiFi-forbindelse
+		WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
+		while (WiFi.status() != WL_CONNECTED) {
+			delay(1000);
+		}
+		
+		// Indstiller Firebase til host og auth
+		Firebase.begin(FIREBASE_HOST, FIREBASE_AUTH);
+	}
+	
+	void loop() {
+		// Send temperaturdata (25 grader) til Firebase
+		if (Firebase.setFloat(firebaseData, "/temperature", 25.0)) {
+			Serial.println("Data sendt til Firebase!");
+		} else {
+			Serial.println("Fejl under afsendelse af data: " + firebaseData.errorReason());
+		}
+		
+		delay(10000); // Vent 10 sekunder foer naeste udsendelse
+	}
+\end{lstlisting}
+\clearpage
+\subsection*{Modtag LED-kontrolstatus fra Firebase RTDB og anvend på ESP32}
+
+ESP32 kode:
+\begin{lstlisting}[language=C++, caption=ESP32 kode til modtagelse af LED status fra Firebase RTDB]
+	#include <WiFi.h>
+	#include <FirebaseESP32.h>
+	
+	#define WIFI_SSID "your-SSID"
+	#define WIFI_PASSWORD "your-PASSWORD"
+	#define FIREBASE_HOST "your-project-id.firebaseio.com"
+	#define FIREBASE_AUTH "your-secret"
+	const int ledPin = 2;
+	
+	FirebaseData firebaseData;
+	
+	void setup() {
+		Serial.begin(115200);
+		
+		WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
+		while (WiFi.status() != WL_CONNECTED) {
+			delay(1000);
+			Serial.println("Connecting to WiFi...");
+		}
+		
+		pinMode(ledPin, OUTPUT);
+		
+		Firebase.begin(FIREBASE_HOST, FIREBASE_AUTH);
+	}
+	
+	void loop() {
+		if (Firebase.getInt(firebaseData, "/ledStatus")) {
+			int status = firebaseData.intData();
+			digitalWrite(ledPin, status);
+		}
+		delay(1000);
+	}
+\end{lstlisting}
+
+For at ændre LED-status fra Firebase-konsollen:
+\begin{enumerate}
+	\item Gå til din Realtime Database i Firebase-konsollen.
+	\item Opret eller opdater "/ledStatus" til enten 0 (slukket) eller 1 (tændt).
+\end{enumerate}
+
+\subsection*{Opgaver}
+
+\subsubsection{Opgave 1: Ændring af Temperaturværdi}
+
+\textbf{Opgavebeskrivelse:} Modificer den viste kode, så ESP32 sender en variabel temperaturværdi mellem 20 og 30 grader til Firebase ved hver iteration. Anvend en tilfældig værdigenerator til dette formål.
+
+\textbf{Løsningsforslag:}
+\begin{lstlisting}[language=C++]
+	#include <FirebaseESP32.h>
+	#include <WiFi.h>
+	
+	#define WIFI_SSID         "dit_wifi_navn"
+	#define WIFI_PASSWORD     "dit_wifi_kodeord"
+	#define FIREBASE_HOST     "dit_firebase_projekt_id.firebaseio.com"
+	#define FIREBASE_AUTH     "din_firebase_sekret_key"
+	
+	FirebaseData firebaseData;
+	
+	void setup() {
+		Serial.begin(115200);
+		WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
+		while (WiFi.status() != WL_CONNECTED) {
+			delay(500);
+			Serial.print(".");
+		}
+		Serial.println();
+		
+		Firebase.begin(FIREBASE_HOST, FIREBASE_AUTH);
+		Firebase.reconnectWiFi(true);
+	}
+	
+	void loop() {
+		float randomTemperature = random(200, 301) / 10.0;
+		
+		if (Firebase.setFloat(firebaseData, "/temperature", randomTemperature)) {
+			Serial.println("Data sendt til Firebase!");
+		} else {
+			Serial.println("Fejl under afsendelse af data: " + firebaseData.errorReason());
+		}
+		
+		delay(10000);
+	}
+\end{lstlisting}           
+
+\subsubsection*{Opgave 2: Tilføj Fugtighedsdata}
+
+\textbf{Opgavebeskrivelse:} Udvid den eksisterende kode til også at sende fugtighedsdata til Firebase. Fugtigheden skal være en tilfældig værdi mellem 40\% og 60\%.
+
+\textbf{Løsningsforslag:}
+\begin{lstlisting}[language=C++]
+	#include <FirebaseESP32.h>
+	#include <WiFi.h>
+	
+	#define WIFI_SSID         "dit_wifi_navn"
+	#define WIFI_PASSWORD     "dit_wifi_kodeord"
+	#define FIREBASE_HOST     "dit_firebase_projekt_id.firebaseio.com"
+	#define FIREBASE_AUTH     "din_firebase_sekret_key"
+	
+	FirebaseData firebaseData;
+	
+	void setup() {
+		Serial.begin(115200);
+		WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
+		while (WiFi.status() != WL_CONNECTED) {
+			delay(500);
+			Serial.print(".");
+		}
+		Serial.println();
+		
+		Firebase.begin(FIREBASE_HOST, FIREBASE_AUTH);
+		Firebase.reconnectWiFi(true);
+	}
+	
+	void loop() {
+		float randomTemperature = random(200, 301) / 10.0;
+		float randomHumidity = random(400, 601) / 10.0;
+		
+		if (Firebase.setFloat(firebaseData, "/temperature", randomTemperature)) {
+			Serial.println("Temperaturdata sendt til Firebase!");
+		} else {
+			Serial.println("Fejl under afsendelse af temperaturdata: " + firebaseData.errorReason());
+		}
+		
+		if (Firebase.setFloat(firebaseData, "/humidity", randomHumidity)) {
+			Serial.println("Fugtighedsdata sendt til Firebase!");
+		} else {
+			Serial.println("Fejl under afsendelse af fugtighedsdata: " + firebaseData.errorReason());
+		}
+		
+		delay(10000);
+	}
+\end{lstlisting}
+\clearpage
+\subsubsection*{Opgave 3: LED-styring gennem Firebase}
+
+\textbf{Opgavebeskrivelse:} Lav en funktion, hvor ESP32 lytter til en bestemt sti i Firebase, fx \texttt{/ledControl}. Hvis værdien på denne sti ændres til 1, skal en LED tændes på ESP32. Hvis værdien ændres til 0, skal LED'en slukkes.
+
+\textbf{Løsningsforslag:}
+\begin{lstlisting}[language=C++]
+	#include <FirebaseESP32.h>
+	#include <WiFi.h>
+	
+	#define WIFI_SSID         "dit_wifi_navn"
+	#define WIFI_PASSWORD     "dit_wifi_kodeord"
+	#define FIREBASE_HOST     "dit_firebase_projekt_id.firebaseio.com"
+	#define FIREBASE_AUTH     "din_firebase_sekret_key"
+	
+	const int ledPin = 2;
+	FirebaseData firebaseData;
+	
+	void setup() {
+		Serial.begin(115200);
+		pinMode(ledPin, OUTPUT);
+		
+		WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
+		while (WiFi.status() != WL_CONNECTED) {
+			delay(500);
+			Serial.print(".");
+		}
+		Serial.println();
+		
+		Firebase.begin(FIREBASE_HOST, FIREBASE_AUTH);
+		Firebase.reconnectWiFi(true);
+	}
+	
+	void loop() {
+		int ledControl = Firebase.getInt(firebaseData, "/ledControl");
+		
+		if(firebaseData.dataType() == "int") {
+			if(ledControl == 1) {
+				digitalWrite(ledPin, HIGH);
+				Serial.println("LED er taendt.");
+			} else if(ledControl == 0) {
+				digitalWrite(ledPin, LOW);
+				Serial.println("LED er slukket.");
+			}
+		}
+		
+		delay(5000);
+	}
+\end{lstlisting}
+\subsection*{Opsummering}
+I dette afsnit blev processen for opsætning af Firebase Realtime Database (RTDB) og integration med ESP32 gennemgået. Vi startede med at oprette og konfigurere en ny Firebase-projekt og RTDB, herunder opsætning af adgangsregler og generering af en hemmelig nøgle for autentificering. Derefter blev ESP32 opsat til at kommunikere med RTDB ved hjælp af Firebase ESP32 Client-biblioteket. Praktiske eksempler blev præsenteret for at illustrere, hvordan man kan sende og modtage data mellem ESP32 og Firebase RTDB, herunder temperaturdata og LED-kontrol. Der blev også stillet opgaver, der udfordrer anvendelsen af Firebase RTDB i et IoT-miljø med ESP32, som giver mulighed for yderligere udforskning og forståelse af emnet.	
