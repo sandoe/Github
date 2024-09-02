@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3) (preloaded format=pdflatex 2024.3.16)  1 SEP 2024 13:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3) (preloaded format=pdflatex 2024.3.16)  2 SEP 2024 10:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -458,7 +458,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 39--44
 
 
 ]
-<fig/fig1.png, id=282, 268.6035pt x 159.59625pt>
+<fig/fig1.png, id=292, 268.6035pt x 159.59625pt>
 File: fig/fig1.png Graphic file (type png)
 <use fig/fig1.png>
 Package pdftex.def Info: fig/fig1.png  used on input line 50.
@@ -494,7 +494,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 163--166
 
  []
 
-<fig/fig2.png, id=313, 143.63663pt x 130.98938pt>
+<fig/fig2.png, id=323, 143.63663pt x 130.98938pt>
 File: fig/fig2.png Graphic file (type png)
 <use fig/fig2.png>
 Package pdftex.def Info: fig/fig2.png  used on input line 169.
@@ -510,7 +510,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 219--224
  []
 
 [12]
-<fig/fig3.png, id=327, 135.50626pt x 119.54663pt>
+<fig/fig3.png, id=337, 135.50626pt x 119.54663pt>
 File: fig/fig3.png Graphic file (type png)
 <use fig/fig3.png>
 Package pdftex.def Info: fig/fig3.png  used on input line 251.
@@ -554,13 +554,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 256--270
  []
 
 [13] [14 <./fig/fig3.png>]
-<fig/fig4.png, id=342, 218.31563pt x 78.2925pt>
+<fig/fig4.png, id=352, 218.31563pt x 78.2925pt>
 File: fig/fig4.png Graphic file (type png)
 <use fig/fig4.png>
 Package pdftex.def Info: fig/fig4.png  used on input line 283.
 (pdftex.def)             Requested size: 312.00119pt x 111.8905pt.
  [15 <./fig/fig4.png>]
-<fig/fig5.png, id=351, 209.88412pt x 174.6525pt>
+<fig/fig5.png, id=361, 209.88412pt x 174.6525pt>
 File: fig/fig5.png Graphic file (type png)
 <use fig/fig5.png>
 Package pdftex.def Info: fig/fig5.png  used on input line 344.
@@ -594,7 +594,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 407--412
 
  []
 
-<fig/fig6.png, id=372, 252.945pt x 78.89474pt>
+<fig/fig6.png, id=382, 252.945pt x 78.89474pt>
 File: fig/fig6.png Graphic file (type png)
 <use fig/fig6.png>
 Package pdftex.def Info: fig/fig6.png  used on input line 427.
@@ -661,7 +661,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 568--570
  []
 
 [24]
-<fig/fig7.png, id=422, 203.25937pt x 63.8385pt>
+<fig/fig7.png, id=432, 203.25937pt x 63.8385pt>
 File: fig/fig7.png Graphic file (type png)
 <use fig/fig7.png>
 Package pdftex.def Info: fig/fig7.png  used on input line 604.
@@ -690,7 +690,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 657--659
 
  []
 
-<fig/fig8.png, id=442, 163.20975pt x 95.45662pt>
+<fig/fig8.png, id=452, 163.20975pt x 95.45662pt>
 File: fig/fig8.png Graphic file (type png)
 <use fig/fig8.png>
 Package pdftex.def Info: fig/fig8.png  used on input line 667.
@@ -735,7 +735,7 @@ C[]
  []
 
 [31]
-<fig/fig9.png, id=482, 502.87875pt x 303.23288pt>
+<fig/fig9.png, id=492, 502.87875pt x 303.23288pt>
 File: fig/fig9.png Graphic file (type png)
 <use fig/fig9.png>
 Package pdftex.def Info: fig/fig9.png  used on input line 804.
@@ -820,36 +820,33 @@ Underfull \hbox (badness 10000) in paragraph at lines 1173--1176
  []
 
 [42]
-<fig/fig10.png, id=552, 257.46187pt x 266.49562pt>
+<fig/fig10.png, id=562, 257.46187pt x 266.49562pt>
 File: fig/fig10.png Graphic file (type png)
 <use fig/fig10.png>
 Package pdftex.def Info: fig/fig10.png  used on input line 1190.
 (pdftex.def)             Requested size: 155.99762pt x 161.47229pt.
  [43 <./fig/fig10.png>] [44
 
-] [45] (master.aux)
+] [45] [46
+
+]
+Kapitel 2.
+[47] [48] (master.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
-
-
-Package rerunfilecheck Warning: File `master.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `master.out':
-(rerunfilecheck)             Before: 5FEC7C145E47FF54C0837684DFB4B63E;10121
-(rerunfilecheck)             After:  2BF96F98098A1CE0039AF562617AA5A7;10212.
+Package rerunfilecheck Info: File `master.out' has not changed.
+(rerunfilecheck)             Checksum: ADCAF18C20A1D26E7F226F9D99F0E7AA;10341.
  ) 
 Here is how much of TeX's memory you used:
- 13122 strings out of 474436
- 211962 string characters out of 5742898
+ 13143 strings out of 474436
+ 212146 string characters out of 5742898
  1938190 words of memory out of 5000000
- 35118 multiletter control sequences out of 15000+600000
- 575888 words of font info for 80 fonts, out of 8000000 for 9000
+ 35123 multiletter control sequences out of 15000+600000
+ 576816 words of font info for 83 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 79i,9n,93p,1341b,611s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 79i,12n,93p,1341b,626s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\aso\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm06
 00.pk> <C:\Users\aso\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ec
 bi1440.pk> <C:\Users\aso\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
@@ -864,24 +861,27 @@ ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\aso\AppData\Local\MiKTeX\fonts
 onts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\aso\AppData\Local\MiKT
 eX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\aso\AppData\Local\
 MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm2074.pk><C:/Users/aso/AppData/Loc
-al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/aso/AppD
-ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><C:/Use
-rs/aso/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
-<C:/Users/aso/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi
-6.pfb><C:/Users/aso/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/c
-m/cmmi8.pfb><C:/Users/aso/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
-onts/cm/cmr10.pfb><C:/Users/aso/AppData/Local/Programs/MiKTeX/fonts/type1/publi
-c/amsfonts/cm/cmr12.pfb><C:/Users/aso/AppData/Local/Programs/MiKTeX/fonts/type1
-/public/amsfonts/cm/cmr6.pfb><C:/Users/aso/AppData/Local/Programs/MiKTeX/fonts/
-type1/public/amsfonts/cm/cmr8.pfb><C:/Users/aso/AppData/Local/Programs/MiKTeX/f
-onts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/aso/AppData/Local/Programs/M
-iKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/aso/AppData/Local/Prog
-rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/aso/AppData/Loca
-l/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/aso/
-AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on master.pdf (45 pages, 697866 bytes).
+al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx6.pfb><C:/Users/aso/AppDa
+ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/aso
+/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Us
+ers/aso/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex8
+.pfb><C:/Users/aso/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
+/cmmi12.pfb><C:/Users/aso/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
+onts/cm/cmmi6.pfb><C:/Users/aso/AppData/Local/Programs/MiKTeX/fonts/type1/publi
+c/amsfonts/cm/cmmi8.pfb><C:/Users/aso/AppData/Local/Programs/MiKTeX/fonts/type1
+/public/amsfonts/cm/cmr10.pfb><C:/Users/aso/AppData/Local/Programs/MiKTeX/fonts
+/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/aso/AppData/Local/Programs/MiKTeX
+/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/aso/AppData/Local/Programs/M
+iKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/aso/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/aso/AppData/Loca
+l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/aso/AppDat
+a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/aso/
+AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C
+:/Users/aso/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/m
+sbm10.pfb>
+Output written on master.pdf (48 pages, 724027 bytes).
 PDF statistics:
- 1097 PDF objects out of 1200 (max. 8388607)
- 174 named destinations out of 1000 (max. 500000)
- 443 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1146 PDF objects out of 1200 (max. 8388607)
+ 187 named destinations out of 1000 (max. 500000)
+ 459 words of extra memory for PDF output out of 10000 (max. 10000000)
 

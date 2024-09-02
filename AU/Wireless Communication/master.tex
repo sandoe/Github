@@ -1251,10 +1251,44 @@
 	
 	Hvis vi skal finde den totale dækningsgrad for cellen, hvor både path loss og shadowing er inkluderet, og vi har flere brugere jævnt fordelt i cellen, kan vi gentage beregningerne fra de tidligere eksempler for flere afstande og beregne gennemsnittet af disse resultater.
 	
-	\section{Opgaver}
+	\chapter{Opgaver}
+	\section{Exercises week 2}
 	
+	\begin{enumerate}
+		\item Under the free-space path loss model, find the transmit power required to obtain a received power of 1 dBm for a wireless system with isotropic antennas ($G_t = G_r = 1$) and a carrier frequency $f_c = 5$ GHz, assuming a distance $d = 10$ m. Repeat for $d = 100$ m.
+		
+		\item For the two-ray model with transmitter-receiver separation $d = 100$ m, $h_t = 10$ m, and $h_r = 2$ m, find the delay spread between the two signals.
+		
+		\item Find the critical distance $d_c$ under the two-ray model for a large macrocell in a suburban area with the base station mounted on a tower or building ($h_t = 20$ m), the receivers at height $h_r = 3$ m, and $f_c = 2$ GHz. Is this a good size for cell radius in a suburban macrocell? Why or why not?
+		
+		\item Consider a receiver with noise power $-160$ dBm within the signal bandwidth of interest. Assume a single-slope path loss model with $d_0 = 1$ m, $K$ obtained from the free-space path loss formula with isotropic antennas and $f_c = 1$ GHz, and $\gamma = 4$. For a transmit power of $P_t = 10$ mW, find the maximum distance between the transmitter and receiver such that the received signal-to-noise power ratio is 20 dB.
+		
+		\item Table 2.7 lists a set of empirical path loss measurements. Assume a carrier frequency $f_c = 2$ GHz.
+		
+		\begin{enumerate}
+			\item Find the parameters of a single-slope path loss model plus log-normal shadowing that best fit this data assuming $K$ is calculated from free-space path loss at the reference distance $d_r = 1$ m.
+			
+			\item Find the path loss at 2 Km based on this model.
+			
+			\item Find the outage probability at a distance $d$ assuming the received power at $d$ due to path loss alone is 10 dB above the required power for non-outage.
+		\end{enumerate}
+	\end{enumerate}
 	
-	
-	
+	\begin{table}[h!]
+		\centering
+		\caption{Path loss measurements for Problem 2-14}
+		\begin{tabular}{|c|c|}
+			\hline
+			\textbf{Distance from Transmitter} & $\mathbf{\frac{P_r}{P_t}}$ \\
+			\hline
+			5 m   & $-60$ dB \\
+			25 m  & $-80$ dB \\
+			65 m  & $-105$ dB \\
+			110 m & $-115$ dB \\
+			400 m & $-135$ dB \\
+			1000 m & $-150$ dB \\
+			\hline
+		\end{tabular}
+	\end{table}
 	
 \end{document}
