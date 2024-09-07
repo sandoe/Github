@@ -1302,78 +1302,41 @@
 	\begin{enumerate}
 		\item Under the free-space path loss model, find the transmit power required to obtain a received power of 1 dBm for a wireless system with isotropic antennas ($G_t = G_r = 1$) and a carrier frequency $f_c = 5$ GHz, assuming a distance $d = 10$ m. Repeat for $d = 100$ m.
 		\newline\newline\noindent
-		\textbf{Solution:} We need to find the transmit power \( P_t \) required to achieve a received power \( P_r = 1 \, \text{dBm} \) for a wireless system with isotropic antennas \( (G_t = G_r = 1) \) and a carrier frequency \( f_c = 5 \, \text{GHz} \) at distances \( d = 10 \, \text{m} \) and \( d = 100 \, \text{m} \).
+		\textbf{Solution:} We need to find the transmit power \( P_t \) required to achieve a received power \( P_r = 1 \, \text{dBm} \) for a wireless system with isotropic antennas \( (G_t = G_r = 1) \) and a carrier frequency \( f_c = 5 \, \text{GHz} \) at distances \( d = 10 \, \text{m} \) and \( d = 100 \, \text{m} \). Following is given:
 		
+		\begin{itemize}
+			\item \(G_t = 1\)
+			\item \(G_r = 1\)
+			\item \(P_r = 1 dBm\)
+			\item \(f_c = 5\times10^9\)
+			\item \(d_{10m} = 10 m\)
+			\item \(d_{100m} = 100 m\)
+		\end{itemize}
+		Calculating \(\lambda\) by:
+		\[
+			\lambda=\frac{c}{f_c}=\frac{3\times10^8}{5\times10^9}=0.06m
+		\]
 		The free-space path loss (FSPL) formula is given by:
 		
 		\[
-		L_{\text{FS}}(dB) = 20 \log_{10}\left( \frac{4\pi d f_c}{c} \right)
+			L_{FS}(dBm) = 20log\bigg(\frac{\lambda}{4\pi d}\bigg)
 		\]
 		
-		where:
-		\begin{itemize}
-			\item \( d \) is the distance between the transmitter and receiver,
-			\item \( f_c \) is the carrier frequency,
-			\item \( c = 3 \times 10^8 \, \text{m/s} \) is the speed of light.
-		\end{itemize}
-		
-		To find the total path loss at \( d = 10 \, \text{m} \):
+		The Linkage Budge Model is given by:
 		
 		\[
-		L_{\text{FS}}(dB) = 20 \log_{10}\left( \frac{4\pi (10) (5 \times 10^9)}{3 \times 10^8} \right)
+		P_r (\text{dBm}) = P_t (\text{dBm}) + G_t (\text{dB}) + G_r (\text{dB}) - L (\text{dB})
 		\]
 		
-		Simplifying this:
-		
+		Where L(dB) is \(L_{FS}\)
+		\newline\newline\noindent
 		\[
-		L_{\text{FS}}(dB) = 20 \log_{10}(209.44) \approx 46.42 \, \text{dB}
+			P_t(dBm)=P_r(dBm)-G_t(dB)-G_r(db)-L_{FS}(dBm)=
 		\]
-		
-		Similarly, for \( d = 100 \, \text{m} \):
-		
 		\[
-		L_{\text{FS}}(dB) = 20 \log_{10}\left( \frac{4\pi (100) (5 \times 10^9)}{3 \times 10^8} \right) 
+		P_t(dBm)=1-0-0-20log\frac{0.06}{40\pi}=
 		\]
 		
-		\[
-		L_{\text{FS}}(dB) = 20 \log_{10}(2094.4) \approx 66.42 \, \text{dB}
-		\]
-		
-		Now, we can calculate the transmit power \( P_t \) required using the link budget equation:
-		
-		\[
-		P_r(dBm) = P_t(dBm) + G_t(dB) + G_r(dB) - L_{\text{FS}}(dB)
-		\]
-		
-		Since the system has isotropic antennas \( G_t = G_r = 0 \, \text{dB} \), we simplify the equation to:
-		
-		\[
-		1 \, \text{dBm} = P_t(dBm) - L_{\text{FS}}(dB)
-		\]
-		
-		For \( d = 10 \, \text{m} \):
-		
-		\[
-		1 \, \text{dBm} = P_t(dBm) - 46.42 \, \text{dB}
-		\]
-		
-		Solving for \( P_t \):
-		
-		\[
-		P_t(dBm) = 1 + 46.42 = 47.42 \, \text{dBm}
-		\]
-		
-		For \( d = 100 \, \text{m} \):
-		
-		\[
-		1 \, \text{dBm} = P_t(dBm) - 66.42 \, \text{dB}
-		\]
-		
-		Solving for \( P_t \):
-		
-		\[
-		P_t(dBm) = 1 + 66.42 = 67.42 \, \text{dBm}
-		\]
 		
 		\textbf{Final Answer:} The transmit power required for a received power of \( 1 \, \text{dBm} \) at \( d = 10 \, \text{m} \) is \( 47.42 \, \text{dBm} \), and at \( d = 100 \, \text{m} \) is \( 67.42 \, \text{dBm} \).
 		
@@ -1613,20 +1576,92 @@
 	\]
 	where \( Q(x) \) is the Q-function, \( \sigma \) is the standard deviation of shadowing, and \( L(d) \) is the path loss at distance \( d \).
 	
-	\chapter{Formula collection}
+	\chapter{Formula Collection}
 	\section{Path Loss Models}
 	
 	\subsection{Free-Space Path Loss (FSPL)}
-	The free-space path loss (FSPL) is given by:
+	The free-space path loss (FSPL) represents the attenuation of a signal as it propagates in free space (without obstructions). It describes how the signal power diminishes due to the spreading of the wavefront over an expanding spherical surface.
+	
+	The FSPL is calculated by the formula:
 	\[
 	L_{\text{FS}}(\text{dB}) = 20 \log_{10} \left( \frac{4\pi d f_c}{c} \right)
 	\]
 	where:
 	\begin{itemize}
-		\item \( d \): distance between transmitter and receiver (meters),
-		\item \( f_c \): carrier frequency (Hz),
-		\item \( c \): speed of light (\( 3 \times 10^8 \, \text{m/s} \)).
+		\item \( d \) is the distance between the transmitter and the receiver (in meters),
+		\item \( f_c \) is the carrier frequency (in Hz),
+		\item \( c \) is the speed of light, \(c = 3 \times 10^8 \, \text{m/s}\).
 	\end{itemize}
+	
+	The free-space path loss increases with both frequency and distance. Higher frequency signals and longer transmission distances experience greater path loss.
+	
+	\subsection{Received Power Calculation}
+	
+	The received power in a free-space environment can be calculated using the link budget equation. This relates the transmitted power, gains, and losses, such as free-space path loss:
+	
+	\[
+	P_r (\text{dBm}) = P_t (\text{dBm}) + 10 \log_{10}(G_t) + 10 \log_{10}(G_r) - L_{\text{FS}} (\text{dB})
+	\]
+	where:
+	\begin{itemize}
+		\item \( P_r (\text{dBm}) \) is the received power (in dBm),
+		\item \( P_t (\text{dBm}) \) is the transmitted power (in dBm),
+		\item \( G_t \) is the gain of the transmitting antenna (in dB),
+		\item \( G_r \) is the gain of the receiving antenna (in dB),
+		\item \( L_{\text{FS}} (\text{dB}) \) is the free-space path loss.
+	\end{itemize}
+	
+	\subsection{Simplified Form for Isotropic Antennas}
+	
+	For isotropic antennas, where \( G_t = G_r = 1 \) (i.e., 0 dB gain), the received power can be simplified as:
+	
+	\[
+	P_r (\text{dBm}) = P_t (\text{dBm}) - L_{\text{FS}} (\text{dB})
+	\]
+	This simplifies the calculation when using omnidirectional antennas, where no directional gain is assumed.
+	
+	\subsection{Relationship Between Path Loss and Received Power}
+	
+	The free-space path loss can also be derived in terms of the ratio between transmitted and received power:
+	\[
+	P_L (\text{dB}) = 10 \log_{10} \left( \frac{P_t}{P_r} \right)
+	\]
+	Substituting \(L_{\text{FS}}\) into this equation gives:
+	\[
+	P_L (\text{dB}) = -10 \log_{10} \left( \frac{G_t G_r \lambda^2}{(4 \pi d)^2} \right)
+	\]
+	where:
+	\begin{itemize}
+		\item \( \lambda = \frac{c}{f_c} \) is the wavelength of the signal (in meters),
+		\item \( G_t \) is the gain of the transmitter antenna (linear),
+		\item \( G_r \) is the gain of the receiver antenna (linear).
+	\end{itemize}
+	
+	This equation shows how the received power decreases as distance increases (proportional to \(d^2\)) and how higher frequencies (smaller \(\lambda\)) experience more path loss.
+	
+	\subsection{Importance of Antenna Gains}
+	
+	Antenna gains \( G_t \) and \( G_r \) play an important role in improving received power by focusing the signal energy in specific directions. In the case of directional antennas with higher gain, the received power increases, helping to compensate for higher path loss at greater distances or higher frequencies.
+	
+	\subsection{Free-Space Path Loss in dB}
+	
+	The free-space path loss in decibels for isotropic antennas can be expressed as:
+	\[
+	L_{\text{FS}} (\text{dB}) = -10 \log_{10} \left( \frac{G_t G_r \lambda^2}{(4 \pi d)^2} \right)
+	\]
+	
+	Where:
+	\begin{itemize}
+		\item \( G_t \) and \( G_r \) are the transmitter and receiver antenna gains, respectively (in linear scale),
+		\item \( \lambda \) is the wavelength (in meters),
+		\item \( d \) is the distance between the transmitter and the receiver (in meters).
+	\end{itemize}
+	
+	If \(G_t = G_r = 1\), this simplifies further to:
+	\[
+	L_{\text{FS}} (\text{dB}) = 20 \log_{10} \left( \frac{4 \pi d}{\lambda} \right)
+	\]
+	This form directly relates the path loss to the distance and wavelength.
 	
 	\subsection{Hata Model for Urban Areas}
 	The Hata model for urban areas is given by:
