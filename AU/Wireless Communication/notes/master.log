@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3) (preloaded format=pdflatex 2024.3.16)  6 SEP 2024 08:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3) (preloaded format=pdflatex 2024.3.16)  8 SEP 2024 12:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -428,17 +428,11 @@ Overfull \hbox (2.57196pt too wide) in paragraph at lines 52--52
 d- 
  []
 
-[3]
-Overfull \hbox (1.14317pt too wide) in paragraph at lines 82--82
- [][] [][]\T1/cmr/m/n/12 Autocorrelation, Cross Cor-re-la-tion, and Po-wer Spec
-tral 
- []
-
-[4])
+[3] [4] [5] [6])
 \tf@toc=\write4
 \openout4 = `master.toc'.
 
- [5] [6
+ [7] [8
 
 
 ]
@@ -463,13 +457,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 39--44
 
  []
 
-[7]
-<fig/fig1.png, id=482, 268.6035pt x 159.59625pt>
+[9]
+<fig/fig1.png, id=803, 268.6035pt x 159.59625pt>
 File: fig/fig1.png Graphic file (type png)
 <use fig/fig1.png>
 Package pdftex.def Info: fig/fig1.png  used on input line 50.
 (pdftex.def)             Requested size: 234.00238pt x 139.03998pt.
- [8 <./fig/fig1.png>]
+ [10 <./fig/fig1.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 58--65
 
  []
@@ -484,15 +478,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 58--65
 
  []
 
-[9] [10]
+[11] [12]
 Overfull \hbox (21.24255pt too wide) in paragraph at lines 104--105
 \T1/cmr/m/n/12 Når mod-ta-ge-ren be-væ-ger sig i for-hold til sen-de-ren, op-st
 år en Doppler-forskydning,
  []
 
-[11] [12]
+[13] [14]
 Kapitel 2.
-[13
+[15
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 160--164
@@ -509,17 +503,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 186--190
 
  []
 
-[14]
+[16]
 Underfull \hbox (badness 10000) in paragraph at lines 220--224
 
  []
 
-[15]
+[17]
 Underfull \hbox (badness 10000) in paragraph at lines 244--248
 
  []
 
-<fig/fig3.png, id=528, 135.50626pt x 119.54663pt>
+<fig/fig3.png, id=848, 135.50626pt x 119.54663pt>
 File: fig/fig3.png Graphic file (type png)
 <use fig/fig3.png>
 Package pdftex.def Info: fig/fig3.png  used on input line 269.
@@ -562,11 +556,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 274--288
 
  []
 
-[16]
+[18]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [17 <./fig/fig3.png>]
-<fig/fig4.png, id=541, 218.31563pt x 78.2925pt>
+ [19 <./fig/fig3.png>]
+<fig/fig4.png, id=862, 218.31563pt x 78.2925pt>
 File: fig/fig4.png Graphic file (type png)
 <use fig/fig4.png>
 Package pdftex.def Info: fig/fig4.png  used on input line 301.
@@ -575,13 +569,13 @@ Package pdftex.def Info: fig/fig4.png  used on input line 301.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[18] [19 <./fig/fig4.png>]
-<fig/fig5.png, id=556, 209.88412pt x 174.6525pt>
+[20] [21 <./fig/fig4.png>]
+<fig/fig5.png, id=876, 209.88412pt x 174.6525pt>
 File: fig/fig5.png Graphic file (type png)
 <use fig/fig5.png>
 Package pdftex.def Info: fig/fig5.png  used on input line 362.
 (pdftex.def)             Requested size: 312.00119pt x 259.63824pt.
- [20 <./fig/fig5.png>]
+ [22 <./fig/fig5.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 388--391
 
  []
@@ -591,7 +585,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 406--409
 
  []
 
-[21]
+[23]
 Underfull \hbox (badness 10000) in paragraph at lines 418--421
 
  []
@@ -606,8 +600,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 425--430
 
  []
 
-[22]
-<fig/fig6.png, id=578, 252.945pt x 78.89474pt>
+[24]
+<fig/fig6.png, id=898, 252.945pt x 78.89474pt>
 File: fig/fig6.png Graphic file (type png)
 <use fig/fig6.png>
 Package pdftex.def Info: fig/fig6.png  used on input line 445.
@@ -623,7 +617,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 456--459
 
  []
 
-[23 <./fig/fig6.png>]
+[25 <./fig/fig6.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 473--476
 
  []
@@ -638,7 +632,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 487--490
 
  []
 
-[24]
+[26]
 Underfull \hbox (badness 10000) in paragraph at lines 511--514
 
  []
@@ -648,7 +642,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 528--531
 
  []
 
-[25]
+[27]
 Underfull \hbox (badness 10000) in paragraph at lines 541--543
 
  []
@@ -658,7 +652,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 544--547
 
  []
 
-[26]
+[28]
 Underfull \hbox (badness 10000) in paragraph at lines 558--561
 
  []
@@ -673,13 +667,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 586--588
 
  []
 
-[27]
-<fig/fig7.png, id=622, 203.25937pt x 63.8385pt>
+[29]
+<fig/fig7.png, id=942, 203.25937pt x 63.8385pt>
 File: fig/fig7.png Graphic file (type png)
 <use fig/fig7.png>
 Package pdftex.def Info: fig/fig7.png  used on input line 622.
 (pdftex.def)             Requested size: 312.00119pt x 97.995pt.
- [28]
+ [30]
 Underfull \hbox (badness 10000) in paragraph at lines 627--630
 
  []
@@ -689,7 +683,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 647--650
 
  []
 
-[29 <./fig/fig7.png>]
+[31 <./fig/fig7.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 659--662
 
  []
@@ -699,7 +693,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 675--677
 
  []
 
-<fig/fig8.png, id=640, 163.20975pt x 95.45662pt>
+<fig/fig8.png, id=961, 163.20975pt x 95.45662pt>
 File: fig/fig8.png Graphic file (type png)
 <use fig/fig8.png>
 Package pdftex.def Info: fig/fig8.png  used on input line 685.
@@ -707,7 +701,7 @@ Package pdftex.def Info: fig/fig8.png  used on input line 685.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[30] [31 <./fig/fig8.png>]
+[32] [33 <./fig/fig8.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 752--758
 
  []
@@ -717,7 +711,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 752--758
 
  []
 
-[32] [33]
+[34] [35]
 Overfull \hbox (42.37268pt too wide) detected at line 794
 \OML/cmm/m/it/12 P[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 d\OT1/cmr/m/n/12 ) = 69\O
 ML/cmm/m/it/12 :\OT1/cmr/m/n/12 55 + 26\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 16 [][
@@ -743,8 +737,8 @@ OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 a\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 h[]\OT1
 C[]
  []
 
-[34]
-<fig/fig9.png, id=682, 502.87875pt x 303.23288pt>
+[36]
+<fig/fig9.png, id=1002, 502.87875pt x 303.23288pt>
 File: fig/fig9.png Graphic file (type png)
 <use fig/fig9.png>
 Package pdftex.def Info: fig/fig9.png  used on input line 822.
@@ -760,12 +754,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 837--840
 
  []
 
-[35 <./fig/fig9.png>]
+[37 <./fig/fig9.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 851--854
 
  []
 
-[36]
+[38]
 Underfull \hbox (badness 10000) in paragraph at lines 893--896
 
  []
@@ -775,7 +769,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 903--911
 
  []
 
-[37]
+[39]
 Overfull \hbox (41.83228pt too wide) detected at line 947
 \OML/cmm/m/it/12 F\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 ^^M\OT1/cmr/m/n/12 ) = (\OM
 S/cmsy/m/n/12 ^^@\OT1/cmr/m/n/12 70 + 31\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 54 + 
@@ -786,7 +780,7 @@ T1/cmr/m/n/12 01\OML/cmm/m/it/12 ^^M\OT1/cmr/m/n/12 )[] + (\OMS/cmsy/m/n/12 ^^@
 2 :\OT1/cmr/m/n/12 99\OML/cmm/m/it/12 ^^M\OT1/cmr/m/n/12 )[]
  []
 
-[38]
+[40]
 Underfull \hbox (badness 10000) in paragraph at lines 973--976
 
  []
@@ -796,7 +790,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 993--996
 
  []
 
-[39]
+[41]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1032.
@@ -813,12 +807,12 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\psi' on input line 1032.
 
-[40] [41] [42]
+[42] [43] [44]
 Underfull \hbox (badness 10000) in paragraph at lines 1124--1127
 
  []
 
-[43] [44]
+[45] [46]
 Overfull \hbox (0.45705pt too wide) in paragraph at lines 1190--1190
 []\T1/cmr/bx/n/14.4 Statistisk Bag-grund: Q-funktionen og Ou-ta-ge Pro-
  []
@@ -828,120 +822,423 @@ Underfull \hbox (badness 10000) in paragraph at lines 1191--1194
 
  []
 
-[45]
-<fig/fig10.png, id=753, 257.46187pt x 266.49562pt>
+[47]
+<fig/fig10.png, id=1073, 257.46187pt x 266.49562pt>
 File: fig/fig10.png Graphic file (type png)
 <use fig/fig10.png>
 Package pdftex.def Info: fig/fig10.png  used on input line 1208.
 (pdftex.def)             Requested size: 155.99762pt x 161.47229pt.
- [46 <./fig/fig10.png>] [47
+ [48 <./fig/fig10.png>] [49
 
-] [48]
+] [50]
 Kapitel 3.
-[49
+<fig/fig11.png, id=1093, 292.6935pt x 70.76437pt>
+File: fig/fig11.png Graphic file (type png)
+<use fig/fig11.png>
+Package pdftex.def Info: fig/fig11.png  used on input line 1278.
+(pdftex.def)             Requested size: 234.00238pt x 56.57484pt.
 
-] [50
+Underfull \hbox (badness 10000) in paragraph at lines 1287--1291
+
+ []
+
+[51
+
+ <./fig/fig11.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1323--1326
+
+ []
+
+[52] [53] [54
 
 ]
 Kapitel 4.
-
-Underfull \hbox (badness 10000) in paragraph at lines 1275--1284
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1275--1284
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1275--1284
-
- []
-
-[51]
-Overfull \hbox (37.10542pt too wide) in paragraph at lines 1287--1287
-[]\T1/cmr/bx/n/14.4 Autocorrelation, Cross Cor-re-la-tion, and Po-wer Spectral
- []
-
-
-Overfull \hbox (10.5838pt too wide) in paragraph at lines 1295--1295
-[]\T1/cmr/bx/n/14.4 Transforms for Au-to-cor-re-la-tion and Scat-te-ring Fun-
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [52]
-[53] [54
-
-]
+[55] [56] [57] [58] [59] [60]
 Kapitel 5.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1303--1306
-
- []
-
-[55]
-Underfull \hbox (badness 10000) in paragraph at lines 1331--1333
+Underfull \hbox (badness 10000) in paragraph at lines 1491--1495
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1331--1333
+Underfull \hbox (badness 10000) in paragraph at lines 1499--1504
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1343--1345
+Underfull \hbox (badness 10000) in paragraph at lines 1499--1504
 
  []
 
+[61
 
-Underfull \hbox (badness 10000) in paragraph at lines 1362--1365
-
- []
-
-[56]
-Underfull \hbox (badness 10000) in paragraph at lines 1370--1373
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1384--1385
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1395--1396
-
- []
-
-[57]
-Underfull \hbox (badness 10000) in paragraph at lines 1416--1417
-
- []
-
-[58]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[59]
-Underfull \hbox (badness 10000) in paragraph at lines 1533--1536
-
- []
-
-[60]
-Underfull \hbox (badness 10000) in paragraph at lines 1558--1563
-
- []
-
-[61] [62
+] [62] [63] [64] [65] [66
 
 ]
 Kapitel 6.
-[63] [64]
-Overfull \hbox (51.11217pt too wide) detected at line 1670
+[67] [68
+
+]
+Kapitel 7.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1649--1658
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1649--1658
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1649--1658
+
+ []
+
+[69]
+Underfull \hbox (badness 10000) in paragraph at lines 1661--1664
+
+ []
+
+[70]
+<fig/fig14.png, id=1189, 185.19188pt x 144.54pt>
+File: fig/fig14.png Graphic file (type png)
+<use fig/fig14.png>
+Package pdftex.def Info: fig/fig14.png  used on input line 1689.
+(pdftex.def)             Requested size: 272.99881pt x 213.07552pt.
+ [71 <./fig/fig14.png>]
+<fig/fig15.png, id=1197, 176.76038pt x 162.6075pt>
+File: fig/fig15.png Graphic file (type png)
+<use fig/fig15.png>
+Package pdftex.def Info: fig/fig15.png  used on input line 1703.
+(pdftex.def)             Requested size: 272.99881pt x 251.15323pt.
+<fig/fig16.png, id=1199, 218.91788pt x 155.07938pt>
+File: fig/fig16.png Graphic file (type png)
+<use fig/fig16.png>
+Package pdftex.def Info: fig/fig16.png  used on input line 1716.
+(pdftex.def)             Requested size: 272.99881pt x 193.39911pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[72 <./fig/fig15.png>] [73 <./fig/fig16.png>]
+<fig/fig17.png, id=1214, 364.9635pt x 254.45062pt>
+File: fig/fig17.png Graphic file (type png)
+<use fig/fig17.png>
+Package pdftex.def Info: fig/fig17.png  used on input line 1745.
+(pdftex.def)             Requested size: 272.99881pt x 190.3444pt.
+ [74
+
+ <./fig/fig17.png>]
+Overfull \hbox (15.81873pt too wide) in paragraph at lines 1774--1775
+[]\T1/cmr/m/n/12 Når $\OML/cmm/m/it/12 t \OMS/cmsy/m/n/12 6\OT1/cmr/m/n/12 = \O
+ML/cmm/m/it/12 nT[]$\T1/cmr/m/n/12 , mod-ta-ges kun LOS-signalet med im-puls-re
+-spon-sen $\OML/cmm/m/it/12 []e[]^^N\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 ^^\ \OMS
+/cmsy/m/n/12 ^^@
+ []
+
+
+Overfull \hbox (7.16454pt too wide) in paragraph at lines 1775--1776
+\T1/cmr/m/n/12 den sam-le-de im-puls-re-spons in-de-hol-der bå-de $\OML/cmm/m/i
+t/12 []e[]^^N\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 ^^\ \OMS/cmsy/m/n/12 ^^@ \OML/c
+mm/m/it/12 ^^\[]\OT1/cmr/m/n/12 )$ \T1/cmr/m/n/12 og $\OML/cmm/m/it/12 []e[]^^
+N\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 ^^\ \OMS/cmsy/m/n/12 ^^@
+ []
+
+[75]
+Underfull \hbox (badness 10000) in paragraph at lines 1789--1792
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1798--1803
+
+ []
+
+
+Overfull \hbox (2.59872pt too wide) detected at line 1806
+\OML/cmm/m/it/12 r\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 t\OT1/cmr/m/n/12 ) = \OMS/c
+msy/m/n/12 < [] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 r[]\OT1/cmr/m/n/12 (\OML/cmm
+/m/it/12 t\OT1/cmr/m/n/12 ) [] [] + \OML/cmm/m/it/12 r[]\OT1/cmr/m/n/12 (\OML/c
+mm/m/it/12 t\OT1/cmr/m/n/12 ) [] [] \OML/cmm/m/it/12 ;
+ []
+
+[76
+
+] [77]
+Overfull \hbox (18.92442pt too wide) in paragraph at lines 1830--1831
+[]\T1/cmr/m/n/12 For at be-reg-ne au-tokor-re-la-tio-nen af $\OML/cmm/m/it/12 r
+[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 t\OT1/cmr/m/n/12 )$ \T1/cmr/m/n/12 an-ta-ge
+r vi, at Doppler-forskydningen
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1836--1839
+
+ []
+
+<fig/fig18.png, id=1239, 343.2825pt x 337.26pt>
+File: fig/fig18.png Graphic file (type png)
+<use fig/fig18.png>
+Package pdftex.def Info: fig/fig18.png  used on input line 1842.
+(pdftex.def)             Requested size: 234.00238pt x 229.89468pt.
+<fig/fig19.png, id=1241, 346.896pt x 293.59688pt>
+File: fig/fig19.png Graphic file (type png)
+<use fig/fig19.png>
+Package pdftex.def Info: fig/fig19.png  used on input line 1855.
+(pdftex.def)             Requested size: 195.0pt x 165.04031pt.
+[78
+
+ <./fig/fig18.png>]
+Overfull \hbox (0.11127pt too wide) in paragraph at lines 1873--1874
+\T1/cmr/m/n/12 For at be-reg-ne spek-traltæt-he-den $\OML/cmm/m/it/12 S[]\OT1/c
+mr/m/n/12 (\OML/cmm/m/it/12 f\OT1/cmr/m/n/12 )$ \T1/cmr/m/n/12 an-ven-der vi Fo
+urier-transformationen
+ []
+
+<fig/fig21.png, id=1249, 424.58624pt x 399.59288pt>
+File: fig/fig21.png Graphic file (type png)
+<use fig/fig21.png>
+Package pdftex.def Info: fig/fig21.png  used on input line 1882.
+(pdftex.def)             Requested size: 155.99762pt x 146.8166pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[79 <./fig/fig19.png>]
+<fig/fig22.png, id=1261, 614.295pt x 434.22224pt>
+File: fig/fig22.png Graphic file (type png)
+<use fig/fig22.png>
+Package pdftex.def Info: fig/fig22.png  used on input line 1900.
+(pdftex.def)             Requested size: 155.99762pt x 110.26471pt.
+
+Underfull \vbox (badness 1902) has occurred while \output is active []
+
+ [80 <./fig/fig21.png> <./fig/fig22.png>] [81]
+<fig/fig23.png, id=1274, 500.46976pt x 299.61937pt>
+File: fig/fig23.png Graphic file (type png)
+<use fig/fig23.png>
+Package pdftex.def Info: fig/fig23.png  used on input line 1970.
+(pdftex.def)             Requested size: 234.00238pt x 140.0942pt.
+<fig/fig24.png, id=1275, 432.71663pt x 284.56313pt>
+File: fig/fig24.png Graphic file (type png)
+<use fig/fig24.png>
+Package pdftex.def Info: fig/fig24.png  used on input line 1976.
+(pdftex.def)             Requested size: 234.00238pt x 153.88757pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[82 <./fig/fig23.png>]
+<fig/fig25.png, id=1283, 252.945pt x 119.54663pt>
+File: fig/fig25.png Graphic file (type png)
+<use fig/fig25.png>
+Package pdftex.def Info: fig/fig25.png  used on input line 1998.
+(pdftex.def)             Requested size: 195.0pt x 92.16245pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[83 <./fig/fig24.png>] [84 <./fig/fig25.png>]
+Overfull \hbox (10.59889pt too wide) in paragraph at lines 2046--2047
+\T1/cmr/m/n/12 an-ven-des of-te en Fi-ni-te Sta-te Markov Chan-nel (FSMC)-model
+. FSMC-modellen
+ []
+
+[85] [86]
+<fig/fig26.png, id=1311, 182.18062pt x 103.88812pt>
+File: fig/fig26.png Graphic file (type png)
+<use fig/fig26.png>
+Package pdftex.def Info: fig/fig26.png  used on input line 2082.
+(pdftex.def)             Requested size: 272.99881pt x 155.69705pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 2086--2089
+
+ []
+
+<fig/fig27.png, id=1312, 172.2435pt x 120.45pt>
+File: fig/fig27.png Graphic file (type png)
+<use fig/fig27.png>
+Package pdftex.def Info: fig/fig27.png  used on input line 2092.
+(pdftex.def)             Requested size: 272.99881pt x 190.93378pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2102--2105
+
+ []
+
+[87 <./fig/fig26.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 2119--2122
+
+ []
+
+[88 <./fig/fig27.png>] [89]
+Underfull \hbox (badness 10000) in paragraph at lines 2167--2170
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2194--2197
+
+ []
+
+[90]
+Underfull \hbox (badness 10000) in paragraph at lines 2212--2215
+
+ []
+
+[91]
+<fig/fig28.png, id=1340, 252.945pt x 81.30376pt>
+File: fig/fig28.png Graphic file (type png)
+<use fig/fig28.png>
+Package pdftex.def Info: fig/fig28.png  used on input line 2241.
+(pdftex.def)             Requested size: 390.0pt x 125.3595pt.
+
+Underfull \hbox (badness 1184) in paragraph at lines 2242--2242
+[]\T1/cmr/m/n/12 Figur 7.14: |Po-wer Delay Pro-fi-le, RMS Delay Spre-ad, and Co
+-he-ren-ce
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2245--2250
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2245--2250
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2258--2261
+
+ []
+
+
+Underfull \vbox (badness 1472) has occurred while \output is active []
+
+ [92 <./fig/fig28.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 2264--2267
+
+ []
+
+
+Overfull \hbox (42.53319pt too wide) in paragraph at lines 2272--2273
+\T1/cmr/m/n/12 og au-tokor-re-la-tions-funk-tio-nen $\OML/cmm/m/it/12 A[]\OT1/c
+mr/m/n/12 (^^A\OML/cmm/m/it/12 f; \OT1/cmr/m/n/12 ^^A\OML/cmm/m/it/12 t\OT1/cmr
+/m/n/12 )$ \T1/cmr/m/n/12 gen-nem en dob-belt Fourier-transformation. 
+ []
+
+<fig/fig29.png, id=1347, 184.2885pt x 130.98938pt>
+File: fig/fig29.png Graphic file (type png)
+<use fig/fig29.png>
+Package pdftex.def Info: fig/fig29.png  used on input line 2289.
+(pdftex.def)             Requested size: 390.0pt x 277.21443pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[93] [94 <./fig/fig29.png>]
+<fig/fig30.png, id=1360, 137.61412pt x 96.36pt>
+File: fig/fig30.png Graphic file (type png)
+<use fig/fig30.png>
+Package pdftex.def Info: fig/fig30.png  used on input line 2308.
+(pdftex.def)             Requested size: 390.0pt x 273.12463pt.
+<fig/fig31.png, id=1361, 185.79413pt x 53.29912pt>
+File: fig/fig31.png Graphic file (type png)
+<use fig/fig31.png>
+Package pdftex.def Info: fig/fig31.png  used on input line 2316.
+(pdftex.def)             Requested size: 390.0pt x 111.88667pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2320--2323
+
+ []
+
+[95 <./fig/fig30.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 2325--2328
+
+ []
+
+[96 <./fig/fig31.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 2364--2367
+
+ []
+
+[97] [98
+
+]
+Kapitel 8.
+
+Underfull \hbox (badness 10000) in paragraph at lines 2372--2375
+
+ []
+
+[99]
+Underfull \hbox (badness 10000) in paragraph at lines 2400--2402
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2400--2402
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2412--2414
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2431--2434
+
+ []
+
+[100]
+Underfull \hbox (badness 10000) in paragraph at lines 2439--2442
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2453--2454
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2464--2465
+
+ []
+
+[101]
+Underfull \hbox (badness 10000) in paragraph at lines 2485--2486
+
+ []
+
+[102]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[103]
+Underfull \hbox (badness 10000) in paragraph at lines 2602--2605
+
+ []
+
+[104]
+Underfull \hbox (badness 10000) in paragraph at lines 2627--2632
+
+ []
+
+[105] [106] [107
+
+] [108]
+Kapitel 9.
+[109
+
+] [110]
+Overfull \hbox (51.11217pt too wide) detected at line 2778
 \OML/cmm/m/it/12 P[]\OT1/cmr/m/n/12 ([]) = 69\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 
 55 + 26\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 16 [][](\OML/cmm/m/it/12 f[]\OT1/cmr/m
 /n/12 ) \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 13\OML/cmm/m/it/12 :\OT1/cmr/m/n/1
@@ -950,8 +1247,8 @@ Overfull \hbox (51.11217pt too wide) detected at line 1670
 mm/m/it/12 d\OT1/cmr/m/n/12 )
  []
 
-[65] [66]
-Overfull \hbox (66.42291pt too wide) detected at line 1751
+[111] [112] [113]
+Overfull \hbox (66.42291pt too wide) detected at line 2859
 \OML/cmm/m/it/12 P[]\OT1/cmr/m/n/12 ([]) = 46\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 
 3 + 33\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 9 [][](\OML/cmm/m/it/12 f[]\OT1/cmr/m/n
 /12 ) \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 13\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 
@@ -960,42 +1257,62 @@ t/12 a\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 h[]\OT1/cmr/m/n/12 ) + [] [][](\OML/cmm
 /m/it/12 d\OT1/cmr/m/n/12 ) + \OML/cmm/m/it/12 C[]
  []
 
-[67] [68]
-Overfull \hbox (10.38835pt too wide) in paragraph at lines 1801--1801
+[114]
+Overfull \hbox (10.38835pt too wide) in paragraph at lines 2909--2909
 []\T1/cmr/bx/n/14.4 Outage Pro-ba-bi-li-ty un-der Path Loss and Sha-dowing 
  []
 
-[69] [70] [71] (master.aux)
+[115] [116] [117] [118
+
+]
+Kapitel 10.
+
+Overfull \hbox (33.89883pt too wide) in paragraph at lines 2988--2988
+[]\T1/cmr/bx/n/17.28 Formelsamling for Sta-ti-sti-cal Mul-ti-path Chan-
+ []
+
+
+Overfull \hbox (11.31555pt too wide) in paragraph at lines 2993--2994
+\T1/cmr/m/n/12 Kanalimpulsresponsen kan ud-tryk-kes som en sum af $\OML/cmm/m/i
+t/12 N$ \T1/cmr/m/n/12 multipath-komponenter: 
+ []
+
+[119]
+Overfull \hbox (17.85176pt too wide) in paragraph at lines 3061--3062
+\T1/cmr/m/n/12 Rayleigh-fordelingen bru-ges til at be-skri-ve fa-ding i mil-jø-
+er med man-ge multipath-
+ []
+
+[120] [121]
+Overfull \hbox (22.68108pt too wide) in paragraph at lines 3130--3131
+\T1/cmr/m/n/12 Forsinkelsesspredning er et mål for va-ri-a-tio-nen i an-komst-t
+ids-punk-ter af multipath-
+ []
+
+[122] [123] (master.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
-
-
-Package rerunfilecheck Warning: File `master.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `master.out':
-(rerunfilecheck)             Before: B183AE7B0B36B9CFD07529F46F270A4A;17872
-(rerunfilecheck)             After:  9511C723F9AC35959BFE9F97EE455199;19074.
+Package rerunfilecheck Info: File `master.out' has not changed.
+(rerunfilecheck)             Checksum: B4685C0BC28407E1E8FCF486EC2E2A25;30784.
  ) 
 Here is how much of TeX's memory you used:
- 13236 strings out of 474436
- 213353 string characters out of 5742898
+ 13620 strings out of 474436
+ 219329 string characters out of 5742898
  1941190 words of memory out of 5000000
- 35152 multiletter control sequences out of 15000+600000
+ 35357 multiletter control sequences out of 15000+600000
  576816 words of font info for 83 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 79i,11n,93p,1341b,611s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 79i,11n,93p,1341b,613s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\aso\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm06
 00.pk> <C:\Users\aso\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ec
 bi1440.pk> <C:\Users\aso\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
 0\ecrm0800.pk> <C:\Users\aso\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/d
 pi600\tcti1200.pk> <C:\Users\aso\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/
 ec/dpi600\tcrm1200.pk> <C:\Users\aso\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
-pen/ec/dpi600\ecbx1440.pk> <C:\Users\aso\AppData\Local\MiKTeX\fonts/pk/ljfour/j
-knappen/ec/dpi600\ecbx1728.pk> <C:\Users\aso\AppData\Local\MiKTeX\fonts/pk/ljfo
+pen/ec/dpi600\ecbx1728.pk> <C:\Users\aso\AppData\Local\MiKTeX\fonts/pk/ljfour/j
+knappen/ec/dpi600\ecbx1440.pk> <C:\Users\aso\AppData\Local\MiKTeX\fonts/pk/ljfo
 ur/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\aso\AppData\Local\MiKTeX\fonts/pk/
 ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\aso\AppData\Local\MiKTeX\fonts
 /pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\aso\AppData\Local\MiKTeX\f
@@ -1021,9 +1338,9 @@ ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/aso
 rs/aso/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10
 .pfb><C:/Users/aso/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/sy
 mbols/msbm10.pfb>
-Output written on master.pdf (71 pages, 811628 bytes).
+Output written on master.pdf (123 pages, 1841087 bytes).
 PDF statistics:
- 1487 PDF objects out of 1728 (max. 8388607)
- 251 named destinations out of 1000 (max. 500000)
- 742 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2203 PDF objects out of 2487 (max. 8388607)
+ 430 named destinations out of 1000 (max. 500000)
+ 1328 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,119 +1,208 @@
 \babel@toc {danish}{}\relax 
-\contentsline {chapter}{\numberline {1}Path Loss and Shadowing}{7}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Variationer i Signalstyrke: Path Loss, Shadowing og Multipath}{7}{section.1.1}%
-\contentsline {subsection}{\numberline {1.1.1}Path Loss og Shadowing}{8}{subsection.1.1.1}%
-\contentsline {subsection}{\numberline {1.1.2}Multipath Effekter}{8}{subsection.1.1.2}%
-\contentsline {section}{\numberline {1.2}Radio Wave Propagation}{9}{section.1.2}%
-\contentsline {section}{\numberline {1.3}Transmitterede og Modtagede Signaler}{10}{section.1.3}%
-\contentsline {subsection}{\numberline {1.3.1}Transmitteret Signal}{10}{subsection.1.3.1}%
-\contentsline {subsection}{\numberline {1.3.2}Modtaget Signal}{11}{subsection.1.3.2}%
-\contentsline {subsection}{\numberline {1.3.3}Doppler Effekt}{11}{subsection.1.3.3}%
-\contentsline {subsection}{\numberline {1.3.4}Path Loss}{11}{subsection.1.3.4}%
-\contentsline {chapter}{\numberline {2}Free-Space Path Loss og Doppler-effekt}{13}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Free-Space Path Loss og Doppler-effekt}{13}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Free-Space Path Loss}{13}{subsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.1.2}Doppler-effekt}{14}{subsection.2.1.2}%
-\contentsline {subsection}{\numberline {2.1.3}Eksempler}{15}{subsection.2.1.3}%
-\contentsline {subsubsection}{Eksempel 1: Beregning af Free-Space Path Loss}{15}{section*.3}%
-\contentsline {subsubsection}{Eksempel 2: Beregning af Doppler-Skift}{15}{section*.4}%
-\contentsline {subsubsection}{Eksempel 3: Beregning af Free-Space Path Loss ved 1 km Afstand}{16}{section*.5}%
-\contentsline {section}{\numberline {2.2}Ray Tracing}{16}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Two-Ray Model}{18}{subsection.2.2.1}%
-\contentsline {subsubsection}{Kritisk Distance i Two-Ray Modellen}{20}{section*.9}%
-\contentsline {subsubsection}{Eksempel 2.2: Beregning af Kritisk Distance}{21}{section*.10}%
-\contentsline {subsubsection}{Eksempel 2.3: Beregning af Modtaget Effekt ved Forskellige Frekvenser}{21}{section*.11}%
-\contentsline {subsubsection}{Eksempel 2.4: Effekt af Antennehøjde på Modtaget Signalstyrke}{22}{section*.12}%
-\contentsline {subsubsection}{Eksempel 2.5: Effekt af Refleksionskoefficient på Signalstyrke}{22}{section*.13}%
-\contentsline {subsection}{\numberline {2.2.2}Ten-Ray Model (Dielectric Canyon)}{22}{subsection.2.2.2}%
-\contentsline {subsubsection}{Eksempel 2.6: Beregning af Modtaget Effekt for SW og DW Stier}{24}{section*.15}%
-\contentsline {subsubsection}{Eksempel 2.7: Effekt af Dielektrisk Konstant på Modtaget Signal}{25}{section*.16}%
-\contentsline {subsubsection}{Eksempel 2.8: Beregning af Modtaget Effekt ved Forskellige Senderhøjder}{25}{section*.17}%
-\contentsline {subsection}{\numberline {2.2.3}General Ray Tracing (GRT)}{26}{subsection.2.2.3}%
-\contentsline {subsubsection}{Eksempel 1: Beregning af Signaltab gennem Bygninger}{26}{section*.18}%
-\contentsline {subsubsection}{Eksempel 2: Beregning af Refleksion fra en Bygning}{27}{section*.19}%
-\contentsline {subsubsection}{Eksempel 3: Brug af GRT til Antenneplacering}{27}{section*.20}%
-\contentsline {subsection}{\numberline {2.2.4}Knife-Edge Diffraction}{28}{subsection.2.2.4}%
-\contentsline {subsubsection}{Eksempel 4: Beregning af Faseskift ved Knife-Edge Diffraction}{29}{section*.22}%
-\contentsline {subsubsection}{Eksempel 5: Beregning af Diffraction Tab}{29}{section*.23}%
-\contentsline {subsubsection}{Eksempel 6: Modtaget Signalstyrke efter Diffraction}{30}{section*.24}%
-\contentsline {subsection}{\numberline {2.2.5}Scattering}{30}{subsection.2.2.5}%
-\contentsline {subsubsection}{Eksempel 7: Beregning af Spredt Signalstyrke}{31}{section*.26}%
-\contentsline {subsubsection}{Eksempel 8: Effekt af Antennens Gain på Spredt Signal}{31}{section*.27}%
-\contentsline {subsubsection}{Eksempel 9: Beregning af Spredningstab}{32}{section*.28}%
-\contentsline {subsection}{\numberline {2.2.6}Local Mean Received Power}{32}{subsection.2.2.6}%
-\contentsline {subsection}{\numberline {2.2.7}Local Mean Received Power}{33}{subsection.2.2.7}%
-\contentsline {section}{\numberline {2.3}Empiriske Path Loss Modeller}{33}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}The Okumura Model}{33}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}The Hata Model}{34}{subsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.3.3}COST 231 Udvidelse til Hata Modellen}{34}{subsection.2.3.3}%
-\contentsline {subsection}{\numberline {2.3.4}Piecewise Linear (Multi-Slope) Model}{35}{subsection.2.3.4}%
-\contentsline {subsection}{\numberline {2.3.5}Indendørs Attenuation Faktorer}{36}{subsection.2.3.5}%
-\contentsline {section}{\numberline {2.4}Simplified Path Loss Model}{37}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}Eksempel 1: Beregning af Path Loss Eksponent og Modtaget Effekt}{38}{subsection.2.4.1}%
-\contentsline {subsection}{\numberline {2.4.2}Eksempel 2: Beregning af Modtaget Effekt ved 200 meter}{39}{subsection.2.4.2}%
-\contentsline {subsection}{\numberline {2.4.3}Eksempel 3: Effekt af \textit {Shadow Fading}}{39}{subsection.2.4.3}%
-\contentsline {subsection}{\numberline {2.4.4}Opsummering}{40}{subsection.2.4.4}%
-\contentsline {section}{\numberline {2.5}Shadow Fading og Log-Normal Skjulte Variabler}{40}{section.2.5}%
-\contentsline {subsection}{\numberline {2.5.1}Log-Normal Skjulte Variabler}{40}{subsection.2.5.1}%
-\contentsline {subsection}{\numberline {2.5.2}Gennemsnit og Varians af \( \log _{10}(\psi ) \)}{41}{subsection.2.5.2}%
-\contentsline {subsection}{\numberline {2.5.3}Shadow Fading Modellering}{41}{subsection.2.5.3}%
-\contentsline {subsection}{\numberline {2.5.4}Eksempler}{41}{subsection.2.5.4}%
-\contentsline {subsubsection}{Eksempel 2.4: Beregning af Shadow Fading Varians}{41}{section*.32}%
-\contentsline {subsubsection}{Eksempel 2.5: Beregning af Skjulte Variabler i Et Byområde}{42}{section*.33}%
-\contentsline {subsubsection}{Eksempel 2.6: Anvendelse af Shadow Fading i Et Mikrocellulært Miljø}{42}{section*.34}%
-\contentsline {section}{\numberline {2.6}Combined Path Loss and Shadowing}{43}{section.2.6}%
-\contentsline {subsection}{\numberline {2.6.1}Statistisk Baggrund for Shadowing}{43}{subsection.2.6.1}%
-\contentsline {section}{\numberline {2.7}Outage Probability under Path Loss and Shadowing}{44}{section.2.7}%
-\contentsline {subsection}{\numberline {2.7.1}Eksempel 2.5: Beregning af Outage Probability}{45}{subsection.2.7.1}%
-\contentsline {subsection}{\numberline {2.7.2}Statistisk Baggrund: Q-funktionen og Outage Probability}{45}{subsection.2.7.2}%
-\contentsline {section}{\numberline {2.8}Cell Coverage Area}{46}{section.2.8}%
-\contentsline {subsection}{\numberline {2.8.1}Basestationens Rolle i Dækning}{46}{subsection.2.8.1}%
-\contentsline {subsection}{\numberline {2.8.2}Effekten af Path Loss og Shadowing}{46}{subsection.2.8.2}%
-\contentsline {subsection}{\numberline {2.8.3}Matematisk Modellering af Dækningen}{47}{subsection.2.8.3}%
-\contentsline {subsection}{\numberline {2.8.4}Outage Probability}{47}{subsection.2.8.4}%
-\contentsline {subsection}{\numberline {2.8.5}Eksempler}{47}{subsection.2.8.5}%
-\contentsline {subsubsection}{Eksempel 1: Beregning af Cell Coverage Area}{47}{section*.37}%
-\contentsline {subsubsection}{Eksempel 2: Beregning af Outage Probability}{48}{section*.38}%
-\contentsline {subsubsection}{Eksempel 3: Beregning af Total Coverage Area}{48}{section*.39}%
-\contentsline {chapter}{\numberline {3}Appendix B}{49}{chapter.3}%
-\contentsline {chapter}{\numberline {4}Statistical Multipath Channel Models}{51}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Time-Varying Channel Impulse Response}{53}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Narrowband Fading Models}{53}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Autocorrelation, Cross Correlation, and Power Spectral Density}{53}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Envelope and Power Distributions}{53}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Level Crossing Rate and Average Fade Duration}{53}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.2.4}Finite State Markov Channels}{53}{subsection.4.2.4}%
-\contentsline {section}{\numberline {4.3}Wideband Fading Models}{53}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Power Delay Profile}{53}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Coherence Bandwidth}{53}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Doppler Power Spectrum and Channel Coherence Time}{53}{subsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.3.4}Transforms for Autocorrelation and Scattering Functions}{53}{subsection.4.3.4}%
-\contentsline {section}{\numberline {4.4}Discrete-Time Model}{53}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Space-Time Channel Models}{53}{section.4.5}%
-\contentsline {chapter}{\numberline {5}Opgaver}{55}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Exercises week 2}{55}{section.5.1}%
-\contentsline {chapter}{\numberline {6}Formula Collection}{63}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Path Loss Models}{63}{section.6.1}%
-\contentsline {subsection}{\numberline {6.1.1}Free-Space Path Loss (FSPL)}{63}{subsection.6.1.1}%
-\contentsline {subsection}{\numberline {6.1.2}Received Power Calculation}{63}{subsection.6.1.2}%
-\contentsline {subsection}{\numberline {6.1.3}Simplified Form for Isotropic Antennas}{64}{subsection.6.1.3}%
-\contentsline {subsection}{\numberline {6.1.4}Relationship Between Path Loss and Received Power}{64}{subsection.6.1.4}%
-\contentsline {subsection}{\numberline {6.1.5}Importance of Antenna Gains}{65}{subsection.6.1.5}%
-\contentsline {subsection}{\numberline {6.1.6}Free-Space Path Loss in dB}{65}{subsection.6.1.6}%
-\contentsline {subsection}{\numberline {6.1.7}Hata Model for Urban Areas}{65}{subsection.6.1.7}%
-\contentsline {subsection}{\numberline {6.1.8}Single-Slope Path Loss Model}{66}{subsection.6.1.8}%
-\contentsline {subsection}{\numberline {6.1.9}Received Power in Free Space}{66}{subsection.6.1.9}%
-\contentsline {subsection}{\numberline {6.1.10}Signal-to-Noise Ratio (SNR)}{67}{subsection.6.1.10}%
-\contentsline {subsection}{\numberline {6.1.11}Maximum Distance for Given SNR}{67}{subsection.6.1.11}%
-\contentsline {subsection}{\numberline {6.1.12}COST 231 Model (Extension of Hata Model)}{68}{subsection.6.1.12}%
-\contentsline {subsection}{\numberline {6.1.13}Two-Ray Ground Reflection Model}{68}{subsection.6.1.13}%
-\contentsline {subsection}{\numberline {6.1.14}Critical Distance in Two-Ray Model}{68}{subsection.6.1.14}%
-\contentsline {subsection}{\numberline {6.1.15}Delay Spread in Two-Ray Model}{69}{subsection.6.1.15}%
-\contentsline {section}{\numberline {6.2}Outage Probability}{69}{section.6.2}%
-\contentsline {subsection}{\numberline {6.2.1}Outage Probability under Path Loss and Shadowing}{69}{subsection.6.2.1}%
-\contentsline {section}{\numberline {6.3}Link Budget Equation}{69}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Doppler Shift}{70}{section.6.4}%
-\contentsline {section}{\numberline {6.5}Probability and Fading}{70}{section.6.5}%
-\contentsline {subsection}{\numberline {6.5.1}Rayleigh Fading}{70}{subsection.6.5.1}%
-\contentsline {subsection}{\numberline {6.5.2}Rician Fading}{70}{subsection.6.5.2}%
-\contentsline {subsection}{\numberline {6.5.3}Simplified Path Loss Model for SNR}{71}{subsection.6.5.3}%
+\contentsline {chapter}{\numberline {1}Path Loss and Shadowing}{9}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Variationer i Signalstyrke: Path Loss, Shadowing og Multipath}{9}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Path Loss og Shadowing}{10}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Multipath Effekter}{10}{subsection.1.1.2}%
+\contentsline {section}{\numberline {1.2}Radio Wave Propagation}{11}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Transmitterede og Modtagede Signaler}{12}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Transmitteret Signal}{12}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Modtaget Signal}{13}{subsection.1.3.2}%
+\contentsline {subsection}{\numberline {1.3.3}Doppler Effekt}{13}{subsection.1.3.3}%
+\contentsline {subsection}{\numberline {1.3.4}Path Loss}{13}{subsection.1.3.4}%
+\contentsline {chapter}{\numberline {2}Free-Space Path Loss og Doppler-effekt}{15}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Free-Space Path Loss og Doppler-effekt}{15}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Free-Space Path Loss}{15}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Doppler-effekt}{16}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Eksempler}{17}{subsection.2.1.3}%
+\contentsline {subsubsection}{Eksempel 1: Beregning af Free-Space Path Loss}{17}{section*.3}%
+\contentsline {subsubsection}{Eksempel 2: Beregning af Doppler-Skift}{17}{section*.4}%
+\contentsline {subsubsection}{Eksempel 3: Beregning af Free-Space Path Loss ved 1 km Afstand}{18}{section*.5}%
+\contentsline {section}{\numberline {2.2}Ray Tracing}{18}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Two-Ray Model}{20}{subsection.2.2.1}%
+\contentsline {subsubsection}{Kritisk Distance i Two-Ray Modellen}{22}{section*.9}%
+\contentsline {subsubsection}{Eksempel 2.2: Beregning af Kritisk Distance}{23}{section*.10}%
+\contentsline {subsubsection}{Eksempel 2.3: Beregning af Modtaget Effekt ved Forskellige Frekvenser}{23}{section*.11}%
+\contentsline {subsubsection}{Eksempel 2.4: Effekt af Antennehøjde på Modtaget Signalstyrke}{24}{section*.12}%
+\contentsline {subsubsection}{Eksempel 2.5: Effekt af Refleksionskoefficient på Signalstyrke}{24}{section*.13}%
+\contentsline {subsection}{\numberline {2.2.2}Ten-Ray Model (Dielectric Canyon)}{24}{subsection.2.2.2}%
+\contentsline {subsubsection}{Eksempel 2.6: Beregning af Modtaget Effekt for SW og DW Stier}{26}{section*.15}%
+\contentsline {subsubsection}{Eksempel 2.7: Effekt af Dielektrisk Konstant på Modtaget Signal}{27}{section*.16}%
+\contentsline {subsubsection}{Eksempel 2.8: Beregning af Modtaget Effekt ved Forskellige Senderhøjder}{27}{section*.17}%
+\contentsline {subsection}{\numberline {2.2.3}General Ray Tracing (GRT)}{28}{subsection.2.2.3}%
+\contentsline {subsubsection}{Eksempel 1: Beregning af Signaltab gennem Bygninger}{28}{section*.18}%
+\contentsline {subsubsection}{Eksempel 2: Beregning af Refleksion fra en Bygning}{29}{section*.19}%
+\contentsline {subsubsection}{Eksempel 3: Brug af GRT til Antenneplacering}{29}{section*.20}%
+\contentsline {subsection}{\numberline {2.2.4}Knife-Edge Diffraction}{30}{subsection.2.2.4}%
+\contentsline {subsubsection}{Eksempel 4: Beregning af Faseskift ved Knife-Edge Diffraction}{31}{section*.22}%
+\contentsline {subsubsection}{Eksempel 5: Beregning af Diffraction Tab}{31}{section*.23}%
+\contentsline {subsubsection}{Eksempel 6: Modtaget Signalstyrke efter Diffraction}{32}{section*.24}%
+\contentsline {subsection}{\numberline {2.2.5}Scattering}{32}{subsection.2.2.5}%
+\contentsline {subsubsection}{Eksempel 7: Beregning af Spredt Signalstyrke}{33}{section*.26}%
+\contentsline {subsubsection}{Eksempel 8: Effekt af Antennens Gain på Spredt Signal}{33}{section*.27}%
+\contentsline {subsubsection}{Eksempel 9: Beregning af Spredningstab}{34}{section*.28}%
+\contentsline {subsection}{\numberline {2.2.6}Local Mean Received Power}{34}{subsection.2.2.6}%
+\contentsline {subsection}{\numberline {2.2.7}Local Mean Received Power}{35}{subsection.2.2.7}%
+\contentsline {section}{\numberline {2.3}Empiriske Path Loss Modeller}{35}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}The Okumura Model}{35}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}The Hata Model}{36}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}COST 231 Udvidelse til Hata Modellen}{36}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.4}Piecewise Linear (Multi-Slope) Model}{37}{subsection.2.3.4}%
+\contentsline {subsection}{\numberline {2.3.5}Indendørs Attenuation Faktorer}{38}{subsection.2.3.5}%
+\contentsline {section}{\numberline {2.4}Simplified Path Loss Model}{39}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Eksempel 1: Beregning af Path Loss Eksponent og Modtaget Effekt}{40}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Eksempel 2: Beregning af Modtaget Effekt ved 200 meter}{41}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}Eksempel 3: Effekt af \textit {Shadow Fading}}{41}{subsection.2.4.3}%
+\contentsline {subsection}{\numberline {2.4.4}Opsummering}{42}{subsection.2.4.4}%
+\contentsline {section}{\numberline {2.5}Shadow Fading og Log-Normal Skjulte Variabler}{42}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Log-Normal Skjulte Variabler}{42}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Gennemsnit og Varians af \( \log _{10}(\psi ) \)}{43}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.5.3}Shadow Fading Modellering}{43}{subsection.2.5.3}%
+\contentsline {subsection}{\numberline {2.5.4}Eksempler}{43}{subsection.2.5.4}%
+\contentsline {subsubsection}{Eksempel 2.4: Beregning af Shadow Fading Varians}{43}{section*.32}%
+\contentsline {subsubsection}{Eksempel 2.5: Beregning af Skjulte Variabler i Et Byområde}{44}{section*.33}%
+\contentsline {subsubsection}{Eksempel 2.6: Anvendelse af Shadow Fading i Et Mikrocellulært Miljø}{44}{section*.34}%
+\contentsline {section}{\numberline {2.6}Combined Path Loss and Shadowing}{45}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}Statistisk Baggrund for Shadowing}{45}{subsection.2.6.1}%
+\contentsline {section}{\numberline {2.7}Outage Probability under Path Loss and Shadowing}{46}{section.2.7}%
+\contentsline {subsection}{\numberline {2.7.1}Eksempel 2.5: Beregning af Outage Probability}{47}{subsection.2.7.1}%
+\contentsline {subsection}{\numberline {2.7.2}Statistisk Baggrund: Q-funktionen og Outage Probability}{47}{subsection.2.7.2}%
+\contentsline {section}{\numberline {2.8}Cell Coverage Area}{48}{section.2.8}%
+\contentsline {subsection}{\numberline {2.8.1}Basestationens Rolle i Dækning}{48}{subsection.2.8.1}%
+\contentsline {subsection}{\numberline {2.8.2}Effekten af Path Loss og Shadowing}{48}{subsection.2.8.2}%
+\contentsline {subsection}{\numberline {2.8.3}Matematisk Modellering af Dækningen}{49}{subsection.2.8.3}%
+\contentsline {subsection}{\numberline {2.8.4}Outage Probability}{49}{subsection.2.8.4}%
+\contentsline {subsection}{\numberline {2.8.5}Eksempler}{49}{subsection.2.8.5}%
+\contentsline {subsubsection}{Eksempel 1: Beregning af Cell Coverage Area}{49}{section*.37}%
+\contentsline {subsubsection}{Eksempel 2: Beregning af Outage Probability}{50}{section*.38}%
+\contentsline {subsubsection}{Eksempel 3: Beregning af Total Coverage Area}{50}{section*.39}%
+\contentsline {chapter}{\numberline {3}Appendix A - Båndpas Signaler og Kanaler}{51}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Båndpas Signaler}{51}{section.3.1}%
+\contentsline {subsubsection}{Repræsentation af Båndpas-Signaler}{51}{section*.41}%
+\contentsline {subsection}{\numberline {3.1.1}Amplitude og Fase af Signal}{52}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Frekvenssvar og Kanaler}{52}{subsection.3.1.2}%
+\contentsline {subsubsection}{Opsummering}{53}{section*.42}%
+\contentsline {chapter}{\numberline {4}Appendix B - Probability Theory, Random Variables, and Random Processes}{55}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Probability Theory}{55}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Conditional Probability and Bayes' Rule}{56}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Independence of Events}{56}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Sammenfatning af vigtig notation}{56}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Probability Theory}{57}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Betinget Sandsynlighed og Uafhængighed}{57}{subsection.4.5.1}%
+\contentsline {section}{\numberline {4.6}Random Variables}{57}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Sandsynlighedstæthedsfunktion (PDF) og Kumulativ Fordelingsfunktion (CDF)}{58}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {4.6.2}Forventningsværdi og Varians}{58}{subsection.4.6.2}%
+\contentsline {subsection}{\numberline {4.6.3}Karakteristisk Funktion}{58}{subsection.4.6.3}%
+\contentsline {subsection}{\numberline {4.6.4}Korrelation og Kovarians}{59}{subsection.4.6.4}%
+\contentsline {section}{\numberline {4.7}Gaussisk Fordeling}{59}{section.4.7}%
+\contentsline {subsection}{\numberline {4.7.1}Kumulativ Fordelingsfunktion (CDF)}{59}{subsection.4.7.1}%
+\contentsline {subsection}{\numberline {4.7.2}Q-funktion}{60}{subsection.4.7.2}%
+\contentsline {section}{\numberline {4.8}Tilfældige Variable og Prøverum}{60}{section.4.8}%
+\contentsline {chapter}{\numberline {5}Appendix C - Matrix Definitions and Operations}{61}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Matrices and Vectors}{61}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Matrix og Vektor Operationer}{62}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Addition og Subtraktion af Matricer}{62}{subsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.1.3}Multiplikation af Matricer}{63}{subsection.5.1.3}%
+\contentsline {subsection}{\numberline {5.1.4}Determinant og Invers Matrix}{63}{subsection.5.1.4}%
+\contentsline {subsection}{\numberline {5.1.5}Løsning af Lineære Ligninger}{63}{subsection.5.1.5}%
+\contentsline {section}{\numberline {5.2}Matrices and Vectors}{63}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Matrix and Vector Operations}{64}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Matrix Decompositions}{65}{section.5.4}%
+\contentsline {chapter}{\numberline {6}Appendix D}{67}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Statistical Multipath Channel Models}{69}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Tidsvarierende Kanalimpulsrespons}{70}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}Matematisk Modellering af Tidsvarierende Kanalimpulsrespons}{70}{subsection.7.1.1}%
+\contentsline {subsection}{\numberline {7.1.2}Kanalimpulsrespons ved Forskellige Tidspunkter}{71}{subsection.7.1.2}%
+\contentsline {subsection}{\numberline {7.1.3}Tidsvarierende Kanalrespons i Frekvensdomænet}{72}{subsection.7.1.3}%
+\contentsline {subsection}{\numberline {7.1.4}Doppler-effekter}{73}{subsection.7.1.4}%
+\contentsline {subsection}{\numberline {7.1.5}Kanalens Ikke-Stationære Respons}{74}{subsection.7.1.5}%
+\contentsline {section}{\numberline {7.2}Narrow Fading Models}{76}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}In-Phase og Quadrature Komponenter}{76}{subsection.7.2.1}%
+\contentsline {subsection}{\numberline {7.2.2}Fading og Statistik}{77}{subsection.7.2.2}%
+\contentsline {subsection}{\numberline {7.2.3}Autokorrelation, krydskorrelation og spektraltæthed}{78}{subsection.7.2.3}%
+\contentsline {subsubsection}{Krydskorrelation mellem in-phase og kvadratur komponenter}{79}{section*.54}%
+\contentsline {subsubsection}{Spektraltæthed}{79}{section*.55}%
+\contentsline {subsubsection}{Doppler-effektens betydning}{80}{section*.57}%
+\contentsline {section}{\numberline {7.3}Envelope and Power Distributions}{81}{section.7.3}%
+\contentsline {subsection}{\numberline {7.3.1}Rayleigh-fordeling af effekt}{81}{subsection.7.3.1}%
+\contentsline {subsection}{\numberline {7.3.2}Eksempel: Rayleigh fading}{81}{subsection.7.3.2}%
+\contentsline {subsection}{\numberline {7.3.3}Rician fading}{81}{subsection.7.3.3}%
+\contentsline {subsection}{\numberline {7.3.4}Nakagami fading}{82}{subsection.7.3.4}%
+\contentsline {subsection}{\numberline {7.3.5}Nakagami-fordelingen}{83}{subsection.7.3.5}%
+\contentsline {subsection}{\numberline {7.3.6}Level Crossing Rate og Average Fade Duration}{83}{subsection.7.3.6}%
+\contentsline {subsubsection}{Anvendelse af Level Crossing Rate og Average Fade Duration}{84}{section*.62}%
+\contentsline {subsection}{\numberline {7.3.7}Finite State Markov Channels (FSMC)}{85}{subsection.7.3.7}%
+\contentsline {subsubsection}{Tilstande i FSMC}{85}{section*.63}%
+\contentsline {subsubsection}{Markov-egenskaber}{85}{section*.64}%
+\contentsline {subsubsection}{Anvendelse af FSMC}{86}{section*.65}%
+\contentsline {subsubsection}{Fordele ved FSMC-modellen}{86}{section*.66}%
+\contentsline {subsubsection}{Eksempel: FSMC for Rayleigh Fading}{86}{section*.67}%
+\contentsline {section}{\numberline {7.4}Wideband Fading Models}{86}{section.7.4}%
+\contentsline {subsection}{\numberline {7.4.1}Matematisk Modellering}{88}{subsection.7.4.1}%
+\contentsline {subsection}{\numberline {7.4.2}Power Delay Profile}{89}{subsection.7.4.2}%
+\contentsline {subsubsection}{Eksempel:}{90}{section*.70}%
+\contentsline {subsubsection}{Eksempel:}{90}{section*.71}%
+\contentsline {subsection}{\numberline {7.4.3}Coherence Bandwidth}{91}{subsection.7.4.3}%
+\contentsline {subsubsection}{Eksempel:}{93}{section*.73}%
+\contentsline {subsection}{\numberline {7.4.4}Doppler Power Spectrum and Channel Coherence Time}{93}{subsection.7.4.4}%
+\contentsline {section}{\numberline {7.5}Discrete-Time Model}{94}{section.7.5}%
+\contentsline {subsection}{\numberline {7.5.1}Point Scatterer Channel Model}{94}{subsection.7.5.1}%
+\contentsline {subsection}{\numberline {7.5.2}Diskret tids approksimation}{95}{subsection.7.5.2}%
+\contentsline {section}{\numberline {7.6}Space-Time Channel Models}{96}{section.7.6}%
+\contentsline {subsection}{\numberline {7.6.1}Vinkelspredning og gennemsnitlig AoA}{97}{subsection.7.6.1}%
+\contentsline {chapter}{\numberline {8}Opgaver}{99}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Exercises week 2}{99}{section.8.1}%
+\contentsline {part}{I\hspace {1em}Formula Collection}{107}{part.1}%
+\contentsline {chapter}{\numberline {9}Kapitel 2}{109}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Path Loss Models}{109}{section.9.1}%
+\contentsline {subsection}{\numberline {9.1.1}Free-Space Path Loss (FSPL)}{109}{subsection.9.1.1}%
+\contentsline {subsection}{\numberline {9.1.2}Received Power Calculation}{110}{subsection.9.1.2}%
+\contentsline {subsection}{\numberline {9.1.3}Simplified Form for Isotropic Antennas}{110}{subsection.9.1.3}%
+\contentsline {subsection}{\numberline {9.1.4}Relationship Between Path Loss and Received Power}{110}{subsection.9.1.4}%
+\contentsline {subsection}{\numberline {9.1.5}Importance of Antenna Gains}{111}{subsection.9.1.5}%
+\contentsline {subsection}{\numberline {9.1.6}Free-Space Path Loss in dB}{111}{subsection.9.1.6}%
+\contentsline {subsection}{\numberline {9.1.7}Hata Model for Urban Areas}{112}{subsection.9.1.7}%
+\contentsline {subsection}{\numberline {9.1.8}Single-Slope Path Loss Model}{112}{subsection.9.1.8}%
+\contentsline {subsection}{\numberline {9.1.9}Received Power in Free Space}{112}{subsection.9.1.9}%
+\contentsline {subsection}{\numberline {9.1.10}Signal-to-Noise Ratio (SNR)}{113}{subsection.9.1.10}%
+\contentsline {subsection}{\numberline {9.1.11}Maximum Distance for Given SNR}{113}{subsection.9.1.11}%
+\contentsline {subsection}{\numberline {9.1.12}COST 231 Model (Extension of Hata Model)}{114}{subsection.9.1.12}%
+\contentsline {subsection}{\numberline {9.1.13}Two-Ray Ground Reflection Model}{114}{subsection.9.1.13}%
+\contentsline {subsection}{\numberline {9.1.14}Critical Distance in Two-Ray Model}{115}{subsection.9.1.14}%
+\contentsline {subsection}{\numberline {9.1.15}Delay Spread in Two-Ray Model}{115}{subsection.9.1.15}%
+\contentsline {section}{\numberline {9.2}Outage Probability}{115}{section.9.2}%
+\contentsline {subsection}{\numberline {9.2.1}Outage Probability under Path Loss and Shadowing}{115}{subsection.9.2.1}%
+\contentsline {section}{\numberline {9.3}Link Budget Equation}{116}{section.9.3}%
+\contentsline {section}{\numberline {9.4}Doppler Shift}{116}{section.9.4}%
+\contentsline {section}{\numberline {9.5}Probability and Fading}{116}{section.9.5}%
+\contentsline {subsection}{\numberline {9.5.1}Rayleigh Fading}{116}{subsection.9.5.1}%
+\contentsline {subsection}{\numberline {9.5.2}Rician Fading}{117}{subsection.9.5.2}%
+\contentsline {subsection}{\numberline {9.5.3}Simplified Path Loss Model for SNR}{117}{subsection.9.5.3}%
+\contentsline {chapter}{\numberline {10}Kapitel 3}{119}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Formelsamling for Statistical Multipath Channel Models}{119}{section.10.1}%
+\contentsline {subsection}{\numberline {10.1.1}Tidsvarierende Kanalimpulsrespons}{119}{subsection.10.1.1}%
+\contentsline {subsubsection}{Matematisk Modellering af Tidsvarierende Kanalimpulsrespons}{119}{section*.87}%
+\contentsline {subsubsection}{Kanalimpulsrespons ved Forskellige Tidspunkter}{119}{section*.88}%
+\contentsline {subsubsection}{Tidsvarierende Kanalrespons i Frekvensdomænet}{119}{section*.89}%
+\contentsline {subsubsection}{Doppler-effekter}{120}{section*.90}%
+\contentsline {subsubsection}{Kanalens Ikke-Stationære Respons}{120}{section*.91}%
+\contentsline {subsection}{\numberline {10.1.2}Narrow Fading Models}{120}{subsection.10.1.2}%
+\contentsline {subsubsection}{In-Phase og Quadrature Komponenter}{120}{section*.92}%
+\contentsline {subsubsection}{Fading og Statistik}{120}{section*.93}%
+\contentsline {subsubsection}{Autokorrelation, Krydskorrelation og Spektraltæthed}{120}{section*.94}%
+\contentsline {subsection}{\numberline {10.1.3}Envelope and Power Distributions}{121}{subsection.10.1.3}%
+\contentsline {subsubsection}{Rayleigh-fordeling af Effekt}{121}{section*.95}%
+\contentsline {subsubsection}{Rician Fading}{121}{section*.96}%
+\contentsline {subsubsection}{Nakagami Fading}{121}{section*.97}%
+\contentsline {subsection}{\numberline {10.1.4}Wideband Fading Models}{121}{subsection.10.1.4}%
+\contentsline {subsubsection}{Matematisk Modellering}{121}{section*.98}%
+\contentsline {subsubsection}{Coherence Bandwidth}{121}{section*.99}%
+\contentsline {subsubsection}{Doppler Power Spectrum and Channel Coherence Time}{122}{section*.100}%
+\contentsline {subsection}{\numberline {10.1.5}Discrete-Time Model}{122}{subsection.10.1.5}%
+\contentsline {subsection}{\numberline {10.1.6}Space-Time Channel Models}{122}{subsection.10.1.6}%
+\contentsline {subsubsection}{Vinkelspredning og Gennemsnitlig AoA}{122}{section*.102}%
+\contentsline {subsection}{\numberline {10.1.7}Forsinkelsesspredning (Delay Spread)}{122}{subsection.10.1.7}%
+\contentsline {subsection}{\numberline {10.1.8}Rayleigh Fading}{123}{subsection.10.1.8}%
+\contentsline {subsubsection}{Power Outage Probability under Rayleigh Fading}{123}{section*.103}%
+\contentsline {subsubsection}{Bestemmelse af Gennemsnitlig Effekt for Givet Outage Probability}{123}{section*.104}%
+\contentsline {subsection}{\numberline {10.1.9}Rician Fading}{123}{subsection.10.1.9}%
+\contentsline {subsubsection}{Outage Probability for Rician Fading}{123}{section*.105}%

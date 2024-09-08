@@ -131,7 +131,7 @@
 	\noindent Disse begreber bruges til at karakterisere, hvor meget signalstyrken reduceres eller forøges, når signalet bevæger sig gennem kommunikationskanalen.
 	
 	\chapter{Free-Space Path Loss og Doppler-effekt}
-	
+	\label{cha:Free-Space Path Loss og Doppler-effekt}
 	\section{Free-Space Path Loss og Doppler-effekt}
 	
 	\subsection{Free-Space Path Loss}
@@ -1269,32 +1269,1101 @@
 	
 	Hvis vi skal finde den totale dækningsgrad for cellen, hvor både path loss og shadowing er inkluderet, og vi har flere brugere jævnt fordelt i cellen, kan vi gentage beregningerne fra de tidligere eksempler for flere afstande og beregne gennemsnittet af disse resultater.
 	
-	\chapter{Appendix B}
+	\chapter{Appendix A - Båndpas Signaler og Kanaler}
+	\section{Båndpas Signaler}
+	I mange kommunikationssystemer bruges båndpas-signaler. Disse signaler har et frekvenssvar, der er koncentreret omkring en bærefrekvens \( f_c \) og en båndbredde \( 2B \), hvor \( B \) er meget mindre end \( f_c \). Figuren \ref{fig:BandpassSignal} viser, hvordan frekvensspektret af et båndpas-signal ser ud.
+	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.6\textwidth]{fig/fig11.png}
+		\caption{Båndpas signal \( S(f) \) med båndbredde \( 2B \) omkring bærefrekvensen \( f_c \).}
+		\label{fig:BandpassSignal}
+	\end{figure}
+	
+	\subsubsection{Repræsentation af Båndpas-Signaler}
+	Et båndpas-signal er en kombination af to lavpas-signaler: en in-phase komponent \( s_I(t) \) og en kvadraturkomponent \( s_Q(t) \). Vi kan beskrive signalet ved hjælp af cosinus og sinus som:
+	\[
+	s(t) = s_I(t) \cos(2\pi f_c t) - s_Q(t) \sin(2\pi f_c t)
+	\]
+	Her er \( s_I(t) \) og \( s_Q(t) \) de lavpas-signaler, der indeholder informationen, mens \( \cos(2\pi f_c t) \) og \( \sin(2\pi f_c t) \) modulerer dem omkring bærefrekvensen \( f_c \).
+	\newline\newline\noindent
+	For at gøre det enklere at analysere, repræsenterer vi ofte et båndpas-signal med et \textbf{kompleks lavpas-signal}. Dette kompleks signal kaldes \( u(t) \) og beskriver signalets amplitude og fase:
+	\[
+	u(t) = s_I(t) + j s_Q(t)
+	\]
+	Den in-phase del \( s_I(t) \) er den reelle del, og kvadraturkomponenten \( s_Q(t) \) er den imaginære del. Sammen udgør de det komplette signal. Med dette kan vi omskrive båndpas-signalet som:
+	\[
+	s(t) = \Re \left\{ u(t) e^{j 2 \pi f_c t} \right\}
+	\]
+	hvor \( \Re \left\{ \cdot \right\} \) betyder, at vi tager den reelle del af det komplekse udtryk.
+	
+	\subsection{Amplitude og Fase af Signal}
+	For at forstå, hvordan signalet varierer over tid, kan vi udtrykke dets amplitude \( a(t) \) og fase \( \phi(t) \). Amplituden er længden af signalvektoren, og den kan findes ved:
+	\[
+	a(t) = \sqrt{s_I^2(t) + s_Q^2(t)}
+	\]
+	Fasen \( \phi(t) \), som viser signalets vinkel, kan findes ved:
+	\[
+	\phi(t) = \tan^{-1} \left( \frac{s_Q(t)}{s_I(t)} \right)
+	\]
+	Således kan båndpas-signalet også skrives som:
+	\[
+	s(t) = a(t) \cos(2 \pi f_c t + \phi(t))
+	\]
+	Her er \( a(t) \) signalets amplitude, og \( \phi(t) \) er faseindhyllingen.
+	
+	\subsection{Frekvenssvar og Kanaler}
+	I mange kommunikationssystemer er det vigtigt at forstå, hvordan signalet opfører sig, når det går gennem en kanal. En kanal kan ændre både amplituden og fasen af signalet. Kanalens frekvensrespons, \( H(f) \), beskriver, hvordan forskellige frekvenser påvirkes, og for båndpas-signaler kan dette repræsenteres som:
+	\[
+	H(f) = H_I(f - f_c) + j H_Q(f - f_c)
+	\]
+	hvor \( H_I(f) \) er den in-phase del af kanalens respons, og \( H_Q(f) \) er kvadraturdelen. Dette betyder, at både amplitude og fase af signalet kan ændres afhængigt af frekvensen.
+	
+	\subsubsection{Opsummering}
+	Ved at repræsentere båndpas-signaler med deres komplekse lavpasækvivalenter kan vi forenkle analysen af både signaler og kanaler. Ved at forstå amplitudeindhyllingen \( a(t) \) og faseindhyllingen \( \phi(t) \) kan vi beskrive, hvordan signalet varierer over tid og gennem forskellige kanaler.
+	\newline\newline\noindent
+	Denne tilgang gør det lettere at analysere komplekse systemer, hvor signalet påvirkes af både amplitude- og faseændringer, såsom i trådløse kommunikationssystemer.
+	
+	
+	\chapter{Appendix B - Probability Theory, Random Variables, and Random Processes}
+	\section{Probability Theory}
+	Sandsynlighedsteori giver en matematisk beskrivelse af tilfældige hændelser. Sådanne hændelser defineres i et underliggende sandsynlighedsområde \( (\Omega, \mathcal{E}, p(\cdot)) \), hvor \( \Omega \) er mængden af mulige udfald for tilfældige hændelser, og \( \mathcal{E} \) er en samling af delmængder af \( \Omega \), kaldet de tilfældige hændelser. Sandsynlighedsfordelingen \( p(A) \) er defineret for hver hændelse \( A \in \mathcal{E} \), hvor \( p(A) \) er sandsynligheden for hændelsen \( A \). For at definere et korrekt sandsynlighedsområde skal mængden \( \mathcal{E} \) være en \(\sigma\)-algebra, hvilket betyder, at den indeholder alle nødvendige operationer som foreninger, skæringer og komplementer.
+	
+	Sandsynlighedsfordelingen opfylder følgende grundlæggende egenskaber:
+	\begin{enumerate}
+		\item \( p(\Omega) = 1 \)
+		\item \( 0 \leq p(A) \leq 1 \) for enhver hændelse \( A \in \mathcal{E} \)
+		\item Hvis \( A \) og \( B \) er disjunkte hændelser, så gælder \( p(A \cup B) = p(A) + p(B) \)
+	\end{enumerate}
+	
+	Unionen af flere hændelser kan beskrives ved følgende formel, også kaldet unionens lov:
+	\[
+	p(A_1 \cup A_2 \cup \ldots \cup A_n) = \sum_{i=1}^{n} p(A_i)
+	\]
+	Hvis to hændelser ikke overlapper, kan deres sandsynligheder blot lægges sammen.
+	
+	\section{Conditional Probability and Bayes' Rule}
+	
+	Når en hændelse \( A \) har fundet sted, kan vi betragte sandsynligheden for en anden hændelse \( B \), givet \( A \). Denne betingede sandsynlighed defineres som:
+	\[
+	p(B|A) = \frac{p(A \cap B)}{p(A)}
+	\]
+	Dette betyder, at sandsynligheden for \( B \), givet \( A \), normaliserer sandsynligheden for \( B \) i forhold til hændelsen \( A \). Bayes' sætning er en vigtig anvendelse af betinget sandsynlighed, som udtrykker sandsynligheden for \( A \), givet \( B \), som:
+	\[
+	p(A|B) = \frac{p(B|A)p(A)}{p(B)}
+	\]
+	
+	\section{Independence of Events}
+	
+	To hændelser \( A \) og \( B \) siges at være uafhængige, hvis deres samtidige forekomst opfylder betingelsen:
+	\[
+	p(A \cap B) = p(A)p(B)
+	\]
+	Dette betyder, at forekomsten af den ene hændelse ikke påvirker sandsynligheden for den anden hændelse.
+	
+	\section{Sammenfatning af vigtig notation}
+	
+	\begin{itemize}
+		\item \( p(A) \): Sandsynligheden for hændelse \( A \).
+		\item \( p(A|B) \): Betinget sandsynlighed for \( A \) givet \( B \).
+		\item \( \cap \): Skæringsmængden, dvs. de hændelser, som forekommer samtidigt.
+		\item \( \cup \): Unionen, dvs. de hændelser, hvor enten den ene, den anden, eller begge forekommer.
+	\end{itemize}
+	
+	Denne sandsynlighedsteori danner grundlaget for at analysere tilfældige variable og processer, som er vigtige i både kommunikationssystemer og statistiske modeller.
+	
+	\section{Probability Theory}
+	Sandsynlighedsteori giver en matematisk ramme til at beskrive tilfældige hændelser. Et sandsynlighedsrum defineres som \((\Omega, \mathcal{E}, p)\), hvor:
+	\begin{itemize}
+		\item \( \Omega \) er \textbf{udfaldsrummet}, som indeholder alle mulige udfald af et eksperiment,
+		\item \( \mathcal{E} \) er et \textbf{hændelsesrum}, som består af alle delmængder \( A \subseteq \Omega \), der beskriver mulige hændelser,
+		\item \( p \) er en \textbf{sandsynlighedsfunktion}, der tilskriver en sandsynlighed til hver hændelse \( A \in \mathcal{E} \).
+	\end{itemize}
+	Sandsynlighedsfunktionen opfylder følgende grundlæggende egenskaber:
+	\begin{enumerate}
+		\item \( p(\Omega) = 1 \) (sandsynligheden for hele udfaldsrummet er 1),
+		\item \( 0 \leq p(A) \leq 1 \) for enhver hændelse \( A \in \mathcal{E} \) (sandsynligheden for en hændelse ligger mellem 0 og 1),
+		\item Hvis \( A \) og \( B \) er disjunkte hændelser (der ikke overlapper), gælder \( p(A \cup B) = p(A) + p(B) \).
+	\end{enumerate}
+	
+	\subsection{Betinget Sandsynlighed og Uafhængighed}
+	Betinget sandsynlighed definerer sandsynligheden for hændelse \( B \), givet at hændelse \( A \) er sket, og udtrykkes som:
+	\[
+	p(B | A) = \frac{p(A \cap B)}{p(A)} \quad \text{for} \quad p(A) \neq 0.
+	\]
+	Bayes' sætning er en vigtig anvendelse af betinget sandsynlighed:
+	\[
+	p(A | B) = \frac{p(B | A)p(A)}{p(B)}.
+	\]
+	To hændelser \( A \) og \( B \) er uafhængige, hvis \( p(A \cap B) = p(A)p(B) \), hvilket betyder, at den ene hændelses opståen ikke påvirker den andens.
+	
+	\section{Random Variables}
+	En \textbf{tilfældig variabel} \( X \) er en funktion, der kortlægger udfald fra et eksperiment til reelle tal. En tilfældig variabel kan være enten:
+	\begin{itemize}
+		\item \textbf{Diskret}, hvis den kun kan antage bestemte værdier, f.eks. resultatet af et terningekast,
+		\item \textbf{Kontinuerlig}, hvis den kan antage enhver værdi inden for et interval, f.eks. temperatur.
+	\end{itemize}
+	
+	\subsection{Sandsynlighedstæthedsfunktion (PDF) og Kumulativ Fordelingsfunktion (CDF)}
+	For en kontinuerlig tilfældig variabel \( X \) beskriver sandsynlighedstæthedsfunktionen (PDF) \( p_X(x) \) sandsynligheden for, at \( X \) falder i et givet interval, mens den kumulative fordelingsfunktion (CDF) \( P_X(x) \) beskriver sandsynligheden for, at \( X \) er mindre end eller lig med \( x \). De to funktioner er relateret som følger:
+	\[
+	P_X(x) = \mathbb{P}(X \leq x) = \int_{-\infty}^{x} p_X(t) dt,
+	\]
+	hvor \( P_X(x) \) er CDF'en og \( p_X(x) \) er PDF'en. Sandsynlighedstæthedsfunktionen opfylder:
+	\[
+	\int_{-\infty}^{\infty} p_X(x) dx = 1.
+	\]
+	
+	\subsection{Forventningsværdi og Varians}
+	Den \textbf{forventede værdi} (eller middelværdi) af en tilfældig variabel \( X \), betegnet \( \mathbb{E}[X] \), er den gennemsnitlige værdi af \( X \) og er givet ved:
+	\[
+	\mu_X = \mathbb{E}[X] = \int_{-\infty}^{\infty} x \, p_X(x) \, dx.
+	\]
+	\textbf{Variansen} af \( X \), der måler spredningen af værdierne omkring middelværdien, defineres som:
+	\[
+	\text{Var}(X) = \mathbb{E}[(X - \mu_X)^2] = \mathbb{E}[X^2] - \mu_X^2.
+	\]
+	Standardafvigelsen \( \sigma_X \) er kvadratroden af variansen.
+	
+	\subsection{Karakteristisk Funktion}
+	Den karakteristiske funktion for \( X \), betegnet \( \phi_X(v) \), bruges til at studere summen af tilfældige variable og er defineret som Fourier-transformationen af PDF'en:
+	\[
+	\phi_X(v) = \mathbb{E}[e^{jvX}] = \int_{-\infty}^{\infty} p_X(x) e^{jvx} dx.
+	\]
+	Man kan genfinde PDF'en fra den karakteristiske funktion ved hjælp af invers Fourier-transformation:
+	\[
+	p_X(x) = \frac{1}{2\pi} \int_{-\infty}^{\infty} \phi_X(v) e^{-jvx} dv.
+	\]
+	
+	\subsection{Korrelation og Kovarians}
+	\textbf{Korrelationen} mellem to tilfældige variable \( X \) og \( Y \) er forventningen af deres produkt:
+	\[
+	\text{Corr}(X, Y) = \mathbb{E}[XY].
+	\]
+	\textbf{Kovariansen} måler, hvor meget \( X \) og \( Y \) varierer sammen, og er defineret som:
+	\[
+	\text{Cov}(X, Y) = \mathbb{E}[(X - \mu_X)(Y - \mu_Y)].
+	\]
+	Hvis \( \text{Cov}(X, Y) = 0 \), siges \( X \) og \( Y \) at være ukorrelerede.
+	
+	\section{Gaussisk Fordeling}
+	Den \textbf{Gaussiske fordeling} (eller normalfordeling) er en vigtig fordeling, som ofte anvendes i praksis. PDF'en for en Gaussisk fordeling er givet ved:
+	\[
+	p_X(x) = \frac{1}{\sqrt{2\pi \sigma_X^2}} \exp\left( - \frac{(x - \mu_X)^2}{2 \sigma_X^2} \right),
+	\]
+	hvor:
+	\begin{itemize}
+		\item \( \mu_X \) er middelværdien af fordelingen,
+		\item \( \sigma_X^2 \) er variansen,
+		\item \( \exp(\cdot) \) er eksponentialfunktionen.
+	\end{itemize}
+	
+	\subsection{Kumulativ Fordelingsfunktion (CDF)}
+	Den kumulative fordelingsfunktion for en Gaussisk fordeling kan ikke udtrykkes i lukket form, men kan beregnes ved hjælp af Gauss' Q-funktion:
+	\[
+	P_X(x) = 1 - Q\left( \frac{x - \mu_X}{\sigma_X} \right),
+	\]
+	hvor Q-funktionen er defineret som:
+	\[
+	Q(x) = \frac{1}{\sqrt{2\pi}} \int_x^{\infty} \exp\left( -\frac{y^2}{2} \right) dy.
+	\]
+	
+	\subsection{Q-funktion}
+	Den Gaussiske Q-funktion beskriver sandsynligheden for, at en normalfordelt variabel overskrider en given værdi \( x \). Funktionen er relateret til den komplementære fejlfunktion og anvendes ofte i kommunikationsteori til at modellere fejl:
+	\[
+	Q(x) \triangleq \frac{1}{\sqrt{2\pi}} \int_x^{\infty} e^{-y^2/2} \, dy.
+	\]
+	
+	\section{Tilfældige Variable og Prøverum}
+	En tilfældig variabel \( X \) beskriver udfald af et eksperiment og kan antage forskellige værdier afhængig af udfaldet. Prøverummet \( \Omega \) er mængden af alle mulige udfald, og en tilfældig variabel kan kortlægge udfald fra prøverummet til den reelle linje \( \mathbb{R} \). For eksempel, hvis vi kaster en terning, er prøverummet \( \Omega = \{1, 2, 3, 4, 5, 6\} \), og en tilfældig variabel kunne kortlægge disse udfald til nogle talværdiers forventede gennemsnit.
+	
+	\chapter{Appendix C - Matrix Definitions and Operations}
+	
+	\section{Matrices and Vectors}
+	En \(N \times M\) matrix \(A\) er en rektangulær samling af værdier med \(N\) rækker og \(M\) kolonner, skrevet som:
+	
+	\[
+	A = \begin{bmatrix} 
+		a_{11} & \dots & a_{1M} \\
+		\vdots & \ddots & \vdots \\
+		a_{N1} & \dots & a_{NM} 
+	\end{bmatrix}.
+	\]
+	Den \(ij\)-te element (eller indgang) i \(A\), dvs. elementet i den \(i\)-te række og \(j\)-te kolonne, betegnes \(A_{ij}\). En \(N \times M\) matrix med \(N = M\) kaldes en \textbf{kvadratisk matrix}, mens en matrix med \(N > M\) kaldes en \textbf{smal matrix}, og en matrix med \(N < M\) kaldes en \textbf{bred matrix}.
+	\newline\newline
+	De \textbf{diagonale elementer} i en kvadratisk matrix er de elementer, der ligger langs diagonal-linjen fra øverste venstre til nederste højre, dvs. elementerne \(A_{ii}\) for \(i = j\). \textbf{Spor} af en kvadratisk matrix \(A\) defineres som summen af dens diagonale elementer: 
+	\[
+	\text{Tr}[A] = \sum_{i=1}^{N} A_{ii}.
+	\]
+	
+	En kvadratisk matrix kaldes en \textbf{diagonal matrix}, hvis alle elementer, der ikke er på diagonalen, er nul: \(A_{ij} = 0, i \neq j\).
+	\newline\newline
+	En \textbf{identitetsmatrix} \(I_N\) er en diagonal matrix, hvor alle diagonale elementer er lig med 1: \(I_{ii} = 1\) for \(i = 1, \dots, N\). 
+	\newline\newline
+	En matrix med kun én kolonne (\(M = 1\)) kaldes en \textbf{kolonnevektor}, eller blot en \textbf{vektor}. Antallet af rækker i en vektor er dens dimension. For eksempel er en \(N\)-dimensionel vektor \(x\) givet ved:
+	
+	\[
+	x = \begin{bmatrix} 
+		x_1 \\
+		\vdots \\
+		x_N 
+	\end{bmatrix}.
+	\]
+	
+	Vektorens \(i\)-te element betegnes som \(x_i\). En vektor, hvor alle elementer er lig med 1, kaldes en \textbf{enhedsvektor} \(1_N\). 
+	
+	\subsection{Matrix og Vektor Operationer}
+	Transponeringen af en matrix \(A\), betegnet \(A^T\), opnås ved at bytte rækker og kolonner:
+	\[
+	A^T = \begin{bmatrix} 
+		a_{11} & \dots & a_{N1} \\
+		\vdots & \ddots & \vdots \\
+		a_{1M} & \dots & a_{NM} 
+	\end{bmatrix}.
+	\]
+	Transponeringen af en vektor \(x\) er skrevet som \(x^T = [x_1 \dots x_N]\).
+	
+	Den \textbf{komplekse konjugerede} af en matrix \(A\), betegnet \(A^*\), opnås ved at tage den komplekse konjugerede af hvert element i \(A\):
+	\[
+	A^* = \begin{bmatrix} 
+		a_{11}^* & \dots & a_{1M}^* \\
+		\vdots & \ddots & \vdots \\
+		a_{N1}^* & \dots & a_{NM}^* 
+	\end{bmatrix}.
+	\]
+	
+	En kvadratisk matrix \(A\) er \textbf{Hermitesk}, hvis \(A = A^H = (A^*)^T\). En Hermitesk matrix er symmetrisk med hensyn til transponering af komplekse konjugerede elementer.
+	
+	\subsection{Addition og Subtraktion af Matricer}
+	To \(N \times M\) matricer kan adderes eller subtraheres, hvis deres dimensioner er ens. Addition og subtraktion foretages elementvis:
+	\[
+	C = A + B, \quad C_{ij} = A_{ij} + B_{ij}.
+	\]
+	
+	\subsection{Multiplikation af Matricer}
+	To matricer kan multipliceres, hvis antallet af kolonner i den første matrix er lig med antallet af rækker i den anden. Hvis \(A\) er en \(N \times K\) matrix, og \(B\) er en \(K \times M\) matrix, er produktet \(C = AB\) en \(N \times M\) matrix, hvor:
+	\[
+	C_{ij} = \sum_{k=1}^{K} A_{ik} B_{kj}.
+	\]
+	Matrixmultiplikation er ikke kommutativ, dvs. generelt gælder det, at \(AB \neq BA\).
+	
+	\subsection{Determinant og Invers Matrix}
+	Determinanten af en \(2 \times 2\) matrix \(A\) defineres som:
+	\[
+	\text{det}(A) = a_{11} a_{22} - a_{12} a_{21}.
+	\]
+	En \(N \times N\) kvadratisk matrix er \textbf{inverterbar}, hvis dens determinant er forskellig fra nul. Inversen af \(A\), betegnet \(A^{-1}\), er defineret som den matrix, der opfylder:
+	\[
+	A A^{-1} = I_N.
+	\]
+	Inversen af en \(2 \times 2\) matrix \(A\) er givet ved:
+	\[
+	A^{-1} = \frac{1}{\text{det}(A)} \begin{bmatrix} 
+		a_{22} & -a_{12} \\
+		-a_{21} & a_{11} 
+	\end{bmatrix}.
+	\]
+	
+	\subsection{Løsning af Lineære Ligninger}
+	Matrixinverser bruges ofte til at løse systemer af lineære ligninger. For et system af ligninger \(Ax = y\), hvor \(A\) er en inverterbar matrix, findes løsningen som:
+	\[
+	x = A^{-1}y.
+	\]
+	Hvis \(A\) ikke er inverterbar, findes der muligvis ingen unik løsning.
+	
+	\section{Matrices and Vectors}
+	En \(N \times M\) matrix \(A\) er en rektangulær tabel af værdier med \(N\) rækker og \(M\) kolonner, skrevet som:
+	\[
+	A = \begin{bmatrix}
+		a_{11} & \cdots & a_{1M} \\
+		\vdots & \ddots & \vdots \\
+		a_{N1} & \cdots & a_{NM}
+	\end{bmatrix}.
+	\]
+	Elementet i \(i\)-te række og \(j\)-te kolonne af \(A\) skrives som \(A_{ij}\), hvor \(A_{ij} = a_{ij}\). En \(N \times M\) matrix kaldes en firkantet matrix, hvis \(N = M\). Hvis \(N > M\) kaldes den en tynd matrix, og hvis \(N < M\), en bred matrix.
+	
+	De diagonale elementer i en firkantet matrix er elementerne langs diagonalen fra øverste venstre til nederste højre. Diagonalelementerne \(A_{ii}\) med \(i = j\) spiller en vigtig rolle. Sporet af en firkantet matrix, kaldet \(\text{Tr}[A]\), er summen af alle diagonale elementer: \(\text{Tr}[A] = \sum_{i=1}^{N} A_{ii}\).
+	
+	\textbf{Specielle matricer:}
+	- En diagonal matrix har kun ikke-nul elementer på diagonalen.
+	- En øvre trekantet matrix har alle nul elementer under diagonalen, mens en nedre trekantet matrix har alle nul elementer over diagonalen.
+	- En identitetsmatrix \(I_N\) er en diagonal matrix med alle diagonale elementer lig med 1.
+	
+	En matrix med én kolonne, dvs. \(M = 1\), kaldes en kolonnevektor. En matrix med én række kaldes en rækkevektor.
+	
+	Vektorer med dimension \(N\) skrives ofte som:
+	\[
+	\mathbf{x} = \begin{bmatrix}
+		x_1 \\
+		\vdots \\
+		x_N
+	\end{bmatrix}.
+	\]
+	Normen af en vektor \(\mathbf{x}\) defineres som:
+	\[
+	||\mathbf{x}|| = \sqrt{\sum_{i=1}^{N} x_i^2}.
+	\]
+	
+	\section{Matrix and Vector Operations}
+	Transponeringen af en matrix \(A\), skrevet som \(A^T\), opnås ved at bytte rækkerne og kolonnerne. Transponeringen af en vektor \(\mathbf{x}\) bliver en rækkevektor:
+	\[
+	A^T = \begin{bmatrix}
+		a_{11} & a_{N1} \\
+		\vdots & \ddots \\
+		a_{1M} & a_{NM}
+	\end{bmatrix}.
+	\]
+	Kompleks konjugation af en matrix \(A\) betegnes \(A^*\) og fås ved at tage kompleks konjugat af hvert element. Hermitisk transponering af en matrix \(A\) skrives som \(A^H = (A^*)^T\), og en hermitisk matrix opfylder \(A = A^H\).
+	
+	To matricer \(A\) og \(B\) kan lægges sammen element for element:
+	\[
+	C = A + B,\quad C_{ij} = A_{ij} + B_{ij}.
+	\]
+	Multiplikation af en matrix med en skalar \(k\) skrives som \(kA\), og hvert element i matrixen ganges med \(k\).
+	
+	\textbf{Matrixmultiplikation:} To matricer \(A\) og \(B\) kan multipliceres, hvis antallet af kolonner i \(A\) er lig med antallet af rækker i \(B\). Produktet \(AB\) er en matrix, hvor elementet \(C_{ij}\) er givet ved:
+	\[
+	C_{ij} = \sum_{k=1}^{M} A_{ik} B_{kj}.
+	\]
+	
+	\textbf{Matrix inversion:} Inversen af en \(N \times N\) matrix \(A\), hvis den eksisterer, betegnes som \(A^{-1}\), og opfylder \(AA^{-1} = I_N\). Hvis en matrix ikke er invertibel, kaldes den singulær.
+	
+	\section{Matrix Decompositions}
+	En vigtig egenskab ved firkantede matricer er deres egenværdier og egenvektorer. En egenværdi \(\lambda\) er en skalar, for hvilken der eksisterer en ikke-nul vektor \(\mathbf{x}\), så \(A\mathbf{x} = \lambda\mathbf{x}\). Vektoren \(\mathbf{x}\) kaldes egenvektoren tilhørende egenværdien \(\lambda\).
+	
+	\textbf{Singular værdi dekomposition (SVD):} Enhver matrix \(A\) kan nedbrydes som:
+	\[
+	A = U\Sigma V^H,
+	\]
+	hvor \(U\) og \(V\) er unitære matricer, og \(\Sigma\) er en diagonal matrix med singularværdier.
+	
+	\textbf{Determinanten:} For en firkantet matrix \(A\) er determinanten givet ved:
+	\[
+	\det[A] = \sum_{i=1}^{N} a_{ij} (-1)^{i+j} \det[A_{ij}],
+	\]
+	hvor \(A_{ij}\) er underdeterminanten opnået ved at slette \(i\)-te række og \(j\)-te kolonne.
+	
+	\chapter{Appendix D}
 	
 	\chapter{Statistical Multipath Channel Models}
 	\textbf{Multipath Fading og Channel models}
 	\newline\noindent
-	I dette kapitel undersøger vi fading-modeller, der beskriver, hvordan signaler kan blive forstærket eller svækket, når de bevæger sig gennem forskellige \textit{multipath} komponenter i en kanal. Mens vi i kapitel 2 talte om \textit{ray-tracing} modeller for deterministiske kanaler, kræver virkelige omgivelser ofte en statistisk tilgang. Deterministiske modeller er sjældent anvendelige, så vi bliver nødt til at karakterisere kanalen statistisk. I dette kapitel vil vi modellere \textit{multipath}-kanalen ved hjælp af en tilfældig, tidsvarierende \textit{impulse response}, og vi vil beskrive dens vigtige egenskaber.
+	I dette kapitel undersøger vi fading-modeller, der beskriver, hvordan signaler kan blive forstærket eller svækket, når de bevæger sig gennem forskellige \textit{multipath} komponenter i en kanal. Mens vi i kapitel \ref{cha:Free-Space Path Loss og Doppler-effekt} talte om \textit{ray-tracing} modeller for deterministiske kanaler, kræver virkelige omgivelser ofte en statistisk tilgang. Deterministiske modeller er sjældent anvendelige, så vi bliver nødt til at karakterisere kanalen statistisk. I dette kapitel vil vi modellere \textit{multipath}-kanalen ved hjælp af en tilfældig, tidsvarierende \textit{impulse response}, og vi vil beskrive dens vigtige egenskaber.
 	\newline\newline
 	Når et signal transmitteres gennem en \textit{multipath} kanal, vil modtageren opfatte det som en række af pulser. Hver puls svarer enten til det direkte \textit{line-of-sight (LOS)} signal eller et reflekteret \textit{multipath} signal fra forskellige \textit{scatterers} eller grupper af \textit{scatterers}. En vigtig egenskab ved en \textit{multipath} kanal er \textit{delay spread}, som måler tidsforskellen mellem det første ankomne signal (enten \textit{LOS} eller \textit{multipath}) og det sidste ankomne signal fra den samme transmitterede puls. Hvis \textit{delay spread} er lille sammenlignet med den inverse af signalets båndbredde, vil der være minimal tidsudbredning i det modtagne signal. Men hvis \textit{delay spread} er stor, vil der være betydelig tidsudbredning, hvilket kan føre til væsentlig forvrængning af signalet.
 	\newline\newline
 	En anden vigtig egenskab ved \textit{multipath} kanalen er dens tidsvarierende natur. Denne variation opstår, når enten senderen eller modtageren bevæger sig, hvilket betyder, at reflektorer i signalvejen ændrer deres placering over tid. Dette medfører ændringer i amplitude, forsinkelse og antallet af \textit{multipath} komponenter, som modtageren opfatter. Hvis vi f.eks. transmitterer pulser gentagne gange fra en bevægende sender, vil vi observere ændringer i signalets styrke og forsinkelser over tid. Dog sker disse ændringer over en længere tidsskala end fading forårsaget af den konstruktive og destruktive tilføjelse af faste \textit{multipath} komponenter fra faste \textit{scatterers}.
 	\newline\newline
 	Vi vil starte med en generisk model for den tidsvarierende \textit{channel impulse response} for at fange både hurtige og langsomme variationer i kanalen. Derefter vil vi begrænse denne model til \textit{narrowband fading}, hvor kanalens båndbredde er lille i forhold til den inverse af \textit{delay spread}. For \textit{narrowband} modeller antager vi en kvasi-statisk situation, hvor vi har et fast antal \textit{multipath} komponenter, hver med fast \textit{path loss} og \textit{shadowing}. 
-	\section{Time-Varying Channel Impulse Response}
 	
-	\section{Narrowband Fading Models}
-	\subsection{Autocorrelation, Cross Correlation, and Power Spectral Density}
-	\subsection{Envelope and Power Distributions}
-	\subsection{Level Crossing Rate and Average Fade Duration}
-	\subsection{Finite State Markov Channels}
+		
+	\section{Tidsvarierende Kanalimpulsrespons}
+	I trådløse kommunikationssystemer ændrer kanalen sig ofte over tid på grund af bevægelse fra enten senderen, modtageren eller objekter i miljøet. Disse ændringer kan have en væsentlig indvirkning på signalets kvalitet, og derfor er det vigtigt at kunne modellere, hvordan signalet ændrer sig, når det bevæger sig gennem en kanal, der varierer over tid.
+	\newline\newline
+	Kanalimpulsresponsen beskriver, hvordan signalet påvirkes af kanalen over tid. En kanal kan introducere forsinkelser, reflektere signalet fra forskellige objekter og påvirke signalets forstærkning (eller dæmpning). For at beskrive disse ændringer anvender vi ofte en flervejskanalmodel, hvor signalet modtages som summen af flere signaler, der hver har taget forskellige veje (flerveje) gennem miljøet.
+	
+	\subsection{Matematisk Modellering af Tidsvarierende Kanalimpulsrespons}
+	Den matematiske model for en tidsvarierende kanalimpulsrespons er givet ved funktionen \(c(\tau, t)\), hvor:
+	\begin{itemize}
+		\item \( \tau \) repræsenterer forsinkelsen (delay) for en flervejskomponent.
+		\item \( t \) er tiden, som viser ændringer i kanalen over tid.
+	\end{itemize}
+	
+	Denne funktion beskriver kanalens respons på et signal, som udsendes ved tid \( t = 0 \). Den kan udtrykkes som en sum af forsinkede versioner af signalet, hvor hver version er vægtet med en faktor, der beskriver signalets dæmpning eller forstærkning langs den pågældende vej:
+	
+	\[
+	c(\tau, t) = \sum_{n=0}^{N(t)-1} \alpha_n(t) \delta(\tau - \tau_n(t))
+	\]
+	hvor:
+	\begin{itemize}
+		\item \( N(t) \) er antallet af flervejskomponenter, der ændrer sig over tid,
+		\item \( \alpha_n(t) \) er den komplekse forstærkning af den \( n \)-te flervejskomponent,
+		\item \( \tau_n(t) \) er forsinkelsen for den \( n \)-te flervejskomponent,
+		\item \( \delta(\tau - \tau_n(t)) \) er Dirac delta-funktionen, som beskriver impulsresponsen langs den \( n \)-te vej.
+	\end{itemize}
+	
+	Dette betyder, at modtageren modtager flere forsinkede kopier af det samme signal, hvor hver kopi har forskellig forsinkelse og forstærkning.
+	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.7\textwidth]{fig/fig14.png}
+		\caption{System med enkelt reflektor og reflektorklynge, som skaber flervejskomponenter.}
+		\label{fig:reflector_cluster}
+	\end{figure}
+	
+	\subsection{Kanalimpulsrespons ved Forskellige Tidspunkter}
+	Lad os overveje systemet ved tidspunktet \( t_1 \), hvor vi kan repræsentere kanalimpulsresponsen som en sum af tre flervejskomponenter, hver med forsinkelse \( \tau_n \), amplitude \( \alpha_n \), og fase \( \phi_n \):
+	\[
+	c(\tau, t_1) = \sum_{n=0}^{2} \alpha_n(t_1) e^{-j \phi_n(t_1)} \delta(\tau - \tau_n(t_1))
+	\]
+	Her repræsenterer \( n=0 \) den direkte linje af synet (LOS), mens \( n=1 \) og \( n=2 \) repræsenterer reflekterede veje. Som vist i Figur \ref{fig:system_t1} modtages signalet ved tidspunktet \( t_1 \) som summen af disse tre signaler.
+	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.7\textwidth]{fig/fig15.png}
+		\caption{System ved tidspunktet \( t_1 \) med flervejskomponenterne defineret af \( (\alpha_i, \phi_i, \tau_i) \).}
+		\label{fig:system_t1}
+	\end{figure}
+	
+	Når systemet ændrer sig over tid, vil flervejskomponenternes parametre ændre sig. Ved tidspunktet \( t_2 \) modtages signalet som:
+	\[
+	c(\tau, t_2) = \sum_{n=0}^{2} \alpha_n'(t_2) e^{-j \phi_n'(t_2)} \delta(\tau - \tau_n'(t_2))
+	\]
+	som vist i Figur \ref{fig:system_t2}, der viser, hvordan flervejskomponenterne ændrer sig over tid.
+	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.7\textwidth]{fig/fig16.png}
+		\caption{System ved tidspunktet \( t_2 \), hvor flervejskomponenterne har ændret sig til nye værdier \( (\alpha_i', \phi_i', \tau_i') \).}
+		\label{fig:system_t2}
+	\end{figure}
+	
+	\subsection{Tidsvarierende Kanalrespons i Frekvensdomænet}
+	For at analysere kanalens opførsel i frekvensdomænet kan vi bruge Fourier-transformationen til at transformere kanalimpulsresponsen til frekvensdomænet. Det tidsvarierende frekvensrespons \( H(f, t) \) er givet ved:
+	\[
+	H(f, t) = \int_{-\infty}^{\infty} c(\tau, t) e^{-j 2 \pi f \tau} d\tau
+	\]
+	Denne ligning beskriver, hvordan kanalen opfører sig ved forskellige frekvenser \( f \) over tid \( t \).
+	
+	\subsection{Doppler-effekter}
+	Når der er relativ bevægelse mellem sender og modtager, vil der være en Doppler-skift i frekvensen. Doppler-skiftet kan beregnes som:
+	\[
+	f_D = \frac{v}{\lambda} \cos(\theta)
+	\]
+	hvor:
+	\begin{itemize}
+		\item \( v \) er den relative hastighed mellem sender og modtager,
+		\item \( \lambda \) er signalets bølgelængde,
+		\item \( \theta \) er vinklen mellem bevægelsesretningen og signalets udbredelsesretning.
+	\end{itemize}
+	Denne effekt fører til frekvensskift i det modtagne signal, som skal tages i betragtning, når signalet modtages og behandles.
+	\clearpage
+	\subsection{Kanalens Ikke-Stationære Respons}
+	Figur \ref{fig:nonstationary_channel} viser, hvordan kanalen ændrer sig over tid fra tidspunktet \( t_1 \) til \( t_2 \). Når kanalen ikke er stationær, ændrer forsinkelsen \( \tau \) sig løbende over tid, hvilket giver et tidsvarierende kanalrespons.
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.7\textwidth]{fig/fig17.png}
+		\caption{Tidsvarierende ikke-stationær kanalimpulsrespons ved tidspunkterne \( t_1 \) og \( t_2 \).}
+		\label{fig:nonstationary_channel}
+	\end{figure}
+	
+	\subsection*{Afslutning}
+	Den tidsvarierende kanalimpulsrespons giver en omfattende model for, hvordan signalet ændrer sig, når det rejser gennem en trådløs kanal. Ved at tage højde for flervejseffekter, Doppler-skift og tidsvariationer kan vi bedre forstå og kompensere for de udfordringer, som trådløs kommunikation medfører.
+	
+	\subsubsection*{Eksempel 3.1: Trådløst LAN i fabriksmiljø}
+	Overvej et trådløst LAN, der opererer i en fabrik i nærheden af et transportbånd. Senderen og modtageren har en \textit{line-of-sight} (LOS) sti imellem sig med en forstærkning \( \alpha_0 \), fase \( \phi_0 \) og forsinkelse \( \tau_0 \). Hvert \( T_0 \) sekund passerer et metalobjekt ned ad transportbåndet, hvilket skaber en ekstra reflekteret signalvej ud over LOS-stien, med en forstærkning \( \alpha_1 \), fase \( \phi_1 \) og forsinkelse \( \tau_1 \). Opgaven er at finde den tidsvarierende kanalimpulsrespons \( c(\tau, t) \) for denne kanal.
+	
+	\subsection*{Løsning:}
+	For \( t \neq nT_0 \), hvor \( n = 1, 2, \dots \), svarer kanalens impulsrespons kun til LOS-stien. For \( t = nT_0 \) vil kanalens impulsrespons inkludere både LOS- og de reflekterede signalveje. Derfor er den tidsvarierende kanalimpulsrespons \( c(\tau, t) \) givet ved:
+	
+	\[
+	c(\tau, t) =
+	\begin{cases} 
+		\alpha_0 e^{j \phi_0} \delta(\tau - \tau_0) & t \neq nT_0, \\
+		\alpha_0 e^{j \phi_0} \delta(\tau - \tau_0) + \alpha_1 e^{j \phi_1} \delta(\tau - \tau_1) & t = nT_0.
+	\end{cases}
+	\]
+	
+	Dette betyder, at når \( t = nT_0 \), vil modtageren opfange både LOS-signalet og den reflekterede vej. Den reflekterede vej tilføjer en ekstra forsinkelse \( \tau_1 \) og forstærkning \( \alpha_1 \).
+	
+	\subsection*{Bemærkninger:}
+	For typiske bærefrekvenser vil den \( n \)-te multipath-komponent have \( f_c \tau_n(t) \gg 1 \). For eksempel, med \( f_c = 1 \text{ GHz} \) og \( \tau_n = 50 \text{ ns} \) (en typisk værdi for et indendørs system), vil \( f_c \tau_n = 50 \gg 1 \). Dette betyder, at forsinkelsen \( 50 \text{ ns} \) er signifikant i forhold til bærefrekvensen, hvilket resulterer i en faseforskydning i det reflekterede signal. Denne faseforskydning skal tages i betragtning ved modellering af kanalen.
+	
+	\subsection*{Opsummering af løsningen:}
+	\begin{itemize}
+		\item Når \( t \neq nT_0 \), modtages kun LOS-signalet med impulsresponsen \( \alpha_0 e^{j \phi_0} \delta(\tau - \tau_0) \).
+		\item Når \( t = nT_0 \), modtages både LOS- og den reflekterede signalvej, hvor den samlede impulsrespons indeholder både \( \alpha_0 e^{j \phi_0} \delta(\tau - \tau_0) \) og \( \alpha_1 e^{j \phi_1} \delta(\tau - \tau_1) \).
+		\item Faseforskydningen mellem LOS og den reflekterede vej påvirker signalets kombination ved modtageren.
+	\end{itemize}
+	
+	\clearpage
+	
+	
+	\section{Narrow Fading Models}
+	Når \textit{delay spread} \( T_m \) i en kanal er lille i forhold til den inverse signalbåndbredde \( B \) for det transmitterede signal, dvs. \( T_m \ll B^{-1} \), kan kanalen betragtes som en \textit{smalbånds fading} kanal. Som nævnt tidligere karakteriseres \textit{delay spread} typisk ved \textit{rms delay spread}, men kan også beskrives på andre måder. Under de fleste \textit{delay spread}-modeller gælder, at \( T_m \ll B^{-1} \), hvilket betyder, at forsinkelsen forbundet med den \( i \)-te multipath-komponent \( \tau_i \leq T_m \) for alle \( i \). Dette indebærer, at modtageren opfatter \( u(t) \) og \( u(t - \tau_i) \) som næsten identiske, dvs. \( u(t - \tau_i) \approx u(t) \) for små \( \tau_i \). Ligning (3.11) kan derfor omskrives som:
+	
+	\[
+	r(t) = \Re \left\{ u(t) e^{j 2 \pi f_c t} \left( \sum_n \alpha_n(t) e^{-j \phi_n(t)} \right) \right\}.
+	\]
+	
+	Her repræsenterer \( r(t) \) det modtagne signal, hvor \( u(t) \) er det komplekse basebandsignal og \( f_c \) er bærefrekvensen. Summationen inden for parenteserne repræsenterer alle de multipath-komponenter, som modtageren opfatter. Hver multipath-komponent \( \alpha_n(t) \) er vægtet med en kompleks forstærkning og faseforskydning \( \phi_n(t) \), som er relateret til forsinkelsen \( \tau_n(t) \) og Doppler-skiftet \( f_{D_n} \). 
+	\newline\newline
+	Ligningen for \(r(t)\) adskiller sig fra det oprindeligt transmitterede signal ved at inkludere en kompleks skalfaktor, som er uafhængig af det transmitterede signal \( s(t) \) eller basebandsignalet \( u(t) \), så længe smalbåndsantagelsen (narrow band) \( T_m \ll B^{-1} \) er opfyldt.
+	
+	\subsection{In-Phase og Quadrature Komponenter}
+	For at karakterisere den tilfældige skalafaktor forårsaget af multipath vælger vi \( s(t) \) som en umoduleret bærebølge med en tilfældig faseoffset \( \phi_0 \):
+	
+	\[
+	s(t) = \Re \left\{ e^{j \left( 2 \pi f_c t + \phi_0 \right)} \right\} = \cos \left( 2 \pi f_c t - \phi_0 \right),
+	\]
+	\noindent
+	hvilket er et smalbåndssignal for ethvert \( T_m \).
+	\newline\newline\noindent
+	Med denne antagelse bliver det modtagne signal:
+	
+	\[
+	r(t) = \Re \left\{ \left( \sum_{n=0}^{N(t)} \alpha_n(t) e^{-j \phi_n(t)} \right) e^{j 2 \pi f_c t} \right\} = r_I(t) \cos \left( 2 \pi f_c t \right) + r_Q(t) \sin \left( 2 \pi f_c t \right),
+	\]
+	\noindent
+	hvor de \textit{in-phase} og \textit{quadrature} komponenter er givet ved:
+	
+	\[
+	r_I(t) = \sum_{n=1}^{N(t)} \alpha_n(t) \cos \phi_n(t),
+	\]
+	\noindent
+	og
+	
+	\[
+	r_Q(t) = \sum_{n=1}^{N(t)} \alpha_n(t) \sin \phi_n(t),
+	\]
+	\noindent
+	hvor faseforskydningen \( \phi_n(t) = 2\pi f_c \tau_n(t) - \phi_{D_n}(t) - \phi_0 \) nu inkluderer faseoffset \( \phi_0 \) såvel som effekterne af forsinkelse og Doppler.
+	
+	\subsection{Fading og Statistik}
+	Hvis \( N(t) \) er stort, kan vi benytte Central Limit Theoremet og antage, at \( \alpha_n(t) \) og \( \phi_n(t) \) er stationære og ergodiske, så \( r_I(t) \) og \( r_Q(t) \) kan beskrives som fælles Gaussiske tilfældige processer. Den Gaussiske egenskab er også gældende for små \( N \), hvis \( \alpha_n(t) \) er Rayleigh-fordelte, og \( \phi_n(t) \) er jævnt fordelt mellem \( [-\pi, \pi] \). Dette sker, når den \( n \)-te multipath-komponent stammer fra et reflektionskluster med mange ikke-resolvable multipath-komponenter.
+	\clearpage
+
+	\subsection{Autokorrelation, krydskorrelation og spektraltæthed}
+	
+	Autokorrelation beskriver, hvordan værdierne af et signal på forskellige tidspunkter hænger sammen. I et \textit{multipath} miljø kan vi udlede autokorrelationen for in-phase $r_I(t)$ og kvadratur $r_Q(t)$ komponenterne ved at bruge deres statistiske uafhængighed og Doppler-skiftet.
+	
+	For at beregne autokorrelationen af $r_I(t)$ antager vi, at Doppler-forskydningen $f_D$ er jævnt fordelt over $[-\pi, \pi]$, og at hver multipath-komponent er uafhængig. Autokorrelationen af $r_I(t)$ er givet ved:
+	
+	\[
+	A_{r_I}(\tau) = E[r_I(t)r_I(t + \tau)] = \sum_n E[\alpha_n^2] E[\cos(2\pi f_D \tau)],
+	\]
+	
+	hvor $\alpha_n$ er amplituden af den $n$-te multipath komponent, og $\tau$ er tidsforskellen mellem de to signaler. 
+	\newline\newline
+	I et uniformt \textit{scattering environment}, som vist i Figur \ref{fig:uniform_scattering}, kan denne sum forenkles til:
+	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.6\textwidth]{fig/fig18.png}
+		\caption{Uniform \textit{scattering} miljø med jævnt fordelte scatterers}
+		\label{fig:uniform_scattering}
+	\end{figure}
+	
+	\[
+	A_{r_I}(\tau) = \frac{P_r}{2\pi} \int_0^{2\pi} \cos(2\pi f_D \tau \cos(\theta)) d\theta = P_r J_0(2\pi f_D \tau),
+	\]
+	
+	hvor $P_r$ er den modtagne effekt, og $J_0(2\pi f_D \tau)$ er en Besselfunktion af 0. orden, som beskrevet i Figur \ref{fig:bessel_function}.
+	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.5\textwidth]{fig/fig19.png}
+		\caption{Bessel-funktion $J_0(2\pi f_D \tau)$ for autokorrelation}
+		\label{fig:bessel_function}
+	\end{figure}
+	
+	Denne Besselfunktion beskriver, hvordan autokorrelationen aftager som en funktion af tidsforskellen $\tau$ og Doppler-frekvensen $f_D$.
+	
+	\subsubsection{Krydskorrelation mellem in-phase og kvadratur komponenter}
+	
+	Krydskorrelation mellem $r_I(t)$ og $r_Q(t)$ beskriver forholdet mellem de to signaler over tid. Krydskorrelationen er givet ved:
+	
+	\[
+	A_{r_I r_Q}(\tau) = E[r_I(t)r_Q(t + \tau)] = 0,
+	\]
+	
+	da de to komponenter er statistisk uafhængige i dette scenarie. Dette betyder, at der ikke er nogen krydskorrelation mellem de to signaler.
+	
+	\subsubsection{Spektraltæthed}
+	For at beregne spektraltætheden $S_{r_I}(f)$ anvender vi Fourier-transformationen af autokorrelationen:
+	
+	\[
+	S_{r_I}(f) = \mathcal{F}[A_{r_I}(\tau)] = \frac{P_r}{2\pi f_D} \frac{1}{\sqrt{1 - \left(\frac{f}{f_D}\right)^2}} \quad \text{for} \quad |f| \leq f_D.
+	\]
+	
+	Figur \ref{fig:spectrum_density} viser spektraltætheden $S_{r_I}(f)$, som beskriver, hvordan signalets energi er fordelt som funktion af frekvensen.
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.4\textwidth]{fig/fig21.png}
+		\caption{Spektraltæthed $S_{r_I}(f)$, der viser energifordelingen i signalet}
+		\label{fig:spectrum_density}
+	\end{figure}
+	
+	Som vi kan se, er spektraltætheden koncentreret omkring frekvensen $f_D$, og den falder gradvist mod $f = 0$. Denne form beskriver den typiske fordeling af signalets energi over frekvens.
+	
+	\subsubsection{Doppler-effektens betydning}
+	Doppler-effekten opstår som følge af bevægelse mellem sender og modtager, og den ændrer frekvensen af det modtagne signal afhængigt af vinkel $\Theta$. For en uniformt fordelt Doppler-forskydning $f_D(\Theta)$ som funktion af $\Theta$, er Doppler-forskydningen givet ved:
+	
+	\[
+	f_D(\Theta) = f_D \cos(\Theta).
+	\]
+	\noindent
+	Denne relation vises i Figur \ref{fig:doppler_shift}, hvor Doppler-forskydningen når sit maksimum ved $\Theta = 0$ og $\Theta = \pi$, og minimum ved $\Theta = \frac{\pi}{2}$.
+	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.4\textwidth]{fig/fig22.png}
+		\caption{Doppler-forskydning $f_D(\Theta)$ som en funktion af vinkel $\Theta$}
+		\label{fig:doppler_shift}
+	\end{figure}
+	
+	Doppler-effekten har en stor indflydelse på modtagerens signal og skal tages i betragtning ved design af trådløse kommunikationssystemer, især i miljøer med høj bevægelse, som for eksempel køretøjer eller fly.
+	
+	\section{Envelope and Power Distributions}
+	Når vi betragter to tilfældige variabler, $X$ og $Y$, begge med middelværdi nul og varians $\sigma^2$, kan summen af disse, $Z = \sqrt{X^2 + Y^2}$, vise sig at være Rayleigh-fordelt. Kvadratet $Z^2$ vil være eksponentielt fordelt. Tidligere viste vi, at for $\phi_n(t)$, som er uniformt fordelt, er signalets komponenter $r_I$ og $r_Q$ Gaussian-fordelte med nul som middelværdi. Hvis variansen for disse komponenter er $\sigma^2$, kan signalets envelope skrives som:
+	
+	\[
+	z(t) = |r(t)| = \sqrt{r_I^2(t) + r_Q^2(t)}
+	\]
+	
+	Dette udtryk er Rayleigh-fordelt, og sandsynlighedsfordelingen for $z(t)$ er givet ved:
+	
+	\[
+	p_z(z) = \frac{2z}{P_r} \exp\left(-\frac{z^2}{P_r}\right) = \frac{z}{\sigma^2} \exp\left(-\frac{z^2}{2\sigma^2}\right), \quad z \geq 0,
+	\]
+	
+	hvor $P_r$ er den gennemsnitlige modtagne signalstyrke.
+	
+	\subsection{Rayleigh-fordeling af effekt}
+	Effekten i det modtagne signal kan beskrives ved kvadratet af enveloppen $z^2$. Fordelingen af den modtagne effekt er eksponentielt fordelt:
+	
+	\[
+	p_{z^2}(x) = \frac{1}{P_r} \exp\left(-\frac{x}{P_r}\right), \quad x \geq 0.
+	\]
+	
+	Dette viser, at den modtagne signalstyrke har en eksponentiel fordeling med middelværdi $P_r$, hvilket er typisk for Rayleigh fading-kanaler.
+	
+	\subsection{Eksempel: Rayleigh fading}
+	Vi betragter en kanal med Rayleigh fading, hvor den gennemsnitlige modtagne effekt er $P_r = 20$ dBm. Vi ønsker at finde sandsynligheden for, at den modtagne effekt er under 10 dBm.
+	
+	\[
+	p(Z^2 < 10) = \int_0^{10} \frac{1}{100} \exp\left(-\frac{x}{100}\right) dx = 0.095.
+	\]
+	
+	\subsection{Rician fading}
+	Hvis vi har en stærk LOS-komponent (Line-of-Sight), vil signalet være en kombination af en Gaussian-fordelt komponent og LOS-komponenten. Envelope i dette tilfælde er Rician-fordelt, givet ved:
+	
+	\[
+	p_z(z) = \frac{z}{\sigma^2} \exp\left( -\frac{z^2 + s^2}{2\sigma^2} \right) I_0\left( \frac{zs}{\sigma^2} \right), \quad z \geq 0,
+	\]
+	
+	hvor $s^2$ er effekten af LOS-komponenten, og $I_0$ er den modificerede Bessel-funktion af 0. orden. Den gennemsnitlige modtagne effekt er:
+	
+	\[
+	P_r = s^2 + 2\sigma^2.
+	\]
+	
+	Rician-fordelingen beskrives ofte med fading-parametret $K$, som er forholdet mellem effekten i LOS-komponenten og multipath-komponenterne:
+	
+	\[
+	K = \frac{s^2}{2\sigma^2}.
+	\]
+	
+	Når $K = 0$, har vi Rayleigh fading, mens højere $K$ indikerer en stærkere LOS-komponent.
+	
+	\subsection{Nakagami fading}
+	Nakagami-fordelingen er en mere generel model, som kan tilpasses mange forskellige miljøer. Nakagami-fordelingen beskrives ved:
+	
+	\[
+	p_z(z) = \frac{2m^m z^{2m-1}}{\Gamma(m) P_r^m} \exp\left( -\frac{mz^2}{P_r} \right), \quad m \geq 0.5,
+	\]
+	
+	hvor $m$ er Nakagami-fadingparameteren. For $m = 1$ reduceres Nakagami til Rayleigh fading, og for $m = \infty$ er der ingen fading.
+	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.6\textwidth]{fig/fig23.png}
+		\caption{Kombineret Path Loss, Shadowing og Narrowband Fading.}
+	\end{figure}
+	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.6\textwidth]{fig/fig24.png}
+		\caption{Narrowband Fading over afstand.}
+	\end{figure}
+	
+	\subsection{Nakagami-fordelingen}
+	Den generelle fading-fordeling kaldet Nakagami kan justeres til forskellige målinger, og dens sandsynlighedstæthedsfunktion er givet ved:
+	
+	\[
+	p_Z(z) = \frac{2m^m z^{2m-1}}{\Gamma(m) P_r^m} \exp\left(- \frac{mz^2}{P_r}\right), \quad m \geq 0.5,
+	\]
+	
+	hvor $\Gamma(m)$ er Gamma-funktionen. Nakagami-fordelingen kan modellere både Rayleigh og Rician fading og tilpasses forskellige empiriske observationer.
+	
+	\[
+	p_{Z^2}(x) = \bigg(\frac{m}{P_r}\bigg)^m\frac{x^{m-1}}{\Gamma(m)}exp\bigg(\frac{-mx}{P_r}\bigg).
+	\]
+	
+	\subsection{Level Crossing Rate og Average Fade Duration}
+	\textit{Level Crossing Rate (LCR)}, betegnet som $L_Z$, er den forventede hastighed, i krydsninger per sekund, hvormed signalets envelope $z(t) = |r(t)|$ krydser et givet niveau $Z$ i den nedadgående retning. For at udlede $L_Z$ kræves den fælles sandsynlighedsfordeling af signalets envelope $z = |r|$ og dets afledte med hensyn til tid $\dot{z}$, dvs. $p(z, \dot{z})$. Lad os tage udgangspunkt i fading-processen illustreret i figur \ref{fig:level_crossing}, som viser, hvordan envelope $z(t)$ krydser niveauet $Z$ flere gange i en tidsperiode.
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.5\textwidth]{fig/fig25.png}
+		\caption{Level Crossing Rate og Fade Duration for en Fading-proces.}
+		\label{fig:level_crossing}
+	\end{figure}
+	
+	For at finde antallet af krydsninger definerer vi først den forventede tid, signalets envelope tilbringer i intervallet $(Z, Z+dz)$ med hældning $\dot{z}$. Dette udtrykkes ved fordelingen $p(Z, \dot{z})d\dot{z}dt$. Krydsningsraten af niveauet $Z$ med negativ hældning over tidsintervallet $[0, T]$ kan udtrykkes som
+	
+	\[
+	L_Z = \int_{-\infty}^{0} \dot{z} p(Z, \dot{z}) d\dot{z}.
+	\]
+	
+	Den forventede tid, hvor signalet $z(t)$ forbliver under niveauet $Z$, betegnes som \textit{Average Fade Duration (AFD)}. AFD, $\bar{t}_Z$, beskriver den gennemsnitlige tid, signalet opholder sig under niveauet $Z$, og kan udledes fra forholdet mellem $L_Z$ og sandsynligheden, $p(z(t) < Z)$, at signalet er under niveauet $Z$:
+	
+	\[
+	p(z(t) < Z) = \frac{1}{T}\sum_{i} t_i,
+	\]
+	
+	hvor $t_i$ er tiden for hvert fade, og $T$ er den samlede tidsperiode. Så den gennemsnitlige fade duration for et stort $T$ er:
+	
+	\[
+	\bar{t}_Z = \frac{1}{T L_Z} \sum_{i=1}^{L_Z T} t_i \approx \frac{p(z(t) < Z)}{L_Z}.
+	\]
+	
+	For Rayleigh fading, hvor $p(z(t) < Z)$ følger Rayleigh-fordelingen, kan vi udtrykke AFD som
+	
+	\[
+	\bar{t}_Z = \frac{e^{\rho^2} - 1}{\rho f_D \sqrt{2\pi}},
+	\]
+	
+	hvor $\rho = Z/\sqrt{P_r}$, $P_r$ er den gennemsnitlige modtagne effekt, og $f_D$ er Doppler-frekvensen.
+	
+	\subsubsection{Anvendelse af Level Crossing Rate og Average Fade Duration}
+	LCR og AFD er vigtige parametre, når man designer trådløse systemer, fordi de giver indikationer på, hvor ofte signalniveauet falder under en bestemt tærskel, samt hvor længe fading varer. For eksempel er disse værdier essentielle for at estimere \textit{bit error rate} (BER) i et kommunikationssystem, da et lavt signalniveau i længere tid kan forårsage mange fejl i signaldekodning.
+	
+	Eksempel 3.3 viser en anvendelse af disse principper:
+	\begin{quote}
+		Overvej et stemmesystem med acceptabel \textit{bit error rate (BER)} når det modtagne signal ligger over halvdelen af dets gennemsnitlige værdi. Find området af Doppler-værdier, der sikrer, at stemmekvaliteten er acceptabel i et Rayleigh fading miljø, hvor brugere oplever en dårlig kvalitet i mindre end $t = 60$ ms. Løsningen er at bruge formlen for AFD og løse for $f_D$:
+		\[
+		f_D \geq \frac{e^{5} - 1}{(.060\sqrt{2\pi})} \approx 6.1 \text{ Hz}.
+		\]
+	\end{quote}
+	
+	Dette betyder, at Doppler-frekvensen skal være mindst $6.1$ Hz for at opretholde en acceptabel stemmekvalitet i en Rayleigh fading kanal, hvor signalniveauet ofte krydser tærsklen på halvdelen af den gennemsnitlige signalstyrke.
+	
+	
+	\subsection{Finite State Markov Channels (FSMC)}
+	\label{sec:fsmc}
+	
+	I trådløse kommunikationssystemer er fading en uundgåelig effekt, der kan påvirke signaloverførslen negativt. For at modellere og analysere fading-kanaler anvendes ofte en Finite State Markov Channel (FSMC)-model. FSMC-modellen tilnærmer fading-processen ved at diskretisere den kontinuerlige tid i en række tidsintervaller, typisk valgt svarende til symbolperioden \(T_s\).
+	
+	\subsubsection{Tilstande i FSMC}
+	FSMC-modellen deler signalets signal-til-støj-forhold (SNR) op i et endeligt antal regioner, kaldet tilstande. Hver region repræsenterer et bestemt interval af SNR. For en kanal, der påvirkes af \textit{Rayleigh} fading, ligger SNR \( \gamma \) i intervallet \( 0 \leq \gamma \leq \infty \). Regionerne \( R_j \) defineres som:
+	\[
+	R_j = \{ A_j \leq \gamma < A_{j+1} \},
+	\]
+	hvor \( A_j \) og \( A_{j+1} \) er grænseværdierne for regionen \(R_j\). Hver region kan betragtes som en diskret tilstand i FSMC-modellen. Over tid vil kanalen skifte mellem disse tilstande baseret på sandsynligheder, der afhænger af kanalens fysiske parametre, såsom Doppler-forskydning og symbolperioden \( T_s \).
+	
+	\subsubsection{Markov-egenskaber}
+	FSMC-modellen antager, at kanalen i hvert tidsinterval forbliver i én af de diskrete tilstande og kun kan skifte til tilstanden før eller efter i den næste tidsperiode. Overgangen mellem tilstandene bestemmes af Markov-egenskaber, hvor sandsynligheden for at skifte fra en tilstand til en anden kun afhænger af den nuværende tilstand, ikke af tidligere tilstande.
+	
+	Overgangssandsynlighederne kan beregnes ved hjælp af følgende ligninger:
+	\[
+	p_{j,j+1} = \frac{N_j T_s}{\pi_j}, \quad p_{j,j-1} = \frac{N_j T_s}{\pi_j}, \quad p_{j,j} = 1 - p_{j,j+1} - p_{j,j-1},
+	\]
+	hvor:
+	\begin{itemize}
+		\item \( N_j \) er antal krydsninger af niveau \( A_j \) pr. sekund (level-crossing rate).
+		\item \( \pi_j \) er steady-state sandsynlighedsfordelingen for at være i region \( R_j \), givet ved \( \pi_j = P(\gamma \in R_j) = P(A_j \leq \gamma < A_{j+1}) \).
+	\end{itemize}
+	
+	\subsubsection{Anvendelse af FSMC}
+	FSMC-modeller er nyttige til at forenkle den komplekse karakter af fading, især for analytisk beregning af fejlrate (Packet Error Rate, PER) og systemperformance. Modellen bruges bredt til at beskrive både Rayleigh og Ricean fading-kanaler, samt mere generelle fading-modeller såsom Nakagami-\(m\) fading.
+	
+	\subsubsection{Fordele ved FSMC-modellen}
+	FSMC-modellen gør det muligt at reducere komplekse kanalanalyser til simple diskrete overgange mellem tilstande. Dette gør det muligt at foretage præcise analyser af systemer, der oplever fading, og hjælpe med at estimere, hvordan fading vil påvirke f.eks. signalkvaliteten eller fejlrate.
+	
+	\subsubsection{Eksempel: FSMC for Rayleigh Fading}
+	For en Rayleigh fading-kanal kan SNR-værdien \( \gamma \) variere hurtigt mellem regionerne \( R_j \), som beskrevet ovenfor. Ved brug af FSMC-modellen kan overgangssandsynlighederne mellem forskellige tilstande bestemmes og bruges til at modellere kanalens adfærd over tid. Dette kan være særligt nyttigt til at estimere, hvor ofte systemet vil opleve fading-dips, hvilket kan påvirke systemets præstation.
+	
 	\section{Wideband Fading Models}
+	Når signalet ikke er smalbåndet, opstår der en anden form for forvrængning på grund af \textit{multipath delay spread}. Et kort transmitteret signal med varighed $T$ vil resultere i et modtaget signal, der har en varighed på $T + T_m$, hvor $T_m$ er \textit{multipath delay spread}. Dette medfører, at det modtagne signal vil være betydeligt forvrænget. Som illustreret i Figur 3.11, hvis $T$ transmitteres over en \textit{multipath channel}, kan multipath-komponenterne, der ankommer med forskellig forsinkelse $\tau_n$, føre til interferens.
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.7\textwidth]{fig/fig26.png}
+		\caption{Multipath Resolution.}
+	\end{figure}
+	
+	Hvis \textit{multipath delay spread} er lille, det vil sige $T_m \ll T$, ankommer multipath-komponenterne næsten samtidigt og interfererer konstruktivt og destruktivt, hvilket fører til smalbånds \textit{fading}. I dette tilfælde er der minimal spredning i tid af de forskellige \textit{multipath} komponenter, og signalforvrængningen er lav.
+	\newline\newline
+	På den anden side, hvis \textit{multipath delay spread} er stort, $T_m \gg T$, kan de forskellige komponenter adskilles, hvilket giver mulighed for tidsmæssig opløsning af de forskellige refleksioner (multipath-komponenter), som vist på Figur 3.12. Dette kan dog føre til \textit{intersymbol interference (ISI)} mellem efterfølgende transmitterede symboler. Dette problem opstår, fordi tidligere refleksioner interfererer med efterfølgende symboler. \textit{ISI} er ofte uønsket i kommunikationssystemer, da det kan påvirke modtagelseskvaliteten.
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.7\textwidth]{fig/fig27.png}
+		\caption{Scattering Function.}
+	\end{figure}
+	
+	En vigtig faktor i bredbåndskanaler er karakteriseringen af den tilsvarende lavpas kanalimpulsrespons $c(\tau,t)$. Denne karakterisering kan udføres ved at tage Fourier-transformationen af $c(\tau,t)$ for at få spredningsfunktionen $S_c(\tau, \rho)$, som er givet ved:
+	
+	\[
+	S_c(\tau, \rho) = \int_{-\infty}^{\infty} c(\tau, t)e^{-j2\pi \rho t} dt
+	\]
+	
+	hvor $\rho$ er Doppler-frekvensen. Denne spredningsfunktion viser, hvordan kanalens output er relateret til både \textit{multipath delay} og Doppler-spredning. Figur 3.12 viser et eksempel på en typisk spredningsfunktion, hvor man kan se sammenhængen mellem forsinkelse og Dopplerforskydning.
+	\newline\newline
+	I bredbåndskanaler, som vi ser her, spiller \textit{multipath delay spread} og \textit{Doppler spread} en afgørende rolle i forvrængningen af signalet. Forsinkelsen mellem de forskellige refleksioner kan forårsage \textit{fading}, og Doppler-spredningen introducerer frekvensafvigelser, der påvirker signalets fase og amplitude over tid.
+	
+	\subsection{Matematisk Modellering}
+	For at modellere de nævnte fænomener kan vi se på den statistiske karakterisering af $c(\tau,t)$ via autokorrelationsfunktionen:
+	
+	\[
+	A_c(\tau_1, \tau_2; \Delta t) = E[c^*(\tau_1; t)c(\tau_2; t+\Delta t)]
+	\]
+	
+	I praksis antages det, at kanalen er bredbåndsstationær (WSS), hvilket betyder, at autokorrelationsfunktionen kun afhænger af tidsforskellen $\Delta t$ og ikke af $t$ direkte:
+	
+	\[
+	A_c(\tau_1, \tau_2) = E[c^*(\tau_1)c(\tau_2)].
+	\]
+	
+	Den tidsvarierende kanalimpulsrespons og dens Doppler-komponenter kan derfor bruges til at beskrive de randomiserede ændringer i signalet over tid.
+	\newline\newline
+	I bredbåndskanaler er det vigtigt at tage hensyn til både \textit{multipath delay spread} og \textit{Doppler spread} for at karakterisere signalforvrængningen. Forskellige teknikker, som f.eks. \textit{equalization} og \textit{multicarrier modulation}, kan bruges til at afhjælpe problemerne med \textit{intersymbol interference (ISI)} og forbedre systemets ydeevne i bredbåndsmiljøer.
+	
 	\subsection{Power Delay Profile}
+	\label{sec:power_delay_profile}
+
+	Power Delay Profile (PDP) beskriver, hvordan den modtagne effekt fordeler sig over tid fra forskellige multipath-komponenter, som signalet har bevæget sig gennem på vej fra senderen til modtageren. PDP'en er vigtig, fordi den hjælper os med at forstå forsinkelserne af signaler i et trådløst miljø og deres effekt på kommunikationssystemer.
+	
+	Den matematiske definition af PDP er relateret til kanalens impulssvar \( h(t, \tau) \). PDP'en \( P_h(\tau) \) er givet ved:
+	
+	\[
+	P_h(\tau) = \lim_{T \to \infty} \frac{1}{2T} \int_{-T}^{T} |h(t, \tau)|^2 \, dt
+	\]
+	
+	Denne ligning betyder, at PDP'en viser, hvordan energien i signalet varierer som funktion af forsinkelsen \( \tau \) for multipath-komponenterne.
+	
+	For at forstå signalets forsinkelse over tid, kan vi beregne den **gennemsnitlige forsinkelse** \( T_m \), som er det første moment af PDP'en:
+	
+	\[
+	T_m = \frac{\int_{-\infty}^{\infty} P_h(\tau) \tau \, d\tau}{\int_{-\infty}^{\infty} P_h(\tau) \, d\tau}
+	\]
+	
+	Dette udtryk giver en idé om, hvor lang tid signalet i gennemsnit forsinkes i forhold til den direkte signalvej.
+	
+	En anden vigtig parameter er **root mean square (rms) forsinkelsesspredningen** \( S_{\tau} \), som måler spredningen af forsinkelserne omkring den gennemsnitlige forsinkelse \( T_m \). Den defineres som:
+	
+	\[
+	S_{\tau} = \sqrt{\frac{\int_{-\infty}^{\infty} P_h(\tau) \tau^2 \, d\tau}{\int_{-\infty}^{\infty} P_h(\tau) \, d\tau} - T_m^2}
+	\]
+	
+	Denne størrelse fortæller, hvor meget multipath-forsinkelserne varierer. Det er en vigtig faktor, når man skal beregne risikoen for **intersymbolinterferens (ISI)**, som opstår, når signaler overlapper hinanden, hvis symbolperioden \( T_s \) er for lille i forhold til \( S_{\tau} \).
+	
+	For at undgå ISI skal vi sikre, at symbolperioden \( T_s \) er større end rms forsinkelsesspredningen:
+	
+	\[
+	T_s > S_{\tau}
+	\]
+	
+	Når du arbejder med PDP i opgaver, skal du typisk beregne \( T_m \) og \( S_{\tau} \) for at forstå, hvordan signalerne forstyrres af multipath-effekter, og hvordan systemet kan kompensere for dem.
+	
+	\subsubsection{Eksempel:}
+	Effektspektrummet for forsinkelse modelleres ofte som en ensidet eksponentiel fordeling:
+	
+	\[
+	A_c(\tau) = \frac{1}{T_m} e^{-\tau/T_m}, \quad \tau \geq 0.
+	\]
+	
+	Vis, at den gennemsnitlige forsinkelsesspredning er \( \mu_{T_m} = T_m \), og find RMS forsinkelsesspredningen \( \sigma_{T_m} \).
+	\newline\newline
+	\textbf{Løsning:} Det er let at vise, at \( A_c(\tau) \) integreres til én. Den gennemsnitlige forsinkelsesspredning er derfor givet ved
+	
+	\[
+	\mu_{T_m} = \frac{1}{T_m} \int_0^\infty \tau e^{-\tau/T_m} d\tau = T_m.
+	\]
+	
+	RMS forsinkelsesspredningen \( \sigma_{T_m} \) er:
+	
+	\[
+	\sigma_{T_m} = \sqrt{\frac{1}{T_m} \int_0^\infty \tau^2 e^{-\tau/T_m} d\tau - \mu_{T_m}^2} = \sqrt{2T_m^2 - T_m^2} = T_m.
+	\]
+	
+	Således er den gennemsnitlige og RMS forsinkelsesspredning de samme for eksponentielt fordelte effektspektrummer for forsinkelse.
+	
+	\subsubsection{Eksempel:}
+	Overvej en bredbåndskanal med multipath intensitetsprofil
+	
+	\[
+	A_c(\tau) = 
+	\begin{cases} 
+		e^{-\tau / .00001}, & 0 \leq \tau \leq 20 \, \mu s, \\
+		0, & \text{ellers}.
+	\end{cases}
+	\]
+	
+	Find den gennemsnitlige og RMS forsinkelsesspredning for kanalen, og find den maksimale symbolrate, sådan at et lineært moduleret signal, der transmitteres gennem denne kanal, ikke oplever ISI.
+	\newline\newline
+	\textbf{Løsning:} Den gennemsnitlige forsinkelsesspredning er:
+	
+	\[
+	\mu_{T_m} = \frac{\int_0^{20 \cdot 10^{-6}} \tau e^{-\tau / .00001} d\tau}{\int_0^{20 \cdot 10^{-6}} e^{-\tau / .00001} d\tau} = 6.87 \, \mu s.
+	\]
+	
+	RMS forsinkelsesspredningen er:
+	
+	\[
+	\sigma_{T_m} = \sqrt{\frac{\int_0^{20 \cdot 10^{-6}} (\tau - \mu_{T_m})^2 e^{-\tau / .00001} d\tau}{\int_0^{20 \cdot 10^{-6}} e^{-\tau / .00001} d\tau}} = 5.25 \, \mu s.
+	\]
+	
+	Vi ser i dette eksempel, at den gennemsnitlige forsinkelsesspredning er omtrent lig med RMS-værdien. For at undgå ISI skal symbolperioden \( T_s \) være større end \( 10\sigma_{T_m} \). Dette betyder, at \( T_s > 10 \cdot 5.25 \, \mu s = 52.5 \, \mu s \), hvilket giver en symbolrate på \( R_s = 1 / T_s = 19.04 \, \text{Ksymb/s} \). Dette er en stærkt begrænset symbolrate for mange trådløse systemer.
+	
+	
 	\subsection{Coherence Bandwidth}
+	\textbf{Coherence Bandwidth (Sammenhængende båndbredde)} er et vigtigt koncept i analyse af trådløse kommunikationskanaler, da det beskriver det frekvensområde, hvor kanalens egenskaber forbliver korrelerede. Dette betyder, at signaler, der ligger inden for denne båndbredde, vil opleve lignende fading-karakteristika, og dermed kan man undgå frekvensselektiv fading.
+	\newline\newline
+	Sammenhængende båndbredde er tæt relateret til kanalens tidsmæssige karakteristika, specielt kanalens forsinkelsesspredning. Den sammenhængende båndbredde \( B_c \) kan defineres som det frekvensområde, hvor signaler forbliver korrelerede. Matematikken bag dette bygger på kanalens frekvenskorrelationsfunktion \( A_C(f_1, f_2; \Delta t) \), som beskriver korrelationen mellem fading ved to forskellige frekvenser \( f_1 \) og \( f_2 \):
+	
+	\[
+	A_C(f_1, f_2; \Delta t) = \mathbb{E}[C^*(f_1; t) C(f_2; t + \Delta t)].
+	\]
+	
+	Hvor \( C(f; t) \) er defineret som:
+	
+	\[
+	C(f; t) = \int_{-\infty}^{\infty} c(\tau; t) e^{-j 2 \pi f \tau} d\tau.
+	\]
+	
+	Udtrykket for frekvenskorrelationsfunktionen kan yderligere udvides til:
+	
+	\[
+	A_C(f_1, f_2; \Delta t) = \int_{-\infty}^{\infty} A_c(\tau, \Delta t) e^{-j 2 \pi (f_2 - f_1) \tau} d\tau,
+	\]
+	
+	hvor \( A_c(\tau) \) er kanalens tidsmæssige korrelationsfunktion. For tilfældet af to frekvenser \( f_1 \) og \( f_2 \) med en forskel \( \Delta f = f_2 - f_1 \), reduceres udtrykket til:
+	
+	\[
+	A_C(\Delta f) = \int_{-\infty}^{\infty} A_c(\tau) e^{-j 2 \pi \Delta f \tau} d\tau.
+	\]
+	
+	Dette viser, at den sammenhængende båndbredde \( B_c \) kan tolkes som det område i frekvensdomænet, hvor korrelationsfunktionen forbliver signifikant, som illustreret i figuren nedenfor:
+	
+	\begin{figure}[!h]
+		\centering\includegraphics[width=\textwidth]{fig/fig28.png}
+		\caption{Power Delay Profile, RMS Delay Spread, and Coherence Bandwidth.}
+	\end{figure}
+	
+	I figuren ses \( A_c(\tau) \) som kanalens tidsmæssige korrelation, der er relateret til kanalens forsinkelsesspredning \( \sigma_{T_m} \). Den Fourier-transformerede funktion \( A_C(\Delta f) \) beskriver korrelationen i frekvensdomænet, hvor den sammenhængende båndbredde \( B_c \) angiver det interval, inden for hvilket kanalen opfører sig som en smalbåndskanal med flad fading. Uden for dette interval opleves frekvensselektiv fading, som har større variation over frekvens.
+	\newline\newline
+	Når signalets båndbredde \( B \) er meget mindre end \( B_c \), er fading flad over hele båndbredden, hvilket er typisk for smalbåndssignaler. Men hvis \( B \) er større end \( B_c \), oplever vi frekvensselektiv fading, hvor forskellige frekvenskomponenter påvirkes forskelligt af kanalen.
+	\newline\newline
+	I praksis skal symbolperioden \( T_s \) være større end den inverse af den sammenhængende båndbredde \( B_c \) for at undgå interferens mellem symboler (ISI). Dette kan udtrykkes som:
+	
+	\[
+	T_s > \frac{1}{B_c}.
+	\]
+	
+	Sammenhængende båndbredde er derfor en essentiel parameter for at bestemme, om en kommunikationskanal oplever flad eller frekvensselektiv fading, hvilket har stor betydning for valg af modulationsteknik og systemdesign.
+	
+	\subsubsection{Eksempel:}
+	For en kanal med Doppler-spredning \( B_d = 80 \, \text{Hz} \), hvilken tidsadskillelse kræves mellem prøver af det modtagne signal, så prøverne er tilnærmelsesvis uafhængige?
+	\newline\newline
+	\textbf{Løsning:} Sammenhængstiden for kanalen er \( T_c \approx 1 / B_d = 1 / 80 \), så prøver, der er adskilt med 12.5 ms, er tilnærmelsesvis ukorrelerede. Givet de Gaussiske egenskaber af den underliggende stokastiske proces er disse prøver derfor tilnærmelsesvis uafhængige.
+	
 	\subsection{Doppler Power Spectrum and Channel Coherence Time}
-	\subsection{Transforms for Autocorrelation and Scattering Functions}
-	\section{Discrete-Time Model}
+	\subsection*{Transforms for Autocorrelation and Scattering Functions}
+	I trådløse kanaler spiller både autokorrelationsfunktionen \( A_c(\tau, \Delta t) \) og spredningsfunktionen \( S_c(\tau, \rho) \) en central rolle i analysen af kanalen. Disse funktioner er tæt forbundet gennem Fourier-transformationer.
+	\newline\newline
+	Den dobbelte Fourier-transformation mellem \( A_c(\Delta f, \Delta t) \) og \( S_c(\tau, \rho) \) kan beskrives som:
+	
+	\[
+	S_c(\tau, \rho) = \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} A_c(\Delta f, \Delta t) e^{-j 2 \pi \rho \Delta t} e^{j 2 \pi \tau \Delta f} d\Delta t d\Delta f.
+	\]
+	
+	Denne ligning viser sammenhængen mellem spredningsfunktionen \( S_c(\tau, \rho) \) og autokorrelationsfunktionen \( A_c(\Delta f, \Delta t) \) gennem en dobbelt Fourier-transformation.
+	
+	\[
+	A_c(\Delta f, \Delta t) = \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} S_c(\tau, \rho) e^{j 2 \pi \Delta f \tau} e^{-j 2 \pi \rho \Delta t} d\tau d\rho.
+	\]
+	
+	Autokorrelations- og spredningsfunktionerne er dermed relateret på følgende måde:
+	
+	\begin{itemize}
+		\item \( A_c(\tau, \Delta t) \) er den inverse Fourier-transformation af \( S_c(\tau, \rho) \) i Doppler-domænet \( \rho \).
+	
+		\item \( S_c(\Delta f, \rho) \) er Fourier-transformen af \( A_c(\Delta f, \Delta t) \) i både frekvens- og tidsdomenet.
+	\end{itemize}
+	
+	Figuren nedenfor viser, hvordan de forskellige funktioner relaterer til hinanden gennem Fourier-transformationer:
+	
+	\begin{figure}[!h]
+		\centering\includegraphics[width=\textwidth]{fig/fig29.png}
+		\caption{Fourier Transform Relationships}
+	\end{figure}
+	
+	Disse transformationer anvendes i praksis til at bestemme kanalens egenskaber såsom Doppler-spredning, forsinkelsesspredning og sammenhængende båndbredde. Ved at måle spredningsfunktionen \( S_c(\tau, \rho) \) kan man udlede kanalens vigtigste karakteristika og dermed optimere det trådløse kommunikationssystem.
+	
+	\section{Discrete-Time Model}	
+	I analyse af trådløse kommunikationssystemer er det vigtigt at modellere kanalen på en måde, der afspejler de multipath-komponenter, som påvirker signalet under transmission. To vigtige modeller for dette er \textit{Point Scatterer Channel Model} og den tilsvarende diskrete tidsmodel.
+	
+	\subsection{Point Scatterer Channel Model}
+	I en multipath-kanal består det modtagne signal af bidrag fra flere signalstier, som kan reflekteres, brydes eller spredes af objekter i miljøet. Dette er illustreret i \textit{Figur 3.16}, hvor forskellige objekter (f.eks. bygninger eller køretøjer) skaber flere refleksioner til modtageren. Den tilsvarende kanalimpulsrespons \(c(\tau; t)\) beskrives ved summen af bidragene fra \(N\) multipath-komponenter:
+	
+	\[
+	c(\tau; t) = \sum_{n=0}^{N} \alpha_n(t) e^{-j \phi_n(t)} \delta(\tau - \tau_n(t)).
+	\]
+	
+	Her repræsenterer \( \alpha_n(t) \) amplituden af den \(n\)-te komponent, \( \phi_n(t) \) er faseforskydningen, og \( \tau_n(t) \) er forsinkelsen på grund af den \(n\)-te signalsti. Kroneckerdeltafunktionen \( \delta(\tau - \tau_n(t)) \) angiver, at den \(n\)-te komponent ankommer ved forsinkelsen \( \tau_n(t) \).
+	
+	\begin{figure}[!h]
+		\centering\includegraphics[width=\textwidth]{fig/fig30.png}
+		\caption{Point Scatterer Channel Model}
+	\end{figure}
+	
+	\subsection{Diskret tids approksimation}
+	For at lette beregninger og analyse af multipath-kanaler, kan vi antage en diskret tidsmodel, hvor kanalens impulssvar \( c(\tau; t) \) samples ved bestemte tidspunkter. Denne diskretisering gør det muligt at opdele kanalen i \(M\) diskrete samples, som illustreret i \textit{Figur 3.17}. Hver sample \( r_m \) repræsenterer bidraget fra en multipath-komponent ved en bestemt forsinkelse \( mT \), hvor \(T\) er samplingintervallet.
+	
+	\begin{figure}[!h]
+		\centering\includegraphics[width=\textwidth]{fig/fig31.png}
+		\caption{Discrete Time Approximation}
+	\end{figure}
+
+	Hver sample \( r_m \) er relateret til en amplitude \( a_m \) og en fase \( \theta_m \), og tidsforsinkelsen mellem successive samples er \( T \). Dette gør det muligt at modellere kanalen som en sum af diskrete impulser, hvor hver impuls repræsenterer en refleksion fra et bestemt objekt i miljøet.
+	\newline\newline
+	Denne diskretisering bruges ofte i praksis til at simulere kanaler i trådløse systemer, hvor man ønsker at modellere de mange multipath-komponenter med begrænsede ressourcer. Den diskrete model gør det muligt at beregne kanalens effekt, forsinkelsesspredning og sammenhængende båndbredde mere effektivt.
+	
 	\section{Space-Time Channel Models}
+	I moderne trådløse kommunikationssystemer er det vigtigt at modellere kanalen som en tids- og rumvarierende enhed for at kunne håndtere de mange multipath-komponenter, der kan opstå i en trådløs kanal. Disse modeller er særligt vigtige i systemer med flere antenner (MIMO), hvor både tid og rum bruges til at forbedre signalets kvalitet.
+	\newline\newline
+	Kanalimpulsresponsen \(c(\tau, t)\) for en space-time kanal kan udtrykkes som summen af bidrag fra \(N(t)\) multipath-komponenter:
+	
+	\[
+	c(\tau, t) = \sum_{n=0}^{N(t)} \alpha_n(t) e^{-j \phi_n(t)} \bar{a}(\theta_n(t)) \delta(\tau - \tau_n(t)),
+	\]
+	
+	hvor:
+	\begin{itemize}
+		\item \( \alpha_n(t) \) er amplituden af den \(n\)-te multipath-komponent,
+		\item \( \phi_n(t) \) er den tilsvarende faseforskydning,
+		\item \( \tau_n(t) \) er forsinkelsen for den \(n\)-te komponent,
+		\item \( \theta_n(t) \) repræsenterer ankomstvinklen (Angle of Arrival, AoA) for den \(n\)-te komponent, og
+		\item \( \bar{a}(\theta_n(t)) \) er antennemønsterets vektor for ankomstvinklen \( \theta_n(t) \).
+	\end{itemize}
+
+	Antennevektoren \( \bar{a}(\theta_n(t)) \) kan defineres som:
+	
+	\[
+	\bar{a}(\theta_n(t)) = \left[ e^{-j \psi_{n,1}}, \ldots, e^{-j \psi_{n,M}} \right]^T,
+	\]
+	
+	hvor \( \psi_{n,m} \) er faseforskydningen for antenneelementet \( m \) i et array af \( M \) antenneelementer.
+	
+	\subsection{Vinkelspredning og gennemsnitlig AoA}
+	En vigtig parameter i Space-Time Channel Models er vinkelspredningen \( \sigma_{\theta} \), som beskriver variabiliteten af ankomstvinklerne i en multipath-kanal. Den gennemsnitlige ankomstvinkel \( \mu_{\theta} \) og vinkelspredningen \( \sigma_{\theta} \) kan beregnes som:
+	
+	\[
+	\mu_{\theta} = \frac{\int_{-\pi}^{\pi} \theta A(\theta) d\theta}{\int_{-\pi}^{\pi} A(\theta) d\theta},
+	\]
+	
+	\[
+	\sigma_{\theta} = \sqrt{\frac{\int_{-\pi}^{\pi} (\theta - \mu_{\theta})^2 A(\theta) d\theta}{\int_{-\pi}^{\pi} A(\theta) d\theta}},
+	\]
+	
+	hvor \( A(\theta) \) er fordelingsfunktionen for ankomstvinklerne. Disse ligninger er vigtige, fordi de beskriver spredningen af multipath-komponenterne i rummet, hvilket har direkte indflydelse på modtagersystemets evne til at udnytte rumlig diversitet.
+	
+	\subsection*{Space-Time model for MIMO-systemer}
+	I et MIMO-system, hvor både afsendelse og modtagelse sker over flere antenner, bruges Space-Time Channel Models til at beskrive sammenhængen mellem hver antenneport og de forskellige multipath-komponenter. Impulsresponsen for et MIMO-system kan udtrykkes som en matrix, hvor hver matrixelement repræsenterer en kanal mellem en afsendende og en modtagende antenne.
+	\newline\newline
+	Denne formalisering giver mulighed for at analysere kanalens kapacitet, forsinkelsesspredning og rumlig diversitet, hvilket er essentielt for at designe trådløse systemer, der kan udnytte de rumlige dimensioner for at opnå højere datahastigheder og bedre signalmodtagelse.
 	
 	\chapter{Opgaver}
 	\section{Exercises week 2}
@@ -1319,7 +2388,7 @@
 		The free-space path loss (FSPL) formula is given by:
 		
 		\[
-			L_{FS}(dBm) = 20log\bigg(\frac{\lambda}{4\pi d}\bigg)
+			L_{FS}(dBm) = 20log\bigg(\frac{\lambda}{4\pi d}\bigg)=
 		\]
 		
 		The Linkage Budge Model is given by:
@@ -1338,7 +2407,7 @@
 		\]
 		
 		
-		\textbf{Final Answer:} The transmit power required for a received power of \( 1 \, \text{dBm} \) at \( d = 10 \, \text{m} \) is \( 47.42 \, \text{dBm} \), and at \( d = 100 \, \text{m} \) is \( 67.42 \, \text{dBm} \).
+		\textbf{Final Answer:} The transmit power required for a received power of \( 1 \, \text{dBm} \) at \( d = 10 \, \text{m} \) is \( 36.42 \, \text{dBm} \) or \(4.385KW\), and at \( d = 100 \, \text{m} \) is \( 56.42 \, \text{dBm} \) or \(438.53KW\).
 		
 		\item For the two-ray model with transmitter-receiver separation $d = 100$ m, $h_t = 10$ m, and $h_r = 2$ m, find the delay spread between the two signals.
 		\newline\newline\noindent\textbf{Solution:} In order to find the delay spread between the two signals we will be using \textit{Delay Spread in Two-Ray Model}
@@ -1576,15 +2645,54 @@
 	\]
 	where \( Q(x) \) is the Q-function, \( \sigma \) is the standard deviation of shadowing, and \( L(d) \) is the path loss at distance \( d \).
 	
-	\chapter{Formula Collection}
-	\section{Path Loss Models}
+	\section*{Exercises week 3}
 	
+	\subsection*{3-3}
+	Consider a time-invariant indoor wireless channel with LOS component at delay 23 ns, a multipath component at delay 48 ns, and another multipath component at delay 67 ns. 
+	Find the delay spread assuming that the demodulator synchronizes to the LOS component. Repeat assuming that the demodulator synchronizes to the first multipath component.
+	
+	\subsection*{3-6}
+	Assume a Rayleigh fading channel with average signal power \( 2\sigma^2 = -80 \, \text{dBm} \). What is the power outage probability of this channel relative to the threshold \( P_0 = -95 \, \text{dBm} \)? How about \( P_0 = -90 \, \text{dBm} \)?
+	
+	\subsection*{3-7}
+	Suppose we have an application that requires a power outage probability of \( 0.01 \) for the threshold \( P_0 = -80 \, \text{dBm} \). For Rayleigh fading, what value of the average signal power is required?
+	
+	\subsection*{3-8}
+	Assume a Rician fading channel with \( 2\sigma^2 = -80 \, \text{dBm} \) and a target power of \( P_0 = -80 \, \text{dBm} \). Find the outage probability assuming that the LOS component has average power \( s^2 = -80 \, \text{dBm} \).
+	
+	\subsection*{3-9}
+	Consider a wideband channel with the multipath intensity profile:
+	
+	\[
+	A_c(\tau) = 
+	\begin{cases}
+		e^{-\tau/0.0001} & 0 \leq \tau \leq 30 \, \mu s, \\
+		0 & \text{else}.
+	\end{cases}
+	\]
+	
+	\begin{itemize}
+		\item[(a)] What is the maximum delay of any non-LOS components in this case?
+		\item[(b)] Find the average delay spread and RMS delay spread.
+		\item[(c)] How should we select our symbol period in order to avoid ISI?
+	\end{itemize}
+	
+	
+	\part{Formula Collection}
+	\chapter{Kapitel 2}
+	\section{Path Loss Models}
 	\subsection{Free-Space Path Loss (FSPL)}
 	The free-space path loss (FSPL) represents the attenuation of a signal as it propagates in free space (without obstructions). It describes how the signal power diminishes due to the spreading of the wavefront over an expanding spherical surface.
 	
 	The FSPL is calculated by the formula:
 	\[
 	L_{\text{FS}}(\text{dB}) = 20 \log_{10} \left( \frac{4\pi d f_c}{c} \right)
+	\]
+	
+	or
+	
+	\[
+		FSPL = \bigg(\frac{4\pi df_c}{c}\bigg)^2
 	\]
 	where:
 	\begin{itemize}
@@ -1874,6 +2982,210 @@
 		\item \( G_t, G_r \): transmitter and receiver antenna gains (linear),
 		\item \( L \): total path loss (linear),
 		\item \( N_0 \): noise power (W).
-	\end{itemize}    
+	\end{itemize} 
+	
+	\chapter{Kapitel 3}
+	\section{Formelsamling for Statistical Multipath Channel Models}
+	
+	\subsection{Tidsvarierende Kanalimpulsrespons}
+	
+	\subsubsection{Matematisk Modellering af Tidsvarierende Kanalimpulsrespons}
+	Kanalimpulsresponsen kan udtrykkes som en sum af \( N \) multipath-komponenter:
+	
+	\[
+	c(\tau, t) = \sum_{n=0}^{N(t)} \alpha_n(t) e^{-j \phi_n(t)} \delta(\tau - \tau_n(t)),
+	\]
+	
+	hvor \( \alpha_n(t) \) er amplituden, \( \phi_n(t) \) er fasen, og \( \tau_n(t) \) er forsinkelsen for den \(n\)-te komponent.
+	
+	\subsubsection{Kanalimpulsrespons ved Forskellige Tidspunkter}
+	Kanalens impulssvar kan variere over tid. Autokorrelationsfunktionen for kanalen kan udtrykkes som:
+	
+	\[
+	R_c(\tau, \Delta t) = \mathbb{E}[c^*(t) c(t + \Delta t)].
+	\]
+	
+	\subsubsection{Tidsvarierende Kanalrespons i Frekvensdomænet}
+	Frekvenskorrelationsfunktionen \( A_c(\Delta f, \Delta t) \) er relateret til impulssvaret gennem Fourier-transformation:
+	
+	\[
+	A_c(\Delta f, \Delta t) = \int_{-\infty}^{\infty} A_c(\tau, \Delta t) e^{-j 2 \pi \Delta f \tau} d\tau.
+	\]
+	
+	\subsubsection{Doppler-effekter}
+	Doppler-frekvensen \( f_D \) kan beregnes som:
+	
+	\[
+	f_D = \frac{v f_c}{c},
+	\]
+	
+	hvor \( v \) er bevægelseshastigheden, \( f_c \) er bærefrekvensen, og \( c \) er lysets hastighed.
+	
+	\subsubsection{Kanalens Ikke-Stationære Respons}
+	Kanalens ikke-stationære respons kan modelleres ved hjælp af autokorrelationsfunktionen:
+	
+	\[
+	R_c(\tau, \Delta t) = \mathbb{E}[c^*(\tau, t) c(\tau, t + \Delta t)].
+	\]
+	
+	\subsection{Narrow Fading Models}
+	\subsubsection{In-Phase og Quadrature Komponenter}
+	For fading kan kanalen opdeles i in-phase og quadrature-komponenter, hvor signalet kan skrives som:
+	
+	\[
+	r(t) = I(t) \cos(2 \pi f_c t) - Q(t) \sin(2 \pi f_c t),
+	\]
+	
+	hvor \( I(t) \) og \( Q(t) \) er henholdsvis in-phase og quadrature-komponenter.
+	
+	\subsubsection{Fading og Statistik}
+	Fading beskrives ofte ved statistiske fordelinger såsom Rayleigh og Rician. Den gennemsnitlige effekt i et fading-miljø kan beregnes som:
+	
+	\[
+	\bar{P} = \int_0^\infty p(r) r^2 dr,
+	\]
+	
+	hvor \( p(r) \) er fordelingsfunktionen for amplitude \( r \).
+	
+	\subsubsection{Autokorrelation, Krydskorrelation og Spektraltæthed}
+	Autokorrelationsfunktionen for fading-signaler er givet ved:
+	
+	\[
+	R_{XX}(\tau) = \mathbb{E}[X(t) X^*(t + \tau)].
+	\]
+	
+	Spektraltætheden \( S_{XX}(f) \) opnås ved Fourier-transformation af autokorrelationsfunktionen.
+	
+	\subsection{Envelope and Power Distributions}
+	\subsubsection{Rayleigh-fordeling af Effekt}
+	Rayleigh-fordelingen bruges til at beskrive fading i miljøer med mange multipath-komponenter og kan beskrives ved:
+	
+	\[
+	p(r) = \frac{r}{\sigma^2} e^{-r^2 / (2 \sigma^2)}, \quad r \geq 0.
+	\]
+	
+	\subsubsection{Rician Fading}
+	Rician fading inkluderer en line-of-sight (LOS)-komponent og er givet ved:
+	
+	\[
+	p(r) = \frac{r}{\sigma^2} e^{-(r^2 + s^2) / (2 \sigma^2)} I_0\left(\frac{r s}{\sigma^2}\right),
+	\]
+	
+	hvor \( s \) er styrken af LOS-komponenten og \( I_0(\cdot) \) er modificeret Bessel-funktion af første orden.
+	
+	\subsubsection{Nakagami Fading}
+	Nakagami-fordelingen beskrives ved:
+	
+	\[
+	p(r) = \frac{2 m^m r^{2m-1}}{\Gamma(m) \Omega^m} e^{-\frac{m r^2}{\Omega}},
+	\]
+	
+	hvor \( m \) er fading-parametret og \( \Omega \) er den gennemsnitlige effekt.
+	
+	\subsection{Wideband Fading Models}
+	\subsubsection{Matematisk Modellering}
+	Wideband fading modelleres ofte ved at analysere forsinkelsesspredning og koherensbåndbredde. Den gennemsnitlige forsinkelse \( T_m \) kan udtrykkes som:
+	
+	\[
+	T_m = \frac{\int_0^\infty P_h(\tau) \tau d\tau}{\int_0^\infty P_h(\tau) d\tau},
+	\]
+	
+	hvor \( P_h(\tau) \) er power delay profile (PDP).
+	
+	\subsubsection{Coherence Bandwidth}
+	Sammenhængende båndbredde \( B_c \) kan relateres til forsinkelsesspredningen \( S_\tau \) ved:
+	
+	\[
+	B_c \approx \frac{1}{2 \pi S_\tau}.
+	\]
+	
+	\subsubsection{Doppler Power Spectrum and Channel Coherence Time}
+	Koherenstiden \( T_c \), som er relateret til Doppler-frekvensen, kan beregnes som:
+	
+	\[
+	T_c \approx \frac{1}{f_D}.
+	\]
+	
+	\subsection{Discrete-Time Model}
+	\subsubsection*{Point Scatterer Channel Model}
+	Den diskrete kanalimpulsrespons i en point scatterer model er givet ved:
+	
+	\[
+	c(\tau, t) = \sum_{n=0}^{N(t)} \alpha_n(t) e^{-j \phi_n(t)} \delta(\tau - \tau_n(t)).
+	\]
+	
+	\subsection{Space-Time Channel Models}
+	\subsubsection{Vinkelspredning og Gennemsnitlig AoA}
+	Den gennemsnitlige ankomstvinkel \( \mu_\theta \) og vinkelspredningen \( \sigma_\theta \) kan beregnes som:
+	
+	\[
+	\mu_\theta = \frac{\int_{-\pi}^{\pi} \theta A(\theta) d\theta}{\int_{-\pi}^{\pi} A(\theta) d\theta},
+	\]
+	
+	\[
+	\sigma_\theta = \sqrt{\frac{\int_{-\pi}^{\pi} (\theta - \mu_\theta)^2 A(\theta) d\theta}{\int_{-\pi}^{\pi} A(\theta) d\theta}}.
+	\]
+	
+	\subsection{Forsinkelsesspredning (Delay Spread)}
+	Forsinkelsesspredning er et mål for variationen i ankomsttidspunkter af multipath-komponenter. Følgende formler kan anvendes:
+	
+	\begin{itemize}
+		\item \textbf{Gennemsnitlig forsinkelse} \( T_m \):
+	
+	\[
+	T_m = \frac{\int_0^\infty P_h(\tau) \tau d\tau}{\int_0^\infty P_h(\tau) d\tau}
+	\]
+	
+	\item  \textbf{RMS forsinkelsesspredning} \( S_\tau \):
+	
+	\[
+	S_\tau = \sqrt{\frac{\int_0^\infty P_h(\tau) \tau^2 d\tau}{\int_0^\infty P_h(\tau) d\tau} - T_m^2}
+	\]
+	\end{itemize}
+	
+	For at undgå intersymbolinterferens (ISI) skal symbolperioden \( T_s \) være større end \( S_\tau \):
+	
+	\[
+	T_s > S_\tau
+	\]
+	
+	\subsection{Rayleigh Fading}
+	\subsubsection{Power Outage Probability under Rayleigh Fading}
+	For en Rayleigh fading kanal er outage probability \( P_\text{out} \) givet ved:
+	
+	\[
+	P_\text{out} = 1 - \exp\left(-\frac{P_0}{2\sigma^2}\right)
+	\]
+	
+	hvor:
+	\begin{itemize}
+		\item \( P_0 \) er tærskelværdien,
+		\item \( 2\sigma^2 \) er den gennemsnitlige
+	\end{itemize} effekt.
+	
+	\subsubsection{Bestemmelse af Gennemsnitlig Effekt for Givet Outage Probability}
+	Hvis outage probability \( P_\text{out} \) er kendt, kan den gennemsnitlige effekt \( 2\sigma^2 \) beregnes ved at omarrangere formlen for outage probability:
+	
+	\[
+	P_\text{out} = 1 - \exp\left(-\frac{P_0}{2\sigma^2}\right)
+	\]
+	
+	Ved at sætte \( P_\text{out} = 0.01 \) og kende \( P_0 \), kan du finde \( 2\sigma^2 \).
+	
+	\subsection{Rician Fading}
+	
+	\subsubsection{Outage Probability for Rician Fading}
+	For Rician fading er outage probability \( P_\text{out} \) givet ved:
+	
+	\[
+	P_\text{out} = 1 - Q_1\left(\sqrt{\frac{2s^2}{2\sigma^2}}, \sqrt{\frac{2P_0}{2\sigma^2}}\right)
+	\]
+	
+	hvor:
+	\begin{itemize}
+		\item \( s^2 \) er LOS-komponentens gennemsnitlige effekt,
+		\item \( 2\sigma^2 \) er variansen af de ikke-LOS-komponenter,
+		\item \( Q_1 \) er den modificerede Bessel-funktion af første orden.
+	\end{itemize}
 	
 	\end{document}
